@@ -866,7 +866,7 @@ hash = "3bc38ae9afcffef9e3158bbb137511ac872bb4edb0b82c644b4aa600d3685672"
 
 [[files]]
 file = "config/generalfeedback_config.toml"
-hash = "18c613c1f19f2880baae4446a721527747e35127f59c09fe4524fdcf1129748e"
+hash = "8dd65baa5bac13ae8bcc57d0aab439bf3e88cc15414097f52e4cb06eb9dfdd22"
 
 [[files]]
 file = "config/gnkinetics-client.toml"

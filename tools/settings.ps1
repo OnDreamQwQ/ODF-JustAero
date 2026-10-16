@@ -44,12 +44,13 @@ $OldIndex = Join-Path $RepoRoot 'tools\legacy\modrinth.index.json'
 # build would publish them to a PUBLIC repo. Never pack this file.
 #
 # config/GeneralFeedback/feedback.json belongs to "General Feedback"
-# (generalfeedback-*.jar). It carries a real GitHub Personal Access Token so
-# the in-game button can open issues on this repo:
+# (generalfeedback-*.jar). It carries a real API token so the in-game button can
+# post to a feedback table:
 #     "token": "github_pat_11..."     <- full credential, PLAIN TEXT
-# GitHub's push protection rejects any push containing it, and a public token
-# gets revoked anyway, so this file can never ship. Keep it out of the pack and
-# hand out a token-less template instead.
+# The mod is DISABLED in this pack: all three displayFeedbackButton* flags are
+# false in config/generalfeedback_config.toml and this file no longer exists.
+# The rule stays anyway, as a permanent guard - re-enabling the button without
+# it would publish a credential to a PUBLIC repo on the very next build.
 $ExcludeGlobs = @(
     'config/jei/world/*',
     'config/spark/tmp/*',
