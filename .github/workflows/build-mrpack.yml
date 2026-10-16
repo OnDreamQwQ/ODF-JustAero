@@ -1,5 +1,12 @@
 name: Build .mrpack
 
+# What each run is called in the Actions list. When you start a run by hand you
+# can type anything into the "title" box; leave it empty and it falls back to
+# "Build .mrpack #<run number>", so runs are never all identical.
+# GitHub evaluates this BEFORE checking the repo out, so it cannot read the
+# version out of pack/pack.toml on its own - type it in if you want it shown.
+run-name: "${{ inputs.title || format('Build .mrpack #{0}', github.run_number) }}"
+
 # GitHub Actions cannot see your Minecraft instance, so the order is:
 #
 #   your instance  ->  tools\Update-Pack.ps1 (local)  ->  git push
@@ -13,9 +20,12 @@ name: Build .mrpack
 # or from a terminal:
 #
 #     gh workflow run build-mrpack.yml
+#     gh workflow run build-mrpack.yml -f title="v0.5.3"
 #
 # The version comes from pack/pack.toml, so bump it locally BEFORE pushing
 # (tools\Update-Pack.ps1 -Version x.y.z -Push) if you want a new release tag.
+# The "title" box only changes what the run is CALLED in the Actions list; it
+# does not change the version that gets built.
 
 on:
   # Automatic triggers are disabled on purpose: editing the README should not
@@ -28,6 +38,11 @@ on:
   #   - cron: "17 3 * * 1" # Mondays 03:17 UTC - rebuild so the release tracks the repo
   workflow_dispatch:
     inputs:
+      title:
+        description: 'Name for this run in the Actions list (empty = "Build .mrpack #<run number>")'
+        type: string
+        required: false
+        default: ''
       release:
         description: Publish a GitHub Release with the .mrpack
         type: boolean
@@ -75,7 +90,7 @@ jobs:
           ver=$(grep  -m1 '^version' pack.toml | sed -E 's/^[^"]*"([^"]*)".*/\1/')
           mc=$(grep   -m1 '^minecraft' pack.toml | sed -E 's/^[^"]*"([^"]*)".*/\1/')
           nf=$(grep   -m1 '^neoforge'  pack.toml | sed -E 's/^[^"]*"([^"]*)".*/\1/')
-          # 238 *.pw.toml (downloaded) + 6 *.jar (bundled) = 244
+          # every *.pw.toml (a linked download) plus every bundled *.jar
           mods=$(ls mods/*.pw.toml mods/*.jar 2>/dev/null | wc -l | tr -d ' ')
           echo "name=$name"       >> "$GITHUB_OUTPUT"
           echo "version=$ver"     >> "$GITHUB_OUTPUT"
