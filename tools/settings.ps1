@@ -35,11 +35,19 @@ $OldIndex = Join-Path $RepoRoot 'tools\legacy\modrinth.index.json'
 # search history (contains your world names), spark's scratch dumps, Axiom's
 # hotbar snapshots and every "*.json.backup" file. fnmatch syntax (* also
 # crosses "/"), matched against the instance-relative path.
+#
+# config/net_music_list.toml belongs to "Net Music: Better Experience"
+# (net_music_list-*.jar). It stores your NetEase / QQ / Bilibili login cookies
+# in PLAIN TEXT:
+#     neteaseCookie = "MUSIC_U=..."   <- full account credential, no expiry
+# They are empty until you log in through the mod, at which point the next
+# build would publish them to a PUBLIC repo. Never pack this file.
 $ExcludeGlobs = @(
     'config/jei/world/*',
     'config/spark/tmp/*',
     'config/spark/tmp-client/*',
     'config/axiom/hotbars/*',
+    'config/net_music_list.toml',
     '*.backup'
 )
 

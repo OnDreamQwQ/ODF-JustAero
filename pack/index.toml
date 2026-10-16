@@ -1101,10 +1101,6 @@ file = "config/neoforge-server.toml"
 hash = "b1e3b38d612295f8d9dfa0fbdb538a992b7a1a3b7a766c491b4e9fdf3823396f"
 
 [[files]]
-file = "config/net_music_list.toml"
-hash = "f3a0abded45c93f5b0278d2067e698b9e91c9a049d30babcdcec2067c6c9384b"
-
-[[files]]
 file = "config/netmusic-common.toml"
 hash = "837e2dcd1263b41bc1cd7e662453aad789fdacd78ce3a2c403a1f2683e4b2476"
 
