@@ -42,12 +42,21 @@ $OldIndex = Join-Path $RepoRoot 'tools\legacy\modrinth.index.json'
 #     neteaseCookie = "MUSIC_U=..."   <- full account credential, no expiry
 # They are empty until you log in through the mod, at which point the next
 # build would publish them to a PUBLIC repo. Never pack this file.
+#
+# config/GeneralFeedback/feedback.json belongs to "General Feedback"
+# (generalfeedback-*.jar). It carries a real GitHub Personal Access Token so
+# the in-game button can open issues on this repo:
+#     "token": "github_pat_11..."     <- full credential, PLAIN TEXT
+# GitHub's push protection rejects any push containing it, and a public token
+# gets revoked anyway, so this file can never ship. Keep it out of the pack and
+# hand out a token-less template instead.
 $ExcludeGlobs = @(
     'config/jei/world/*',
     'config/spark/tmp/*',
     'config/spark/tmp-client/*',
     'config/axiom/hotbars/*',
     'config/net_music_list.toml',
+    'config/GeneralFeedback/*',
     '*.backup'
 )
 

@@ -1,0 +1,7 @@
+#This is a global field.
+globalField = 8
+
+#This is a test category.
+[testCategory]
+	#This is a page entry.
+	pageEntry = 8

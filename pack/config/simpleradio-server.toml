@@ -1,0 +1,227 @@
+#These are the configurations for the antenna block.
+[antenna]
+	#This is the maximum distance an antenna can travel without support before falling. CAUTION: SETTING THIS TOO HIGH MAY CAUSE LAG WITH LARGE ANTENNAS. Defaults to 8.
+	maxDistance = 8
+	#When false, removes the antenna recipe. Defaults to true.
+	enabled = true
+
+#These are the configurations for the wires.
+[wire]
+	#This is the amount of time (in ticks) per block a wire takes to relay data. Defaults to 4.
+	transmissionTime = 4
+	#This is the amount of time (in ticks) a wire can survive while being invalid (no connections or out of range) before breaking. Defaults to 5.
+	invalidDeathTime = 5
+	#This is the method of diminishment to use. ADDITIVE subtracts a flat amount, while MULTIPLICATIVE subtracts a percentage from the initial transmission power. Defaults to ADDITIVE.
+	diminishmentMethod = "MULTIPLICATIVE"
+	#This is the range a wire can reach before breaking. Defaults to 12.
+	range = 12.0
+	#This is the amount of time (in ticks) between each header sent. Defaults to 5.
+	headerInterval = 5
+	#This is the amount of time (in ticks) between each effect for a wire. Can be disabled by setting to -1. Defaults to 5.
+	effectInterval = 5
+	#This is how much transmission power diminishes per block. Defaults to 0.01.
+	transmissionDiminishment = 0.01
+
+#These are the configurations for ALL types of routers (such as Receivers, Transmitters, Listeners, and Speakers).
+[router]
+	#[EXPERIMENTAL] Pick up audio from the world, not just players. Defaults to false.
+	soundListening = false
+	#How long (in ticks) should a router stay active after receiving audio data? Affects the rate of updates for activity checks. Defaults to 20.
+	activityTime = 20
+	#How many sources should be compiled for reading audio levels? Affects the rate of updates for activity levels. Changing this value greatly may cause unexpected results. Defaults to 10.
+	compileAmount = 10
+	#The factor of audio signal energy for converting to redstone signals. Higher values will cause lower redstone signals, and vice versa. Defaults to 20.
+	activityRedstoneFactor = 1500.0
+	#How long (in ticks) before activity expiry can we resend an update? Defaults to 2.
+	activityForgiveness = 2
+	#[EXPERIMENTAL] Pick up audio from speakers, can cause feedback loops. Defaults to false.
+	feedbackListening = false
+
+#These are the configurations for the receiver block.
+[receiver]
+	#This is how effective the receiver is at receiving signals, and is essentially a flat bonus to transmission power. Defaults to 300.
+	receptionPower = 300
+	#Effectively, this is the *floor* for which reception power can reduce travel distance to. Defaults to 20.
+	receptionFloor = 20
+	#This is the capability of this item to make use of antennas. Essentially acts as a multiplier for the antenna score. Defaults to 10.
+	antennaAptitude = 10
+	#When false, removes the receiver recipe. Defaults to true.
+	enabled = true
+
+#These are the configurations for the transceiver item.
+[transceiver]
+	#This is how effective the transceiver is at receiving signals, and is essentially a flat bonus to transmission power. Defaults to 200.
+	receptionPower = 200
+	#This is the threshold of transmission power in amplitude modulation at which it begins to have an auditory effect. Defaults to 300.
+	diminishThresholdAM = 300
+	#This is the method of diminishment to use. ADDITIVE subtracts a flat amount, while MULTIPLICATIVE subtracts a percentage from the initial transmission power. Defaults to ADDITIVE.
+	diminishmentMethod = "ADDITIVE"
+	#This is the threshold of transmission power in frequency modulation at which it begins to have an auditory effect. Defaults to 200.
+	diminishThresholdFM = 200
+	#This is the range for the transceiver in which the audio played from it can be heard. Defaults to 4.
+	speakingRange = 4
+	#This is the cooldown in ticks after using. Defaults to 20.
+	cooldown = 20
+	#This is the range for the transceiver that it can hear from. Defaults to 4.
+	listeningRange = 4
+	#Effectively, this is the *floor* for which reception power can reduce travel distance to. Defaults to 20.
+	receptionFloor = 10
+	#This is the transmission power for frequency modulation. Defaults to 1000.
+	transmissionPowerFM = 1000
+	#This is how much transmission power diminishes per block. Defaults to 1.
+	transmissionDiminishment = 1.0
+	#When false, removes the transceiver recipe. Defaults to true.
+	enabled = true
+	#This is the range after which players can no longer be heard for amplitude modulation. Defaults to 1800.
+	transmissionPowerAM = 1800
+
+#These are the configurations for the speaker block.
+[speaker]
+	#This is how often (in ticks) the speaker will update its redstone signal according to its activity. Defaults to 5.
+	redstonePolling = 5
+	#When false, removes the speaker recipe. Defaults to true.
+	enabled = true
+	#This is the range for the radio in which the audio transmitted from it can be heard. Defaults to 32.
+	speakingRange = 32
+
+#These are the configurations for the walkie talkie item.
+[walkie_talkie]
+	#Effectively, this is the *floor* for which reception power can reduce travel distance to. Defaults to 20.
+	receptionFloor = 20
+	#This is the transmission power for frequency modulation. Defaults to 500.
+	transmissionPowerFM = 500
+	#When true, replaces the walkie talkie with the spuddie talkie. Defaults to true.
+	spuddieTalkie = true
+	#This is how much transmission power diminishes per block. Defaults to 1.
+	transmissionDiminishment = 1.0
+	#When false, removes both the spuddie and walkie recipe. Defaults to true.
+	enabled = true
+	#This is the range after which players can no longer be heard for amplitude modulation. Defaults to 900.
+	transmissionPowerAM = 900
+	#This is how effective the walkie is at receiving signals, and is essentially a flat bonus to transmission power. Defaults to 100.
+	receptionPower = 100
+	#This is the threshold of transmission power in amplitude modulation at which it begins to have an auditory effect. Defaults to 200.
+	diminishThresholdAM = 200
+	#This is the method of diminishment to use. ADDITIVE subtracts a flat amount, while MULTIPLICATIVE subtracts a percentage from the initial transmission power. Defaults to ADDITIVE.
+	diminishmentMethod = "ADDITIVE"
+	#This is the threshold of transmission power in frequency modulation at which it begins to have an auditory effect. Defaults to 100.
+	diminishThresholdFM = 100
+	#This is the range for the walkie in which the audio played from it can be heard. Defaults to 4.
+	speakingRange = 4
+	#This is the cooldown in ticks after using. Defaults to 60.
+	cooldown = 60
+	#This is the range for the walkie that it can hear from. Defaults to 4.
+	listeningRange = 4
+
+#These are the configurations for the microphone block.
+[microphone]
+	#This is how often (in ticks) the microphone will update its redstone signal according to its activity. Defaults to 5.
+	redstonePolling = 5
+	#This is the range for the microphone that it can hear from. Defaults to 8.
+	listeningRange = 8
+	#When false, removes the microphone recipe. Defaults to true.
+	enabled = true
+
+#These are the configurations for the transmitter block.
+[transmitter]
+	#This is the threshold of transmission power in amplitude modulation at which it begins to have an auditory effect. Defaults to 500.
+	diminishThresholdAM = 500
+	#This is the capability of this item to make use of antennas. Essentially acts as a multiplier for the antenna score. Defaults to 10.
+	antennaAptitude = 10
+	#This is the method of diminishment to use. ADDITIVE subtracts a flat amount, while MULTIPLICATIVE subtracts a percentage from the initial transmission power. Defaults to ADDITIVE.
+	diminishmentMethod = "ADDITIVE"
+	#This is the threshold of transmission power in frequency modulation at which it begins to have an auditory effect. Defaults to 300.
+	diminishThresholdFM = 300
+	#This is the transmission power for frequency modulation. Defaults to 3000.
+	transmissionPowerFM = 3300
+	#This is how much transmission power diminishes per block. Defaults to 1.
+	transmissionDiminishment = 1.0
+	#When false, removes the transmitter recipe. Defaults to true.
+	enabled = true
+	#This is the range after which players can no longer be heard for amplitude modulation. Defaults to 4400.
+	transmissionPowerAM = 4400
+
+#These are the configurations for the radio block.
+[radio]
+	#This is how effective the radio is at receiving signals, and is essentially a flat bonus to transmission power. Defaults to 100.
+	receptionPower = 100
+	#Effectively, this is the *floor* for which reception power can reduce travel distance to. Defaults to 50.
+	receptionFloor = 50
+	#When false, removes the radio recipe. Defaults to true.
+	enabled = true
+	#This is the range for the radio in which the audio played from it can be heard. Defaults to 24.
+	speakingRange = 24
+
+#These are the general configurations for frequencies.
+[frequency]
+	#Whether or not the radios work across dimensions. Defaults to false.
+	crossDimensional = false
+	#This is how many decimal places (digits after the period) can exist in a frequency. Defaults to 2.
+	decimalPlaces = 2
+	#This is the default frequency to be provided to frequency-holding items. When set to auto-generate, will generate a pattern of zeros equal to the wholePlaces and decimalPlaces configurations, i.e. '000.00' by default. Defaults to auto-generate.
+	defaultFrequency = "auto-generate"
+	#The packet buffer for packet transmission. You likely won't need to worry about this. Defaults to 2.
+	packetBuffer = 2
+	#The base amount of interference to give to all AM radio transmissions. Defaults to 15.
+	baseAMInterference = 15.0
+	#The base amount of interference to give to radio transmission per block across dimensions. Defaults to 4.
+	dimensionalInterference = 4.0
+	#The base amount of interference to give to all FM radio transmissions. Defaults to 2.
+	baseFMInterference = 2.0
+	#This is how many whole places (digits before the period) can exist in a frequency. Defaults to 3.
+	wholePlaces = 3
+
+#These are the general configurations for compatibilities.
+[compatibilities]
+
+	#These are the configurations for the optional dependency CC: Tweaked.
+	[compatibilities.cc_tweaked]
+		#When false, removes compatibility for CC: Tweaked. Defaults to true.
+		enabled = true
+
+	#These are the configurations for the optional dependency Voice Chat Interaction.
+	[compatibilities.voice_chat_interaction]
+		#When false, removes compatibility for Voice Chat Interaction. Defaults to false. (NON-FUNCTIONAL)
+		enabled = false
+
+	#These are the configurations for the optional dependency AudioPlayer.
+	[compatibilities.audioplayer]
+		#When false, removes compatibility for AudioPlayer. Defaults to true.
+		enabled = true
+
+	#These are the configurations for the optional dependency Valkyrien Skies.
+	[compatibilities.valkyrien_skies]
+		#When false, removes compatibility for Valkyrien Skies. Defaults to true.
+		enabled = true
+
+	#These are the configurations for the optional dependency Trinkets.
+	[compatibilities.trinkets]
+		#When false, removes compatibility for Trinkets. Defaults to true.
+		enabled = true
+
+	#These are the configurations for the optional dependency Curios.
+	[compatibilities.curios]
+		#When false, removes compatibility for Curios. Defaults to true.
+		enabled = true
+
+	#These are the configurations for the optional dependency Create.
+	[compatibilities.create]
+		#When false, removes compatibility for Create. Defaults to true.
+		enabled = true
+
+	#These are the configurations for the optional dependency Etched.
+	[compatibilities.etched]
+		#When true, enabled the mixin patch fixing the 'dual-download' issue. Defaults to true.
+		streamPatch = true
+		#When false, removes compatibility for Etched. Defaults to true.
+		enabled = true
+
+	#These are the configurations for the optional dependency Vibrative Voice.
+	[compatibilities.vibrative_voice]
+		#When false, removes compatibility for Vibrative Voice. Defaults to true.
+		enabled = true
+
+	#These are the configurations for the optional dependency Sable/Create Aeronautics.
+	[compatibilities.sable]
+		#When false, removes compatibility for Sable. Defaults to true.
+		enabled = true

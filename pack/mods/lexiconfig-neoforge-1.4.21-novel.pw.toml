@@ -1,0 +1,12 @@
+name = "Lexiconfig"
+filename = "lexiconfig-neoforge-1.4.21-novel.jar"
+side = "both"
+
+[download]
+hash-format = "sha512"
+hash = "43cf15bbea771c8553681d4c69d48b50dd87401fd8e30bce2fb05bf052aa536504a7f13e7a5c0c5340790423bbbcb112667e0cd0a99f0a38bc66ff937b427aa7"
+url = "https://cdn.modrinth.com/data/D157Rgyf/versions/ij5zMAln/lexiconfig-neoforge-1.4.21-novel.jar"
+
+[update.modrinth]
+mod-id = "D157Rgyf"
+version = "ij5zMAln"

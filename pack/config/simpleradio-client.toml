@@ -1,0 +1,34 @@
+#These are the configurations for the wires.
+[wire]
+	#This is the amount of time (in ticks) per block a wire effect lasts. Best if matching 'transmissionTime'. Defaults to 4.
+	effectTime = 4
+	#This is how much wires drop per block from gravity. Defaults to 0.075.
+	distanceSag = 0.075
+	#This is how much wires drop from gravity. Defaults to 0.75.
+	baseSag = 0.75
+	#This determines whether or not wire effects will be processed. Defaults to true.
+	effect = true
+
+#These are the configurations for the walkie talkie item.
+[walkie_talkie]
+	#This is whether or not using the walkie talkie should enable push to talk. Defaults to true.
+	walkieTalkiePTT = true
+	#This is whether or not using the walkie talkie slows the player. Defaults to true.
+	walkieTalkieSlow = true
+
+#These are the configurations for the microphone block.
+[microphone]
+	#This is how often (in ticks) the microphone will emit a particle when active. Set to -1 to disable. Defaults to 10.
+	particleInterval = 10
+
+#These are the configurations for the transceiver item.
+[transceiver]
+	#This is whether or not using the transceiver slows the player. Defaults to true.
+	transceiverSlow = true
+	#This is whether or not using the transceiver should enable push to talk. Defaults to true.
+	transceiverPTT = true
+
+#These are the configurations for the speaker block.
+[speaker]
+	#This is how often (in ticks) the speaker will emit a particle when active. Set to -1 to disable. Defaults to 10.
+	particleInterval = 10

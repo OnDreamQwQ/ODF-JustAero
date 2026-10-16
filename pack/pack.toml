@@ -1,12 +1,12 @@
 name = "ODF-JustAero"
 author = "OnDreamQwQ"
-version = "0.5.0"
+version = "0.5.1"
 pack-format = "packwiz:1.1.0"
 
 [index]
 file = "index.toml"
 hash-format = "sha256"
-hash = "537c7429f5219dabd378b50863eb1f21d3fd6c95fe77219b67482a5242911f2f"
+hash = "031e71762bd2c470a3287a67eb421df3a84925bbc2fafa1213d0f0d42c2513f9"
 
 [versions]
 minecraft = "1.21.1"

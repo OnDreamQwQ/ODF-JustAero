@@ -1,0 +1,12 @@
+name = "Simple Radio"
+filename = "simpleradio-neoforge-1.21.1-4.5.7.9.jar"
+side = "both"
+
+[download]
+hash-format = "sha512"
+hash = "8e81d0b2354115f0750879f2e8c25cd7d6854f279998a8465de43a2ed25c6a7fadc2457324d6d52ce3bf1140803a1cd7d4d650002421a69ef9f171c35e2649dc"
+url = "https://cdn.modrinth.com/data/S7b8mMXS/versions/voNh2a0L/simpleradio-neoforge-1.21.1-4.5.7.9.jar"
+
+[update.modrinth]
+mod-id = "S7b8mMXS"
+version = "voNh2a0L"

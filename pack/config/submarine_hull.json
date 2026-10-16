@@ -85269,6 +85269,42 @@
     "maxWaterDepth": 267,
     "implosionChance": 0.05
   },
+  "simpleradio:antenna": {
+    "maxWaterDepth": 30,
+    "implosionChance": 0.6
+  },
+  "simpleradio:frequencer": {
+    "maxWaterDepth": 69,
+    "implosionChance": 0.355409
+  },
+  "simpleradio:insulator": {
+    "maxWaterDepth": 20,
+    "implosionChance": 0.6
+  },
+  "simpleradio:microphone": {
+    "maxWaterDepth": 30,
+    "implosionChance": 0.6
+  },
+  "simpleradio:radio": {
+    "maxWaterDepth": 30,
+    "implosionChance": 0.6
+  },
+  "simpleradio:radiosmither": {
+    "maxWaterDepth": 68,
+    "implosionChance": 0.330409
+  },
+  "simpleradio:receiver": {
+    "maxWaterDepth": 69,
+    "implosionChance": 0.355409
+  },
+  "simpleradio:speaker": {
+    "maxWaterDepth": 69,
+    "implosionChance": 0.355409
+  },
+  "simpleradio:transmitter": {
+    "maxWaterDepth": 69,
+    "implosionChance": 0.355409
+  },
   "simulated:altitude_sensor": {
     "maxWaterDepth": 41,
     "implosionChance": 0.39013878

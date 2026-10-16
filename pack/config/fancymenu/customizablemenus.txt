@@ -9,3 +9,6 @@ net.minecraft.client.gui.screens.TitleScreen {
 com.gly091020.netMusicListNeoforge.client.MusicSearchScreen {
 }
 
+com.sighs.generalfeedback.client.FeedbackScreen {
+}
+
