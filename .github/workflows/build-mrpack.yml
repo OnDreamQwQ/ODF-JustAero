@@ -146,8 +146,12 @@ jobs:
           # 更新日志重复。所以关掉。想恢复自动生成就把它改成 true。
           generate_release_notes: false
 
-          # 更新日志链接用的是「根相对路径」：以 / 开头、不写 https://github.com，
-          # 在 github.com 上打开 Release 页时能正确跳转。
+          # 更新日志链接必须写完整的 https://github.com/... 绝对地址，不能用
+          # 以 / 开头的根相对路径。Release 正文渲染时会被当作「本 tag 的仓库根
+          # 目录下的一个文件」，于是 /owner/repo/blob/main/CHANGELOG.md 被拼成
+          #   /owner/repo/blob/v0.5.2/owner/repo/blob/main/CHANGELOG.md
+          # 一个 404 的死链（v0.5.0 ~ v0.5.2 都中过这个招）。加上 https://github.com
+          # 前缀，GitHub 才会原样输出。
           # 锚点 #v<版本号> 由 CHANGELOG.md 里手写的 <a id="v0.5.0"></a> 提供；
           # 万一忘了写，链接仍会打开 CHANGELOG.md，只是不会自动滚到那一节。
           body: |
@@ -155,7 +159,7 @@ jobs:
 
             用**第三方启动器**导入即可。
 
-            [更新日志](/${{ github.repository }}/blob/main/CHANGELOG.md#v${{ steps.meta.outputs.version }})
+            [更新日志](https://github.com/${{ github.repository }}/blob/main/CHANGELOG.md#v${{ steps.meta.outputs.version }})
 
             ---
 
