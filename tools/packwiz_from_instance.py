@@ -54,15 +54,23 @@ DEFAULT_EXCLUDE_DIRS = {"cache", "netmusiclistcache", "logs", "crash-reports", "
 VERISH = re.compile(r"^[vV]?\d")
 
 
-def walk_content(root: Path, exclude_dirs: set[str], exclude_globs: list[str]):
-    """Yield (abs_path, rel_posix) for every file under root that survives the excludes."""
+def walk_content(root: Path, exclude_dirs: set[str], exclude_globs: list[str],
+                 prefix: str = ""):
+    """Yield (abs_path, rel_posix) for every file under root that survives the excludes.
+
+    `prefix` is prepended to the yielded rel when testing exclude_globs, so globs
+    are always written instance-relative ("config/jei/world/*") even though each
+    top-level entry is walked separately from its own root.
+    """
     for dirpath, dirnames, filenames in os.walk(root):
         dirnames[:] = sorted(d for d in dirnames if d.lower() not in exclude_dirs)
         for fn in sorted(filenames):
             p = Path(dirpath) / fn
             rel = p.relative_to(root).as_posix()
-            if any(fnmatch.fnmatch(rel.lower(), g.lower()) for g in exclude_globs):
-                continue
+            if exclude_globs:
+                full = f"{prefix}/{rel}" if prefix else rel
+                if any(fnmatch.fnmatch(full.lower(), g.lower()) for g in exclude_globs):
+                    continue
             yield p, rel
 
 
@@ -780,7 +788,8 @@ def cf_file_by_id(project_id, file_id, mc: str, loader: str, cache: dict) -> dic
 
 
 def verify_pack(instance: Path, out: Path, *, mc: str, loader: str,
-                check_urls: bool = False, jobs: int = 8) -> tuple[list, dict]:
+                check_urls: bool = False, jobs: int = 8,
+                exclude_globs: list[str] | None = None) -> tuple[list, dict]:
     """Compare a generated packwiz pack against the instance it was built from."""
     L: list[str] = []
     problems: list[str] = []
@@ -1043,19 +1052,31 @@ def verify_pack(instance: Path, out: Path, *, mc: str, loader: str,
         pfiles = {p.relative_to(out).as_posix() for p in pp.rglob("*") if p.is_file()} if pp.exists() else set()
         dropped = sorted(ifiles - pfiles)
         added = sorted(pfiles - ifiles)
-        excluded = [d for d in dropped
-                    if any(part.lower() in DEFAULT_EXCLUDE_DIRS for part in d.split("/"))]
-        other = [d for d in dropped if d not in excluded]
+        globs = list(exclude_globs or [])
+
+        def _by_rule(d: str) -> str | None:
+            if any(part.lower() in DEFAULT_EXCLUDE_DIRS for part in d.split("/")):
+                return "cache/junk"
+            if any(fnmatch.fnmatch(d.lower(), g.lower()) for g in globs):
+                return "excluded by rule"
+            return None
+
+        excluded = [d for d in dropped if _by_rule(d) == "cache/junk"]
+        by_rule = [d for d in dropped if _by_rule(d) == "excluded by rule"]
+        other = [d for d in dropped if _by_rule(d) is None]
         L.append(f"   {top}/: instance {len(ifiles)} file(s) -> pack {len(pfiles)}")
         if excluded:
             L.append(f"     excluded cache/junk: {len(excluded)}")
+        if by_rule:
+            L.append(f"     excluded by rule: {len(by_rule)} (e.g. {by_rule[:3]})")
         if other:
             L.append(f"     not packed for another reason: {len(other)} (e.g. {other[:3]})")
         if added:
             notes.append(f"{top}/: {len(added)} file(s) in the pack but not in the instance")
             L.append(f"     only in the pack: {len(added)} (e.g. {added[:3]})")
         if not other and not added:
-            ok(f"{top}/ reproduced exactly (minus {len(excluded)} cache file(s))")
+            ok(f"{top}/ reproduced exactly (minus {len(excluded)} cache file(s)"
+               + (f", {len(by_rule)} excluded by rule" if by_rule else "") + ")")
     for single in ("options.txt",):
         ip, pp = instance / single, out / single
         if ip.exists() and pp.exists():
@@ -1237,7 +1258,8 @@ def main() -> int:
         mc = args.mc or _toml_val(ptxt, "minecraft") or "1.21.1"
         lines, summary = verify_pack(instance, out, mc=mc, loader=args.loader,
                                      check_urls=args.check_urls,
-                                     jobs=max(args.jobs, 8))
+                                     jobs=max(args.jobs, 8),
+                                     exclude_globs=list(args.exclude_glob))
         write_verify(out, lines, summary)
         log("")
         for line in lines:
@@ -1291,7 +1313,7 @@ def main() -> int:
         src = instance / e
         if src.is_dir():
             kept = 0
-            for p, rel in walk_content(src, excluded_dirs, excluded_globs):
+            for p, rel in walk_content(src, excluded_dirs, excluded_globs, prefix=e):
                 copy_plan.append((p, f"{e}/{rel}"))
                 kept += p.stat().st_size
             full = dir_size(src)

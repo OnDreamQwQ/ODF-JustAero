@@ -29,6 +29,20 @@ $PackVersion = '0.5.0'
 #   Expand-Archive -> modrinth.index.json -> tools\legacy\
 $OldIndex = Join-Path $RepoRoot 'tools\legacy\modrinth.index.json'
 
+# --- per-player client state that must NOT ship in the pack ----------------
+# The instance's config\ folder is copied 1:1 into the pack, which also drags
+# along UI state that is only meaningful on your own machine: JEI's per-world
+# search history (contains your world names), spark's scratch dumps, Axiom's
+# hotbar snapshots and every "*.json.backup" file. fnmatch syntax (* also
+# crosses "/"), matched against the instance-relative path.
+$ExcludeGlobs = @(
+    'config/jei/world/*',
+    'config/spark/tmp/*',
+    'config/spark/tmp-client/*',
+    'config/axiom/hotbars/*',
+    '*.backup'
+)
+
 # --- python launcher -------------------------------------------------------
 # Prefers the Windows `py` launcher, falls back to `python` on PATH.
 function Get-PythonCommand {

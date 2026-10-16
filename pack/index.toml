@@ -117,16 +117,8 @@ file = "config/armourers_workshop-common.toml"
 hash = "6afaab340fe8175a8e9ab14a763eb7fad26011fb9d963b323233849911bf35e5"
 
 [[files]]
-file = "config/axiom/.axiom.json.backup"
-hash = "b18f9cac95491c9769a747a11753c102383457cfe568a217197374dac94e0a37"
-
-[[files]]
 file = "config/axiom/axiom.json"
 hash = "b18f9cac95491c9769a747a11753c102383457cfe568a217197374dac94e0a37"
-
-[[files]]
-file = "config/axiom/hotbars/新的世界 (1)"
-hash = "e4568db562109d435b6560c41f40b82a44d974740c9d044cef6bae8a6333184c"
 
 [[files]]
 file = "config/axiom/imgui.ini"
@@ -777,10 +769,6 @@ file = "config/ferritecore-mixin.toml"
 hash = "b2b3cc6e5079a4f8f4d5bd28836479dacc560ac719c56ed41ee2e980a6d334bf"
 
 [[files]]
-file = "config/flashback/.flashback.json.backup"
-hash = "2ee32ec5129cd73816729e30bd7504ee27b3cf099a4ad1f1a925d1c56547abd8"
-
-[[files]]
 file = "config/flashback/flashback.json"
 hash = "01ccd9993b6db3bdc8b5e290fa20e03e71a31741049f578dbb1f2c00740b35ab"
 
@@ -995,18 +983,6 @@ hash = "9c6c1c0e70a84a9f59399679f6ff5bc77cc1c39571d0a5453d2afa7d29fbcf51"
 [[files]]
 file = "config/jei/client/recipe-category-sort-order.ini"
 hash = "a16b27d472a8669548f5bf9640f565c0173e715e73012feb884bf16211f38156"
-
-[[files]]
-file = "config/jei/world/local/新的世界 (1)/lookupHistory.json"
-hash = "f9a34f8dde875784bd5ec4a00f48d23cb43e3693164f32797a67718cdbc4bc97"
-
-[[files]]
-file = "config/jei/world/local/新的世界 (2)/lookupHistory.json"
-hash = "fc2426eeadfce62aa480180cdc5e60e83eb6e0e40c32793b89546497569d03b6"
-
-[[files]]
-file = "config/jei/world/local/新的世界 (3)/lookupHistory.json"
-hash = "a794938ff8ac21e9b00ab5eb23873ab1acce46f025cd813fce325f7f298aef5c"
 
 [[files]]
 file = "config/justzoom/config.json"
@@ -1371,14 +1347,6 @@ hash = "914c0f35bd1942e5d6aef6246054f4a04c2dc85e597b7962dda3a8ed45d1cf5f"
 [[files]]
 file = "config/spark/config.json"
 hash = "992ba9f3a4a7ce3de112eb95575328956fdc3ce6781c455ebce7b23db7e7da42"
-
-[[files]]
-file = "config/spark/tmp-client/about.txt"
-hash = "d7514c0ddb6ae8611a281527bf04ca6cbcea1fa21758534fdcd08ed0f51c19c0"
-
-[[files]]
-file = "config/spark/tmp/about.txt"
-hash = "d7514c0ddb6ae8611a281527bf04ca6cbcea1fa21758534fdcd08ed0f51c19c0"
 
 [[files]]
 file = "config/submarine_hull.json"

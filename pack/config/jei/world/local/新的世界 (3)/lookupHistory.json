@@ -1,6 +1,0 @@
-[
-  {"version":1},
-  {"ingredient":{"id":"createdieselgenerators:huge_diesel_engine"},"type":"item_stack","bookmarkType":"INGREDIENT"},
-  {"ingredient":{"id":"createpropulsion:coral"},"type":"fluid_stack","bookmarkType":"INGREDIENT"},
-  {"ingredient":{"id":"createpropulsion:coral_bucket"},"type":"item_stack","bookmarkType":"INGREDIENT"}
-]

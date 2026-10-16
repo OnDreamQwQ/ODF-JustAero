@@ -1,6 +1,0 @@
-[
-  {"version":1},
-  {"ingredient":{"id":"waystones:warp_stone"},"type":"item_stack","bookmarkType":"INGREDIENT"},
-  {"ingredient":{"id":"waystones:twinbound_feather"},"type":"item_stack","bookmarkType":"INGREDIENT"},
-  {"ingredient":{"id":"handheldmoon:full_moon"},"type":"item_stack","bookmarkType":"INGREDIENT"}
-]
