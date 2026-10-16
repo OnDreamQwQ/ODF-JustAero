@@ -37,7 +37,7 @@
 ### 方式 B：packwiz 自动更新（改了就能跟）
 
 ```bash
-java -jar packwiz-installer-bootstrap.jar https://raw.githubusercontent.com/OnDreamQwQ/ODF-JustAero-Pack/main/pack/pack.toml
+java -jar packwiz-installer-bootstrap.jar https://raw.githubusercontent.com/OnDreamQwQ/ODF-JustAero/main/pack/pack.toml
 ```
 
 放进启动器的启动前命令里，之后每次启动都会增量更新。
