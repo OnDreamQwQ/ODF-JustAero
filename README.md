@@ -22,25 +22,17 @@
 
 ---
 
-## 安装
+## 下载
 
-### 方式 A：`.mrpack`（推荐）
+[Releases](../../releases/latest) → `ODF-JustAero-<版本>.mrpack`
 
-1. 去 [Releases](../../releases/latest) 下载 `ODF-JustAero-<版本>.mrpack`
-2. 启动器里导入：
-   - **Prism Launcher**：`Add Instance` → `Import from file` → 选 `.mrpack`
-   - **Modrinth App**：`Add Instance` → `Import from file`
-   - **ATLauncher / MultiMC**：都有 import 入口
-   - **HMCL**：`版本列表` → `安装新游戏` → `从整合包安装`
-3. 首次启动会联网下载约 900 MB 的 mod，耐心等
+### 自动更新（可选）
 
-### 方式 B：packwiz 自动更新（改了就能跟）
+放进启动器的**启动前命令**，之后每次启动都会增量更新：
 
 ```bash
 java -jar packwiz-installer-bootstrap.jar https://raw.githubusercontent.com/OnDreamQwQ/ODF-JustAero/main/pack/pack.toml
 ```
-
-放进启动器的启动前命令里，之后每次启动都会增量更新。
 
 ---
 
