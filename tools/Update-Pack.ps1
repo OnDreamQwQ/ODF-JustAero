@@ -12,7 +12,8 @@
         3. write pack\            mods\*.pw.toml, index.toml, pack.toml, config\
         4. packwiz refresh        normalise the index
         5. audit + verify         compare the result back against the instance
-        6. optional: commit+push  then GitHub Actions builds the .mrpack
+        6. optional: commit+push  (publishing is a separate manual step:
+                                   gh workflow run build-mrpack.yml)
 
     pack\ contains nothing but generated content, so it is wiped and rebuilt
     every run. Your Minecraft instance is only ever READ, never modified.
@@ -44,7 +45,8 @@
 
 .EXAMPLE
     .\tools\Update-Pack.ps1 -Bump -Push
-    Rebuild as 0.5.1 and push; GitHub Actions builds the .mrpack.
+    Rebuild as 0.5.1 and push. Pushing no longer builds anything - run
+    "gh workflow run build-mrpack.yml" when you want to publish.
 #>
 [CmdletBinding()]
 param(
@@ -220,7 +222,7 @@ else {
     if ($Push) {
         git -C $RepoRoot push
         if ($LASTEXITCODE -ne 0) { throw 'git push failed' }
-        Write-Host '  pushed - GitHub Actions will build the .mrpack'
+        Write-Host '  pushed - publish with:  gh workflow run build-mrpack.yml'
     }
 }
 

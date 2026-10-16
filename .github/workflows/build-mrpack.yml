@@ -2,15 +2,30 @@ name: Build .mrpack
 
 # GitHub Actions cannot see your Minecraft instance, so the order is:
 #
-#   your instance  ->  tools\Update-Pack.ps1 (local)  ->  git push  ->  this workflow
+#   your instance  ->  tools\Update-Pack.ps1 (local)  ->  git push
+#                                                             |
+#                                          then run THIS workflow by hand
+#                                                             v
+#   normalise index -> export .mrpack -> upload artifact -> publish the release
 #
-# The workflow then normalises the index, exports a launcher-installable
-# .mrpack, uploads it as an artifact, and publishes/updates the release
-# tagged with the version in pack/pack.toml.
+# This workflow is MANUAL ONLY. Pushing to main does NOT build or publish
+# anything. Start it from the Actions tab ("Build .mrpack" -> "Run workflow")
+# or from a terminal:
+#
+#     gh workflow run build-mrpack.yml
+#
+# The version comes from pack/pack.toml, so bump it locally BEFORE pushing
+# (tools\Update-Pack.ps1 -Version x.y.z -Push) if you want a new release tag.
 
 on:
-  push:
-    branches: [main]
+  # Automatic triggers are disabled on purpose: editing the README should not
+  # rebuild and silently overwrite the .mrpack attached to a release.
+  # Uncomment push:/schedule: again if you ever want them back.
+  #
+  # push:
+  #   branches: [main]
+  # schedule:
+  #   - cron: "17 3 * * 1" # Mondays 03:17 UTC - rebuild so the release tracks the repo
   workflow_dispatch:
     inputs:
       release:
@@ -21,8 +36,6 @@ on:
         description: Run `packwiz update --all` first (bumps every mod, may break the pack)
         type: boolean
         default: false
-  schedule:
-    - cron: "17 3 * * 1" # Mondays 03:17 UTC - rebuild so the release tracks the repo
 
 permissions:
   contents: write
@@ -113,7 +126,7 @@ jobs:
           retention-days: 30
 
       - name: Publish release
-        if: ${{ github.event_name == 'push' || (github.event_name == 'workflow_dispatch' && inputs.release) }}
+        if: ${{ inputs.release }}
         uses: softprops/action-gh-release@v2
         with:
           tag_name: v${{ steps.meta.outputs.version }}
