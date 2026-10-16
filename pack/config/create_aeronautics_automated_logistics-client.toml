@@ -1,0 +1,3 @@
+[rendering]
+	#Render the passive route and vehicle preview on top of nearby Logistics Terminals.
+	renderLogisticsTerminalTopPreview = true

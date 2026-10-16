@@ -1,0 +1,12 @@
+name = "AeroEngine"
+filename = "AeroEngine-1.3.0.jar"
+side = "both"
+
+[download]
+hash-format = "sha512"
+hash = "4312cde8482ded0f1a01010660313ac7af53ca3851d3fadb327c240297c7dc39e3f384cf4c8baf0ee88440b170f6b2cfb388a6c7ff6aeb8955d22aab82815833"
+url = "https://cdn.modrinth.com/data/CRh10iJF/versions/eqi1VZul/AeroEngine-1.3.0.jar"
+
+[update.modrinth]
+mod-id = "CRh10iJF"
+version = "eqi1VZul"

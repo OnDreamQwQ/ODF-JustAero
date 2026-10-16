@@ -1,0 +1,12 @@
+name = "Dashpanels: Expanded"
+filename = "dashpanels_expanded-2.0.1.jar"
+side = "both"
+
+[download]
+hash-format = "sha512"
+hash = "0132bba2ebe6abced2e1c8f215f5aabaa7f57d55995801a531cd38835d66068a52c3ae11839e5ee125faeb7bd649ca37038e524dc9d0e58f7acf8638f69b8d3f"
+url = "https://cdn.modrinth.com/data/gazFBp5k/versions/v7lqYJaZ/dashpanels_expanded-2.0.1.jar"
+
+[update.modrinth]
+mod-id = "gazFBp5k"
+version = "v7lqYJaZ"

@@ -1,0 +1,78 @@
+	[createrailwaysnavigator_server_config.general]
+		#[in Ticks]
+		#The next stop or information about the start of the journey is announced in the specified number of ticks before the scheduled arrival at the next station. (Default: 600, 30 real life seconds)
+		# Default: 600
+		# Range: 100 ~ 1000
+		next_stop_announcement = 600
+		#[in Ticks]
+		#This value indicates how accurately the real-time data should be displayed. By default, only deviations above 10 in-game minutes (167 ticks, approx. 8 real life seconds) are displayed. The lower the value, the more accurate the real-time data but also the more often deviations from the schedule occur. (Default: 167, 10 in-game minutes)
+		# Default: 167
+		# Range: 1 ~ 1000
+		realtime_precision_threshold = 167
+		#[in Ticks]
+		#How early a train should be shown on the display. (Default: 1200, 1 real life minute)
+		# Default: 1200
+		# Range: 100 ~ 24000
+		display_lead_time = 1200
+		#Whether stations, that are not part of any station tag, should be shown in the suggestions list of the navigator UI. (Default: ON)
+		show_untagged_stations = true
+
+	[createrailwaysnavigator_server_config.navigation]
+		#The max number of transfers a searched route may have. The navigator will not return routes that need more transfers than this. Set to -1 for no limit. (Default: 64)
+		# Default: 64
+		# Range: -1 ~ 4096
+		max_transfers = 64
+
+	[createrailwaysnavigator_server_config.permissions]
+		#Minimum permission level required to edit the global navigator settings. 0 allows everyone to edit these settings, -1 disables editing for everyone (including admins). (Default: 0)
+		# Default: 0
+		# Range: -1 ~ 4
+		global_settings_permission_level = 0
+		#Minimum permission level required to use admin features in CRN. 0 gives everybody admin permissions in CRN (not recommended), -1 disables admin features. (Default: 3)
+		# Default: 3
+		# Range: -1 ~ 4
+		admin_mode_permission_level = 3
+
+	[createrailwaysnavigator_server_config.train_data_calculation]
+		#[in Cycles]
+		#How often the calculated time for a route section between two stations must deviate from the current reference value before the reference value is updated. (Default: 3)
+		# Default: 3
+		# Range: 1 ~ 16
+		total_duration_deviation_buffer_size = 3
+		#[in Ticks]
+		#Deviations of the calculated time for a route section between two stations from the reference value that are smaller than the threshold value are not taken into account. (Default: 50)
+		# Default: 50
+		# Range: 0 ~ 1000
+		total_duration_deviation_threshold = 50
+		#[in Ticks]
+		#How many ticks the real-time can deviate from the scheduled time before the train is considered delayed. (Default: 500)
+		# Default: 500
+		# Range: 100 ~ 24000
+		schedule_deviation_threshold = 500
+		#If activated, the schedule also stores the typical total waiting time of each route section (signals, other trains) in addition to the pure driving time.
+		#When off, the schedule is the ideal unobstructed run and any waiting at all shows up as a delay. (Default: ON)
+		schedule_includes_waiting = true
+		#[in Cycles]
+		#(ONLY WORKS FOR TRAINS WITH DYNAMIC DELAYS! Trains without dynamic delays do this every new schedule section by default.)
+		# 
+		#Every X cycles the scheduled times are updated to the current real-time data. (Default: 2; Disabled: 0)
+		# Default: 2
+		# Range: > 0
+		auto_reset_timings = 2
+
+	[createrailwaysnavigator_server_config.disruptions]
+		#[in Ticks]
+		#How long a train whose schedule was removed keeps being shown as cancelled (Default: 1200, 1 real life minute; Unlimited: -1; Never shown: 0)
+		# Default: 1200
+		# Range: > -1
+		display_duration = 1200
+		#[in Ticks]
+		#How long a train whose schedule was paused keeps being shown as cancelled. (Default: 3600, 3 real life minutes; Unlimited: -1; Never shown: 0)
+		# Default: 3600
+		# Range: > -1
+		display_duration_schedule_paused = 3600
+		#[in Ticks]
+		#How long a derailed train keeps being shown as cancelled. (Default: -1, unlimited; Never shown: 0)
+		# Default: -1
+		# Range: > -1
+		display_duration_derailed = -1

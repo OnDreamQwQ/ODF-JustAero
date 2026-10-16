@@ -1,0 +1,11 @@
+#.
+#Configs for the Client
+[client]
+	#.
+	#Debug Rotation Propagator Location
+	debugRotPropLoc = false
+	#.
+	#Debug Rotation Propagator Delay
+	# Default: 50
+	# Range: > -2147483648
+	debugRotPropDelay = 50

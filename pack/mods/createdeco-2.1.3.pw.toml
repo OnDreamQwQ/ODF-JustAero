@@ -1,0 +1,12 @@
+name = "Create Deco"
+filename = "createdeco-2.1.3.jar"
+side = "both"
+
+[download]
+hash-format = "sha512"
+hash = "c536662f9d47ad57a37419165ded14835b23ad6c3e82a920298ecd7ee074244b0b6062ef9cc7ea4501ddd35919a840faccd7fc64e43eb8df31e12076681c3c0d"
+url = "https://cdn.modrinth.com/data/sMvUb4Rb/versions/qrcMVoBD/createdeco-2.1.3.jar"
+
+[update.modrinth]
+mod-id = "sMvUb4Rb"
+version = "qrcMVoBD"

@@ -1,0 +1,20 @@
+#.
+#Physics Bogies
+[bogey]
+
+	#.
+	#Wheel Slip VFX
+	[bogey.wheelSlip]
+		#.
+		#Spawn sparks between the wheels of a Physics Bogie and the track when the wheels lose traction.
+		sparkEnabled = true
+		#.
+		#Multiplier on the amount of sparks spawned by slipping wheels of a Physics Bogie.
+		# Default: 1.0
+		# Range: 0.0 ~ 4.0
+		sparkDensity = 1.0
+		#.
+		#Multiplier on the size of the sparks spawned by slipping wheels of a Physics Bogie.
+		# Default: 1.0
+		# Range: 0.25 ~ 4.0
+		sparkScale = 1.0

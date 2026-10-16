@@ -1,0 +1,12 @@
+name = "Armourer's Workshop"
+filename = "armourersworkshop-forge-1.21.1-3.4.0-beta.3.jar"
+side = "both"
+
+[download]
+hash-format = "sha512"
+hash = "236d3ba7426d51d93047cc7df371351c2f2b67d26badc75e180e5eff9572ac0e34bebcce67262d1da70ad1ceb2547b9e60bf8e8c880dbe299d0d92c3a07862fc"
+url = "https://cdn.modrinth.com/data/y4JF3gXL/versions/aXfzs8l3/armourersworkshop-forge-1.21.1-3.4.0-beta.3.jar"
+
+[update.modrinth]
+mod-id = "y4JF3gXL"
+version = "aXfzs8l3"

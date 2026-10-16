@@ -1,0 +1,12 @@
+name = "Create Aeronautics: Dyeable Components"
+filename = "dyeable-components-1.0.4+mc1.21.1.jar"
+side = "both"
+
+[download]
+hash-format = "sha512"
+hash = "7bb37126abffd0c3f7291d4b292a67ef38517df2a766a94070e2f568696b4a4227650d44f2d1adc295c0f89e4c81644a1d06bd1f1583b2ca642a2009f34eda5f"
+url = "https://cdn.modrinth.com/data/LBYQlFkX/versions/kOW3VwPl/dyeable-components-1.0.4%2Bmc1.21.1.jar"
+
+[update.modrinth]
+mod-id = "LBYQlFkX"
+version = "kOW3VwPl"

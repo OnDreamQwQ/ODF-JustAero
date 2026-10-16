@@ -1,0 +1,10 @@
+[radar]
+	#Detection range radius of SAM anti-aircraft launchers (ПВО) and radars in blocks.
+	#Default: 1024 blocks. Supported range: 16 to 8192 blocks.
+	# Default: 1024
+	# Range: 16 ~ 8192
+	detection_range = 1024
+	#AIM-9 entity and aircraft lock range in blocks.
+	# Default: 1024
+	# Range: 64 ~ 8192
+	aim9_lock_range = 1024

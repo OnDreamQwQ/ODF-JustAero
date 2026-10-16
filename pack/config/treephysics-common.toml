@@ -1,0 +1,66 @@
+#treephysics.config.despawn_time.tooltip
+# Default: 144000
+# Range: > -1
+despawn_time = 144000
+#treephysics.config.small_tree_maximum.tooltip
+# Default: 5
+# Range: > 1
+small_tree_maximum = 5
+#treephysics.config.despawn_behavior.tooltip
+#Allowed Values: NO_DESPAWN, DESPAWN_SMALL, DESPAWN_ALL
+despawn_behavior = "DESPAWN_SMALL"
+#treephysics.config.drop_items_on_despawn.tooltip
+drop_items_on_despawn = false
+#treephysics.config.rooted_dirt_generation.tooltip
+rooted_dirt_generation = true
+#treephysics.config.remove_rooted_dirt.tooltip
+remove_rooted_dirt = true
+#treephysics.config.drop_hanging_roots.tooltip
+drop_hanging_roots = false
+#treephysics.config.rootless_tree_detection.tooltip
+rootless_tree_detection = false
+#treephysics.config.requires_axe.tooltip
+requires_axe = false
+#treephysics.config.prevent_interacting_with_trees.tooltip
+prevent_interacting_with_trees = false
+#treephysics.config.leaf_walking_behavior.tooltip
+#Allowed Values: NEVER, ALWAYS, IN_SUB_LEVELS, IN_WORLD
+leaf_walking_behavior = "ALWAYS"
+#treephysics.config.leaf_walking_speed.tooltip
+# Default: 0.67
+# Range: 0.0 ~ 1.0
+leaf_walking_speed = 0.67
+#treephysics.config.tree_entity_damage.tooltip
+# Default: 25.0
+# Range: 0.0 ~ 1.7976931348623157E308
+tree_entity_damage = 25.0
+
+[physics]
+	#treephysics.config.gravity_multiplier.tooltip
+	# Default: 1.0
+	# Range: 1.0 ~ 1.7976931348623157E308
+	gravity_multiplier = 1.0
+	#treephysics.config.gravity_multiplier_ticks.tooltip
+	# Default: 400
+	# Range: > -1
+	gravity_multiplier_ticks = 400
+	#treephysics.config.impulse_force.tooltip
+	# Default: 1.5
+	# Range: 0.0 ~ 1.7976931348623157E308
+	impulse_force = 1.5
+	#treephysics.config.impulse_torque.tooltip
+	# Default: 0.3
+	# Range: 0.0 ~ 1.7976931348623157E308
+	impulse_torque = 0.3
+	#treephysics.config.extra_push_multiplier.tooltip
+	# Default: 1.5
+	# Range: 0.0 ~ 1.7976931348623157E308
+	extra_push_multiplier = 1.5
+	#treephysics.config.axes_push_trees.tooltip
+	axes_push_trees = false
+	#treephysics.config.static_leaf_collision.tooltip
+	static_leaf_collision = false
+
+[compatibility]
+	#treephysics.config.create_saws_fell_trees.tooltip
+	create_saws_fell_trees = false

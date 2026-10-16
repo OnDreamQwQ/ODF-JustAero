@@ -1,0 +1,67 @@
+#Aiming mode settings: geometry, FOV, blur, zoom and secondary camera capture.
+[aiming]
+	#Maximum distance (in blocks) from the aiming block before aim-mode auto-exits.
+	# Default: 6.0
+	# Range: 1.0 ~ 32.0
+	maxDistance = 6.0
+	#Distance of the aim-mode camera from the block's center along its FACING direction.
+	# Default: 1.5
+	# Range: 0.1 ~ 4.0
+	cameraDistanceFront = 1.5
+	#Fraction of viewport width occupied by the aiming block. Lower = more visible space around it.
+	# Default: 0.7799999713897705
+	# Range: 0.10000000149011612 ~ 1.0
+	viewportFillRatio = 0.7799999713897705
+	#FOV multiplier at maximum zoom (1.0 - zoomFovFactor). 0.82 means final FOV is ~18% of base.
+	# Default: 0.8199999928474426
+	# Range: 0.0 ~ 0.9900000095367432
+	zoomFovFactor = 0.8199999928474426
+	#Hold-to-warmup ticks before the rangefinder displays a measurement. 0 = instant.
+	# Default: 10
+	# Range: 0 ~ 60
+	rangefinderWarmupTicks = 10
+	#Length of the 'focus flash' blur effect when entering aim-mode (ticks).
+	# Default: 6
+	# Range: 0 ~ 60
+	blurKickTicksEnter = 6
+	#Length of the blur kick on each zoom-in (ticks).
+	# Default: 4
+	# Range: 0 ~ 60
+	blurKickTicksZoom = 4
+	#Speed at which blur decays to 0 after a kick. Higher = faster clear.
+	# Default: 0.45
+	# Range: 0.05 ~ 1.0
+	blurChase = 0.45
+	#Width of the secondary render FBO used by aiming module screen.
+	# Default: 512
+	# Range: 64 ~ 2048
+	fboWidth = 512
+	#Height of the secondary render FBO used by aiming module screen.
+	# Default: 512
+	# Range: 64 ~ 2048
+	fboHeight = 512
+	#Vertical FOV (degrees) for the secondary capture camera.
+	# Default: 70.0
+	# Range: 30.0 ~ 120.0
+	virtualFovDegrees = 70.0
+	#Near clip plane for the secondary capture camera.
+	# Default: 0.05000000074505806
+	# Range: 0.0010000000474974513 ~ 1.0
+	virtualNearPlane = 0.05000000074505806
+	#Distance the capture camera sits behind the aiming block center (blocks).
+	# Default: 0.55
+	# Range: 0.0 ~ 2.0
+	cameraBackOffset = 0.55
+
+#Thermal vision module settings: toggle transition timing and ambient sound.
+[thermal]
+	#Black-screen delay when toggling thermal vision on (ticks). 0 = instant.
+	# Default: 50
+	# Range: 0 ~ 200
+	transitionDelayTicks = 50
+	#Intensity of static noise overlay during thermal transition.
+	# Default: 1.0
+	# Range: 0.0 ~ 5.0
+	noiseFactor = 1.0
+	#Whether the thermal module plays its work-loop ambient sound.
+	workLoopSoundEnabled = true

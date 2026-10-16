@@ -1,0 +1,363 @@
+#.
+#Parameters of Simurail block behaviors
+[blocks]
+
+	#.
+	#.
+	#Connections
+	[blocks.connection]
+		#.
+		#[in ṁ]
+		#The maximum distance of connections between Physics Bogies on the same sublevel.
+		# Default: 32.0
+		# Range: 1.0 ~ 256.0
+		bogeyRangeSame = 32.0
+		#.
+		#[in ṁ]
+		#The maximum distance of connections between Physics Bogies on different sublevels.
+		# Default: 12.0
+		# Range: 1.0 ~ 256.0
+		bogeyRangeDifferent = 12.0
+		#.
+		#[in ṁ]
+		#The maximum distance of connections between a Train Coupler and a Physics Bogie.
+		# Default: 4.0
+		# Range: 1.0 ~ 256.0
+		couplerRange = 4.0
+		#.
+		#[in ṁ]
+		#The maximum distance of connections between a Physics Roller and a Physics Bogie.
+		# Default: 16.0
+		# Range: 1.0 ~ 256.0
+		rollerRange = 16.0
+
+	#.
+	#Physics Bogies
+	[blocks.bogey]
+		#.
+		#[in ticks]
+		#Interval to probe the track for track points for the Physics Bogie.
+		# Default: 2
+		# Range: 1 ~ 40
+		bogeyProbeInterval = 2
+
+	#.
+	#Bogie Probe Readers
+	[blocks.probeReader]
+		#.
+		#[in ṁ]
+		#Maximum distance between a Bogie Probe Reader and its targeted Physics Bogie.
+		# Default: 64.0
+		# Range: 1.0 ~ 512.0
+		probeReaderRange = 64.0
+
+	#.
+	#Bogie Remote Controllers
+	[blocks.remoteController]
+		#.
+		#[in ṁ]
+		#Maximum distance between a Bogie Remote Controller and its targeted Physics Bogie.
+		# Default: 64.0
+		# Range: 1.0 ~ 512.0
+		remoteControllerRange = 64.0
+
+#.
+#Parameters of Simurail physics behaviors
+[physics]
+
+	#.
+	#.
+	#Physics Bogies
+	[physics.bogey]
+		#.
+		#Use sublevels instead of box objects for the pivot of the Physics Bogie.
+		pivotCompatibilityMode = false
+		#.
+		#[in kġ]
+		#The mass of the pivot of the Physics Bogie when using box objects.
+		# Default: 1.0
+		# Range: 0.0 ~ 32767.0
+		pivotMass = 1.0
+
+		#.
+		#Vertical Movement
+		[physics.bogey.vertical]
+			#.
+			#[in rad/s]
+			#Vertical spring frequency between the Physics Bogie and its pivot when vertical offset is allowed.
+			# Default: 10.0
+			# Range: 0.0 ~ 32767.0
+			springFrequency = 10.0
+			#.
+			#Vertical spring damping rate between the Physics Bogie and its pivot when vertical offset is allowed.
+			# Default: 1.25
+			# Range: 0.0 ~ 32767.0
+			springDampingRate = 1.25
+			#.
+			#[in Ṅ]
+			#Vertical spring maximum force between the Physics Bogie and its pivot when vertical offset is allowed.
+			# Default: 10000.0
+			# Range: 0.0 ~ 32767.0
+			springMaxForce = 10000.0
+
+		#.
+		#Lateral Movement
+		[physics.bogey.lateral]
+			#.
+			#[in rad/s]
+			#Lateral spring frequency between the Physics Bogie and its pivot when lateral offset is allowed.
+			# Default: 10.0
+			# Range: 0.0 ~ 32767.0
+			springFrequency = 10.0
+			#.
+			#Lateral spring damping rate between the Physics Bogie and its pivot when lateral offset is allowed.
+			# Default: 1.25
+			# Range: 0.0 ~ 32767.0
+			springDampingRate = 1.25
+			#.
+			#[in Ṅ]
+			#Lateral spring maximum force between the Physics Bogie and its pivot when lateral offset is allowed.
+			# Default: 10000.0
+			# Range: 0.0 ~ 32767.0
+			springMaxForce = 10000.0
+
+		#.
+		#Roll Movement
+		[physics.bogey.roll]
+			#.
+			#[in rad/s]
+			#Roll spring frequency between the Physics Bogie and its pivot.
+			# Default: 15.0
+			# Range: 0.0 ~ 32767.0
+			springFrequency = 15.0
+			#.
+			#Roll spring damping rate between the Physics Bogie and its pivot.
+			# Default: 1.25
+			# Range: 0.0 ~ 32767.0
+			springDampingRate = 1.25
+			#.
+			#Roll spring moment multiplier between the Physics Bogie and its pivot.
+			# Default: 2.0
+			# Range: 0.0 ~ 32767.0
+			springMomentMultiplier = 2.0
+			#.
+			#[in Ṅ∙ṁ]
+			#Roll spring maximum torque between the Physics Bogie and its pivot.
+			# Default: 10000.0
+			# Range: 0.0 ~ 32767.0
+			springMaxTorque = 10000.0
+
+	#.
+	#Physics Bogie Axles
+	[physics.axle]
+		#.
+		#[in s]
+		#Time to update the axle spacing when changed for the axles of the Physics Bogie.
+		# Default: 2.0
+		# Range: 0.0 ~ 10.0
+		spacingUpdateTime = 2.0
+		#.
+		#[in Ṅ∙s/ṁ]
+		#Passive linear damping between an axle of the Physics Bogie and its track.
+		# Default: 100.0
+		# Range: 0.0 ~ 32767.0
+		passiveLinearDamping = 100.0
+		#.
+		#[in Ṅ∙ṁ∙s/rad]
+		#Passive angular damping between an axle of the Physics Bogie and its track.
+		# Default: 1.0
+		# Range: 0.0 ~ 32767.0
+		passiveAngularDamping = 1.0
+		#.
+		#[in ṁ/s]
+		#Conversion of RPM to target speed between an axle of the Physics Bogie and its track.
+		# Default: 0.25
+		# Range: 0.0 ~ 32767.0
+		targetSpeedFactor = 0.25
+		#.
+		#[in Ṅ∙s/ṁ]
+		#Conversion of current and target speed difference to drive force between an axle of the Physics Bogie and its track.
+		# Default: 0.5
+		# Range: 0.0 ~ 32767.0
+		driveForceFactor = 0.5
+		#.
+		#[in ṁ/s²]
+		#Conversion of brake strength [0-1] to brake force between an axle of the Physics Bogie and its track.
+		# Default: 20.0
+		# Range: 0.0 ~ 32767.0
+		brakeStrengthFactor = 20.0
+		#.
+		#Factor of effective friction between an axle of the Physics Bogie and the ground when derailed.
+		# Default: 0.5
+		# Range: 0.0 ~ 1.0
+		derailFrictionFactor = 0.5
+		#.
+		#[in s]
+		#Inverval to find nearest track when derailed for an axle of the Physics Bogie.
+		# Default: 0.10000000149011612
+		# Range: 0.0 ~ 5.0
+		trackCheckTime = 0.10000000149011612
+		#.
+		#[in s]
+		#Inverval to re-find nearest track for an axle of the Physics Bogie.
+		# Default: 3.0
+		# Range: 0.0 ~ 60.0
+		trackRecheckTime = 3.0
+
+		#.
+		#Slip
+		[physics.axle.slip]
+			#.
+			#Allow the wheels to lose their grip on the track. Very slightly affects physics while accelerating at low speeds.
+			enabled = true
+			#.
+			#[in ṁ/s²]
+			#How quickly the wheels of the Physics Bogie spin up once they lose traction.
+			# Default: 15.0
+			# Range: 0.0 ~ 32767.0
+			acceleration = 15.0
+			#.
+			#[in ṁ/s²]
+			#How quickly the track drags slipping wheels of the Physics Bogie back to its own speed.
+			# Default: 20.0
+			# Range: 0.0 ~ 32767.0
+			decay = 20.0
+			#.
+			#[in s]
+			#How long a drive of the Physics Bogie stays bound against wheels it cannot break loose, at the largest overload it can build up under, before all of it lets go at once. Set to 0 for wheels that break loose the moment they lose traction.
+			# Default: 0.75
+			# Range: 0.0 ~ 32767.0
+			bindTime = 0.75
+			#.
+			#Temporary wheel rotation speed excess just after the wheel loses grip. Set to 0 for wheels that never overrun their drive speed.
+			# Default: 0.5
+			# Range: 0.0 ~ 32767.0
+			burstFactor = 0.5
+			#.
+			#[in ṁ/s]
+			#Speed above which the wheels of the Physics Bogie always keep their grip. Prevents the realistic behavior of a permanent slip for non progressive wheel acceleration.
+			# Default: 4.0
+			# Range: 0.0 ~ 32767.0
+			maxSpeed = 4.0
+
+	#.
+	#Tracks
+	[physics.track]
+
+		#.
+		#Standard
+		[physics.track.standard]
+			#.
+			#[in ṁ/s²]
+			#Lateral max speed factor between an axle of the Physics Bogie and a standard track. Max speed is sqrt(factor / curvature).
+			# Default: 30.0
+			# Range: 0.0 ~ 32767.0
+			lateralMaxSpeedFactor = 30.0
+			#.
+			#[in ṁ/s²]
+			#Vertical max speed factor between an axle of the Physics Bogie and a standard track. Max speed is sqrt(factor / curvature).
+			# Default: 50.0
+			# Range: 0.0 ~ 32767.0
+			verticalMaxSpeedFactor = 50.0
+			#.
+			#[in ṁ/s²]
+			#Maximum traction coefficient a Physics Bogie axle can transmit to a standard track, per unit of mass resting on that axle. Any drive force beyond this spins the wheels instead of moving the bogie.
+			# Default: 12.0
+			# Range: 0.0 ~ 32767.0
+			adhesionFactor = 12.0
+
+	#.
+	#Train Couplers
+	[physics.coupler]
+		#.
+		#[in Ṅ∙s/ṁ]
+		#Passive linear damping between a Train Coupler and its partner.
+		# Default: 10.0
+		# Range: 0.0 ~ 32767.0
+		passiveLinearDamping = 10.0
+		#.
+		#[in Ṅ∙ṁ∙s/rad]
+		#Passive angular damping between a Train Coupler and its partner.
+		# Default: 1.0
+		# Range: 0.0 ~ 32767.0
+		passiveAngularDamping = 1.0
+		#.
+		#[in rad/s]
+		#Spring frequency between a Train Coupler and its partner.
+		# Default: 100.0
+		# Range: 0.0 ~ 32767.0
+		springFrequency = 100.0
+		#.
+		#Spring damping rate between a Train Coupler and its partner.
+		# Default: 2.0
+		# Range: 0.0 ~ 32767.0
+		springDampingRate = 2.0
+
+#.
+#Parameters of Simurail compat behaviors
+[compat]
+
+	#.
+	#.
+	#Steam 'n' Rails
+	[compat.railways]
+
+		#.
+		#Monorail
+		[compat.railways.monorail]
+			#.
+			#[in ṁ/s²]
+			#Lateral max speed factor between an axle of the Physics Bogie and a monorail track. Max speed is sqrt(factor / curvature).
+			# Default: 500.0
+			# Range: 0.0 ~ 32767.0
+			lateralMaxSpeedFactor = 500.0
+			#.
+			#[in ṁ/s²]
+			#Vertical max speed factor between an axle of the Physics Bogie and a monorail track. Max speed is sqrt(factor / curvature).
+			# Default: 100.0
+			# Range: 0.0 ~ 32767.0
+			verticalMaxSpeedFactor = 100.0
+			#.
+			#[in ṁ/s²]
+			#Maximum traction coefficient a Physics Bogie axle can transmit to a monorail track, per unit of mass resting on that axle. Any drive force beyond this spins the wheels instead of moving the bogie.
+			# Default: 24.0
+			# Range: 0.0 ~ 32767.0
+			adhesionFactor = 24.0
+
+		#.
+		#Narrow
+		[compat.railways.narrow]
+			#.
+			#[in ṁ/s²]
+			#Lateral max speed factor between an axle of the Physics Bogie and a narrow track. Max speed is sqrt(factor / curvature).
+			# Default: 25.0
+			# Range: 0.0 ~ 32767.0
+			lateralMaxSpeedFactor = 25.0
+			#.
+			#[in ṁ/s²]
+			#Vertical max speed factor between an axle of the Physics Bogie and a narrow track. Max speed is sqrt(factor / curvature).
+			# Default: 50.0
+			# Range: 0.0 ~ 32767.0
+			verticalMaxSpeedFactor = 50.0
+			#.
+			#[in ṁ/s²]
+			#Maximum traction coefficient a Physics Bogie axle can transmit to a narrow track, per unit of mass resting on that axle. Any drive force beyond this spins the wheels instead of moving the bogie.
+			# Default: 12.0
+			# Range: 0.0 ~ 32767.0
+			adhesionFactor = 12.0
+
+		#.
+		#Wide
+		[compat.railways.wide]
+			#.
+			#[in ṁ/s²]
+			#Vertical max speed factor between an axle of the Physics Bogie and a wide track. Max speed is sqrt(factor / curvature).
+			# Default: 50.0
+			# Range: 0.0 ~ 32767.0
+			lateralMaxSpeedFactor = 50.0
+			#.
+			#[in ṁ/s²]
+			#Maximum traction coefficient a Physics Bogie axle can transmit to a wide track, per unit of mass resting on that axle. Any drive force beyond this spins the wheels instead of moving the bogie.
+			# Default: 12.0
+			# Range: 0.0 ~ 32767.0
+			adhesionFactor = 12.0

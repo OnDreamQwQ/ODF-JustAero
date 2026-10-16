@@ -1,0 +1,185 @@
+#99A diesel audio only. Never changes Create RPM, SU capacity or M1A2 audio.
+[mix]
+	#Total diesel gain before the GUI volume and distance attenuation.
+	# Default: -12.0
+	# Range: -80.0 ~ 24.0
+	masterDb = -12.0
+	#Additional gain for the four RPM loops.
+	# Default: 0.0
+	# Range: -80.0 ~ 24.0
+	loopsDb = 0.0
+	#Additional gain for state-matched revv and release takes.
+	# Default: -14.0
+	# Range: -80.0 ~ 24.0
+	transientsDb = -14.0
+	#Additional gain for short blips.
+	# Default: -13.75
+	# Range: -80.0 ~ 24.0
+	blipsDb = -13.75
+	#Additional gain for start and stop takes.
+	# Default: -4.0
+	# Range: -80.0 ~ 24.0
+	startStopDb = -4.0
+	#Per-engine worst-case peak budget, including GUI volume, continuous loops and shots.
+	# Default: 0.8
+	# Range: 0.1 ~ 0.95
+	peakCeiling = 0.8
+
+[smoothing]
+	# Default: 0.25
+	# Range: 0.05 ~ 5.0
+	rpmSeconds = 0.25
+	#Maximum normalized audio RPM units/sec. Official rpm_result seek speed is 50.
+	# Default: 50.0
+	# Range: 5.0 ~ 200.0
+	rpmSeekPerSecond = 50.0
+	#Log playback-rate smoothing, independent of actual Create RPM and SU.
+	# Default: 0.12
+	# Range: 0.05 ~ 2.0
+	pitchSeconds = 0.12
+	# Default: 1.975
+	# Range: 0.05 ~ 10.0
+	suLoadSeconds = 1.975
+	# Default: 0.2
+	# Range: 0.05 ~ 5.0
+	gainSeconds = 0.2
+	#Maximum dB change per second for each track, including config edits.
+	# Default: 24.0
+	# Range: 1.0 ~ 120.0
+	maxDbPerSecond = 24.0
+
+	#XML endpoints; defaults use native FMOD response tables. Custom shapes smoothly blend/warp those tables (approximate).
+	[loadAutomation.layer00]
+		# Default: 0.0
+		# Range: 0.0 ~ 0.49
+		startLoad = 0.0
+		# Default: 2.0
+		# Range: -80.0 ~ 24.0
+		startDb = 2.0
+		# Default: 1.0
+		# Range: 0.5 ~ 1.0
+		endLoad = 1.0
+		# Default: -80.0
+		# Range: -80.0 ~ 24.0
+		endDb = -80.0
+		# Default: 0.8221461772918701
+		# Range: -0.99 ~ 0.99
+		curveShape = 0.8221461772918701
+
+	[loadAutomation.layer06]
+		# Default: 0.0
+		# Range: 0.0 ~ 0.49
+		startLoad = 0.0
+		# Default: 0.0
+		# Range: -80.0 ~ 24.0
+		startDb = 0.0
+		# Default: 0.9971751570701599
+		# Range: 0.5 ~ 1.0
+		endLoad = 0.9971751570701599
+		# Default: 6.0
+		# Range: -80.0 ~ 24.0
+		endDb = 6.0
+		# Default: -0.4501674175262451
+		# Range: -0.99 ~ 0.99
+		curveShape = -0.4501674175262451
+
+[takes]
+	#Allowed Values: LOOPS_ONLY, LOOPS_REVV, LOOPS_RELEASE, FULL
+	auditionMode = "FULL"
+	enableRevv = true
+	enableRelease = true
+	enableBlips = true
+	#Normalized audio RPM/sec; slow ramps use only continuous loops.
+	# Default: 12.0
+	# Range: 2.0 ~ 100.0
+	triggerRpmPerSecond = 12.0
+	# Default: 2
+	# Range: 1 ~ 2
+	maxConcurrent = 2
+	# Default: 5.5
+	# Range: 1.0 ~ 60.0
+	revvReleaseCooldownSeconds = 5.5
+	# Default: 12.0
+	# Range: 2.0 ~ 120.0
+	blipCooldownSeconds = 12.0
+
+[trackTrimDb]
+	#Per-original-file dB offsets, added to measured RMS/peak calibration. Zero retains calibration.
+	# Default: 0.0
+	# Range: -80.0 ~ 24.0
+	engine_00 = 0.0
+	# Default: 0.0
+	# Range: -80.0 ~ 24.0
+	engine_33_load = 0.0
+	# Default: 0.0
+	# Range: -80.0 ~ 24.0
+	engine_66_load = 0.0
+	# Default: 0.0
+	# Range: -80.0 ~ 24.0
+	engine_99_load = 0.0
+	# Default: 0.0
+	# Range: -80.0 ~ 24.0
+	engine_blips-001 = 0.0
+	# Default: 0.0
+	# Range: -80.0 ~ 24.0
+	engine_blips-002 = 0.0
+	# Default: 0.0
+	# Range: -80.0 ~ 24.0
+	engine_blips-003 = 0.0
+	# Default: 0.0
+	# Range: -80.0 ~ 24.0
+	engine_blips-004 = 0.0
+	# Default: 0.0
+	# Range: -80.0 ~ 24.0
+	engine_blips-005 = 0.0
+	# Default: 0.0
+	# Range: -80.0 ~ 24.0
+	engine_blips-006 = 0.0
+	# Default: 0.0
+	# Range: -80.0 ~ 24.0
+	engine_blips-007 = 0.0
+	# Default: 0.0
+	# Range: -80.0 ~ 24.0
+	engine_blips-008 = 0.0
+	# Default: 0.0
+	# Range: -80.0 ~ 24.0
+	engine_release-001 = 0.0
+	# Default: 0.0
+	# Range: -80.0 ~ 24.0
+	engine_release-002 = 0.0
+	# Default: 0.0
+	# Range: -80.0 ~ 24.0
+	engine_release-003 = 0.0
+	# Default: 0.0
+	# Range: -80.0 ~ 24.0
+	engine_release-004 = 0.0
+	# Default: 0.0
+	# Range: -80.0 ~ 24.0
+	engine_release-005 = 0.0
+	# Default: 0.0
+	# Range: -80.0 ~ 24.0
+	engine_release-006 = 0.0
+	# Default: 0.0
+	# Range: -80.0 ~ 24.0
+	engine_release-007 = 0.0
+	# Default: 0.0
+	# Range: -80.0 ~ 24.0
+	engine_revv-001 = 0.0
+	# Default: 0.0
+	# Range: -80.0 ~ 24.0
+	engine_revv-002 = 0.0
+	# Default: 0.0
+	# Range: -80.0 ~ 24.0
+	engine_revv-003 = 0.0
+	# Default: 0.0
+	# Range: -80.0 ~ 24.0
+	engine_revv-004 = 0.0
+	# Default: 0.0
+	# Range: -80.0 ~ 24.0
+	engine_revv-005 = 0.0
+	# Default: 0.0
+	# Range: -80.0 ~ 24.0
+	engine_start = 0.0
+	# Default: 0.0
+	# Range: -80.0 ~ 24.0
+	engine_stop = 0.0

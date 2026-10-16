@@ -1,0 +1,12 @@
+name = "Geckolib"
+filename = "geckolib-neoforge-1.21.1-4.9.3.jar"
+side = "both"
+
+[download]
+hash-format = "sha512"
+hash = "8dfa5f8c57224a5e34e5098367ea9819ca6dc9c11357cd3062c16da3455c8bd1a483098af7383debc4b9ce8e4d7ab3fdc799b415644eb829da83eb72a7335dfd"
+url = "https://cdn.modrinth.com/data/8BmcQJ2H/versions/Grwn5rUB/geckolib-neoforge-1.21.1-4.9.3.jar"
+
+[update.modrinth]
+mod-id = "8BmcQJ2H"
+version = "Grwn5rUB"

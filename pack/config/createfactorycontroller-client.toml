@@ -1,0 +1,30 @@
+#Background texture path of Controller Screen. The texture file must locate in 'createfactorycontroller/textures/gui/controller_background/' path, and in 16 pixel resolution.
+controllerBackground = "cardboard_block_side"
+#Upscale controller background texture tiles to 2x2 component size.
+upscaleBackgroundTexture = false
+#Show the count label on every gauge in the controller interface, instead of only the hovered gauge.
+alwaysShowLabel = true
+#Show the current signal strength on Redstone Link components in the Controller GUI.
+showRedstoneLinkSignalStrengthLabel = false
+#Shrink a gauge's count label when it is too wide for the gauge.
+dynamicLabelScaling = true
+#Show the ingredient-availability tooltip when hovering the Stock Keeper's Send button over
+#an order containing Production Patterns. Must also be enabled in the server config.
+checkIngredientsOnSend = false
+#When right-clicking a Stock Keeper with a material list (clipboard), request a Production
+#Order for any listed item that is short in stock but producible by an orderable gauge on the
+#network — instead of only requesting the in-stock amount.
+orderFromMaterialList = true
+#Draw input/output item counts in the recipe config screen with Create's compact number
+#sprite (the same glyphs as the stock icon) instead of the vanilla item-count font.
+compactRecipeCountFont = true
+#Hide the missing logistics-link warning indicators in the Controller GUI.
+hideMissingLinkWarning = false
+#Show outlines on components connected to the hovered component or connection in the Controller GUI.
+coloredConnectedComponentOutlines = true
+#Enable smooth animations in the Controller GUI.
+enableSmoothAnimation = true
+#Delay in milliseconds before a hovered connection's tooltip appears.
+# Default: 250
+# Range: 0 ~ 1000
+connectionTooltipDelay = 250

@@ -1,0 +1,4 @@
+#Energy capacity of the docking connector energy buffer
+# Default: 80000
+# Range: > 1
+dockEnergyCapacity = 80000

@@ -1,0 +1,12 @@
+name = "Synaxis"
+filename = "synaxis-1.5.0.jar"
+side = "both"
+
+[download]
+hash-format = "sha512"
+hash = "8510dbcd6a94e3489c597caf86de12b7123614550e6875fcfd094edde80eeb935c561b6c1ba249bdee4d56c56068309880a50391f19565a3b6a2d8a0086d84c8"
+url = "https://cdn.modrinth.com/data/aJewFWOb/versions/RFBeUM47/synaxis-1.5.0.jar"
+
+[update.modrinth]
+mod-id = "aJewFWOb"
+version = "RFBeUM47"

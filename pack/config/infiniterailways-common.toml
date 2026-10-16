@@ -1,0 +1,358 @@
+#Where stations are placed and which stations are linked.
+[Network]
+	#Place stations at villages. When off, or when no villages can be found, stations are spread on a seeded grid (Node Density).
+	useVillageNodes = true
+	#Always place a station at world spawn, in addition to the village (or grid) stations. When Railways Untold's startingTrain option is on, its starter train waits on the platform.
+	spawnStation = true
+	#Let every player use /railway nearest, which teleports to the nearest station. When off, only operators can.
+	nearestCommandForAll = false
+	#Chance for each grid spot to get a station. Only used when stations are spread on the grid (useVillageNodes off, or no villages found): every village gets a station, so routes always know where villages are and go around them. To thin village stations, use villageMinSpacing.
+	# Default: 1.0
+	# Range: 0.0 ~ 1.0
+	stationChance = 1.0
+	#Minimum distance between two village stations, in blocks. Of villages closer than this, only one gets a station. 0 = no limit.
+	# Default: 400
+	# Range: 0 ~ 10000
+	villageMinSpacing = 400
+	#Grid cell size for stations when villages are not used, in blocks. Smaller = more stations.
+	# Default: 3000
+	# Range: 100 ~ 20000
+	nodeDensity = 3000
+	#Highest surface level (Y) a station can be placed at. Raise it for terrain packs with very tall worlds (e.g. JJThunder To The Max).
+	# Default: 150
+	# Range: 64 ~ 2031
+	maxNodeHeight = 150
+	#Plan long main lines that stop at the villages along their way. When off, neighbouring stations are linked directly (Graph Type).
+	useMainLines = true
+	#Spacing between main-line hubs, in blocks. Larger = fewer, longer lines. Keep it well below Scan Radius + Max Connection Distance.
+	# Default: 4000
+	# Range: 500 ~ 12000
+	mainLineScale = 4000
+	#Without main lines: which station pairs are linked. RNG = sparser network, GABRIEL = denser.
+	#Allowed Values: RNG, GABRIEL
+	graphType = "RNG"
+	#Longest direct link between two stations, in blocks.
+	# Default: 8000
+	# Range: 500 ~ 20000
+	maxConnectDist = 8000
+	#Links longer than this, in blocks, are only allowed when no village in between could serve as a stop.
+	# Default: 2000
+	# Range: 500 ~ 20000
+	maxStopSpacing = 2000
+	#Longest link across land without villages (oceans, mountain ranges), in blocks.
+	# Default: 8000
+	# Range: 500 ~ 40000
+	maxCrossingDist = 8000
+	#Height difference allowed between two linked stations, as a multiple of what the maximum slope can climb over their distance. Lower = fewer links across steep terrain.
+	# Default: 1.0
+	# Range: 1.0 ~ 5.0
+	climbSlack = 1.0
+
+#When the network around players is computed.
+[Scanning]
+	#Radius around the player in which stations and routes are planned, in blocks.
+	# Default: 20000
+	# Range: 2000 ~ 100000
+	precomputeRadius = 20000
+	#Distance a player must travel before the area is scanned again, in blocks.
+	# Default: 14000
+	# Range: 1000 ~ 50000
+	rescanDistance = 14000
+
+#How routes are searched. Changes only apply to routes computed afterwards.
+[Pathfinding]
+	#Size of a pathfinding cell, in blocks. Larger = faster search, coarser routes.
+	# Default: 64
+	# Range: 16 ~ 256
+	step = 64
+	#Most height the track may gain or lose per cell, in blocks (the steepest grade).
+	# Default: 2
+	# Range: 1 ~ 32
+	slopeThreshold = 2
+	#Cost per block of tunnel depth or bridge height. Higher = routes detour more to stay at ground level.
+	# Default: 1.5
+	# Range: 0.0 ~ 20.0
+	structurePenaltyPerBlock = 1.5
+	#Discount when a route alternates between short cuts and fills, so it follows steep slopes instead of long tunnels or viaducts. 0 = off.
+	# Default: 0.5
+	# Range: 0.0 ~ 1.0
+	terrainHugDiscount = 0.5
+	#Cost each time a route switches between climbing and descending. Higher = steadier grades.
+	# Default: 150.0
+	# Range: 0.0 ~ 10000.0
+	gradeReversalPenalty = 150.0
+	#Cost per cell of village a route passes through. Routes go around villages whenever they can.
+	# Default: 4000.0
+	# Range: 0.0 ~ 1000000.0
+	villageCrossPenalty = 4000.0
+	#Minimum height difference where two tracks cross, in blocks, at the default tunnel height. One block is added for every block of tunnel height above the default (Railways Untold verticalExpansion 6 plus tunnelExtraHeight 1), and taken off for every block below it.
+	# Default: 12
+	# Range: 4 ~ 64
+	crossingClearance = 12
+	#Preferred track height above the sea, in blocks.
+	# Default: 30
+	# Range: 0 ~ 64
+	waterClearanceOcean = 30
+	#Preferred track height above rivers and lakes, in blocks.
+	# Default: 6
+	# Range: 0 ~ 64
+	waterClearanceRiver = 6
+	#Cost per block the track sits below the preferred height over water. Higher = bridges climb more to clear the water.
+	# Default: 2.0
+	# Range: 0.0 ~ 20.0
+	waterClearancePenaltyPerBlock = 2.0
+	#Extra cost of track over water. Higher = routes prefer land detours to long crossings.
+	# Default: 0.5
+	# Range: 0.0 ~ 10.0
+	waterCrossFraction = 0.5
+	#Longest bridge over deep water, in cells. Longer crossings are avoided. 0 = unlimited.
+	# Default: 12
+	# Range: 0 ~ 128
+	bridgeMaxSegments = 12
+	#Bridges over deep water run straight, except within this many cells of a station. 0 = always straight.
+	# Default: 4
+	# Range: 0 ~ 16
+	waterTurnStartSegments = 4
+	#Let routes hold a steady grade instead of only following the terrain. Smoother climbs, slower search.
+	verticalCandidates = true
+	#Keep the first complete route found instead of searching for a cheaper one. Much faster, slightly less optimal routes.
+	stopAtFirstMeet = true
+	#Where a line splits in two, also link the two branches to each other with a curve that bypasses the switch, so trains can run between all three directions (a triangle junction). Skipped where no curve fits.
+	junctionTriangles = false
+
+#Station layout and how lines reach it.
+[Stations]
+	#Let routes run through stations along their platforms instead of going around them.
+	stationPassThrough = true
+	#Straight track kept at each end of a station's platforms, in blocks.
+	# Default: 16
+	# Range: 4 ~ 64
+	stationEndClearance = 16
+	#Most pathfinding cells a station may span. Station designs too long for this are not used.
+	# Default: 3
+	# Range: 1 ~ 5
+	stationMaxCells = 3
+	#Most ground above a station that is dug away, in blocks. Where the hill is higher, that part of the station is built as a tunnel.
+	# Default: 8
+	# Range: 0 ~ 48
+	stationCutMaxHeight = 8
+	#With Dual Track, add a crossover at each end of two-track stations so trains can switch tracks.
+	stationCrossover = true
+	#Without Dual Track, use two-track stations anyway, so trains can pass each other there: at each end the line splits into both platform tracks through a switch. Off: single-track lines get single-track stations. Applies to stations not chosen yet.
+	passingStations = false
+	#Stations with buildings. Off: stations are just their platform tracks laid on a paved strip, 64 blocks long, with Create station blocks (one or two tracks, as with buildings).
+	#Building-less stations are the station definitions under railwaysuntold/stations/bare/ in a datapack. Applies to stations not chosen yet.
+	stationBuildings = true
+
+#Track laying and the corridor around it.
+[Track]
+	#Track material, for the line and station platforms. andesite (Create), or with Steam 'n' Rails: oak, spruce, birch, jungle, acacia, dark_oak, mangrove, cherry, bamboo, stripped_bamboo, crimson, warped, blackstone, ender, tieless.
+	#Any standard-gauge track material works; give its full id (e.g. railways:dark_oak) when two mods share a name. Falls back to andesite when not found. Only applies to track placed from now on.
+	trackMaterial = "dark_oak"
+	#Track gauge: STANDARD, NARROW or WIDE. NARROW and WIDE need Steam 'n' Rails, and trains on matching bogeys: the starter train gets them.
+	#Fixed per world when it is first loaded, so all of its track carries the same trains: changing it only affects new worlds. Worlds that already had track stay STANDARD.
+	#Allowed Values: STANDARD, NARROW, WIDE
+	trackGauge = "STANDARD"
+	#Lay curves as wide as possible, like Create's track placement with sprint (Left Ctrl) held. Off = Create's standard curves.
+	maximiseTurns = true
+	#Lay two parallel tracks along every route. Only applies to track placed from now on.
+	dualTrack = false
+	#Distance from the route's centre line to each of the two tracks, in blocks.
+	# Default: 2
+	# Range: 2 ~ 6
+	dualTrackOffset = 2
+	#Free space beside the outer rails, in blocks. Sets the width of cuttings, tunnels, bridge decks and ballast.
+	# Default: 2
+	# Range: 0 ~ 9
+	trackSideMargin = 2
+	#Extra width beyond the corridor where trees and plants are removed, in blocks.
+	# Default: 2
+	# Range: 0 ~ 8
+	vegetationClearWidth = 2
+
+#Create train signals.
+[Signals]
+	#Place train signals at stations, and along dual-track lines and their junctions during initial generation only. Completed segments are never retrofitted.
+	signals = true
+	#Signal look. AUTO and SEMAPHORE: a Steam 'n' Rails semaphore if installed, otherwise a nixie tube. NIXIE: nixie tube. CREATE: the signal block alone.
+	#Allowed Values: AUTO, CREATE, SEMAPHORE, NIXIE
+	signalStyle = "AUTO"
+	#Target distance between regular signals on dual-track lines: this value times step, in blocks. Balanced between stations and junctions, rounded to available portals; mandatory signals are always kept.
+	# Default: 4
+	# Range: 1 ~ 64
+	signalSpacingCells = 4
+	#Trains keep right on dual-track lines. Off = keep left.
+	signalRightHandTraffic = false
+	#Lowest hanging semaphore head height = configured tunnel height minus this offset.
+	#Tunnel height is Railways Untold verticalExpansion plus tunnelExtraHeight. Roof and wall mounts share this height.
+	#Heads rise as needed for train and catenary clearance. With catenary, omit the girder below the signal.
+	# Default: 2
+	# Range: 1 ~ 8
+	hangingSemaphoreTopOffset = 2
+
+#Overhead catenary. Optional compat: requires Create: Pantographs & Wires (pantographsandwires)
+#or Create: Electro Energetics (electroenergetics).
+#Without either mod installed none of these settings do anything and no masts or wires are placed.
+[OverheadWires]
+	#Build masts and overhead wires along the track and in stations. Requires Create: Pantographs & Wires
+	#or Create: Electro Energetics; ignored (nothing is placed) when neither is installed, even if true.
+	#Only applies to track placed from now on.
+	overheadWires = true
+	#Which mod's catenary to build. AUTO uses Pantographs & Wires when installed, else Electro Energetics.
+	#A mod that is not installed falls back to the other one.
+	#Allowed Values: AUTO, PANTOGRAPHS_AND_WIRES, ELECTRO_ENERGETICS
+	catenaryMod = "AUTO"
+	#Height of the contact wire above the track, in blocks, for Pantographs & Wires and Electro Energetics alike.
+	#Above 6, tunnels, bridge arches and track crossings grow taller with it to keep room for the wires.
+	#Only applies to track placed from now on.
+	# Default: 6
+	# Range: 4 ~ 10
+	contactWireHeight = 6
+	#Longest distance between two masts on straight track, in blocks. Curves get closer masts.
+	# Default: 32
+	# Range: 8 ~ 64
+	mastSpacing = 32
+	#Pantographs & Wires mast block to use (needs Create: Pantographs & Wires).
+	mastBlock = "pantographsandwires:h_beam_mast_galvanized"
+	#Pole the Electro Energetics catenary holders hang from (needs Create: Electro Energetics).
+	#A holder grabs the nearest fence, wall, Create girder or Electro Energetics concrete pole.
+	poleBlock = "electroenergetics:concrete_pole"
+
+#Open cuttings through hills.
+[Cuttings]
+	#Extra height cleared above the track in cuttings, in blocks.
+	# Default: 2
+	# Range: 0 ~ 8
+	cutExtraHeight = 2
+	#Steepness of cutting sides, in blocks across per block up (1.0 = 45 degrees, 2.0 = gentler).
+	# Default: 1.0
+	# Range: 0.5 ~ 3.0
+	cutSlope = 1.0
+	#Widest a cutting side may slope out, in blocks. Beyond that a retaining wall is built.
+	# Default: 10
+	# Range: 2 ~ 24
+	cutMaxWidth = 10
+	#Tallest retaining wall in a cutting, in blocks.
+	# Default: 12
+	# Range: 2 ~ 32
+	retainingWallMaxHeight = 12
+
+#Tunnel bores and portals.
+[Tunnels]
+	#Block lining tunnel walls and ceiling.
+	tunnelLiningBlock = "minecraft:stone_bricks"
+	#Amount of cracked and mossy bricks in the lining (stone bricks only). 0 = none.
+	# Default: 1.0
+	# Range: 0.0 ~ 1.0
+	tunnelWeathering = 1.0
+	#Build a masonry facade at tunnel entrances.
+	tunnelPortalFacade = true
+	#Extra interior height of tunnels, in blocks. With overhead wires, tunnels are at least Contact Wire Height + 1 tall anyway.
+	# Default: 1
+	# Range: 0 ~ 8
+	tunnelExtraHeight = 1
+	#Shortest tunnel, in blocks. Shorter ones are dug as open cuttings.
+	# Default: 16
+	# Range: 0 ~ 64
+	tunnelMinLength = 16
+	#Two tunnels closer than this are joined into one, in blocks.
+	# Default: 24
+	# Range: 0 ~ 64
+	tunnelMergeGap = 24
+
+#Ground built up under the track.
+[Embankments]
+	#Build embankments that blend into the surrounding terrain. Off = Railways Untold's plain fill.
+	naturalEmbankments = true
+	#Steepness of embankment sides, in blocks across per block down (1.0 = 45 degrees).
+	# Default: 1.5
+	# Range: 1.0 ~ 4.0
+	embankmentSlope = 1.5
+	#Widest an embankment side may spread, in blocks. Beyond that a retaining wall is built.
+	# Default: 8
+	# Range: 2 ~ 16
+	embankmentMaxWidth = 8
+	#Build masonry retaining walls where the ground is too steep for a slope, beside embankments and cuttings.
+	retainingWalls = true
+
+#Bridges and arch viaducts.
+[Bridges]
+	#Height above the ground from which the track is carried on a bridge, in blocks.
+	# Default: 5
+	# Range: 1 ~ 64
+	bridgeMinGap = 5
+	#Build masonry arch viaducts under bridges. Off = Railways Untold's plain piers.
+	bridgeArches = true
+	#Block for arch piers and walls.
+	bridgeBlock = "minecraft:stone_bricks"
+	#Stair block for arch curves and cornices. Empty = plain blocks.
+	bridgeStairBlock = "minecraft:stone_brick_stairs"
+	#Amount of weathered and mossy blocks in the masonry (stone bricks only). 0 = none.
+	# Default: 1.0
+	# Range: 0.0 ~ 1.0
+	bridgeWeathering = 1.0
+	#Run a stair cornice under the deck edge (straight bridges only).
+	archCornice = true
+	#Distance between piers, in blocks, when Arch Span Per Height is 0.
+	# Default: 24
+	# Range: 6 ~ 96
+	archSpan = 24
+	#Arch span as a multiple of its height, so arches fit the valley. 0 = fixed Arch Span.
+	# Default: 1.4
+	# Range: 0.0 ~ 3.0
+	archSpanPerHeight = 1.4
+	#Narrowest arch, in blocks.
+	# Default: 10
+	# Range: 6 ~ 32
+	archSpanMin = 10
+	#Widest arch over land, in blocks.
+	# Default: 64
+	# Range: 12 ~ 96
+	archSpanMax = 64
+	#How strongly tall piers are avoided. Higher = piers move to shallower ground.
+	# Default: 1.0
+	# Range: 0.0 ~ 5.0
+	archPierHeightCost = 1.0
+	#Minimum pier thickness, in blocks.
+	# Default: 3
+	# Range: 1 ~ 8
+	archPierThickness = 3
+	#Pier thickness = span / this. Lower = thicker piers.
+	# Default: 8
+	# Range: 4 ~ 24
+	archPierSpanRatio = 8
+	#Arch height as a fraction of its span (0.5 = semicircle).
+	# Default: 0.5
+	# Range: 0.1 ~ 0.6
+	archRise = 0.5
+	#Minimum masonry rows above the top of an arch.
+	# Default: 2
+	# Range: 1 ~ 5
+	archCrownThickness = 2
+	#Masonry rows above an arch = span / this. Lower = thicker deck.
+	# Default: 12
+	# Range: 4 ~ 32
+	archCrownSpanRatio = 12
+	#Height of one tier of stacked arches, in blocks. 0 = always a single tier.
+	# Default: 0
+	# Range: 0 ~ 64
+	archTierHeight = 0
+	#Widest arch over deep water, in blocks, so boats can pass. 0 = off.
+	# Default: 124
+	# Range: 0 ~ 160
+	archNavigationSpan = 124
+	#Height of the wide water arches as a fraction of their span.
+	# Default: 0.15
+	# Range: 0.1 ~ 0.6
+	archNavigationRise = 0.15
+	#Masonry rows above the wide water arches.
+	# Default: 2
+	# Range: 1 ~ 10
+	archNavigationCrownThickness = 2
+
+#Tools for testing. Leave off for normal play.
+[Debug]
+	#Show detailed scan and pathfinding messages in chat, and log slow server ticks.
+	debug = false
+	#Outline pathfinding cells with particles.
+	debugCellRenderer = false

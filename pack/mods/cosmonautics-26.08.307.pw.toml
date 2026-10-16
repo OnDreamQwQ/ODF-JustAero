@@ -1,0 +1,12 @@
+name = "Create Cosmonautics"
+filename = "cosmonautics-26.08.307.jar"
+side = "both"
+
+[download]
+hash-format = "sha512"
+hash = "72ff1be7f31767eb64635a5fd827428410b0899fe5431f951bb4ab2a006ed105bf1cae24b803d51a5b18b067f5f956c493bb827573b22567e204b6b2d84a0de8"
+url = "https://cdn.modrinth.com/data/micg1iTH/versions/HuCMavv8/cosmonautics-26.08.307.jar"
+
+[update.modrinth]
+mod-id = "micg1iTH"
+version = "HuCMavv8"

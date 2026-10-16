@@ -1,0 +1,58 @@
+{
+  "functionConfig": {
+    "itemToggles": {
+      "andesiteScrapBucketEnabled": true,
+      "brassScrapBucketEnabled": true,
+      "networkManagerEnabled": true,
+      "labeledRedstoneLinkEnabled": true,
+      "batchCraftingEnabled": true,
+      "templateSystemEnabled": true,
+      "redstoneLinkRouterEnabled": true
+    },
+    "featureToggles": {
+      "packagerAddressFilterEnabled": true,
+      "quickUnpackEnabled": true,
+      "factoryDemandModeEnabled": true,
+      "templateDemandModeEnabled": true
+    }
+  },
+  "scrapBucket": {
+    "itemsPerNugget": 64,
+    "mbPerNugget": 8000,
+    "itemProductionEfficiencies": [],
+    "fluidProductionEfficiencies": [],
+    "generateExperienceNuggets": true,
+    "brassScrapBucketProduceItem": "create:experience_nugget",
+    "itemTransferAmount": 64,
+    "itemTransferInterval": 10,
+    "fluidTransferAmount": 1024,
+    "fluidTransferInterval": 10,
+    "blacklistedItems": [],
+    "blacklistedFluids": []
+  },
+  "labeledRedstoneLinkConfig": {
+    "showFrequencyLabel": true
+  },
+  "networkManagerConfig": {
+    "longPressThreshold": 10
+  },
+  "batchMechanicalCrafterConfig": {
+    "maxSpeedStressImpact": 2048,
+    "showItemCount": true
+  },
+  "templateFunctionConfig": {
+    "backToConnectedInventoryAddress": "/back",
+    "historyLogRetentionCount": 10,
+    "stockKeeperTemplateDisplayStyle": "STYLE_1",
+    "mergeTemplateWithStock": false
+  },
+  "fixConfig": {
+    "fixDuplicatePackagerPromiseConsumption": true
+  },
+  "modCompatConfig": {
+    "fluidLogisticsCompat": {
+      "fixFluidPackagerDuplicatePromiseConsumption": true,
+      "fluidPackagerAddressFilterEnabled": true
+    }
+  }
+}

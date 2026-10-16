@@ -1,0 +1,12 @@
+name = "create-schematic-compute"
+filename = "create-schematic-compute-1.2.5.2.jar"
+side = "both"
+
+[download]
+hash-format = "sha512"
+hash = "0459d7478f6a24cf482812a9d18204983428fb79ae62e57ca1bf525275613b3bb4781211d033c7844dfc4ba390d5b4af9d79cb5b35642af6267df44fe176501d"
+url = "https://cdn.modrinth.com/data/1bUvJALH/versions/2BZdLygl/create-schematic-compute-1.2.5.2.jar"
+
+[update.modrinth]
+mod-id = "1bUvJALH"
+version = "2BZdLygl"

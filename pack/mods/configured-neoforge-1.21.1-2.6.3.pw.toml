@@ -1,0 +1,8 @@
+name = "configured-neoforge-1.21.1-2.6.3"
+filename = "configured-neoforge-1.21.1-2.6.3.jar"
+side = "both"
+
+[download]
+hash-format = "sha512"
+hash = "1e5037fc7aa998d372ee22868f422e78f375a199307114493bc0a3cbd198e3c171c3d086f4f4bd063763cb35304f72f0d72867f2cd28ec83e8e27b55c8dea203"
+url = "https://mediafilez.forgecdn.net/files/7276/577/configured-neoforge-1.21.1-2.6.3.jar"

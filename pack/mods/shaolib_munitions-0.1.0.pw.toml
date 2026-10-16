@@ -1,0 +1,12 @@
+name = "Shaolib Munitions"
+filename = "shaolib_munitions-0.1.0.jar"
+side = "both"
+
+[download]
+hash-format = "sha512"
+hash = "849e0d463f6c3a10e0ba778455753e62389a8471354f315a5e94057107860414a40798eee73ff8da8bff03c18be76c92b986c85f3f43357dd606a09f13f5e50b"
+url = "https://cdn.modrinth.com/data/os0j0wuC/versions/6WpAFpmX/shaolib_munitions-0.1.0.jar"
+
+[update.modrinth]
+mod-id = "os0j0wuC"
+version = "6WpAFpmX"

@@ -1,0 +1,12 @@
+name = "DragonLib"
+filename = "dragonlib-3.0.29+mc1.21.1-neoforge.jar"
+side = "both"
+
+[download]
+hash-format = "sha512"
+hash = "9eecaadf4009fcd2b16ca14aea907f933b30531b31a1c361f555dfa9821fd8e6a84579dd71434cb2afadd6075bf6514f6135ef131a8063b03e0fa74f11f54833"
+url = "https://cdn.modrinth.com/data/sbIsGaOV/versions/y30Bx41r/dragonlib-3.0.29%2Bmc1.21.1-neoforge.jar"
+
+[update.modrinth]
+mod-id = "sbIsGaOV"
+version = "y30Bx41r"

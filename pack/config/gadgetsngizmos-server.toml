@@ -1,0 +1,10 @@
+#Gadgets & Gizmos library safeguards
+[server]
+	#Enable global held-angle mixin behavior on kinetic entities
+	enableGlobalHeldAngleMixin = true
+	#Enable precise-angle propagation graph writes to connected kinetics
+	enableGlobalPreciseAnglePropagation = true
+	#Enable virtual-kinetics neighbor and slot propagation hooks
+	enableGlobalVirtualKineticPropagation = true
+	#Log one-time guard rejections for kinetic safeguard troubleshooting
+	logKineticGuardDecisions = false

@@ -1,0 +1,285 @@
+#Railways Untold Configuration
+[track_clearing]
+	#Number of blocks to clear horizontally on each side of the track.
+	# Default: 3
+	# Range: 1 ~ 16
+	horizontalExpansion = 3
+	#
+	#Number of blocks to clear vertically above the track.
+	# Default: 6
+	# Range: 2 ~ 32
+	verticalExpansion = 6
+
+#World Generation Settings
+#Controls which world types allow track generation
+[world_generation]
+	#Comma-separated list of chunk generator types where track generation is allowed.
+	#Uses the registry name of the chunk generator (e.g. 'minecraft:noise', 'minecraft:flat').
+	#Modded generators can be added by their full ID (e.g. 'bigglobe:scripted').
+	#Set to an empty string to disable generation in all world types.
+	generateInWorldTypes = "minecraft:noise,minecraft:flat"
+
+#Feature Toggles
+[features]
+	#Whether to place a starting train at world generation.
+	#If false, only the track network will be generated.
+	startingTrain = true
+	#
+	#Whether track branches (junctions) are enabled.
+	#If false, tracks will only generate as a single continuous line.
+	branchesEnabled = true
+	#
+	#Whether branches can create additional branches (recursive branching).
+	#If false, only the main track lines can create branches.
+	#Has no effect if branchesEnabled is false.
+	recursiveBranchingEnabled = true
+	#
+	#Maximum depth for recursive branching.
+	#1 = one level of branches, 2 = branches can branch once, 3 = two levels of recursive branches, etc.
+	#Setting to 0 means unlimited branch depth which could affect performance.
+	#Only applies when recursiveBranchingEnabled is true.
+	# Default: 3
+	# Range: 0 ~ 10
+	maxBranchDepth = 3
+	#
+	#Maximum number of simultaneously active track heads (including main tracks and all branches).
+	#Limits how many track lines can be generating at once.
+	#Setting to 0 means unlimited heads which could affect performance.
+	# Default: 15
+	# Range: 0 ~ 100
+	maxActiveHeads = 15
+	#
+	#Minimum distance in blocks between consecutive branches from the same track head.
+	#After spawning a branch, the parent head must travel this distance before branching again.
+	# Default: 150
+	# Range: 50 ~ 1000
+	minBranchSpacing = 150
+	#
+	#Whether tracks should seek out and path toward structures for station placement.
+	#Which structures are targeted is configured via biome settings data packs (structure_target_tags).
+	#When disabled, tracks will not target any structures regardless of data pack settings.
+	structureTargeting = true
+	#
+	#Whether tracks should avoid obstacles by turning.
+	#When enabled, tracks will curve around structures, terrain obstacles, and other hazards.
+	#When disabled, tracks will go straight through all terrain (tunneling through mountains,
+	#descending into ravines) without ever turning.
+	allAvoidance = true
+	#
+	#Enable side-by-side dual track mode.
+	#Two parallel tracks with opposite travel directions.
+	#Separation = horizontalExpansion * 2 (minimum 5 blocks).
+	sideBySideTracks = false
+	#
+	#Whether a head running parallel and adjacent to another line should merge into it.
+	#When enabled, a head that meets another track running its way merges in (curving across
+	#when touching, or steering over from up to ~70 blocks away) instead of running side by side.
+	#When disabled, parallel lines are left as separate side-by-side tracks.
+	parallelMergeEnabled = true
+	#
+	#Enable rail sidings (passing loops).
+	#When enabled, long straight sections of track will occasionally
+	#generate a parallel siding that diverges and reconnects.
+	sidingsEnabled = true
+	#
+	#Minimum number of consecutive straight segments before a siding can be placed.
+	#Each segment is approximately 16 blocks long.
+	# Default: 6
+	# Range: 3 ~ 100
+	sidingMinStraightSegments = 6
+	#
+	#Track width/gauge.
+	#Values: standard, wide, narrow.
+	#Non-standard values require Steam 'n' Rails.
+	#Note: phantom tracks only support standard gauge.
+	gauge = "standard"
+	#
+	#Which rail mod provides the tracks when more than one supported one is installed.
+	#Values: create, immersive_railroading.
+	#Ignored when only one supported rail mod is installed. Once a world has
+	#generated track, its backend is pinned and this option no longer changes it.
+	defaultTracks = "create"
+	#
+	#Lateral/around search margin (blocks) for the terrain-follow cost field, capping how
+	#far a route may swing wide to find a prettier line - notably how far it can detour
+	#around an ocean to follow the coastline. Larger is slower and prettier.
+	# Default: 1024
+	# Range: 64 ~ 4096
+	terrainFollowSearchRadius = 1024
+
+#Bridge Settings
+#Controls bridge decking placement (pier spacing comes from the railing pattern NBT)
+[pillars]
+	#
+	#Minimum height above ground to use bridge decking.
+	#When the track is this many blocks above ground, bridge decking and
+	#pillar schematics are placed instead of terrain fill.
+	#Set to 0 to only use bridge decking over water.
+	# Default: 4
+	# Range: 0 ~ 32
+	bridgeElevationThreshold = 4
+
+#Terrain Detection
+#Controls how the track generator detects and responds to terrain features
+[terrain]
+	#
+	#Allow curves to change elevation while turning (banking curves).
+	#When false, curves are always flat and elevation changes happen on straight segments.
+	#When true, curves can slope up/down while turning, creating a roller coaster effect.
+	bankingCurves = false
+	#
+	#Lateral drift correction threshold (in blocks).
+	#When the track drifts this far off the cardinal axis, an SCurve45 diagonal
+	#or curve correction is inserted to realign with the planned route.
+	# Default: 5
+	# Range: 2 ~ 20
+	lateralOffset = 5
+	#
+	#Rise component of the maximum slope ratio (rise:run).
+	#Combined with slopeRun to determine max track steepness.
+	#Example: rise=1, run=2 means max slope of 1/2 (0.5).
+	# Default: 1
+	# Range: 1 ~ 5
+	slopeRise = 1
+	#
+	#Run component of the maximum slope ratio (rise:run).
+	#Combined with slopeRise to determine max track steepness.
+	#Example: rise=1, run=2 means max slope of 1/2 (0.5).
+	# Default: 4
+	# Range: 1 ~ 20
+	slopeRun = 4
+	#
+	#Minimum curve radius in blocks.
+	#Smaller values allow tighter turns but may cause train navigation issues.
+	# Default: 15
+	# Range: 10 ~ 50
+	minCurveRadius = 15
+	#
+	#Maximum curve radius in blocks.
+	#Larger values create wider, smoother turns.
+	# Default: 25
+	# Range: 10 ~ 100
+	maxCurveRadius = 25
+	#
+	#Minimum height above water level for bridge tracks over oceans and rivers.
+	#Set to 0 to disable water bridging.
+	# Default: 5
+	# Range: 0 ~ 20
+	bridgeWaterDistance = 5
+
+#Tunnel Settings
+#Controls tunnel decoration like torch placement
+[tunnels]
+	#Distance in blocks between light placements in tunnels.
+	#Lights are placed on both walls at this interval.
+	#Lighting block type is configured via biome settings data packs.
+	# Default: 14
+	# Range: 2 ~ 64
+	lightSpacing = 14
+
+#Immersive Railroading Settings
+#Only used when the Immersive Railroading track backend is active
+[ir_integration]
+	#
+	#Immersive Railroading track definition id used for generated track.
+	#Built-in values include: default, concrete, railsonly, track.
+	irTrackType = "default"
+	#
+	#Track gauge in meters (1.435 = standard gauge).
+	# Default: 1.435
+	# Range: 0.2 ~ 3.0
+	irGauge = 1.435
+	#
+	#Curve handle scale for generated curves (how 'bowed' curves are).
+	#1.0 approximates Create's curve proportions.
+	# Default: 1.0
+	# Range: 0.1 ~ 3.0
+	irCurvosity = 1.0
+	#
+	#Preferred radius for ordinary IR curves in blocks.
+	#IR supports much larger geometry than Create; 128 produces broad mainline curves.
+	# Default: 128
+	# Range: 16 ~ 1000
+	irMinCurveRadius = 128
+	#
+	#Largest radius considered for IR obstacle-avoidance curves.
+	#The supported ceiling is 1000, but very large turns require thousands of chunks.
+	# Default: 256
+	# Range: 16 ~ 1000
+	irMaxCurveRadius = 256
+	#
+	#Maximum IR grade as 1 block of rise per this many horizontal blocks.
+	#100 is a 1% railroad grade; larger values are gentler.
+	# Default: 100
+	# Range: 16 ~ 1000
+	irSlopeRun = 100
+	#
+	#Maximum generated IR straight/grade segment length in blocks.
+	#Longer segments allow smooth integer-height changes at very low grades.
+	# Default: 128
+	# Range: 64 ~ 512
+	irMaxSegmentLength = 128
+	#
+	#What to do when Immersive Railroading reports a segment cannot be built
+	#(missing solid ground / blocked cells).
+	#FORCE: place anyway (worldgen already prepared the terrain).
+	#SKIP: fail the segment so the planner picks another route.
+	#RETRY: defer and retry the segment later.
+	irOnValidationFail = "FORCE"
+	#
+	#Block id rendered by IR as the track's native rail bed.
+	#Blank uses minecraft:gravel; set to 'none' to disable.
+	irRailBed = "minecraft:gravel"
+	#
+	#Block id IR places into gaps below its physical track cells.
+	#Blank uses non-falling minecraft:cobblestone; set to 'none' to disable.
+	irRailBedFill = "minecraft:cobblestone"
+
+#Debug Settings
+[debug]
+	#Enable verbose debug logging for track placement and chunk loading.
+	#Warning: produces a lot of log output. Only enable when troubleshooting.
+	verboseLogging = false
+
+#Station and Train Settings
+[station_train]
+	#Whether to place a station at the starting track area with the starting train.
+	#Has no effect if startingTrain is disabled.
+	stationAtStart = true
+
+#Event Settings
+[events]
+	#Enable placing custom event schematics along tracks.
+	#Requires valid .nbt files in config/railways-untold/events/
+	customEvents = false
+	#
+	#Minimum distance in blocks between events.
+	#After placing an event, the track must travel this far before another can appear.
+	# Default: 500
+	# Range: 100 ~ 5000
+	eventSeparationMinDistance = 500
+	#
+	#Chance (percent) of placing an event once minimum distance is met.
+	#Checked each track segment after the minimum distance requirement.
+	# Default: 15
+	# Range: 1 ~ 100
+	eventChance = 15
+
+#LostCities Integration
+#Controls station placement in LostCities worlds (detected automatically).
+[lostcities]
+	#Whether to seek LostCities city centers as station targets when in a LostCities world.
+	lostCitiesIntegrationEnabled = true
+	#
+	#Minimum distance in blocks between stations in a LostCities world.
+	#City centers can be very dense (a world-city profile places one every few chunks);
+	#this gate thins them so stations look natural.
+	# Default: 600
+	# Range: 100 ~ 10000
+	lostCitiesStationSpacing = 600
+	#
+	#Last-resort tunnelling UNDER a LostCities city body when a head can neither route
+	#around the city nor cross it overhead via the street viaduct. When off, a boxed-in
+	#head retires (its normal behaviour); when on, the planner bores a deep tunnel beneath
+	#the buildings instead.
+	cityUnderTunnelEnabled = true

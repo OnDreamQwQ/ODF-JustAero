@@ -1,0 +1,8 @@
+name = "cbcmodernwarfare-0.0.6v+mc.1.21.1-neoforge"
+filename = "cbcmodernwarfare-0.0.6v+mc.1.21.1-neoforge.jar"
+side = "both"
+
+[download]
+hash-format = "sha512"
+hash = "780f413e5b58e6d2c7003a2ce4e00b4871ceda1db4220922fa60dbf81f30b9ef63f28261cda07e2e21b8d07291ad956c8324b14430bb036e8d625036138d62f8"
+url = "https://mediafilez.forgecdn.net/files/8232/556/cbcmodernwarfare-0.0.6v%2bmc.1.21.1-neoforge.jar"

@@ -1,0 +1,12 @@
+name = "Net Music: Better Experience"
+filename = "net_music_list-4.3.jar"
+side = "both"
+
+[download]
+hash-format = "sha512"
+hash = "2d6fcb9511a43524a39afc5d6d446a9d1fd6ae8461c6939f31d9718ee9e6719db17f814c9008f985190b2633e853bd2352b56a46cbe9dbf630eb22eb364fd87f"
+url = "https://cdn.modrinth.com/data/Jc6WJafg/versions/MTzfIx4I/net_music_list-4.3.jar"
+
+[update.modrinth]
+mod-id = "Jc6WJafg"
+version = "MTzfIx4I"

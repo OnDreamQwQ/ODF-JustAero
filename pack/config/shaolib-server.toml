@@ -1,0 +1,18 @@
+[blockDamage]
+	#When enabled, Shaolib-driven explosion and projectile penetration block destruction
+	#only affects blocks that belong to a loaded Sable/Synaxis physics body.
+	#Entity damage, impact effects, and non-destructive projectile outcomes are unchanged.
+	restrictToPhysicsBodies = false
+
+[debug]
+	#When enabled, logs Shaolib projectile chunk-load decisions.
+	#This is low-volume and useful for checking whether a cache hit upgraded to a live chunk load.
+	projectileChunkLoadVerbose = false
+	#When enabled, logs Shaolib chunk cache lifecycle events: chunk load/unload, restore, refresh, install, and persistence.
+	cacheLifecycleVerbose = false
+	#When enabled, logs chunk dirty marks produced inside a Shaolib debug trace scope.
+	#This path is hot; it intentionally ignores ordinary setBlock calls outside Shaolib projectile/explosion scopes.
+	cacheDirtyVerbose = false
+	#When enabled, logs Shaolib explosion finalize summaries: candidate counts and affected chunks.
+	#Per-block explosion details are intentionally not logged.
+	explosionVerbose = false

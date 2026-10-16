@@ -1,0 +1,12 @@
+name = "Yuushya Modelling"
+filename = "yuushya_modelling-1.21.1-2.4.1.jar"
+side = "both"
+
+[download]
+hash-format = "sha512"
+hash = "bced02e33397e5b97d2dcb9f9bbc66bcfeb7c4875884efe9683177024f4c13bea1f94ef551acb502c331a8e36334384b69637bf6ca7571d7758d80976309e3f5"
+url = "https://cdn.modrinth.com/data/RxVV6ldg/versions/BEzfp616/yuushya_modelling-1.21.1-2.4.1.jar"
+
+[update.modrinth]
+mod-id = "RxVV6ldg"
+version = "BEzfp616"

@@ -1,0 +1,13 @@
+#Client-only bridge confirmation preferences.
+[bridge]
+	#Do not show the second confirmation when enabling infinite range. The server still validates credentials and quota independently.
+	skip_infinite_range_confirmation = false
+
+	#Map background providers. The first enabled available provider is used: Xaero World Map, AFN exploration map, then the lightweight grid fallback.
+	[bridge.map_sources]
+		#Allow Xaero World Map when the optional mod is installed.
+		xaero = true
+		#Allow the AFN persistent client exploration map.
+		afn = true
+		#Allow the zero-cost simple coordinate grid fallback.
+		grid = true

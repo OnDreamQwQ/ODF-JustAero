@@ -1,0 +1,29 @@
+#Client-side visuals and UX
+[client]
+	#Legacy option; addon goggle tooltip details now follow Create's Sneak detail behavior
+	showDetailedGoggleTooltips = false
+	#Show the attached inventory preview when looking at a Shipping Manifest while wearing Create goggles
+	showShippingManifestGoggleTooltip = true
+	#Render the attached inventory contents on placed Shipping Manifests and enable mouse-wheel scrolling while looking at them
+	renderShippingManifestContents = true
+	#Show gyro/link status messages in chat when interacting with blocks
+	showLinkStatusChat = true
+	#Enable Mannequin Poser GUI
+	enableMannequinPoserGui = true
+	#Use the StrawStatues/Statue Menus armor stand GUI for armor stands and player mannequins when StrawStatues is installed. StrawStatues entities always keep their own GUI.
+	preferStrawStatuesPoserGui = true
+	#Use the V2 node graph interface for Advanced Contraption Controllers
+	advancedControllerV2Ui = true
+	#Maximum local volume multiplier for thruster sounds (0 disables local thruster audio)
+	# Default: 1.0
+	# Range: 0.0 ~ 2.0
+	thrusterMaxVolume = 1.0
+	#Local thruster particle multiplier (0 disables local thruster particles)
+	# Default: 1.0
+	# Range: 0.0 ~ 1.0
+	thrusterParticleScale = 1.0
+	#Thrusters emit light
+	thrustersEmitLight = true
+	#Claw marker render mode is disabled; OFF is enforced
+	#Allowed Values: DEPTH, DECAL, PARTICLE, OFF
+	clawMarkerRenderMode = "OFF"

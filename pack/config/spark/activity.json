@@ -1,0 +1,41 @@
+[
+  {
+    "user": {
+      "type": "player",
+      "name": "OnDreamFur",
+      "uniqueId": "d13f125f-5362-4647-bec9-10d04e5adb7f"
+    },
+    "time": 1791958624502,
+    "type": "Profiler",
+    "data": {
+      "type": "url",
+      "value": "https://spark.lucko.me/HPgDWzHRE7"
+    }
+  },
+  {
+    "user": {
+      "type": "player",
+      "name": "OnDreamFur",
+      "uniqueId": "d13f125f-5362-4647-bec9-10d04e5adb7f"
+    },
+    "time": 1791958622561,
+    "type": "Profiler",
+    "data": {
+      "type": "url",
+      "value": "https://spark.lucko.me/9USK8bcCaN"
+    }
+  },
+  {
+    "user": {
+      "type": "player",
+      "name": "OnDreamFur",
+      "uniqueId": "d13f125f-5362-4647-bec9-10d04e5adb7f"
+    },
+    "time": 1791956380109,
+    "type": "Profiler",
+    "data": {
+      "type": "url",
+      "value": "https://spark.lucko.me/X3HhfRKkAy"
+    }
+  }
+]

@@ -1,0 +1,31 @@
+[cookery]
+	#Whether enabling the Satiated Shield effect.
+	SatiatedShieldAbsorbEnabled = true
+	#Whether the Satiated Shield effect should absorb excess damage beyond its capacity.
+	SatiatedShieldAbsorbExcessDamage = true
+	#If true, the Satiated Shield effect will not apply while the player has the Hunger effect.
+	IS_SATIATED_SHIELD_DISABLE_WHEN_HUNGRY_EFFECT = true
+	#Minimum Hunger Value required for the Satiated Shield to apply (int).
+	# Default: 4
+	# Range: 1 ~ 20
+	SATIATED_SHIELD_MIN_FOOD_LEVEL = 4
+	#The exhaustion added each time the player takes damage.
+	# Default: 2.0
+	# Range: 0.0 ~ 40.0
+	SATIATED_SHIELD_ADDITIONAL_EXHAUSTION_PER_DAMAGE = 2.0
+	#The damage reduction percentage of the Satiated Shield effect.
+	# Default: 1.0
+	# Range: 0.0 ~ 1.0
+	SATIATED_SHIELD_DAMAGE_REDUCTION_PERCENT = 1.0
+	#The maximum damage reduction amount of the Satiated Shield effect.
+	# Default: 64.0
+	# Range: 0.0 ~ 2.147483647E9
+	SATIATED_SHIELD_MAX_DAMAGE_REDUCTION = 64.0
+	#The minimum damage that can be got in the Satiated Shield effect.
+	# Default: 0.0
+	# Range: 0.0 ~ 2.147483647E9
+	SATIATED_SHIELD_MIN_DAMAGE = 0.0
+	#The multiplier for the exhaustion added per point of Satiated Shield Weakness Damage.
+	# Default: 2.0
+	# Range: 1.0 ~ 2.147483647E9
+	SATIATED_SHIELD_WEAKNESS_DAMAGE_MULTIPLIER = 2.0

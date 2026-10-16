@@ -1,0 +1,12 @@
+name = "Create: Tracks"
+filename = "tracks-neoforge-1.21.1-1.0.1.jar"
+side = "both"
+
+[download]
+hash-format = "sha512"
+hash = "4875d0e5f2e6561451341ea13d6f8edea0158971b851b7e8c2c2901f128c73ee9393d4615be9950f2bfe057e7e5121d460c30a23828290917658c9dee0cd3552"
+url = "https://cdn.modrinth.com/data/iPv9VoMI/versions/V4hhNZeU/tracks-neoforge-1.21.1-1.0.1.jar"
+
+[update.modrinth]
+mod-id = "iPv9VoMI"
+version = "V4hhNZeU"

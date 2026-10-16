@@ -1,0 +1,12 @@
+name = "Net Music"
+filename = "netmusic-1.5.2-neoforge+mc1.21.1.jar"
+side = "both"
+
+[download]
+hash-format = "sha512"
+hash = "bc4100b08757b3c3f50df8a0c05812bf564900ddfa17cc81749c42fc0653f5346f84685206b87447548d16311fe666a92b568e02a57239ecfc624c595357f33d"
+url = "https://cdn.modrinth.com/data/gKNuqaQq/versions/ePPjVRpW/netmusic-1.5.2-neoforge%2Bmc1.21.1.jar"
+
+[update.modrinth]
+mod-id = "gKNuqaQq"
+version = "ePPjVRpW"

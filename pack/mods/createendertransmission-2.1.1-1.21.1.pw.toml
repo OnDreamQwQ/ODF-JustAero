@@ -1,0 +1,12 @@
+name = "Create: Ender Transmission"
+filename = "createendertransmission-2.1.1-1.21.1.jar"
+side = "both"
+
+[download]
+hash-format = "sha512"
+hash = "6b2ec688b73cd65edf8d0f76a509b71ec8ffbf10bb663c2fcd5334a264e2fdef40cd81f7a148690eb25db71714f418635afaf0fd7f17f2af045d88892756286f"
+url = "https://cdn.modrinth.com/data/wtW8g4TG/versions/eI9pk5JC/createendertransmission-2.1.1-1.21.1.jar"
+
+[update.modrinth]
+mod-id = "wtW8g4TG"
+version = "eI9pk5JC"

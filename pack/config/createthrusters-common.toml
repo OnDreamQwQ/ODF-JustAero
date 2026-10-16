@@ -1,0 +1,195 @@
+#Gameplay values shared between client and server
+[common]
+
+	#Thruster propulsion, fuel, beam mode, and upgrade scaling
+	[common.thruster]
+		#Base thrust at 100% throttle for normal thrusters. Default 900.
+		# Default: 900.0
+		# Range: 1.0 ~ 100000.0
+		thrusterBaseThrust = 900.0
+		#Base airflow at 100% throttle
+		# Default: 80.0
+		# Range: 0.0 ~ 100000.0
+		thrusterBaseAirflow = 80.0
+		#Base fuel usage in mB/t at 100% throttle for a neutral fuel
+		# Default: 5.6
+		# Range: 0.01 ~ 1000.0
+		thrusterBaseFuelUsePerTick = 5.6
+		#Fuel curve exponent: >1 makes low throttle significantly more efficient
+		# Default: 1.35
+		# Range: 0.1 ~ 4.0
+		thrusterFuelThrottleExponent = 1.35
+		#Allow active thruster exhaust to damage living entities
+		enableThrusterEntityDamage = true
+		#Allow haunting-upgraded thrusters to convert supported mobs instead of dropping loot on death
+		enableThrusterMobHaunting = true
+		#Thrust multiplier for beam (focused/lense) thruster mode. Default 1.5
+		# Default: 1.5
+		# Range: 0.0 ~ 100.0
+		beamThrustMultiplier = 1.5
+		#Thrust multiplier applied to oxidized thruster fuels
+		# Default: 1.5
+		# Range: 0.0 ~ 100.0
+		oxidizedFuelThrustMultiplier = 1.5
+		#Propulsion Simulated Oxidized Fuel Bonus Offset
+		# Default: 0.45
+		# Range: 0.0 ~ 1.0
+		propulsionSimulatedOxidizedFuelBonusShare = 0.45
+		#Fuel efficiency multiplier for fluids tagged as dense thruster fuels
+		# Default: 1.45
+		# Range: 0.01 ~ 100.0
+		denseFuelEfficiencyMultiplier = 1.45
+		#Fuel efficiency multiplier for fluids tagged as light thruster fuels
+		# Default: 1.0
+		# Range: 0.01 ~ 100.0
+		lightFuelEfficiencyMultiplier = 1.0
+		#FE consumed per tick at 100% throttle when a thruster is in focused/beam mode. Scales linearly with throttle.
+		# Default: 30.0
+		# Range: 1.0 ~ 100000.0
+		focusedModeFePerTick = 30.0
+		#Maximum FE a beam thruster can store internally
+		# Default: 100000
+		# Range: 1000 ~ 10000000
+		focusedModeFeCapacity = 100000
+		#Maximum multiplier allowed from propulsion upgrades. Tiers apply 2x, 4x, 8x, and 16x before this cap.
+		# Default: 32.0
+		# Range: 1.0 ~ 64.0
+		propulsionUpgradeMaxMultiplier = 32.0
+
+	#RCS Thruster propulsion
+	[common.rcs_thruster]
+		#Maximum thrust in pN per RCS nozzle at full power. Shaft power scales up to this value at 256 RPM.
+		# Default: 215.0
+		# Range: 0.0 ~ 100000.0
+		rcsThrusterMaxThrust = 215.0
+
+	#Servo Bearing pivot controls
+	[common.thruster_bearing]
+		#Maximum pivot angle in degrees when bearing receives full redstone differential
+		# Default: 90.0
+		# Range: 1.0 ~ 180.0
+		bearingMaxPivotAngleDeg = 90.0
+		#Bearing interpolation factor per tick (0 = no movement, 1 = snap)
+		# Default: 0.25
+		# Range: 0.0 ~ 1.0
+		bearingSmoothing = 0.25
+		#Bearing target debounce ticks before motion updates
+		# Default: 2
+		# Range: 0 ~ 40
+		bearingDebounceTicks = 2
+
+	#Gyroscope and gearbox controls
+	[common.gearbox]
+		#Maximum static per-face angle reported by the bi-directional gearbox from gyro input
+		# Default: 90.0
+		# Range: 1.0 ~ 180.0
+		gearboxMaxStaticAngleDeg = 90.0
+		#Invert gearbox gyro-derived face angles and redstone outputs when the gearbox is powered
+		gearboxReverseWithRedstone = true
+
+	#Scissor Piston extension limits
+	[common.scissor_piston]
+		#Maximum extension range, in blocks, after adding Scissor Arms
+		# Default: 32
+		# Range: 1 ~ 32
+		maxRange = 32
+
+	#Optional loot and entity drops
+	[common.loot]
+		#Allow mobs and players to drop heads through the addon's head-drop system
+		enableMobHeadDrops = true
+
+	#Shared kinetic and Forge Energy conversion values
+	[common.energy]
+		#Forge Energy conversion rate in FE/t at 256 RPM. The alternator multiplies this by its efficiency; default 5883 keeps alternator output at 5000 FE/t with 0.85 efficiency.
+		# Default: 5883
+		# Range: > 0
+		feAtMaxRpm = 5883
+		#Maximum stress for the Alternator and Industrial Motor in SU at 256 RPM.
+		# Default: 96800
+		# Range: > 0
+		maxStress = 96800
+
+	#Industrial Motor energy input and speed limits
+	[common.industrial_motor]
+		#Industrial Motor min/max RPM range.
+		# Default: 256
+		# Range: > 1
+		motorRpmRange = 256
+		#Industrial Motor minimum required energy consumption in FE/t.
+		# Default: 8
+		# Range: > 0
+		motorMinConsumption = 8
+		#Industrial Motor max FE input transfer rate.
+		# Default: 5000
+		# Range: > 0
+		motorMaxInput = 5000
+		#Industrial Motor internal FE buffer.
+		# Default: 5000
+		# Range: > 0
+		motorCapacity = 5000
+
+	#Alternator energy output and efficiency
+	[common.alternator]
+		#Alternator max FE output transfer rate.
+		# Default: 5000
+		# Range: > 0
+		generatorMaxOutput = 5000
+		#Alternator internal FE buffer.
+		# Default: 5000
+		# Range: > 0
+		generatorCapacity = 5000
+		#Alternator efficiency relative to the shared FE-at-256-RPM conversion rate.
+		# Default: 0.85
+		# Range: 0.01 ~ 1.0
+		generatorEfficiency = 0.85
+
+	#Powered Zipline movement and rope attachment behavior
+	[common.powered_zipline]
+		#Powered Zipline hanging-rope anchor motion damping while ropes are attached. 0 = instant start/stop, 1 = strongest smoothing/coasting. Higher values reduce sway from hard starts and stops.
+		# Default: 0.45
+		# Range: 0.0 ~ 1.0
+		poweredZiplineRopeAttachmentInertiaDamping = 0.45
+
+	#Claw block targeting and entity pickup behavior
+	[common.claw]
+		#Allow the Claw block to scan for and pick up living entities
+		clawCanGrabEntities = true
+
+	#Entity Launcher throw and grapple behavior
+	[common.entity_launcher]
+		#Maximum knockback applied when a fully charged Entity Launcher throws a held entity
+		# Default: 4.0
+		# Range: 0.1 ~ 64.0
+		entityLauncherMaxKnockback = 4.0
+		#Maximum player pull velocity per tick while actively reeling toward a grapple anchor
+		# Default: 0.62
+		# Range: 0.01 ~ 8.0
+		entityLauncherGrappleReelVelocity = 0.62
+		#Maximum player pull velocity per tick when only enforcing rope slack/length without active reel
+		# Default: 0.18
+		# Range: 0.0 ~ 8.0
+		entityLauncherGrappleSlackPullVelocity = 0.18
+		#Maximum grapple movement velocity cap applied to the player
+		# Default: 0.78
+		# Range: 0.1 ~ 16.0
+		entityLauncherGrappleMaxVelocity = 0.78
+		#Tangential swing acceleration applied from movement input while grappling
+		# Default: 0.045
+		# Range: 0.0 ~ 2.0
+		entityLauncherGrappleSwingAcceleration = 0.045
+
+	#Advanced Contraption Controller graph limits
+	[common.advanced_controller]
+		#Maximum number of nodes allowed across an Advanced Contraption Controller graph and its functions
+		# Default: 512
+		# Range: 32 ~ 4096
+		maxNodes = 512
+
+	#App Ownership and persistance
+	[common.diagnostic_tablet]
+		#Enable the Smart Tablet block, item, user interface, apps and networking
+		enabled = false
+		#Who owns the paid apps, PLAYER is shared across tablets, DEVICE is not.
+		#Allowed Values: PLAYER, DEVICE
+		appPurchaseScope = "PLAYER"

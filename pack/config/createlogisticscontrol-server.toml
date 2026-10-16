@@ -1,0 +1,6 @@
+#Enable Filter Link (require reload game).
+enableFilterLink = true
+#Maximum distance (in blocks) a Filter Link may reach to select its filter target blocks.
+# Default: 16
+# Range: 1 ~ 256
+filterLinkRange = 16

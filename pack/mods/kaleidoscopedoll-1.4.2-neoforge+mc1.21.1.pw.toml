@@ -1,0 +1,12 @@
+name = "Kaleidoscope Doll"
+filename = "kaleidoscopedoll-1.4.2-neoforge+mc1.21.1.jar"
+side = "both"
+
+[download]
+hash-format = "sha512"
+hash = "87d3db8e6b8fded00d72d81c9b7ee07bed2009937dbce8a6c0b34799caefffedd21db9c08fe504acf30fa77d8b7b6f28e804d46fa43ce23ec7dc553f49f89e87"
+url = "https://cdn.modrinth.com/data/vQLjjxNs/versions/iRKxsLXR/kaleidoscopedoll-1.4.2-neoforge%2Bmc1.21.1.jar"
+
+[update.modrinth]
+mod-id = "vQLjjxNs"
+version = "iRKxsLXR"

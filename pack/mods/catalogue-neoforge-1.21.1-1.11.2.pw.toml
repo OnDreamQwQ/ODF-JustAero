@@ -1,0 +1,8 @@
+name = "catalogue-neoforge-1.21.1-1.11.2"
+filename = "catalogue-neoforge-1.21.1-1.11.2.jar"
+side = "both"
+
+[download]
+hash-format = "sha512"
+hash = "32a29b34b4c25a9fce98fca9a31ee8061fd73533c09f935ff7f6207fd0a2417a60f8641656e15524e1736f3e8e149a8cfa03ec7e73667f8af016bae40adf1921"
+url = "https://mediafilez.forgecdn.net/files/6926/815/catalogue-neoforge-1.21.1-1.11.2.jar"

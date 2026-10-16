@@ -1,0 +1,12 @@
+name = "General Feedback"
+filename = "generalfeedback-1.0.0.jar"
+side = "client"
+
+[download]
+hash-format = "sha512"
+hash = "d92920a136418235a5840d4a17b655b0223a573acb4cc333d0465a0d20b1e9b385e352c09a3d985c2e2f76954854c6063a0445a1f6d9a14ac243b338908c86bd"
+url = "https://cdn.modrinth.com/data/YX77RQqj/versions/XihrS83D/generalfeedback-1.0.0.jar"
+
+[update.modrinth]
+mod-id = "YX77RQqj"
+version = "XihrS83D"

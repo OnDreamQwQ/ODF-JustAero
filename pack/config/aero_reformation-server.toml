@@ -1,0 +1,79 @@
+["Levitite Mining"]
+	#If true, levitite and pearlescent_levitite can only be mined with a golden pickaxe.
+	#Mining speed equals diamond pickaxe on obsidian. Efficiency enchantment has no effect.
+	levititeGoldPickaxeOnly = true
+
+["Redstone Spring"]
+	#Stress capacity (SU) of the Redstone Spring output. Default 8.0 (same as torsion spring).
+	# Default: 8.0
+	# Range: 0.0 ~ 1024.0
+	redstoneSpringStressCapacity = 8.0
+
+["RCS Thruster"]
+	#Fuel consumption of RCS Thruster in pN per mB per tick. Higher = more efficient. Default 5000.
+	# Default: 5000.0
+	# Range: 1.0 ~ 1000000.0
+	rcsFuelConsumption = 5000.0
+	#Electric efficiency of RCS Thruster in pN per FE per tick. Higher = more efficient. Default 25.
+	# Default: 25.0
+	# Range: 1.0 ~ 1000000.0
+	rcsElectricEfficiency = 25.0
+	#Maximum speed (m/s) for guidance warhead. RCS will throttle forward thrust above this speed. Default 20.
+	# Default: 20.0
+	# Range: 1.0 ~ 1000.0
+	guidanceMaxSpeed = 20.0
+
+["Filter Patch"]
+	#If false, all filter patch mixins are disabled for compatibility.
+	filterPatchEnabled = true
+
+["Physics Anchor"]
+	#Maximum chunk loading radius for the Physics Anchor (2 to this value). Default 5.
+	# Default: 5
+	# Range: 4 ~ 64
+	maxAnchorRadius = 5
+	#Tracking range in blocks for anchored SubLevels. Higher values prevent SubLevels from being removed by Sable when far away. Default 1024.
+	# Default: 1024.0
+	# Range: 64.0 ~ 1.7976931348623157E308
+	anchorTrackingRange = 1024.0
+	#Master switch for the runaway self-destruct guard on anchored SubLevels.
+	#When a craft starts moving absurd distances per tick the guard tears its anchors down
+	#to stop it from stalling the server. Default true.
+	runawayProtectionEnabled = true
+	#Blocks per tick above which a move counts as one runaway strike. Default 500.
+	#A single strike is never fatal — the guard requires several inside a short window,
+	#so an ordinary teleport will not destroy a healthy craft.
+	# Default: 500.0
+	# Range: 16.0 ~ 1.7976931348623157E308
+	runawayMaxSpeed = 500.0
+	#Strikes needed inside the window before the craft self-destructs. Default 3.
+	# Default: 3
+	# Range: 2 ~ 100
+	runawayStrikesToKill = 3
+	#Length in ticks of the rolling window that strikes are counted over. Default 20.
+	# Default: 20
+	# Range: 2 ~ 200
+	runawayStrikeWindowTicks = 20
+
+["Create Radar Fix"]
+	#Master switch for Create Radar performance optimizations (default false).
+	#When enabled: improves AABB scan splitting, throttles monitor sync, caps track count.
+	radarFixEnabled = false
+	#Sub-AABB chunk size for radar entity scanning. Larger = fewer queries. Default 512 (range 256-1024).
+	# Default: 512
+	# Range: 256 ~ 1024
+	radarScanSplitSize = 512
+	#Ticks between radar monitor syncs to clients. Default 10 (original 5).
+	# Default: 10
+	# Range: 5 ~ 40
+	radarSyncInterval = 10
+	#Maximum number of radar tracks synced per monitor per update. Default 50.
+	# Default: 50
+	# Range: 10 ~ 500
+	radarMaxSyncedTracks = 50
+
+["Copycat Ultimine"]
+	#Master switch for FTB Ultimine copycat block chain right-click compatibility.
+	#When enabled: right-clicking a copycat block with a BlockItem or Wrench while holding
+	#the Ultimine key will apply the action to all adjacent copycat blocks with the same material.
+	copycatUltimineEnabled = true

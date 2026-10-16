@@ -1,0 +1,77 @@
+#Virtual ballistic missile physics; speed is blocks/second and acceleration is blocks/second^2
+[virtualBallisticMissile]
+	# Default: 50.0
+	# Range: 1.0 ~ 2000.0
+	initialSpeed = 50.0
+	# Default: 40.0
+	# Range: 0.0 ~ 1000.0
+	boostAcceleration = 40.0
+	# Default: 500.0
+	# Range: 1.0 ~ 2000.0
+	cruiseSpeed = 500.0
+	# Default: 120.0
+	# Range: 0.0 ~ 2000.0
+	terminalAcceleration = 120.0
+	# Default: 1020.0
+	# Range: 1.0 ~ 4000.0
+	terminalMaxSpeed = 1020.0
+	# Default: 12.0
+	# Range: 0.1 ~ 180.0
+	boostTurnRateDegreesPerSecond = 12.0
+	# Default: 25.0
+	# Range: 0.1 ~ 360.0
+	midcourseTurnRateDegreesPerSecond = 25.0
+	# Default: 55.0
+	# Range: 0.1 ~ 720.0
+	terminalTurnRateDegreesPerSecond = 55.0
+	# Default: 160.0
+	# Range: 0.0 ~ 10000.0
+	minApogee = 160.0
+	# Default: 1800.0
+	# Range: 1.0 ~ 50000.0
+	maxApogee = 1800.0
+	# Default: 0.06
+	# Range: 0.0 ~ 2.0
+	apogeeDistanceFactor = 0.06
+	# Default: 1200.0
+	# Range: 16.0 ~ 10000.0
+	terminalStartDistance = 1200.0
+	# Default: 6.0
+	# Range: 0.5 ~ 60.0
+	impactChunkPrepareSeconds = 6.0
+	# Default: 6
+	# Range: 1 ~ 8
+	impactChunkRadius = 6
+	# Default: 4
+	# Range: 1 ~ 40
+	missileSyncIntervalTicks = 4
+	# Default: 32000.0
+	# Range: 64.0 ~ 100000.0
+	missileMaxRenderDistance = 32000.0
+	flareEnabled = true
+	#Allowed Values: BOOST, MIDCOURSE, TERMINAL
+	flareStartPhase = "TERMINAL"
+	# Default: 8
+	# Range: 1 ~ 100
+	flareBurstIntervalTicks = 8
+	# Default: 4
+	# Range: 1 ~ 16
+	flareCountPerBurst = 4
+	# Default: 100
+	# Range: 10 ~ 1200
+	flareLifetimeTicks = 100
+	# Default: 1.0
+	# Range: 0.0 ~ 100.0
+	flareHeat = 1.0
+	# Default: 16.0
+	# Range: 0.0 ~ 200.0
+	flareDispersionBlocksPerSecond = 16.0
+	# Default: 24.0
+	# Range: 0.0 ~ 500.0
+	flareBackwardImpulseBlocksPerSecond = 24.0
+	# Default: 16000.0
+	# Range: 64.0 ~ 100000.0
+	flareRenderDistance = 16000.0
+	# Default: 6.0
+	# Range: 0.0 ~ 64.0
+	proximityFuzeRadius = 6.0

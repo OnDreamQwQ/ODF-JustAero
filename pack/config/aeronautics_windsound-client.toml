@@ -1,0 +1,20 @@
+#Minimum speed (blocks/second) to start playing wind sound
+# Default: 3.0
+# Range: 0.0 ~ 100.0
+wind_min_speed = 3.0
+#Speed (blocks/second) at which wind sound reaches maximum volume
+# Default: 25.0
+# Range: 0.0 ~ 100.0
+wind_max_speed = 25.0
+#Volume when moving at minimum speed threshold (exposed)
+# Default: 0.0
+# Range: 0.0 ~ 1.0
+wind_min_volume = 0.0
+#Volume when moving at max speed and above (exposed)
+# Default: 1.0
+# Range: 0.0 ~ 1.0
+wind_max_volume = 1.0
+#Volume multiplier applied when obstructed in the direction of travel (0.0 = silent, 1.0 = same as exposed)
+# Default: 0.4
+# Range: 0.0 ~ 1.0
+wind_blocked_factor = 0.4

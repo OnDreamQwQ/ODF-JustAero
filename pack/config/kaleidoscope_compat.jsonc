@@ -1,0 +1,180 @@
+{
+    // The version of the config file. Do not change this unless you know what you are doing.
+    "rconfig:version": 0,
+    /*
+     * NONE: Disable all datapacks except soup
+     * COMPAT: Extensive compatibility with other mod items
+     * UNITE: Duplicate items of the unified module
+     * Valid Values: NONE, COMPAT, UNITE
+     */
+    "datapack_mode": "COMPAT",
+    // Enable soup base material
+    "soup_datapack_enabled": true,
+    "kitchen": {
+        // Enable fuzzy recipes (FlexPotRecipe and FlexStockpotRecipe)
+        "fuzzy_recipes_enabled": true,
+        // Whether Nourishment effect is blocked when player has Satiated Shield
+        "block_enabled": true,
+        // Millstone related settings
+        "millstone": {
+            // Whether millstone item stacking is enabled
+            "stacking_enabled": false
+        },
+        // Transmutation Lunch Bag related settings
+        "lunch_bag": {
+            // Whether the lunch bag blacklist is enabled
+            "blacklist_enabled": true,
+            // List of item IDs that cannot be put into the Transmutation Lunch Bag
+            "blacklist": "artifacts:eternal_steak,kaleidoscope_nether:everlasting_flame_steak",
+            // Whether the modified Transmutation Lunch Bag behavior is enabled
+            "back_behavior_enabled": false,
+            // Whether AppleSkin mod compatibility is enabled
+            "appleskin_compat_enabled": true
+        },
+        // Scarecrow related settings
+        "scarecrow": {
+            // Whether scarecrows can repel phantoms
+            "repel_phantoms": true
+        },
+        // Projectile dodge related settings
+        "projectile_dodge": {
+            // Whether projectile dodge teleport is enabled
+            "teleport_enabled": true,
+            /*
+             * Duration cost per dodge (in ticks)
+             * Type: Integer
+             */
+            "duration_cost": 200
+        },
+        // Vitality effect related settings
+        "vitality": {
+            // List of entity IDs that cannot be affected by Vitality effect
+            "blacklist": ""
+        }
+    },
+    "farmersdelight": {
+        // Whether all FarmersDelight cooking pot recipes are disabled
+        "cooking_pot_recipes_disabled": false,
+        // Whether the FarmersDelight cooking pot GUI is disabled
+        "cooking_pot_gui_disabled": false,
+        // Whether all FarmersDelight cutting board recipes are disabled
+        "cutting_board_recipes_disabled": false,
+        // Whether rich soil hoe tilling is enabled
+        "rich_soil_hoe_enabled": true
+    },
+    "youkaisfeasts": {
+        // Whether all Youkai's Homecoming steaming recipes are disabled
+        "steaming_recipes_disabled": false
+    },
+    "farm_and_charm": {
+        // Whether all Farm and Charm cooking pot recipes are disabled
+        "cooking_pot_recipes_disabled": false,
+        // Whether Farm and Charm mod compatibility is enabled
+        "farm_and_charm_compat_enabled": true
+    },
+    "vinery": {
+        // Whether all Vinery fermentation barrel recipes are disabled
+        "barrel_recipes_disabled": false
+    },
+    "little_maid": {
+        // Whether Little Maid mod compatibility is enabled
+        "compat_enabled": true,
+        // Whether Little Maid chopping board task is enabled
+        "chopping_board_enabled": true,
+        // Whether Little Maid millstone task is enabled
+        "millstone_enabled": true,
+        // Whether Little Maid pressing tub task is enabled
+        "pressing_tub_enabled": true
+    },
+    "spectrum": {
+        // Whether Spectrum mod compatibility is enabled
+        "compat_enabled": true,
+        // Whether Spectrum anvil crushing recipes can be used in millstone
+        "millstone_anvil_crushing_enabled": true,
+        // Network node related settings
+        "network_node": {
+            // Whether Spectrum pot item handler is enabled
+            "pot_item_handler_enabled": true,
+            // Whether Spectrum chopping board item handler is enabled
+            "chopping_board_item_handler_enabled": true,
+            // Whether Spectrum millstone item handler is enabled
+            "millstone_item_handler_enabled": true,
+            // Whether Spectrum shawarma spit item handler is enabled
+            "shawarma_spit_item_handler_enabled": true,
+            // Whether Spectrum steamer item handler is enabled
+            "steamer_item_handler_enabled": true,
+            // Whether Spectrum teapot item handler is enabled
+            "teapot_item_handler_enabled": true,
+            // Whether Spectrum trash can item handler is enabled
+            "trash_can_item_handler_enabled": true
+        },
+        // Whether Spectrum pastel node pot oil compatibility is enabled
+        "pastel_node_compat_enabled": true
+    },
+    "create": {
+        // Whether Create mod compatibility is enabled
+        "compat_enabled": true,
+        // Mechanical arm related settings
+        "arm": {
+            // Whether Create mechanical arm pot compatibility is enabled
+            "pot_enabled": true,
+            // Whether Create mechanical arm stockpot compatibility is enabled
+            "stockpot_enabled": true,
+            // Whether Create mechanical arm steamer compatibility is enabled
+            "steamer_enabled": true,
+            // Whether Create mechanical arm millstone compatibility is enabled
+            "millstone_enabled": true,
+            // Whether Create mechanical arm shawarma spit compatibility is enabled
+            "shawarma_spit_enabled": true,
+            // Whether Create mechanical arm teapot compatibility is enabled
+            "teapot_enabled": true
+        },
+        // Contraption interaction related settings
+        "contraption": {
+            // Whether to enable pot contraption interaction
+            "pot_enabled": true,
+            // Whether to enable stove contraption interaction
+            "stove_enabled": true,
+            // Whether to enable stockpot contraption interaction
+            "stockpot_enabled": true,
+            // Whether to enable steamer contraption interaction
+            "steamer_enabled": true,
+            // Whether to enable teapot contraption interaction
+            "teapot_enabled": true,
+            // Whether to enable fruit basket contraption interaction
+            "fruit_basket_enabled": true,
+            // Whether to enable chopping board contraption interaction
+            "chopping_board_enabled": true,
+            // Whether to enable enamel basin contraption interaction
+            "enamel_basin_enabled": true,
+            // Whether to enable kitchenware racks contraption interaction
+            "kitchenware_racks_enabled": true,
+            // Whether to enable millstone contraption interaction
+            "millstone_enabled": true,
+            // Whether to enable oil pot contraption interaction
+            "oil_pot_enabled": true,
+            // Whether to enable shawarma spit contraption interaction
+            "shawarma_spit_enabled": true,
+            // Whether to enable trash can contraption interaction
+            "trash_can_enabled": true,
+            // Whether to enable table contraption interaction
+            "table_enabled": true,
+            // Whether to enable chair contraption interaction
+            "chair_enabled": true,
+            // Whether to enable cook stool contraption interaction
+            "cook_stool_enabled": true
+        }
+    },
+    "quark": {
+        // Whether Quark sickle harvest fix is enabled
+        "sickle_harvest_fix_enabled": true
+    },
+    "other": {
+        // Whether JEI compatibility is enabled
+        "jei_compat_enabled": true,
+        // Whether Thirst mod compatibility is enabled
+        "thirst_compat_enabled": true,
+        // Whether to suppress tag file loading error logs
+        "suppress_tag_load_errors": false
+    }
+}

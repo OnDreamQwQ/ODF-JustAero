@@ -1,0 +1,56 @@
+#Nuclear explosion visual effects (mushroom clouds of the Nuke / H-Bomb shells).
+[nuke_fx]
+	#Render the mushroom cloud effects at all.
+	enabled = true
+	#Detail multiplier for the clouds (billboard density). 0.25 = very light, 1.0 = default, 1.5 = maximum.
+	#Also scaled by the vanilla Particles setting (All / Decreased / Minimal).
+	# Default: 1.0
+	# Range: 0.25 ~ 1.5
+	quality = 1.0
+	#Distance (blocks) beyond which a cloud is not rendered.
+	# Default: 2000
+	# Range: 256 ~ 4000
+	renderDistance = 2000
+	#Maximum number of clouds alive at once (the oldest is dropped).
+	# Default: 6
+	# Range: 1 ~ 12
+	maxClouds = 6
+
+#Screen and camera effects.
+[immersion]
+	#Full-screen white flash at detonation. Disable if you are sensitive to flashing lights.
+	screenFlash = true
+	#Peak opacity of the screen flash.
+	# Default: 1.0
+	# Range: 0.0 ~ 1.0
+	flashIntensity = 1.0
+	#Orange thermal wash on the screen after the flash.
+	heatWash = true
+	#Faint retinal afterimage of the fireball (a soft violet spot fading over a few seconds) when you looked straight at the blast.
+	afterimage = true
+	#Camera shake when the shock front arrives.
+	cameraShake = true
+	#Camera shake strength multiplier.
+	# Default: 1.0
+	# Range: 0.0 ~ 2.0
+	shakeIntensity = 1.0
+	#The shock front pushes your player away from the blast.
+	blastWind = true
+	#Play the detonation sound on the client with a distance-based delay (like real thunder).
+	explosionSounds = true
+	#Volume multiplier of the detonation sounds.
+	# Default: 1.0
+	# Range: 0.0 ~ 2.0
+	soundVolume = 1.0
+
+#Optional visual elements.
+[elements]
+	#Lightning between the cloud and the ground.
+	lightning = true
+	#Shadow of the cloud cast on the ground.
+	cloudShadow = true
+	#Ash keeps falling around the site for a few minutes after the cloud dissipates.
+	falloutAsh = true
+	#Singularity Shell: bend and swirl the whole view around the black hole (gravitational lensing) with chromatic aberration.
+	#Off by default: the horizon, accretion disk and Einstein ring are drawn either way.
+	singularityLensing = false

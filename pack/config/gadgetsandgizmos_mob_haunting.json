@@ -1,0 +1,16 @@
+{
+  "conversions": {
+    "minecraft:skeleton": "minecraft:wither_skeleton",
+    "minecraft:stray": "minecraft:wither_skeleton",
+    "minecraft:bogged": "minecraft:wither_skeleton",
+    "minecraft:slime": "minecraft:magma_cube",
+    "minecraft:zombie": "minecraft:zombified_piglin",
+    "minecraft:husk": "minecraft:piglin_brute",
+    "minecraft:drowned": "minecraft:zombified_piglin",
+    "minecraft:pig": "minecraft:hoglin",
+    "minecraft:silverfish": "minecraft:endermite",
+    "minecraft:horse": "minecraft:skeleton_horse",
+    "minecraft:villager": "minecraft:piglin",
+    "minecraft:piglin": "minecraft:enderman"
+  }
+}

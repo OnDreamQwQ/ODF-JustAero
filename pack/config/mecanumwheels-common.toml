@@ -1,0 +1,14 @@
+[wheel]
+	#Mecanum wheel configuration
+	#Rolling resistance coefficient
+	# Default: 0.1
+	# Range: 0.0 ~ 100.0
+	roll = 0.1
+	#Mecanum forward thrust coefficient (along rolling direction)
+	# Default: 0.1
+	# Range: 0.0 ~ 10.0
+	fam = 0.1
+	#Mecanum side thrust coefficient (along wheel axis)
+	# Default: 0.1
+	# Range: 0.0 ~ 10.0
+	side = 0.1

@@ -1,0 +1,13 @@
+[panel_overview]
+	#Horizontal offset in GUI pixels from the centered position.
+	# Default: 0
+	# Range: -200 ~ 200
+	x_offset = 0
+	#Vertical offset in GUI pixels from the default position above the hotbar.
+	# Default: 0
+	# Range: -100 ~ 100
+	y_offset = 0
+	#Interface size as a percentage of the default size.
+	# Default: 100
+	# Range: 25 ~ 200
+	scale_percent = 100

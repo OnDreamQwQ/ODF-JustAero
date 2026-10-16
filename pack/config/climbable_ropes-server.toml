@@ -1,0 +1,73 @@
+#Climbing motion (blocks per tick).
+[climbing]
+	#Vertical speed when holding forward to climb up.
+	# Default: 0.18
+	# Range: 0.0 ~ 5.0
+	climbSpeed = 0.18
+	#Vertical speed when holding back to climb down.
+	# Default: 0.22
+	# Range: 0.0 ~ 5.0
+	descendSpeed = 0.22
+	#Upward impulse applied when jumping off the rope.
+	# Default: 0.42
+	# Range: 0.0 ~ 5.0
+	jumpOffVelocity = 0.42
+	#Maximum angle from vertical (in degrees) at which a hanging rope segment can be grabbed for climbing.
+	#0 = only perfectly vertical ropes; 90 = any angle including horizontal. Increase to climb diagonal lines.
+	# Default: 90.0
+	# Range: 0.0 ~ 90.0
+	maxClimbAngleFromVertical = 90.0
+
+#Sprint-while-descending slide mechanics.
+[sliding]
+	#Maximum slide speed.
+	# Default: 1.2
+	# Range: 0.0 ~ 10.0
+	slideSpeed = 1.2
+	#How quickly the slide ramps up to slideSpeed.
+	# Default: 0.05
+	# Range: 0.0 ~ 1.0
+	slideAcceleration = 0.05
+	#How quickly the slide eases out after releasing back.
+	# Default: 0.04
+	# Range: 0.0 ~ 1.0
+	slideDeceleration = 0.04
+
+#Toggle individual climbing features.
+[features]
+	#Allow climbing vertical hanging ropes.
+	allowVerticalRopeClimbing = true
+	#Allow climbing rope lines between two plungers.
+	allowPlungerClimbing = true
+	#Allow ziplining along plunger rope lines while holding a CHAIN_RIDEABLE-tagged item (e.g. Create's wrench), mirroring Simulated's existing zipline on hanging rope strands.
+	allowPlungerZipline = true
+	#Allow mantling onto the block above the rope when jumping off at its top end. When disabled, jumping off at the top performs a normal upward impulse instead.
+	allowBlockMantle = true
+
+#Advanced physics and targeting tuning. These affect how climbing feels and when you are forced off a rope.
+#Defaults preserve the standard behavior; change at your own risk.
+[advanced]
+	#How aggressively the spring drags you toward the rope each tick.
+	# Default: 0.55
+	# Range: 0.0 ~ 5.0
+	snapPull = 0.55
+	#Maximum per-tick velocity the snap spring can contribute.
+	# Default: 0.35
+	# Range: 0.0 ~ 5.0
+	snapVelocityCap = 0.35
+	#Distance (in blocks) from the rope at which external forces dismount you.
+	# Default: 3.0
+	# Range: 0.0 ~ 32.0
+	maxLeashDistance = 3.0
+	#How close (in blocks) to the lower endpoint counts as "at the bottom" for the grounded auto-dismount.
+	# Default: 0.6
+	# Range: 0.0 ~ 5.0
+	bottomDismountOffset = 0.6
+	#Ticks of ground contact at the bottom of a rope before you are auto-dismounted.
+	# Default: 5
+	# Range: 0 ~ 200
+	bottomGroundedDismountTicks = 5
+	#Raycast hitbox radius (in blocks) for rope hover detection. Larger values make ropes easier to aim at.
+	# Default: 0.25
+	# Range: 0.0 ~ 2.0
+	ropeHoverRadius = 0.25

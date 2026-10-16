@@ -1,0 +1,12 @@
+name = "Copycats+ aeronautics weight"
+filename = "aerocopycats-1.1.1.jar"
+side = "both"
+
+[download]
+hash-format = "sha512"
+hash = "4f48c03a25a6f4ec022398cece20e5aa8d51f00951a0f568980e6e5419c1af2f12c8bb652500721afef119ecc455e4c5b1bc4bb7bef38d88846759f0e4c39e8c"
+url = "https://cdn.modrinth.com/data/wjpmYU1u/versions/wsXjRa7l/aerocopycats-1.1.1.jar"
+
+[update.modrinth]
+mod-id = "wjpmYU1u"
+version = "wsXjRa7l"

@@ -1,0 +1,68 @@
+#Reactive armor Kontakt-1 settings: explosion interception radius and detonation sound.
+[kontakt]
+	#Search radius (in blocks) for active Kontakt-1 slots when an explosion detonates.
+	# Default: 4.0
+	# Range: 1.0 ~ 16.0
+	explosionSearchRadius = 4.0
+	#Volume of the slot detonation sound (1.0 = vanilla).
+	# Default: 0.6000000238418579
+	# Range: 0.0 ~ 2.0
+	detonateSoundVolume = 0.6000000238418579
+	#Pitch of the slot detonation sound. Higher = sharper.
+	# Default: 1.399999976158142
+	# Range: 0.5 ~ 2.0
+	detonateSoundPitch = 1.399999976158142
+
+#Rangefinder settings: max measurement distance and update frequency.
+[rangefinder]
+	#Maximum raycast distance for the rangefinder (blocks). Default 64.
+	# Default: 64.0
+	# Range: 8.0 ~ 256.0
+	maxRange = 64.0
+	#Server ticks between rangefinder measurements. 4 = 5 Hz. Lower = smoother but more network traffic.
+	# Default: 4
+	# Range: 1 ~ 40
+	tickInterval = 4
+	#Minimum distance delta (blocks) before sending a sync packet to clients.
+	# Default: 0.05
+	# Range: 0.0 ~ 1.0
+	updateEpsilon = 0.05
+
+#Power Generator and consumer settings: stress output, transmission range, and per-block SU cost.
+[power]
+	#Maximum distance (blocks) at which the Power Generator can supply energy to consumers.
+	# Default: 20.0
+	# Range: 1.0 ~ 64.0
+	maxTransmissionDistance = 20.0
+	#Minimum rotational speed (RPM) required for the generator to start producing energy.
+	# Default: 32.0
+	# Range: 1.0 ~ 256.0
+	minSpeedForOutput = 32.0
+	#Rotational speed (RPM) at which energy output saturates (clamped before SU calculation).
+	# Default: 128.0
+	# Range: 32.0 ~ 512.0
+	maxSpeed = 128.0
+	#Multiplier: SU = (RPM - minSpeed) * speedToSuFactor, clamped to maxStressOutput.
+	# Default: 8.0
+	# Range: 0.10000000149011612 ~ 64.0
+	speedToSuFactor = 8.0
+	#Maximum total SU the generator can supply. Total consumption across consumers above this triggers overload.
+	# Default: 1024.0
+	# Range: 64.0 ~ 8192.0
+	maxStressOutput = 1024.0
+	#Server ticks between balance recalculations. 20 = once per second.
+	# Default: 20
+	# Range: 1 ~ 200
+	updateIntervalTicks = 20
+	#Stress Units consumed by AimingModule when powered.
+	# Default: 128
+	# Range: 0 ~ 4096
+	aimingConsumption = 128
+	#Stress Units consumed by Optical Observation Unit when powered.
+	# Default: 64
+	# Range: 0 ~ 4096
+	opticalObsConsumption = 64
+	#Stress Units consumed by Thermal Vision Module when powered.
+	# Default: 256
+	# Range: 0 ~ 4096
+	thermalConsumption = 256

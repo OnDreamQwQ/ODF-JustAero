@@ -1,0 +1,12 @@
+name = "Create: Crafts & Additions and Aeronautics Compat"
+filename = "aeroadditionbridge-1.0.0.jar"
+side = "server"
+
+[download]
+hash-format = "sha512"
+hash = "11cd9aeee932f340ecccd6e0270c94808af64f61679dead8bc7f59f934c0488a4ec3fe2ffc1a0393c48c42dfa63d7955725927ab8f64ffb6dffb225ced1de883"
+url = "https://cdn.modrinth.com/data/tum2vG0T/versions/zibO5DQH/aeroadditionbridge-1.0.0.jar"
+
+[update.modrinth]
+mod-id = "tum2vG0T"
+version = "zibO5DQH"

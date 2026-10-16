@@ -1,0 +1,12 @@
+name = "CTM-1.21-1.2.1+3"
+filename = "CTM-1.21-1.2.1+3.jar"
+side = "both"
+
+[download]
+hash-format = "sha512"
+hash = "551e65931fbb84fc095ecd62c35863abff4ea6b7ed283aac108369934f87c736a12c17298bfe5f616fdc0d88fb24e01dd7fe274180c83d8c258ae8308c76cb48"
+url = "https://mediafilez.forgecdn.net/files/5587/515/CTM-1.21-1.2.1%2b3.jar"
+
+[update.curseforge]
+file-id = 5587515
+project-id = 267602

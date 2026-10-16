@@ -1,0 +1,29 @@
+#.
+#Show AC content in the creative tab.
+showACContent = false
+#.
+#Disables flywheel wire rendering
+disableFlywheelWireRendering = false
+#.
+#Whether wires are rendered on unloaded chunks
+renderWiresOnUnloadedChunks = false
+#.
+#Use Level-Of-Detail when rendering wires without flywheel.
+wireLOD = true
+#.
+#Maximum distance for wire rendering without flywheel.
+# Default: 512
+# Range: > -2147483648
+wireRenderDistance = 512
+#.
+#Show the pantograph range box.
+debugPantographRange = false
+#.
+#Display nodeID when hovering.
+debugNodeID = false
+#.
+#Display birds on wires.
+showBirdsOnWires = false
+#.
+#Display hint on items placeable in electrical panel.
+displayPanelTooltip = true

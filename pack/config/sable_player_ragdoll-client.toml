@@ -1,0 +1,10 @@
+#When ragdolled, switch to the normal first-person camera instead of the unlocked Sable contraption camera.
+useFirstPersonCamera = false
+#Base distance (blocks) for the unlocked Sable ragdoll camera before scroll zoom. Sable multiplies this by
+#~1.75 and clamps it against terrain, so the effective pull-back is larger. Vanilla default is 4.0; lower it
+#to bring the camera closer to the ragdoll. Ignored when useFirstPersonCamera is on.
+# Default: 4.0
+# Range: 0.5 ~ 16.0
+subLevelCameraDistance = 4.0
+#Show the on-screen controls hint popup when entering ragdoll mode.
+showControlsHint = true

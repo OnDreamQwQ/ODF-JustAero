@@ -1,0 +1,7 @@
+# packwiz cannot ship its own ignore file, and the extraction step wipes pack\,
+# so this template is copied back into place on every update.
+#
+# Written by the extractor itself; keep in sync with tools\Update-Pack.ps1.
+audit-report.*
+verify-report.*
+.packwizignore

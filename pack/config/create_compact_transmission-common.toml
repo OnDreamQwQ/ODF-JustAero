@@ -1,0 +1,12 @@
+#c2scrubber power
+# Default: 200
+# Range: > 1
+c02scrub_power = 200
+#Max absolute gear ratio for the four-speed transmission,(400 = 4.00x).
+# Default: 400
+# Range: > 1
+four_kpp_max = 400
+#Max absolute speed multiplier for the simple gear box 
+# Default: 400
+# Range: > 1
+simple_kpp_max = 400

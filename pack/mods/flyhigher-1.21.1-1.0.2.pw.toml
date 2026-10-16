@@ -1,0 +1,12 @@
+name = "Create: FlyHigher-直上九霄"
+filename = "flyhigher-1.21.1-1.0.2.jar"
+side = "both"
+
+[download]
+hash-format = "sha512"
+hash = "902fede5c6154da1cff52bc85790dac8941ea7d33e927b3d305e7315ec838b4b8f1cb1f0c31970e906e2d8b64688d9f99f81d748004362c9d07cdf0fcdaa8f47"
+url = "https://cdn.modrinth.com/data/cePRJjRZ/versions/OzpXNl6w/flyhigher-1.21.1-1.0.2.jar"
+
+[update.modrinth]
+mod-id = "cePRJjRZ"
+version = "OzpXNl6w"

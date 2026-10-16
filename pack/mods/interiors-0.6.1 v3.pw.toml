@@ -1,0 +1,12 @@
+name = "interiors-0.6.1 v3"
+filename = "interiors-0.6.1 v3.jar"
+side = "both"
+
+[download]
+hash-format = "sha512"
+hash = "efc9ee1e0f3b1a5d5c63adaf62c3dfb74acf6df54d687c423aa1b9a9f8022b990d3d815f3455ce907f7adcc67e805b4713b699a2106d8c73584abde89db1ac98"
+url = "https://mediafilez.forgecdn.net/files/8974/633/interiors-0.6.1%20v3.jar"
+
+[update.curseforge]
+file-id = 8974633
+project-id = 906239

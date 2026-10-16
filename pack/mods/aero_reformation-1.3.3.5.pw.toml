@@ -1,0 +1,12 @@
+name = "Aero-Reformation"
+filename = "aero_reformation-1.3.3.5.jar"
+side = "both"
+
+[download]
+hash-format = "sha512"
+hash = "bc63370f1cb6dd2ca7573da87f98513c77e47dcd9f6c3dafdc7ad470111894d88c5fe13ab214c866b41ba99360f71db2cafb00c4c9ae819f54a7a5938f76bfaf"
+url = "https://cdn.modrinth.com/data/EYJ4oFpq/versions/t8yMRfXt/aero_reformation-1.3.3.5.jar"
+
+[update.modrinth]
+mod-id = "EYJ4oFpq"
+version = "t8yMRfXt"

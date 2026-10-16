@@ -1,0 +1,12 @@
+name = "mianbaos_modernwarfare-2.6.4-neoforge"
+filename = "mianbaos_modernwarfare-2.6.4-neoforge.jar"
+side = "both"
+
+[download]
+hash-format = "sha512"
+hash = "c5c78b49d0a2d48285df9161c763b90d746a6f3b4e67ceadc7c7dc2adc7ab9e8dfb670b8c457f12f45ae1fdd9282d040f9b3356446d262ff26eb37597a2b00f1"
+url = "https://mediafilez.forgecdn.net/files/9100/452/mianbaos_modernwarfare-2.6.4-neoforge.jar"
+
+[update.curseforge]
+file-id = 9100452
+project-id = 1619723

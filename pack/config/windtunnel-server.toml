@@ -1,0 +1,39 @@
+[wind_tunnel]
+	#Maximum number of open blocks scanned in front of a wind tunnel.
+	# Default: 256
+	# Range: 1 ~ 256
+	maxRange = 256
+	#Base local air velocity injected by the tunnel, in blocks-per-second.
+	# Default: 12.0
+	# Range: 0.1 ~ 256.0
+	baseAirspeed = 12.0
+	#Half-width of the tunnel effect on the two axes perpendicular to the flow.
+	# Default: 0.85
+	# Range: 0.1 ~ 3.0
+	crossSectionRadius = 0.85
+	#Upper clamp for the injected local air velocity, in blocks-per-second.
+	# Default: 128.0
+	# Range: 0.1 ~ 256.0
+	maxAirspeed = 128.0
+	#When true, Create sails and Simulated symmetric sails use velocity-squared lift/drag scaling instead of linear velocity scaling.
+	quadraticSailAerodynamics = false
+	#Active when quadraticSailAerodynamics is enabled
+	# Default: 50.0
+	# Range: 20.0 ~ 256.0
+	normalDragSoftCap = 50.0
+	#Active when quadraticSailAerodynamics is enabled
+	# Default: 40.0
+	# Range: 20.0 ~ 256.0
+	liftSoftCap = 40.0
+	#Active when quadraticSailAerodynamics is enabled
+	# Default: 0.16
+	# Range: 0.1 ~ 1.0
+	liftTuning = 0.16
+	#Active when quadraticSailAerodynamics is enabled
+	# Default: 0.35
+	# Range: 0.1 ~ 1.0
+	parallelDragTuning = 0.35
+	#Active when quadraticSailAerodynamics is enabled
+	# Default: 0.1
+	# Range: 0.02 ~ 1.0
+	directionlessDragTuning = 0.1

@@ -1,0 +1,4 @@
+#treephysics.config.leaf_volume.tooltip
+# Default: 0.15
+# Range: 0.0 ~ 1.0
+leaf_volume = 0.15

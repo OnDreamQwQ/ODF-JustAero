@@ -1,0 +1,10 @@
+[client]
+	#Disable all Deep Seas startup UI screens (Welcome screen and Update notifications).
+	#Highly recommended to set this to TRUE if you are creating a modpack to avoid annoying your players.
+	disableStartupScreens = false
+	#Coloured moving lights on the Sonar and the Industrial Alarm (Veil).
+	#Always off when Iris is installed: Veil cannot draw them next to Iris, even with shaders turned off.
+	veilLights = true
+	#For photosensitive or epileptic players: the Industrial Alarm no longer throws its coloured flashing Veil light,
+	#only normal Minecraft light. Other Veil lights are not affected.
+	photosensitiveMode = true

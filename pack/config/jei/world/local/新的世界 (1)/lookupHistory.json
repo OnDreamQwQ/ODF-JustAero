@@ -1,0 +1,8 @@
+[
+  {"version":1},
+  {"ingredient":{"id":"computercraft:computer_advanced"},"type":"item_stack","bookmarkType":"INGREDIENT"},
+  {"ingredient":{"id":"fluidlogistics:potato_server"},"type":"item_stack","bookmarkType":"INGREDIENT"},
+  {"ingredient":{"id":"create:copycat_step"},"type":"item_stack","bookmarkType":"INGREDIENT"},
+  {"ingredient":{"id":"electroenergetics:iron_wire"},"type":"item_stack","bookmarkType":"INGREDIENT"},
+  {"ingredient":{"id":"fluidlogistics:blaze_cooler"},"type":"item_stack","bookmarkType":"INGREDIENT"}
+]

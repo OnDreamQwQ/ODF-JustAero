@@ -1,0 +1,44 @@
+[blueprint]
+	# Default: 16777216
+	# Range: 1024 ~ 134217728
+	max_file_bytes = 16777216
+	# Default: 67108864
+	# Range: 1024 ~ 268435456
+	max_expanded_bytes = 67108864
+	# Default: 4
+	# Range: 1 ~ 32
+	max_concurrent_jobs = 4
+	# Default: 1000000
+	# Range: 1 ~ 4000000
+	max_blocks = 1000000
+	# Default: 16384
+	# Range: 1 ~ 65536
+	max_devices = 16384
+	# Default: 65536
+	# Range: 1 ~ 262144
+	max_frequency_entries = 65536
+	# Default: 512
+	# Range: 1 ~ 16384
+	capture_blocks_per_tick = 512
+	# Default: 32
+	# Range: 1 ~ 1024
+	installations_per_tick = 32
+	# Default: 65536
+	# Range: 1 ~ 262144
+	max_pending_installations = 65536
+	# Default: 16384
+	# Range: 1 ~ 262144
+	max_authorized_blueprints = 16384
+	#Maximum retries while a loaded bridge waits for its full rectangle; unloaded chunks do not count.
+	# Default: 7200
+	# Range: 1 ~ 720000
+	max_loaded_installation_retries = 7200
+	#Maximum pending Create schematic printer identity claims kept by the server.
+	# Default: 8192
+	# Range: 64 ~ 65536
+	max_printer_identity_claims = 8192
+	#Lifetime in ticks of a Create schematic printer identity claim.
+	# Default: 1200
+	# Range: 20 ~ 72000
+	printer_identity_claim_ttl = 1200
+	copy_hidden_faces = true

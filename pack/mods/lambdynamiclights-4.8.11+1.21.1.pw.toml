@@ -1,0 +1,12 @@
+name = "LambDynamicLights - Dynamic Lights"
+filename = "lambdynamiclights-4.8.11+1.21.1.jar"
+side = "client"
+
+[download]
+hash-format = "sha512"
+hash = "0286076e8b2922dfbe90cd4544a0d16e6d07d7249c732a37479ea4281e9cf96c86dd2e1ce5261489bd5553ceba33044bc550a04b9eb582645eb97f15c9c6a64c"
+url = "https://cdn.modrinth.com/data/yBW8D80W/versions/ksaGCvSu/lambdynamiclights-4.8.11%2B1.21.1.jar"
+
+[update.modrinth]
+mod-id = "yBW8D80W"
+version = "ksaGCvSu"

@@ -1,0 +1,13 @@
+#Cancel container and door interactions
+#while the player is grabbing a ragdoll part.
+#Set to false to allow normal container and door interactions while grabbing.
+grabInterceptEnabled = true
+#When enabled, prevents interacting with a ragdoll corpse
+#if the player is currently grabbing any part of that ragdoll.
+#(Only applies when ragdoll-corpse mod is installed)
+corpseInterceptEnabled = true
+#Default state of No-Collide mode on server/world load.
+#When enabled, ragdoll part blocks have no collision,
+#preventing players and mobs from getting stuck.
+#Can be toggled at runtime with /nocollide command.
+noCollideDefault = true

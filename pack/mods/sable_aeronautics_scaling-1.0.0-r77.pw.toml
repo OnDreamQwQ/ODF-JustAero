@@ -1,0 +1,12 @@
+name = "sable aeronautics scaling"
+filename = "sable_aeronautics_scaling-1.0.0-r77.jar"
+side = "both"
+
+[download]
+hash-format = "sha512"
+hash = "767adfa2327983274717c172fe1b45ce7c8db0cc6b65f80990bce737865b78c515cde04c342b26a3c187c8121350888255c3fda9036b49203cdcb07cf4f8706e"
+url = "https://cdn.modrinth.com/data/k8JvyaXM/versions/s089Ei57/sable_aeronautics_scaling-1.0.0-r77.jar"
+
+[update.modrinth]
+mod-id = "k8JvyaXM"
+version = "s089Ei57"

@@ -1,0 +1,110 @@
+#Linear motor tuning
+[linear_motor]
+	#The most a launch is allowed to pull, in blocks/s^2. A ceiling, not the
+	#rate a launch uses: a launch works out the acceleration that reaches its
+	#target speed exactly at the end of its run and holds that, so a long run
+	#is a gentle one and only a run too short to be gentler comes up here.
+	#This is what a real coaster is designed around, and the limit is the
+	#riders rather than the motor: a real launch sits near 1.5g, and reaching
+	#50 blocks/s in one block would need 127g whatever the magnets could do.
+	#Default ~3.5g, harder than a real launch coaster because a Minecraft park
+	#is built at a tighter scale than a real one. Past ~64 a cart gains more
+	#than three blocks/s per tick and the physics starts stepping over
+	#collisions.
+	# Default: 35.0
+	# Range: 1.0 ~ 1000.0
+	launchRate = 35.0
+	#The most a brake is allowed to pull back, in blocks/s^2. Unlike a launch
+	#a brake uses all of it, since a Trim or a Stop is given a speed to reach
+	#and no distance to reach it over.
+	#Set above the launch ceiling on purpose, so a brake run is always
+	#shorter than the launch run that made the speed: stopping from 50
+	#blocks/s takes ~25 blocks against the ~36 it took to get there. Gravity
+	#does not weaken with a heavier cart, so brakes are the one thing that
+	#should not be left to just keep up.
+	# Default: 50.0
+	# Range: 1.0 ~ 1000.0
+	brakeRate = 50.0
+	#How fast a motor walks a cart onto a Stop's mark, in blocks/s.
+	#A stop brakes at the full rate down to this, then holds this speed until the
+	#cart is on its mark and parks it there. It is the pace a station roll-in is
+	#watched at rather than a performance figure: too high and the cart arrives
+	#faster than it can be parked accurately, too low and a cart that overshot
+	#takes an age to walk back.
+	# Default: 3.0
+	# Range: 0.5 ~ 20.0
+	creepSpeed = 3.0
+	#Highest speed a Linear Motor Controller step can be set to, in blocks/s.
+	#Bounds Launch and Trim alike. Top-hat launches want 50-80; past ~100 the
+	#physics can miss collisions at speed.
+	# Default: 100
+	# Range: 5 ~ 200
+	maxStepSpeed = 100
+
+#Coaster Observer tuning
+[coaster_observer]
+	#How long a Coaster Observer holds its redstone signal after a cart has passed.
+	#A cart at speed crosses the watched point in a fraction of a tick, so without a
+	#hold the pulse would be invisible to redstone. 20 ticks = 1 second. The reading
+	#itself stays on show longer than this, so a display is still worth walking to.
+	# Default: 20
+	# Range: 1 ~ 200
+	signalHoldTicks = 20
+	#Bound of the Speed at Full Signal value on Coaster Observers, in blocks/s.
+	#That value is the cart speed an observer reports as a full redstone signal.
+	# Default: 100
+	# Range: 5 ~ 200
+	fullSignalAt = 100
+
+#Splashdown Scoop tuning
+[splashdown_scoop]
+	#How hard one fully submerged Splashdown Scoop drags, per (blocks/s)^2.
+	#Drag is a force, so a heavy train slows less through the same trough with
+	#nothing here having to know its mass. Speed halves every mass*0.69/(drag
+	#* scoops) blocks: at the default a bare two-mass cart loses half its speed
+	#over about 28 blocks of trough, a ten-mass train over 139. Fitting more
+	#scoops is the lever for a heavy train, and how deep the track runs sets how
+	#much of each one is in the water.
+	#Raising this much past the default lets one scoop out-brake a linear motor,
+	#which is rarely what a splashdown is for.
+	# Default: 0.15
+	# Range: 0.0 ~ 5.0
+	drag = 0.15
+	#The maximum total drag a single cart can experience from Splashdown Scoops, per (blocks/s)^2.
+	#This simulates the 'wake' effect: the first few scoops hit undisturbed water and do the braking,
+	#while additional scoops just drag through the wake and contribute nothing extra to the braking force,
+	#even though they still throw water visually. A default of 0.25 means the cap is reached at roughly
+	#2 fully submerged scoops (if drag is 0.15).
+	# Default: 0.25
+	# Range: 0.0 ~ 10.0
+	maxDrag = 0.25
+
+#Forge Energy
+[energy]
+	#Whether driving a cart needs Forge Energy to work.
+	#Only work that speeds a cart up is paid for: a launch, and the last few
+	#blocks a stop walks a cart onto its mark. Braking is never refused for want
+	#of power, because braking is what fills the buffer.
+	#Off by default: Coasters Simulated's own magnets need no power, and a pack
+	#with no way to generate FE would be left unable to launch anything. Turning
+	#it on exposes an energy buffer on every anchorpoint that starts a run, which
+	#any FE cable can connect to.
+	requireEnergy = false
+	#Capacity in FE of the buffer on an anchorpoint that starts a run.
+	#Big enough to hold a launch or two, so a slow trickle charge between
+	#dispatches is a valid way to power a ride.
+	# Default: 100000
+	# Range: 1000 ~ 1000000000
+	energyBuffer = 100000
+	#FE drawn per unit of work the hardware does (force * distance).
+	#Cost therefore scales with what the launch actually achieves: a heavy
+	#train to a high speed costs more than a light one nudged along.
+	# Default: 10.0
+	# Range: 0.01 ~ 10000.0
+	energyPerJoule = 10.0
+	#Fraction of a brake run's work returned to its buffer as FE.
+	#Real coaster fins are eddy-current brakes and shed everything as heat;
+	#recovering any of it treats them as linear generators. 0 disables it.
+	# Default: 0.3
+	# Range: 0.0 ~ 1.0
+	regenEfficiency = 0.3

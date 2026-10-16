@@ -1,0 +1,18 @@
+{
+    "schema": 1,
+    "defaults": {
+        "item": "minecraft:emerald",
+        "count": 2
+    },
+    "apps":{
+        "createthrusters:app_store": {"item": "minecraft:emerald", "count": 0},
+        "createthrusters:settings": {"item": "minecraft:emerald", "count": 0},
+        "createthrusters:rdp": {"item": "minecraft:emerald", "count": 8},
+        "createthrusters:scm": {"item": "minecraft:emerald", "count": 20},
+        "createthrusters:block360": {"item": "minecraft:emerald", "count": 0},
+        "createthrusters:journey": {"item": "minecraft:emerald", "count": 0},
+        "createthrusters:redstone_link": {"item": "minecraft:emerald", "count": 0},
+        "createthrusters:gg_auto": {"item": "minecraft:emerald", "count": 0},
+        "createthrusters:nfc": {"item": "minecraft:emerald", "count": 0}
+    }
+}

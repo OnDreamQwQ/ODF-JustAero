@@ -1,0 +1,8 @@
+name = "refurbished_furniture-neoforge-1.21.1-1.0.22"
+filename = "refurbished_furniture-neoforge-1.21.1-1.0.22.jar"
+side = "both"
+
+[download]
+hash-format = "sha512"
+hash = "fde4f40a3a6439c43df1f522a92a1bd16e4a175966d17efe9dea425d42f7906e7ed7771fd84182b1fd7f3bb86ecd6b969fdca3c4aca4719597e4832e75ae2511"
+url = "https://mediafilez.forgecdn.net/files/7473/565/refurbished_furniture-neoforge-1.21.1-1.0.22.jar"

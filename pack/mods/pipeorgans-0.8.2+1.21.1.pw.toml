@@ -1,0 +1,12 @@
+name = "Create: Sound of Steam"
+filename = "pipeorgans-0.8.2+1.21.1.jar"
+side = "both"
+
+[download]
+hash-format = "sha512"
+hash = "883cd6a411980e8cf03ff3447ed2397f5681df10a0e06f7129712a55e01c0776d63aa2741270482d599371d2c2b59927779c1330a920ef494307060bde03924e"
+url = "https://cdn.modrinth.com/data/yGttHo06/versions/iFePoN10/pipeorgans-0.8.2%2B1.21.1.jar"
+
+[update.modrinth]
+mod-id = "yGttHo06"
+version = "iFePoN10"

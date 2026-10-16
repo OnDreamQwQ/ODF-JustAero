@@ -1,0 +1,12 @@
+name = "钠-汉化模组（Sodium Chinese Localization Mod）"
+filename = "sclp-neoforge-3.17.8.jar"
+side = "client"
+
+[download]
+hash-format = "sha512"
+hash = "3d8479d25ff2105d6f2e80e477c21f2e9e9322901f27cd4350dac01879e79abb6634a84ae86fc6ce7d254aa1408db0a48e2de042cf1e8e00040969b84a3e68b5"
+url = "https://cdn.modrinth.com/data/5vV6tCDu/versions/sQvXzPjB/sclp-neoforge-3.17.8.jar"
+
+[update.modrinth]
+mod-id = "5vV6tCDu"
+version = "sQvXzPjB"

@@ -1,0 +1,21 @@
+#The layout files are found in the minecraft folder /visual keybinder/layouts
+#The name of the file should be [number].[name].layout.txt
+#If all the layouts are deleted, the default will generate on startup
+#Layout file line format:
+#for a small button: [keyName];[xPosition];[yPosition];
+#for a wide button:  [keyName];[xPosition];[yPosition];wide
+[Preferences]
+	#Display whether a binding is for GUI, in game or both.
+	display_conflict_context = false
+	#Should a tooltip be displayed when the mouse is over a button.
+	display_layout_button_tooltip = true
+	#Should a tooltip be displayed for the change and reset button.
+	display_button_tooltip = true
+	#Reposition the menu button horizontally.
+	# Default: 0
+	# Range: -10000 ~ 10000
+	menu_button_offset_x = 0
+	#Reposition the menu button vertically.
+	# Default: 0
+	# Range: -10000 ~ 10000
+	menu_button_offset_y = 0

@@ -1,0 +1,140 @@
+[recording]
+	#Number of ticks between route recording samples.
+	# Default: 10
+	# Range: 1 ~ 1200
+	sampleIntervalTicks = 10
+	#Minimum distance between saved route points.
+	# Default: 1.0
+	# Range: 0.0 ~ 1024.0
+	minDistanceBetweenPoints = 1.0
+	#Maximum number of route points stored per route.
+	# Default: 5000
+	# Range: 2 ~ 100000
+	maxRoutePoints = 5000
+
+[playback]
+	#Default route playback mode.
+	#Allowed Values: PING_PONG, ONE_WAY
+	mode = "PING_PONG"
+	#Maximum automated playback speed in blocks per second.
+	#Default is 60. Higher values can cause overshoot, unstable docking, unloaded-travel issues, reload/recovery faults, or other automation failures on very fast vehicles.
+	#If higher values break something, please report it at https://github.com/sprocketaudio/Create-Aeronautics-Automated-Logistics/issues
+	# Default: 60.0
+	# Range: 1.0 ~ 1000.0
+	maxPlaybackSpeedBlocksPerSecond = 60.0
+	#Maximum distance from the nearest route endpoint allowed when beginning playback.
+	# Default: 24.0
+	# Range: 0.0 ~ 512.0
+	maxStartJoinDistance = 24.0
+	#Allow a single recorded leg / single stop plan to count as a valid runnable route.
+	allowOneWayRoutePlans = false
+	#Stop automated playback when collision is detected.
+	stopOnCollision = true
+	#How many times longer than the recorded segment duration playback may take before overdue stuck monitoring begins.
+	# Default: 3.0
+	# Range: 1.0 ~ 20.0
+	segmentOverrunMultiplier = 3.0
+	#Minimum net distance in blocks an overdue segment must gain toward its target before the overdue stuck timer is reset.
+	# Default: 0.25
+	# Range: 0.01 ~ 32.0
+	minMeaningfulProgressDistance = 0.25
+	#Maximum ticks an overdue segment may continue without meaningful net progress before playback pauses in a fault hold.
+	# Default: 200
+	# Range: 20 ~ 36000
+	stuckTimeoutTicks = 200
+
+[docking]
+	#Search radius in blocks for finding exactly one ground-side Docking Connector near an Airship Station.
+	# Default: 24
+	# Range: 1 ~ 128
+	stationDockSearchRadius = 24
+	#Maximum ticks to wait for station and ship Docking Connectors to lock after a docking stop starts.
+	# Default: 200
+	# Range: 20 ~ 12000
+	dockLockTimeoutTicks = 200
+	#Maximum ticks to wait for dock transfer activity to become idle before continuing.
+	# Default: 2400
+	# Range: 20 ~ 36000
+	dockIdleTimeoutTicks = 2400
+	#Recorded route distance in blocks kept clear around a reserved dock.
+	#Incoming ships queue before this much inbound path remains to the docking stop; the holder releases after clearing this much outbound path after the stop.
+	# Default: 80.0
+	# Range: 1.0 ~ 512.0
+	dockReservationClearanceDistance = 80.0
+	#Keep Airship Station chunks force-loaded so route starts, docking, and stop context remain available even when players move away.
+	#Disable this if you prefer to manage loading with another chunk-loader mod.
+	forceLoadStationChunks = true
+	#Extra station-centered chunk radius to temporarily force-load while a ship is docking.
+	#0 loads only the station chunk, 1 loads a 3x3 chunk square, and 2 loads a 5x5 chunk square.
+	# Default: 1
+	# Range: 0 ~ 2
+	stationInteractionChunkRadius = 1
+
+[simurail]
+	#Keep active automated Simurail vehicles force-loaded through Sable for their full recorded route.
+	#The Sable loading ticket is acquired when playback starts while the vehicle is live, then released when playback stops, faults, or completes.
+	#Disable this to use normal unloaded-travel behavior instead.
+	forceLoadSimurailVehicles = true
+
+[limits]
+	#Maximum number of simultaneously active automated vehicles in each owner or team limit bucket.
+	# Default: 8
+	# Range: 0 ~ 1024
+	maxActiveVehiclesPerPlayer = 8
+	#How active automated ship limits are pooled: PER_OWNER or PER_TEAM.
+	#PER_TEAM falls back to PER_OWNER when FTB Teams is not installed or the owner has no team.
+	#Allowed Values: PER_OWNER, PER_TEAM
+	activeVehicleLimitMode = "PER_TEAM"
+
+[permissions]
+	#Enable ownership-based permission checks for Ship Transponders, Airship Stations, and related logistics controls.
+	#When true, owner, team, ally, and operator rules are enforced.
+	#When false, these blocks behave as unrestricted public controls.
+	enableOwnershipPermissions = true
+	#Allow FTB Teams members to use stations owned by another member of their team without granting station admin control.
+	#Use includes landing, queueing, docking, viewing their allowed routes, and starting or stopping their own allowed vehicles.
+	#Set this to true and allowTeamStationControl to false if you want team members to use stations without editing dock or cargo links.
+	allowTeamStationUse = true
+	#Allow FTB Teams allies to use stations without granting station admin control.
+	#Use includes landing, queueing, docking, viewing their allowed routes, and starting or stopping their own allowed vehicles.
+	#Set this to true and allowAlliedStationControl to false if you want allies to use stations without editing dock or cargo links.
+	allowAlliedStationUse = false
+	#Allow FTB Teams members to fully control stations owned by another member of their team.
+	#Control includes station admin actions such as changing dock links and cargo links.
+	allowTeamStationControl = true
+	#Allow FTB Teams allies to fully control stations.
+	#Control includes station admin actions such as changing dock links and cargo links.
+	allowAlliedStationControl = false
+	#Allow FTB Teams members to control transponders owned by another member of their team.
+	allowTeamTransponderControl = true
+	#Allow FTB Teams allies to control transponders.
+	allowAlliedTransponderControl = false
+	#Who can see the passive top-surface preview on nearby Logistics Terminals.
+	#Options: OWNER_ONLY, OWNER_AND_TEAM, OWNER_TEAM_AND_ALLIES, PUBLIC.
+	#Allowed Values: OWNER_ONLY, OWNER_AND_TEAM, OWNER_TEAM_AND_ALLIES, PUBLIC
+	logisticsTerminalPreviewVisibility = "OWNER_AND_TEAM"
+	#Who can open Logistics Terminals for the read-only network view.
+	#Options: OWNER_ONLY, OWNER_AND_TEAM, OWNER_TEAM_AND_ALLIES, PUBLIC.
+	#Allowed Values: OWNER_ONLY, OWNER_AND_TEAM, OWNER_TEAM_AND_ALLIES, PUBLIC
+	logisticsTerminalAccess = "OWNER_AND_TEAM"
+	#Require players to crouch while mining Airship Stations and Ship Transponders, because breaking them removes related routes.
+	requireCrouchToBreakRouteBlocks = true
+[debug]
+	#Master switch for automated logistics debug logging.
+	#When false, all category debug logs below are disabled.
+	debugLogging = false
+	#Enable playback/runtime debug logs, including unloaded-transit progress and restore.
+	#Only used when debugLogging is true.
+	playback = true
+	#Enable low-level vehicle/Sable controller debug logs.
+	#Only used when debugLogging is true.
+	vehicle = true
+	#Enable docking connector discovery and docking-runtime debug logs.
+	#Only used when debugLogging is true.
+	docking = true
+	#Enable cargo endpoint, cargo wait, and cargo saved-data debug logs.
+	#Only used when debugLogging is true.
+	cargo = true
+	#Enable station/transponder menu, sync, and state-refresh debug logs.
+	#Only used when debugLogging is true.
+	uiSync = true

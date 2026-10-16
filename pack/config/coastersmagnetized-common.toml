@@ -1,0 +1,13 @@
+#Magnetic track tuning
+[magnet]
+	#Speed gained per second spent on magnetized track, in blocks/second^2.
+	#There is no target speed: the final speed comes from how much magnetized
+	#track the cart crosses, so longer magnetized runs go faster.
+	# Default: 32.0
+	# Range: 0.0 ~ 1000.0
+	acceleration = 32.0
+	#Hard speed cap in blocks/second. This is a safety limit, not a target:
+	#past roughly 100 the physics may miss collisions and carts can leave the track.
+	# Default: 128.0
+	# Range: 0.0 ~ 1000.0
+	maxSpeed = 128.0

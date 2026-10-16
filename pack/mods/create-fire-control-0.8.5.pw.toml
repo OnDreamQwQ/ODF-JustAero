@@ -1,0 +1,12 @@
+name = "create-fire-control-0.8.5"
+filename = "create-fire-control-0.8.5.jar"
+side = "both"
+
+[download]
+hash-format = "sha512"
+hash = "d15ff2e01239030c903911fa534e541c8a9e6cee22765e12238db0731505cb41ba7e7fba1896b9de0976d80e7999b3d3d9433a804a047d0f7689a5171066d23b"
+url = "https://mediafilez.forgecdn.net/files/9115/242/create-fire-control-0.8.5.jar"
+
+[update.curseforge]
+file-id = 9115242
+project-id = 1647191

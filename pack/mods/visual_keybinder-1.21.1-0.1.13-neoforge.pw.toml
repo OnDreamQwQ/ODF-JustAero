@@ -1,0 +1,12 @@
+name = "visual_keybinder-1.21.1-0.1.13-neoforge"
+filename = "visual_keybinder-1.21.1-0.1.13-neoforge.jar"
+side = "both"
+
+[download]
+hash-format = "sha512"
+hash = "821cee0ee2935debba7af392bb65b576252451076ea12d4a86bb9e245bceb0f68fbe4d2e609d2d638b9e0336c3623bc50ec5b7af682b38c0d6bc0d253ab93b84"
+url = "https://mediafilez.forgecdn.net/files/8055/151/visual_keybinder-1.21.1-0.1.13-neoforge.jar"
+
+[update.curseforge]
+file-id = 8055151
+project-id = 1020759

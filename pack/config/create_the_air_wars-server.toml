@@ -1,0 +1,16 @@
+[camera_monitor]
+	#Target monitor refresh rate (1-60 FPS). Actual refresh is limited by game FPS.
+	#Visible cameras share the render budget; monitors using the same camera share one image.
+	# Default: 60
+	# Range: 1 ~ 60
+	feed_fps = 60
+	#Camera monitor render resolution. Supported values: 64, 96, 128, 192, 256, 384, 512, 768, 1024
+	# Default: 256
+	# Range: 64 ~ 1024
+	feed_resolution = 256
+	#Extra chunk radius loaded and rendered around every active camera.
+	#These chunks are added to the player's normal chunks; they do not replace them.
+	#Default: 6, supported range: 1-16. High values are expensive.
+	# Default: 6
+	# Range: 1 ~ 16
+	feed_view_distance = 6

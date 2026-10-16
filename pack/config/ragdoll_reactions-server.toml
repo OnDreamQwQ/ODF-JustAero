@@ -1,0 +1,262 @@
+#Master switch for all ragdoll reactions.
+enabled = true
+
+#Options shared by all triggers.
+[general]
+
+	#Shared launch velocity and cooldown options.
+	[general.launch]
+		#Clamp total ragdoll launch speed after trigger detection (m/s).
+		# Default: 128.0
+		# Range: 1.0 ~ 256.0
+		maxSpeed = 128.0
+		#Ticks before the same player can be auto-ragdolled again.
+		# Default: 60
+		# Range: 0 ~ 1200
+		cooldownTicks = 60
+
+	#Shared target eligibility options.
+	[general.targeting]
+		#When true, creative-mode players can also be auto-ragdolled.
+		affectCreative = true
+
+	#Shared trigger sound effects.
+	[general.sound]
+		#When true, a punch sound plays at the player when any reaction trigger ragdolls them.
+		enabled = true
+		#Volume of the trigger sound.
+		# Default: 1.0
+		# Range: 0.0 ~ 4.0
+		volume = 1.0
+
+	#Developer options.
+	[general.debug]
+		#Log trigger details to the server console.
+		logging = false
+
+#Player states that suppress automatic reactions.
+[suppressions]
+
+	#Riptide trident self-launch suppression.
+	[suppressions.riptide]
+		#When true, riptide self-launches will not trigger movement reactions.
+		enabled = true
+		#Ticks to keep suppressing after the riptide state ends.
+		# Default: 15
+		# Range: 0 ~ 200
+		graceTicks = 15
+
+	#Slime block and bed bounce suppression.
+	[suppressions.bounce]
+		#When true, slime block and bed bounces will not trigger movement reactions.
+		enabled = true
+		#Ticks to keep suppressing after the player leaves a bounce block.
+		# Default: 10
+		# Range: 0 ~ 200
+		graceTicks = 10
+
+	#Elytra flight movement suppression.
+	[suppressions.elytraFlight]
+		#When true, elytra flight and its landing deceleration will not trigger movement reactions.
+		enabled = true
+		#Ticks to keep suppressing after the player stops fall-flying.
+		# Default: 10
+		# Range: 0 ~ 200
+		graceTicks = 10
+
+	#Creative/spectator-style flight movement suppression.
+	[suppressions.creativeFlight]
+		#When true, creative flight and its landing deceleration will not trigger movement reactions.
+		enabled = true
+		#Ticks to keep suppressing after the player stops flying.
+		# Default: 10
+		# Range: 0 ~ 200
+		graceTicks = 10
+
+	#Create Aeronautics Climbable Ropes suppression.
+	[suppressions.ropeClimbing]
+		#When true, climbing ropes from Create Aeronautics Climbable Ropes will not trigger movement reactions. Requires Create/Simulated.
+		enabled = true
+		#Ticks to keep suppressing after the player stops climbing a rope.
+		# Default: 10
+		# Range: 0 ~ 200
+		graceTicks = 10
+
+	#Create chain conveyor riding suppression.
+	[suppressions.chainConveyor]
+		#When true, Create chain conveyor riding will not trigger movement reactions. Requires Create.
+		enabled = true
+		#Ticks to keep suppressing after the player stops hanging from a chain conveyor.
+		# Default: 10
+		# Range: 0 ~ 200
+		graceTicks = 10
+
+	#Wind charge reaction suppression.
+	[suppressions.windCharge]
+		#When true, no wind charge explosions (from any source) will ragdoll players.
+		suppressAll = false
+		#When true, self-thrown wind charges will not ragdoll the throwing player.
+		suppressSelf = true
+		#Ticks to suppress movement reactions after a self-thrown wind charge explodes.
+		# Default: 10
+		# Range: 0 ~ 200
+		graceTicks = 10
+
+#Reaction trigger sources.
+[triggers]
+
+	#Sharp horizontal velocity change reactions.
+	[triggers.impact]
+		#When true, sharp horizontal velocity changes can ragdoll the player.
+		enabled = true
+		#Minimum horizontal player velocity change over the 3-tick window (m/s) required to trigger.
+		# Default: 16.0
+		# Range: 0.1 ~ 128.0
+		minVelocityDelta = 16.0
+		#Velocity changes above this (m/s) are ignored as teleports or anomalies rather than physical impacts.
+		# Default: 120.0
+		# Range: 1.0 ~ 1024.0
+		maxVelocityDelta = 120.0
+
+	#Create Big Cannons explosion reactions.
+	[triggers.cannonExplosions]
+		#When true, Create Big Cannons custom explosions can ragdoll nearby players.
+		enabled = true
+		#Minimum Create Big Cannons explosion power required to trigger a ragdoll.
+		# Default: 1.0
+		# Range: 0.0 ~ 256.0
+		minPower = 1.0
+		#Extra blocks added to the explosion entity radius when searching for nearby players.
+		# Default: 2.0
+		# Range: 0.0 ~ 64.0
+		radiusPadding = 2.0
+		#Launch speed multiplier applied to cannon explosion power before the global max launch speed clamp.
+		# Default: 15.0
+		# Range: 0.0 ~ 128.0
+		launchMultiplier = 15.0
+
+	#Vanilla explosion reactions.
+	[triggers.vanillaExplosions]
+		#When true, vanilla explosions can ragdoll nearby players.
+		enabled = true
+		#Minimum explosion power required to trigger a ragdoll.
+		# Default: 1.0
+		# Range: 0.0 ~ 256.0
+		minPower = 1.0
+		#Extra blocks added to the explosion knockback radius when searching for nearby players.
+		# Default: 2.0
+		# Range: 0.0 ~ 64.0
+		radiusPadding = 2.0
+		#Launch speed multiplier applied to explosion power before the global max launch speed clamp.
+		# Default: 15.0
+		# Range: 0.0 ~ 128.0
+		launchMultiplier = 15.0
+
+	#Hard fall landing reactions.
+	[triggers.fall]
+		#When true, landing from a high fall ragdolls the player.
+		enabled = true
+		#Minimum fall damage actually taken (after feather falling, protection, resistance, etc.) required to trigger a ragdoll.
+		# Default: 4.0
+		# Range: 0.0 ~ 1024.0
+		minDamage = 4.0
+		#Fraction of the landing impact speed driven downward to smash the ragdoll into the ground.
+		# Default: 0.5
+		# Range: 0.0 ~ 2.0
+		slamMultiplier = 0.5
+
+	#Elytra wall-crash reactions.
+	[triggers.crash]
+		#When true, flying into a wall while gliding ragdolls the player.
+		enabled = true
+		#Minimum fly-into-wall damage required to trigger a ragdoll.
+		# Default: 4.0
+		# Range: 0.0 ~ 1024.0
+		minDamage = 4.0
+		#Forward crash drive speed (m/s) per point of crash damage, scaled down before launch.
+		# Default: 3.0
+		# Range: 0.0 ~ 64.0
+		launchMultiplier = 3.0
+
+	#Heavy melee/projectile hit reactions.
+	[triggers.hit]
+		#When true, taking a big hit knocks the player into a ragdoll away from the attacker.
+		enabled = true
+		#Minimum damage required to trigger a ragdoll.
+		# Default: 8.0
+		# Range: 0.0 ~ 1024.0
+		minDamage = 8.0
+		#Launch speed (m/s) per point of damage taken.
+		# Default: 1.5
+		# Range: 0.0 ~ 64.0
+		launchMultiplier = 1.5
+
+	#Lightning strike reactions.
+	[triggers.lightning]
+		#When true, being struck by lightning ragdolls the player.
+		enabled = true
+		#Upward launch speed (m/s) when struck by lightning.
+		# Default: 12.0
+		# Range: 0.0 ~ 128.0
+		launchSpeed = 12.0
+
+#Ragdoll reactions for mobs. Separate from the player triggers above; only whitelisted mobs can ragdoll.
+[mobs]
+	#Master switch for all mob ragdoll reactions.
+	enabled = true
+
+	#Hard fall landing reactions for mobs.
+	[mobs.fall]
+		#When true, landing from a high fall ragdolls the mob.
+		enabled = true
+		#Minimum fall damage taken required to trigger a mob ragdoll.
+		# Default: 4.0
+		# Range: 0.0 ~ 1024.0
+		minDamage = 4.0
+		#Fraction of the landing impact speed driven downward to smash the ragdoll into the ground.
+		# Default: 0.5
+		# Range: 0.0 ~ 2.0
+		slamMultiplier = 0.5
+
+	#Heavy melee/projectile hit reactions for mobs.
+	[mobs.damage]
+		#When true, taking a big hit knocks the mob into a ragdoll away from the attacker.
+		enabled = true
+		#Fraction of the mob's remaining health that a hit must deal to trigger a ragdoll.
+		# Default: 0.3333333333333333
+		# Range: 0.0 ~ 1.0
+		healthFraction = 0.3333333333333333
+		#Launch speed (m/s) per point of damage taken.
+		# Default: 1.5
+		# Range: 0.0 ~ 64.0
+		launchMultiplier = 1.5
+
+	#Explosion reactions for mobs (vanilla and Create Big Cannons).
+	[mobs.explosion]
+		#When true, explosions can ragdoll nearby mobs.
+		enabled = true
+		#Minimum explosion power required to trigger a mob ragdoll.
+		# Default: 1.0
+		# Range: 0.0 ~ 256.0
+		minPower = 1.0
+		#Extra blocks added to the explosion radius when searching for nearby mobs.
+		# Default: 2.0
+		# Range: 0.0 ~ 64.0
+		radiusPadding = 2.0
+		#Launch speed multiplier applied to explosion power before the global max launch speed clamp.
+		# Default: 15.0
+		# Range: 0.0 ~ 128.0
+		launchMultiplier = 15.0
+
+	#Sublevel collision reactions for mobs.
+	[mobs.impact]
+		#When true, a sublevel hitting a mob hard enough will ragdoll it.
+		enabled = true
+		#Minimum relative impact speed (m/s) between the sublevel and the mob required to trigger a ragdoll.
+		# Default: 4.0
+		# Range: 0.1 ~ 256.0
+		minSpeed = 4.0
+		#Launch speed multiplier applied to the impact speed before the global max launch speed clamp.
+		# Default: 1.0
+		# Range: 0.0 ~ 64.0
+		launchMultiplier = 1.0

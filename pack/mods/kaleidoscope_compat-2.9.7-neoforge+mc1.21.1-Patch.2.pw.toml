@@ -1,0 +1,12 @@
+name = "Kaleidoscope Compat"
+filename = "kaleidoscope_compat-2.9.7-neoforge+mc1.21.1-Patch.2.jar"
+side = "both"
+
+[download]
+hash-format = "sha512"
+hash = "c7aeb8c26cf8d27dafd7dc418a84818d90c369d89924a59657cb09a5b054db563b9b0dbc2443ed528aef5187023499901ec0a61939df36a90e27aa09cff9a660"
+url = "https://cdn.modrinth.com/data/Xm1eP54z/versions/K9qzZOOA/kaleidoscope_compat-2.9.7-neoforge%2Bmc1.21.1-Patch.2.jar"
+
+[update.modrinth]
+mod-id = "Xm1eP54z"
+version = "K9qzZOOA"

@@ -1,0 +1,12 @@
+name = "Kaleidoscope Doll Workshop"
+filename = "kaleidoscope_doll_workshop-1.0.5-neoforge+mc1.21.1.jar"
+side = "both"
+
+[download]
+hash-format = "sha512"
+hash = "2fb9b0dcc47a2db9c8d41ca0edd863d081475cae43f3d6fdb7fb24468bc10434c193c2c66309a7a7adc54e1991abb6fdb0587aab2ce5479535e8d32860b7b014"
+url = "https://cdn.modrinth.com/data/a0N5leR0/versions/t7QGFnLx/kaleidoscope_doll_workshop-1.0.5-neoforge%2Bmc1.21.1.jar"
+
+[update.modrinth]
+mod-id = "a0N5leR0"
+version = "t7QGFnLx"

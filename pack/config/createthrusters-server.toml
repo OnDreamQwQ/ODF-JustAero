@@ -1,0 +1,299 @@
+#Authoritative server-side behavior
+[server]
+	#Spawn thruster exhaust particles while active
+	enableThrusterParticles = true
+	#Multiplier for active thruster particle count
+	# Default: 1.0
+	# Range: 0.0 ~ 4.0
+	thrusterParticleIntensity = 1.0
+	#Force thruster air streams to bulk-process items using Create fan blasting or haunting
+	enableThrusterBulkProcessing = true
+	#Bulk processing rate multiplier at 100% throttle, relative to Create's default fan processing speed. Processing scales linearly with throttle, so 50% throttle matches Create when this is 2.0
+	# Default: 2.0
+	# Range: 0.0 ~ 64.0
+	thrusterBulkProcessingFullThrottleMultiplier = 2.0
+	#Allow linking Advanced Data Link blocks to Simulated gyro sensors
+	enableGyroscopeLinking = true
+	#Maximum block distance between selected gyro sensor and placed Advanced Data Link, matching Create's Display Link flow
+	# Default: 128
+	# Range: 1 ~ 1024
+	gyroscopeLinkRange = 128
+	#How many ticks a virtual orientation source remains active without an update
+	# Default: 40
+	# Range: 1 ~ 1200
+	virtualOrientationSourceTimeoutTicks = 40
+	#Maximum tilt magnitude (degrees) when deriving orientation from Analogue Contraption Controller pitch/roll axes
+	# Default: 45.0
+	# Range: 1.0 ~ 89.0
+	controllerOrientationSourceMaxTiltDegrees = 45.0
+	#Allow Use-key toggling of the enabled state on thrusters
+	allowThrusterManualToggle = true
+	#Maximum allowed link distance for Physics Gantry Belt Wheel (hard capped to 64 blocks)
+	# Default: 64
+	# Range: 1 ~ 64
+	physicsGantryBeltWheelMaxDistance = 64
+
+	#Server-owned content availability. Clients use these values while connected.
+	[server.features]
+
+		[server.features.blocks]
+			#Allow thruster on this server. Existing content is not removed automatically.
+			thruster = true
+			#Allow rcs thruster on this server. Existing content is not removed automatically.
+			rcs_thruster = true
+			#Allow creative rcs thruster on this server. Existing content is not removed automatically.
+			creative_rcs_thruster = true
+			#Allow blackstone alloy block on this server. Existing content is not removed automatically.
+			blackstone_alloy_block = true
+			#Allow fuel oxidizer on this server. Existing content is not removed automatically.
+			fuel_oxidizer = true
+			#Allow thruster bearing on this server. Existing content is not removed automatically.
+			thruster_bearing = true
+			#Allow thruster bearing link on this server. Existing content is not removed automatically.
+			thruster_bearing_link = true
+			#Allow aileron bearing on this server. Existing content is not removed automatically.
+			aileron_bearing = true
+			#Allow aileron bearing link on this server. Existing content is not removed automatically.
+			aileron_bearing_link = true
+			#Allow vector bearing on this server. Existing content is not removed automatically.
+			vector_bearing = true
+			#Allow vector bearing link on this server. Existing content is not removed automatically.
+			vector_bearing_link = true
+			#Allow scissor piston on this server. Existing content is not removed automatically.
+			scissor_piston = true
+			#Allow scissor piston link on this server. Existing content is not removed automatically.
+			scissor_piston_link = true
+			#Allow scissor piston arm on this server. Existing content is not removed automatically.
+			scissor_piston_arm = true
+			#Allow gyroscope link on this server. Existing content is not removed automatically.
+			gyroscope_link = true
+			#Allow double button on this server. Existing content is not removed automatically.
+			double_button = true
+			#Allow copycat double button on this server. Existing content is not removed automatically.
+			copycat_double_button = true
+			#Allow virtual orientation source on this server. Existing content is not removed automatically.
+			virtual_orientation_source = false
+			#Allow gyro redstone bridge on this server. Existing content is not removed automatically.
+			gyro_redstone_bridge = false
+			#Allow bidirectional gearbox on this server. Existing content is not removed automatically.
+			bidirectional_gearbox = true
+			#Allow bi directional gearshift on this server. Existing content is not removed automatically.
+			bi_directional_gearshift = true
+			#Allow analogue joystick on this server. Existing content is not removed automatically.
+			analogue_joystick = true
+			#Allow analogue contraption controller on this server. Existing content is not removed automatically.
+			analogue_contraption_controller = true
+			#Allow contraption network linker plane on this server. Existing content is not removed automatically.
+			contraption_network_linker_plane = true
+			#Allow advanced contraption controller on this server. Existing content is not removed automatically.
+			advanced_contraption_controller = true
+			#Allow ship control module on this server. Existing content is not removed automatically.
+			ship_control_module = true
+			#Allow ship coupler on this server. Existing content is not removed automatically.
+			ship_coupler = true
+			#Allow ACC Displays on this server. Existing content is not removed automatically.
+			acc_display = true
+			#Allow universal display adapter on this server. Existing content is not removed automatically.
+			universal_display_adapter = true
+			#Allow ship dock on this server. Existing content is not removed automatically.
+			ship_dock = true
+			#Allow advanced navigation table on this server. Existing content is not removed automatically.
+			advanced_navigation_table = true
+			#Allow shipping manifest on this server. Existing content is not removed automatically.
+			shipping_manifest = true
+			#Allow alternator on this server. Existing content is not removed automatically.
+			alternator = true
+			#Allow claw on this server. Existing content is not removed automatically.
+			claw = true
+			#Allow entity launcher anchor on this server. Existing content is not removed automatically.
+			entity_launcher_anchor = true
+			#Allow powered zipline on this server. Existing content is not removed automatically.
+			powered_zipline = true
+			#Allow rope knot on this server. Existing content is not removed automatically.
+			rope_knot = true
+			#Allow launcher endpoint on this server. Existing content is not removed automatically.
+			launcher_endpoint = true
+			#Allow andesite cable on this server. Existing content is not removed automatically.
+			andesite_cable = true
+			#Allow industrial motor on this server. Existing content is not removed automatically.
+			industrial_motor = true
+			#Allow variable transmission on this server. Existing content is not removed automatically.
+			variable_transmission = true
+			#Allow physics gantry carriage on this server. Existing content is not removed automatically.
+			physics_gantry_carriage = true
+			#Allow physics gantry shaft on this server. Existing content is not removed automatically.
+			physics_gantry_shaft = true
+			#Allow physics gantry belt wheel on this server. Existing content is not removed automatically.
+			physics_gantry_belt_wheel = true
+			#Allow physics staff anchor on this server. Existing content is not removed automatically.
+			physics_staff_anchor = true
+
+		[server.features.items]
+			#Allow thruster on this server. Existing content is not removed automatically.
+			thruster = true
+			#Allow rcs thruster on this server. Existing content is not removed automatically.
+			rcs_thruster = true
+			#Allow creative rcs thruster on this server. Existing content is not removed automatically.
+			creative_rcs_thruster = true
+			#Allow blackstone alloy on this server. Existing content is not removed automatically.
+			blackstone_alloy = true
+			#Allow blackstone sheet on this server. Existing content is not removed automatically.
+			blackstone_sheet = true
+			#Allow computation mechanism on this server. Existing content is not removed automatically.
+			computation_mechanism = true
+			#Allow incomplete computation mechanism on this server. Existing content is not removed automatically.
+			incomplete_computation_mechanism = true
+			#Allow blackstone alloy block on this server. Existing content is not removed automatically.
+			blackstone_alloy_block = true
+			#Allow small thruster on this server. Existing content is not removed automatically.
+			small_thruster = true
+			#Allow fuel oxidizer on this server. Existing content is not removed automatically.
+			fuel_oxidizer = true
+			#Allow thruster bearing on this server. Existing content is not removed automatically.
+			thruster_bearing = true
+			#Allow aileron bearing on this server. Existing content is not removed automatically.
+			aileron_bearing = true
+			#Allow vector bearing on this server. Existing content is not removed automatically.
+			vector_bearing = true
+			#Allow scissor piston on this server. Existing content is not removed automatically.
+			scissor_piston = true
+			#Allow scissor arms on this server. Existing content is not removed automatically.
+			scissor_arms = true
+			#Allow gyroscope link on this server. Existing content is not removed automatically.
+			gyroscope_link = true
+			#Allow double button on this server. Existing content is not removed automatically.
+			double_button = true
+			#Allow copycat double button on this server. Existing content is not removed automatically.
+			copycat_double_button = true
+			#Allow virtual orientation source on this server. Existing content is not removed automatically.
+			virtual_orientation_source = false
+			#Allow gyro redstone bridge on this server. Existing content is not removed automatically.
+			gyro_redstone_bridge = false
+			#Allow bidirectional gearbox on this server. Existing content is not removed automatically.
+			bidirectional_gearbox = true
+			#Allow bi directional gearshift on this server. Existing content is not removed automatically.
+			bi_directional_gearshift = true
+			#Allow vertical bidirectional gearbox on this server. Existing content is not removed automatically.
+			vertical_bidirectional_gearbox = true
+			#Allow analogue joystick on this server. Existing content is not removed automatically.
+			analogue_joystick = true
+			#Allow analogue contraption controller on this server. Existing content is not removed automatically.
+			analogue_contraption_controller = true
+			#Allow advanced contraption controller on this server. Existing content is not removed automatically.
+			advanced_contraption_controller = true
+			#Allow ship control module on this server. Existing content is not removed automatically.
+			ship_control_module = true
+			#Allow ship coupler on this server. Existing content is not removed automatically.
+			ship_coupler = true
+			#Allow universal display adapter on this server. Existing content is not removed automatically.
+			universal_display_adapter = true
+			#Allow ship dock on this server. Existing content is not removed automatically.
+			ship_dock = true
+			#Allow advanced navigation table on this server. Existing content is not removed automatically.
+			advanced_navigation_table = true
+			#Allow portable contraption controller on this server. Existing content is not removed automatically.
+			portable_contraption_controller = true
+			#Allow advanced portable contraption controller on this server. Existing content is not removed automatically.
+			advanced_portable_contraption_controller = true
+			#Allow alternator on this server. Existing content is not removed automatically.
+			alternator = true
+			#Allow claw on this server. Existing content is not removed automatically.
+			claw = true
+			#Allow powered zipline on this server. Existing content is not removed automatically.
+			powered_zipline = true
+			#Allow rope knot on this server. Existing content is not removed automatically.
+			rope_knot = true
+			#Allow andesite cable on this server. Existing content is not removed automatically.
+			andesite_cable = true
+			#Allow industrial motor on this server. Existing content is not removed automatically.
+			industrial_motor = true
+			#Allow variable transmission on this server. Existing content is not removed automatically.
+			variable_transmission = true
+			#Allow vertical variable transmission on this server. Existing content is not removed automatically.
+			vertical_variable_transmission = true
+			#Allow physics gantry carriage on this server. Existing content is not removed automatically.
+			physics_gantry_carriage = true
+			#Allow physics gantry shaft on this server. Existing content is not removed automatically.
+			physics_gantry_shaft = true
+			#Allow physics gantry belt wheel on this server. Existing content is not removed automatically.
+			physics_gantry_belt_wheel = true
+			#Allow thruster lense on this server. Existing content is not removed automatically.
+			thruster_lense = true
+			#Allow processing upgrade smoking t1 on this server. Existing content is not removed automatically.
+			processing_upgrade_smoking_t1 = true
+			#Allow processing upgrade smoking t2 on this server. Existing content is not removed automatically.
+			processing_upgrade_smoking_t2 = true
+			#Allow processing upgrade smoking t3 on this server. Existing content is not removed automatically.
+			processing_upgrade_smoking_t3 = true
+			#Allow processing upgrade smoking t4 on this server. Existing content is not removed automatically.
+			processing_upgrade_smoking_t4 = true
+			#Allow processing upgrade smelting t1 on this server. Existing content is not removed automatically.
+			processing_upgrade_smelting_t1 = true
+			#Allow processing upgrade smelting t2 on this server. Existing content is not removed automatically.
+			processing_upgrade_smelting_t2 = true
+			#Allow processing upgrade smelting t3 on this server. Existing content is not removed automatically.
+			processing_upgrade_smelting_t3 = true
+			#Allow processing upgrade smelting t4 on this server. Existing content is not removed automatically.
+			processing_upgrade_smelting_t4 = true
+			#Allow processing upgrade haunting t1 on this server. Existing content is not removed automatically.
+			processing_upgrade_haunting_t1 = true
+			#Allow processing upgrade haunting t2 on this server. Existing content is not removed automatically.
+			processing_upgrade_haunting_t2 = true
+			#Allow processing upgrade haunting t3 on this server. Existing content is not removed automatically.
+			processing_upgrade_haunting_t3 = true
+			#Allow processing upgrade haunting t4 on this server. Existing content is not removed automatically.
+			processing_upgrade_haunting_t4 = true
+			#Allow propulsion upgrade t1 on this server. Existing content is not removed automatically.
+			propulsion_upgrade_t1 = true
+			#Allow propulsion upgrade t2 on this server. Existing content is not removed automatically.
+			propulsion_upgrade_t2 = true
+			#Allow propulsion upgrade t3 on this server. Existing content is not removed automatically.
+			propulsion_upgrade_t3 = true
+			#Allow propulsion upgrade t4 on this server. Existing content is not removed automatically.
+			propulsion_upgrade_t4 = true
+			#Allow physics staff on this server. Existing content is not removed automatically.
+			physics_staff = true
+			#Allow contraption network linker on this server. Existing content is not removed automatically.
+			contraption_network_linker = true
+			#Allow configuration clipboard on this server. Existing content is not removed automatically.
+			configuration_clipboard = true
+			#Allow shipping manifest on this server. Existing content is not removed automatically.
+			shipping_manifest = true
+			#Allow shipping schedule on this server. Existing content is not removed automatically.
+			shipping_schedule = true
+			#Allow entity launcher on this server. Existing content is not removed automatically.
+			entity_launcher = true
+			#Allow Supporter Mannequins on this server. Existing content is not removed automatically.
+			player_mannequin = true
+			#Allow physics goggles on this server. Existing content is not removed automatically.
+			physics_goggles = true
+			#Allow oxidized creative blaze cake on this server. Existing content is not removed automatically.
+			oxidized_creative_blaze_cake = true
+			#Allow Music Discs on this server. Existing content is not removed automatically.
+			music_discs = true
+			#Allow music disc kinetic currency on this server. Existing content is not removed automatically.
+			music_disc_kinetic_currency = true
+			#Allow music disc twisted alive on this server. Existing content is not removed automatically.
+			music_disc_twisted_alive = true
+			#Allow music disc unplug the earth on this server. Existing content is not removed automatically.
+			music_disc_unplug_the_earth = true
+
+		[server.features.entities]
+			#Allow launched claw on this server. Existing content is not removed automatically.
+			launched_claw = true
+			#Allow Supporter Mannequins on this server. Existing content is not removed automatically.
+			player_mannequin = true
+
+	#Advanced Contraption Controller chat delivery
+	[server.advanced_controller]
+		#Allow Send Chat Message nodes to broadcast nearby: the same sub-level, or a centered 3x3 chunk area in the main world. Private messages remain available when disabled. The legacy config key is retained so existing opt-outs keep working.
+		allowGlobalChatBroadcast = true
+
+	#Advanced Contraption Controller and Ship Control Module tuning
+	[server.ship_control]
+		#Spread shipping schedule maintenance and state updates over this many ticks. Ship physics control still runs every tick.
+		# Default: 2
+		# Range: 1 ~ 4
+		shippingScheduleWorkSpreadTicks = 2
+		#Use the experimental SCM initialization V2 matrix probe, representative propulsion sampling, and interpolated 9x9 bearing maps
+		enableScmInitializationV2 = false

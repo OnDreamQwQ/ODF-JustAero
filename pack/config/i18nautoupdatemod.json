@@ -1,0 +1,12 @@
+{
+  "forceBottom": true,
+  "defaultSource": "auto",
+  "mirrorPriority": [
+    "CFPA",
+    "Community",
+    "GitHub"
+  ],
+  "betaPack": false,
+  "mergeLoaders": false,
+  "initialTimeout": 10
+}

@@ -1,0 +1,12 @@
+name = "CBC: Compact Mount"
+filename = "cbc_compact_mount-1.2.2.jar"
+side = "both"
+
+[download]
+hash-format = "sha512"
+hash = "dbffa35e7451b9fa23fe24c02ad305bf7a0c2dda9e069bd362a2fe06bd5b4e447647e5d3acfddfa63b591dbbf5db262be6bdd2166b6b6f7bb786340d40732063"
+url = "https://cdn.modrinth.com/data/rjti7mm0/versions/1ttsIjdZ/cbc_compact_mount-1.2.2.jar"
+
+[update.modrinth]
+mod-id = "rjti7mm0"
+version = "1ttsIjdZ"

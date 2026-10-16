@@ -1,0 +1,8 @@
+name = "sophisticatedbackpacks-1.21.1-3.26.9.2195"
+filename = "sophisticatedbackpacks-1.21.1-3.26.9.2195.jar"
+side = "both"
+
+[download]
+hash-format = "sha512"
+hash = "9dcad262b7ec45ec8ac5091ab1000aad7a917967b205bc826ce7be6daf757c29039fb380b886eaff776c54c8fdb3cabd8ecaca5cb1273fce501f273301c36563"
+url = "https://mediafilez.forgecdn.net/files/9083/940/sophisticatedbackpacks-1.21.1-3.26.9.2195.jar"

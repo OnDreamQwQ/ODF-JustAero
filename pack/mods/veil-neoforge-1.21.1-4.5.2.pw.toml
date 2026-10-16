@@ -1,0 +1,12 @@
+name = "Veil"
+filename = "veil-neoforge-1.21.1-4.5.2.jar"
+side = "both"
+
+[download]
+hash-format = "sha512"
+hash = "046de1b45b94431c4faba4dd16b559491a433644a1ea1aa7e1edf2a5c37bde85d192bbf362297d4a4a04b8ab24ba9b6f9ec72a84f8de3affdb87bc72d52aa8c1"
+url = "https://cdn.modrinth.com/data/3KUWeVhG/versions/IpGnlNgK/veil-neoforge-1.21.1-4.5.2.jar"
+
+[update.modrinth]
+mod-id = "3KUWeVhG"
+version = "IpGnlNgK"

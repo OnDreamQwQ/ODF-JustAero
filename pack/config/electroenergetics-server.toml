@@ -1,0 +1,279 @@
+#.
+#Bulbs prevent mob spawns even when they are off
+bulbsPreventMobSpawns = true
+#.
+#this many watts is one FE/tick
+# Default: 34.0
+# Range: 1.0E-4 ~ 1.7976931348623157E308
+wattFeTConversionRate = 34.0
+#.
+#[in kW]
+# Default: 100.0
+# Range: 1.0 ~ 1.7976931348623157E308
+converterMaxPower = 100.0
+#.
+#[in Meters]
+# Default: 128
+# Range: > 8
+wireLength = 128
+#.
+#[in Meters]
+# Default: 64
+# Range: > 8
+bundledWireLength = 64
+#.
+#[in Meters]
+# Default: 32
+# Range: > 8
+heavilyInsulatedWireLength = 32
+#.
+#[in Meters]
+# Default: 8
+# Range: > 1
+busWireLength = 8
+#.
+#[in Meters]
+# Default: 64
+# Range: > 8
+catenaryLength = 64
+#.
+# Default: 4
+# Range: 1 ~ 8
+wireItemsPerSpool = 4
+#.
+# Default: 16
+# Range: 1 ~ 32
+wireViewDistance = 16
+#.
+# Default: 500
+# Range: > 100
+maxFuseAmperage = 500
+#.
+#Wires break when overloaded
+wiresBreak = true
+#.
+#Wires can cause damage to players and entities
+enableElectrocution = true
+#.
+#Uninsulated wires can connect
+enableCrossContact = false
+#.
+#Components get damaged when overloaded
+componentDamage = true
+#.
+#Doesn't return empty spools on wire placement
+alternateWirePlacement = false
+
+#.
+#Alternator Values
+[rotor]
+	#.
+	#.
+	#SUs of 1 Watt
+	# Default: 1.0
+	# Range: 9.999999747378752E-5 ~ 3.4028234663852886E38
+	rotorStressMultiplier = 1.0
+	#.
+	#decide output power of alternators through voltage
+	# Default: 48.0
+	# Range: 9.999999747378752E-5 ~ 3.4028234663852886E38
+	rotorPowerMultiplier = 48.0
+	#.
+	#[in Amps]
+	# Default: 100.0
+	# Range: 9.999999747378752E-5 ~ 3.4028234663852886E38
+	rotorFullLoadCurrent = 100.0
+
+#.
+#Resistance Values
+[Resistances]
+	#.
+	#.
+	#[in Ohms]
+	# Default: 30.0
+	# Range: 0.1 ~ 1.7976931348623157E308
+	motorResistance = 30.0
+	#.
+	#[in Ohms]
+	# Default: 200.0
+	# Range: 0.1 ~ 1.7976931348623157E308
+	pumpResistance = 200.0
+	#.
+	#[in Ohms]
+	# Default: 1000.0
+	# Range: 0.1 ~ 1.7976931348623157E308
+	bulbResistance = 1000.0
+	#.
+	#[in Ohms]
+	# Default: 45.0
+	# Range: 0.1 ~ 1.7976931348623157E308
+	resistiveHeaterResistance = 45.0
+	#.
+	#[in Watts]
+	# Default: 40000.0
+	# Range: 0.1 ~ 1.7976931348623157E308
+	electricTrainAccelerationPowerConsumption = 40000.0
+	#.
+	#[in Watts]
+	# Default: 20000.0
+	# Range: 0.1 ~ 1.7976931348623157E308
+	electricTrainCruisePowerConsumption = 20000.0
+	#.
+	#[in Ohms / Meter]
+	# Default: 0.005
+	# Range: 1.0E-4 ~ 1.7976931348623157E308
+	wireResistance = 0.005
+	#.
+	#[in Ohms / Meter]
+	# Default: 0.005
+	# Range: 1.0E-4 ~ 1.7976931348623157E308
+	electrumWireResistance = 0.005
+	#.
+	#[in Ohms / Meter]
+	# Default: 0.01
+	# Range: 1.0E-4 ~ 1.7976931348623157E308
+	ironWireResistance = 0.01
+	#.
+	#[in Ohms / Meter]
+	# Default: 0.003
+	# Range: 1.0E-4 ~ 1.7976931348623157E308
+	ironRailResistance = 0.003
+	#.
+	#[in Ohms]
+	# Default: 1000.0
+	# Range: 1.0E-4 ~ 1.7976931348623157E308
+	indicatorBulbResistance = 1000.0
+
+#.
+#Max ratings
+[Ratings]
+	#.
+	#.
+	#[in Watts]
+	# Default: 20000.0
+	# Range: 1.0 ~ 3.4028234663852886E38
+	variacMaxPower = 20000.0
+	#.
+	#[in Watts]
+	# Default: 1300.0
+	# Range: 1.0 ~ 3.4028234663852886E38
+	potentiometerMaxPower = 1300.0
+	#.
+	#[in Watts]
+	# Default: 1300.0
+	# Range: 1.0 ~ 3.4028234663852886E38
+	resistorMaxPower = 1300.0
+
+#.
+#Voltage Values
+[Voltages]
+	#.
+	#.
+	#[in Volts]
+	# Default: 80
+	# Range: > 0
+	motorMinVoltage = 80
+	#.
+	#[in Volts]
+	# Default: 1900
+	# Range: > 0
+	trainMinVoltage = 1900
+	#.
+	#[in Volts]
+	# Default: 5000
+	# Range: > 0
+	trainMaxVoltage = 5000
+	#.
+	#[in Volts]
+	# Default: 1500.0
+	# Range: 0.0 ~ 1.7976931348623157E308
+	wireMaxVoltage = 1500.0
+	#.
+	#[in Volts]
+	# Default: 20000.0
+	# Range: 0.0 ~ 1.7976931348623157E308
+	heavilyInsulatedWireMaxVoltage = 20000.0
+	#.
+	#[in Volts]
+	# Default: 25000.0
+	# Range: 0.0 ~ 1.7976931348623157E308
+	highVoltageCapacitorVoltage = 25000.0
+	#.
+	#[in Volts]
+	# Default: 500.0
+	# Range: 0.0 ~ 1.7976931348623157E308
+	capacitorVoltage = 500.0
+	#.
+	#[in Volts]
+	# Default: 500.0
+	# Range: 0.0 ~ 1.7976931348623157E308
+	inductorVoltage = 500.0
+	#.
+	#[in Volts]
+	# Default: 10000.0
+	# Range: 0.0 ~ 1.7976931348623157E308
+	maxVoltmeterVoltage = 10000.0
+	#.
+	#[in Amps]
+	# Default: 200.0
+	# Range: 0.0 ~ 1.7976931348623157E308
+	maxAmmeterCurrent = 200.0
+	#.
+	#[in Coulombs]
+	# Default: 36000.0
+	# Range: 0.0 ~ 1.7976931348623157E308
+	maxAccumulatorCharge = 36000.0
+
+#.
+#Train Values
+[trains]
+	#.
+	#.
+	#[in Ticks / one Accumulator]
+	# Default: 1200
+	# Range: > 1
+	trainAccumulatorTime = 1200
+	#.
+	#[in Ticks / one Accumulator]
+	# Default: 1200
+	# Range: > 1
+	trainAccumulatorChargeTime = 1200
+	#.
+	#Sparks appear on electric trains in cold conditions.
+	winterPantographSparks = true
+	#.
+	#Chance of a spark appearing in cold conditions.
+	# Default: 0.009999999776482582
+	# Range: 0.0 ~ 1.0
+	winterPantographSparkChance = 0.009999999776482582
+	#.
+	#Trains faster than this value will have sparks on pantographs. Set to 0 to disable. [in Blocks / Tick]
+	# Default: 1.440000057220459
+	# Range: 0.0 ~ 3.4028234663852886E38
+	speedPantographSparkThreshold = 1.440000057220459
+	#.
+	#Chance of a spark appearing at high speeds.
+	# Default: 0.009999999776482582
+	# Range: 0.0 ~ 1.0
+	highSpeedPantographSparkChance = 0.009999999776482582
+	#.
+	#Sparks appear on electric trains in rainy conditions.
+	rainPantographSparks = true
+	#.
+	#Chance of a spark appearing in raniy conditions.
+	# Default: 0.009999999776482582
+	# Range: 0.0 ~ 1.0
+	rainPantographSparkChance = 0.009999999776482582
+
+#.
+#Simulation Configs
+[simulation]
+	#.
+	#.
+	#Don't turn off unless you want to cook your TPS
+	optimizeGraph = true
+	#.
+	#[EXPERIMENTAL] This describes how many times the simulation is run every tick.
+	# Default: 1
+	# Range: 1 ~ 32
+	microTicks = 1

@@ -1,0 +1,8 @@
+name = "CBCmoreshells-1.4.0"
+filename = "CBCmoreshells-1.4.0.jar"
+side = "both"
+
+[download]
+hash-format = "sha512"
+hash = "fa2556c24ae0899481110df9bee52c05e233e6ac4755237e6940ede2fa6017a0513eced9b56b60bca4cbb8476d8aacef8674f38858b2faa0e81786737207d303"
+url = "https://mediafilez.forgecdn.net/files/8853/805/CBCmoreshells-1.4.0.jar"

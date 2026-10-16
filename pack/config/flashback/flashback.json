@@ -1,0 +1,101 @@
+{
+  "configVersion": 2,
+  "recordingControls": {
+    "controlsLocation": "RIGHT",
+    "automaticallyStart": false,
+    "automaticallyFinish": true,
+    "showRecordingToasts": true,
+    "quicksave": false
+  },
+  "recording": {
+    "markDimensionChanges": true,
+    "recordHotbar": false,
+    "localPlayerUpdatesPerSecond": 20,
+    "recordVoiceChat": false,
+    "recordBobbyIntoReplay": false
+  },
+  "exporting": {
+    "defaultExportFilename": "%date%T%time%",
+    "exportRenderDummyFrames": 0
+  },
+  "keyframes": {
+    "defaultInterpolationType": "SMOOTH",
+    "useRealtimeInterpolation": true
+  },
+  "editorMovement": {
+    "flightDirection": "HORIZONTAL",
+    "flightMomentum": 1.0,
+    "flightLockX": false,
+    "flightLockY": false,
+    "flightLockZ": false,
+    "flightLockYaw": false,
+    "flightLockPitch": false
+  },
+  "marker": {
+    "markerOptions1": {
+      "color": "RED",
+      "customRGB": "#FF0000",
+      "savePosition": true,
+      "description": ""
+    },
+    "markerOptions2": {
+      "color": "RED",
+      "customRGB": "#FF0000",
+      "savePosition": true,
+      "description": ""
+    },
+    "markerOptions3": {
+      "color": "RED",
+      "customRGB": "#FF0000",
+      "savePosition": true,
+      "description": ""
+    },
+    "markerOptions4": {
+      "color": "RED",
+      "customRGB": "#FF0000",
+      "savePosition": true,
+      "description": ""
+    }
+  },
+  "advanced": {
+    "disableIncreasedFirstPersonUpdates": false,
+    "disableThirdPersonCancel": false,
+    "synchronizeTicking": false,
+    "ignoredCustomPayloads": ""
+  },
+  "internal": {
+    "recentReplays": [
+      "D:\\Minecraft\\.minecraft\\versions\\ODF-JustAero\\flashback\\replays\\2026-10-14T16_03_43.zip"
+    ],
+    "openedWindows": [],
+    "nextUnsupportedModLoaderWarning": 0,
+    "filterUnnecessaryPackets": true,
+    "signedRenderFilter": false,
+    "viewedTipsOfTheDay": 1,
+    "showTipOfTheDay": true,
+    "nextTipOfTheDay": 1792051499699,
+    "replaySorting": "CREATED_DATE",
+    "sortDescending": true,
+    "defaultOverrideFov": 70.0,
+    "enableOverrideFovByDefault": false,
+    "nfdUsePortal": true
+  },
+  "internalExport": {
+    "resolution": [
+      1920,
+      1080
+    ],
+    "framerate": [
+      60.0
+    ],
+    "resetRng": false,
+    "ssaa": false,
+    "noGui": false,
+    "useMaximumBitrate": false,
+    "recordAudio": false,
+    "transparentBackground": false,
+    "audioCodec": "AAC",
+    "stereoAudio": false
+  },
+  "forceDefaultExportSettings": {}
+}

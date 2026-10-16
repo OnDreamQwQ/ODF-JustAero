@@ -1,0 +1,20 @@
+#When enabled, ragdoll hands holding luminous items act as dynamic light sources
+#for Sodium/Embeddium Dynamic Lights and LambDynamicLights.
+#Also brightens the ragdoll model itself to match the held light.
+ragdollDynamicLightsEnabled = true
+#Apply hidden armor and cosmetic armor overrides to ragdoll corpses.
+#Supports Cosmetic Armor Reworked and Accessories armor visibility/alternative stacks.
+#Disable to render the armor stored directly on the ragdoll without cosmetic overrides.
+cosmeticArmorCompatEnabled = true
+#Render waist lantern items on ragdoll corpses.
+#Controls both Dynamic Lantern waist item rendering and Beltborne Lanterns/Accessories Layer lamps.
+#Also lets supported waist lanterns contribute to ragdoll dynamic lights.
+waistLanternCompatEnabled = true
+#Hide capes on ragdoll corpses even when the player had cape rendering enabled.
+#Other skin customization parts, such as hats, sleeves, jacket and pants, still follow
+#the player's settings captured at death. Disable to sync cape visibility too.
+hideCorpseCapeEnabled = true
+#Disable Leawind's Third Person camera while the local player is self-ragdolled.
+#When enabled, falling down and standing up are handled by Sable's own camera
+#to avoid Leawind snapping the camera back during self-ragdoll recovery.
+leawindCameraCompatEnabled = true

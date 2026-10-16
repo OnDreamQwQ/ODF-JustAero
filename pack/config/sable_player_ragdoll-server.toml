@@ -1,0 +1,102 @@
+#Master switch for the ragdoll system.
+enabled = true
+#Allow players to grab and drag ragdolls.
+grabEnabled = true
+
+#Ragdoll trigger behavior.
+[trigger]
+	#Ticks before the same player can be ragdolled again.
+	# Default: 60
+	# Range: 0 ~ 1200
+	cooldownTicks = 60
+	#When true, creative-mode players can also be ragdolled.
+	affectCreative = true
+	#Seat the player on the ragdoll automatically after launch.
+	autoSeatOnTrigger = true
+	#Allow players to trigger their own ragdoll with the client keybind.
+	allowManualTrigger = true
+	#Minimum ticks after ragdoll start before the player can manually exit. 60 = 3 seconds.
+	# Default: 60
+	# Range: 0 ~ 1200
+	minDismountTicks = 60
+
+#Ragdoll physics limits.
+[physics]
+	#Ignore velocity spikes above this (m/s) to filter teleports and chunk loads.
+	# Default: 120.0
+	# Range: 8.0 ~ 256.0
+	maxVelocityDelta = 120.0
+	#Clamp inherited linear speed on the ragdoll capsule (m/s).
+	# Default: 128.0
+	# Range: 1.0 ~ 256.0
+	maxFlingSpeed = 128.0
+	#Clamp total ragdoll launch speed (m/s).
+	# Default: 128.0
+	# Range: 1.0 ~ 256.0
+	ragdollMaxLaunchSpeed = 128.0
+	#When true, the body parts of a ragdoll collide with each other.
+	partSelfCollision = true
+	#When true, a hand grip slips loose once it is stretched past the break distance under load.
+	grabBreakEnabled = true
+	#How far (blocks) the hand can be pulled from the spot it grabbed before the grip slips.
+	# Default: 0.275
+	# Range: 0.05 ~ 5.0
+	grabBreakDistance = 0.275
+
+#Damage from hard ragdoll impacts.
+[impact_damage]
+	#Damage ragdolled players when their ragdoll takes a hard impact.
+	impactDamageEnabled = true
+	#Minimum speed lost in one tick before ragdoll impact sound and dust are played (m/s).
+	# Default: 4.0
+	# Range: 0.0 ~ 128.0
+	impactFeedbackThreshold = 4.0
+	#Minimum speed lost in one tick before ragdoll impact damage is applied (m/s).
+	# Default: 12.0
+	# Range: 0.0 ~ 128.0
+	impactDamageThreshold = 12.0
+	#Damage dealt per m/s of speed lost above the threshold.
+	# Default: 0.75
+	# Range: 0.0 ~ 20.0
+	impactDamageMultiplier = 0.75
+	#Maximum damage dealt by one ragdoll impact.
+	# Default: 20.0
+	# Range: 0.0 ~ 200.0
+	impactDamageMax = 20.0
+	#Minimum ticks between ragdoll impact damage events for the same ragdoll.
+	# Default: 10
+	# Range: 0 ~ 200
+	impactDamageCooldownTicks = 10
+
+#When player ragdolls expire.
+[despawn]
+	#Expire player ragdolls after the configured duration. If all despawn toggles are off, player ragdolls never expire automatically.
+	expireAfterDuration = false
+	#Ticks after launch before a player ragdoll expires and the player is unseated.
+	# Default: 40
+	# Range: 5 ~ 600
+	ragdollDurationTicks = 40
+	#Expire player ragdolls after they touch down and slow below the release speed threshold.
+	expireWhenSlow = false
+	#Expire after touchdown only once the ragdoll slows below this speed (m/s).
+	# Default: 0.1
+	# Range: 0.0 ~ 32.0
+	releaseSpeedThreshold = 0.1
+	#Force-expire player ragdolls after the safety timeout.
+	expireAfterSafetyTimeout = false
+	#Hard safety limit: force expiry if the ragdoll still exists after this many ticks.
+	# Default: 200
+	# Range: 20 ~ 2400
+	step1BodyLifetimeTicks = 200
+
+#Ragdoll mass density. Individual parts scale by collision volume.
+[body_mass]
+	#Ragdoll mass per full 16x16x16 collision block. Player and mob parts scale by volume.
+	# Default: 1.4
+	# Range: 0.01 ~ 100.0
+	mobMassDensity = 1.4
+
+#Developer options.
+[debug]
+	#Log ragdoll trigger and seating details to the server console.
+	debugLogging = true

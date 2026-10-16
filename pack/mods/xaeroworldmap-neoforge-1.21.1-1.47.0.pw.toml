@@ -1,0 +1,12 @@
+name = "Xaero's World Map"
+filename = "xaeroworldmap-neoforge-1.21.1-1.47.0.jar"
+side = "both"
+
+[download]
+hash-format = "sha512"
+hash = "4d2d78bc85afa002f682ef344b7284cf1baa4903cc5a11cd1d7bd260ac63952580ae717bab47079540ead633cdd5d8e4fdf230dc99a68bcb7a269500e7dada13"
+url = "https://cdn.modrinth.com/data/NcUtCpym/versions/SnQ4SoDe/xaeroworldmap-neoforge-1.21.1-1.47.0.jar"
+
+[update.modrinth]
+mod-id = "NcUtCpym"
+version = "SnQ4SoDe"

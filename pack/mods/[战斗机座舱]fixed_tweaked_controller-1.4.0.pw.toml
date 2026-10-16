@@ -1,0 +1,12 @@
+name = "fixed Tweaked Controller"
+filename = "[战斗机座舱]fixed_tweaked_controller-1.4.0.jar"
+side = "both"
+
+[download]
+hash-format = "sha512"
+hash = "12b8026f08cd8c7070446aafa647ac2a61a60e9385f6d277a17319b9fdf6fcf60f3dcd8e5a641c6419d7745c1823cdeead7b48d2ecc492738efb94c5ed73a5e9"
+url = "https://cdn.modrinth.com/data/RmyppZtQ/versions/5H6FhRn2/%5B%E6%88%98%E6%96%97%E6%9C%BA%E5%BA%A7%E8%88%B1%5Dfixed_tweaked_controller-1.4.0.jar"
+
+[update.modrinth]
+mod-id = "RmyppZtQ"
+version = "5H6FhRn2"

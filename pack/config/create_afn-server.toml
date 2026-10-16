@@ -1,0 +1,198 @@
+#Opt-in, authenticated infinite-range AFN bridge transport.
+[infinite_range]
+	#Master switch. Existing channel flags stay stored but are inert while false.
+	enabled = true
+	#Maximum enabled infinite-range devices per authentication-board Owner. All channels sharing one device identity count once; individual SavedData overrides take precedence; zero disables the feature for an Owner.
+	# Default: 15
+	# Range: 0 ~ 4096
+	default_owner_quota = 15
+	#Maximum unloaded destinations one source update may enqueue.
+	# Default: 64
+	# Range: 1 ~ 1024
+	max_fanout_per_emission = 64
+	#Maximum long-signal channels one device may register. All channels of one device still count as one quota device.
+	# Default: 10
+	# Range: 1 ~ 10
+	max_channels_per_device = 10
+	#Global bound for queued remote wake-up jobs.
+	# Default: 256
+	# Range: 1 ~ 16384
+	max_pending_wakeups = 256
+	#Maximum chunks in one legacy remote wake batch. This is a per-destination safety guard, not a global server-wide ticket limit.
+	# Default: 8
+	# Range: 1 ~ 256
+	max_concurrent_chunk_loads = 8
+	#Ticks before an incomplete destination wake-up is cancelled and its tickets are released.
+	# Default: 100
+	# Range: 20 ~ 1200
+	chunk_load_timeout_ticks = 100
+	#Ticks to retain a remote destination force-load lease after all matching signals are cleared. Zero releases it immediately; the default is 10 seconds.
+	# Default: 200
+	# Range: 0 ~ 72000
+	force_load_release_delay_ticks = 200
+	#CPU budget: maximum queued wake-up jobs started during one server tick.
+	# Default: 16
+	# Range: 1 ~ 1024
+	max_wakeups_per_tick = 16
+	#Write bounded AFN remote-link lifecycle diagnostics to latest.log. Enable only while reproducing a remote signal problem.
+	diagnostics = false
+
+#Stock mailbox inventory sampling budgets.
+[stock_mailbox]
+	#Maximum container or logistics-summary scans started per server tick. Excess due work is deferred, not discarded.
+	# Default: 16
+	# Range: 1 ~ 1024
+	max_scans_per_tick = 16
+
+#Bounded, local and side-effect-free structured channel rules.
+[structured_rules]
+	#Master switch for structured rules. Stored rule source is retained but inert while false.
+	enabled = true
+
+	#Hard parser, structure and evaluation limits. Exceeding one invalidates only that rule.
+	[structured_rules.limits]
+		#Maximum UTF-8 bytes in one rule source and in one structured TEXT/JSON input view.
+		# Default: 4096
+		# Range: 256 ~ 4096
+		max_source_utf8_bytes = 4096
+		#Maximum Unicode code points in one rule source and in one structured TEXT/JSON input view.
+		# Default: 1024
+		# Range: 64 ~ 1024
+		max_source_code_points = 1024
+		#Maximum combined UTF-8 bytes of all rule sources stored by one device.
+		# Default: 16384
+		# Range: 256 ~ 262144
+		max_device_rule_source_utf8_bytes = 16384
+		#Maximum compiled AST nodes in one rule.
+		# Default: 128
+		# Range: 8 ~ 1024
+		max_ast_nodes_per_rule = 128
+		#Maximum nesting depth of an input, literal or intermediate JSON value.
+		# Default: 8
+		# Range: 1 ~ 32
+		max_json_depth = 8
+		#Maximum total nodes in one parsed JSON view or JSON literal.
+		# Default: 256
+		# Range: 8 ~ 4096
+		max_json_nodes = 256
+		#Maximum elements in one JSON array.
+		# Default: 128
+		# Range: 1 ~ 1024
+		max_array_elements = 128
+		#Maximum members in one JSON object.
+		# Default: 64
+		# Range: 1 ~ 1024
+		max_object_members = 64
+		#Maximum object/array steps in one statically compiled path.
+		# Default: 8
+		# Range: 1 ~ 32
+		max_path_depth = 8
+		#Maximum nested function-call depth in one rule.
+		# Default: 8
+		# Range: 1 ~ 32
+		max_function_call_depth = 8
+		#Maximum statically bound channel/path references in one rule.
+		# Default: 16
+		# Range: 1 ~ 64
+		max_references_per_rule = 16
+		#Maximum literal arguments accepted by one function call.
+		# Default: 8
+		# Range: 1 ~ 32
+		max_literal_arguments_per_function = 8
+		#Maximum decoded UTF-8 bytes in one JSON string literal.
+		# Default: 1024
+		# Range: 1 ~ 4096
+		max_string_literal_utf8_bytes = 1024
+		#Maximum decoded UTF-8 bytes in a join separator (the empty separator remains valid).
+		# Default: 64
+		# Range: 1 ~ 256
+		max_join_separator_utf8_bytes = 64
+		#Maximum UTF-8 bytes in one JSON number token.
+		# Default: 64
+		# Range: 8 ~ 256
+		max_number_token_utf8_bytes = 64
+		#Maximum significant decimal digits retained for one structured number.
+		# Default: 34
+		# Range: 1 ~ 128
+		max_number_significant_digits = 34
+		#Maximum absolute base-10 exponent accepted from a structured number.
+		# Default: 308
+		# Range: 1 ~ 4096
+		max_number_absolute_exponent = 308
+		#Maximum stable JSON size of a function intermediate value.
+		# Default: 4096
+		# Range: 64 ~ 16384
+		max_intermediate_utf8_bytes = 4096
+		#Maximum nodes in a function intermediate array or object.
+		# Default: 256
+		# Range: 8 ~ 4096
+		max_intermediate_nodes = 256
+		#Hard maximum value/path node visits during one rule evaluation.
+		# Default: 1024
+		# Range: 16 ~ 16384
+		max_node_visits_per_rule = 1024
+		#Maximum UTF-8 bytes emitted by one structured rule.
+		# Default: 4096
+		# Range: 256 ~ 4096
+		max_output_utf8_bytes = 4096
+		#Maximum Unicode code points emitted by one structured rule.
+		# Default: 1024
+		# Range: 64 ~ 1024
+		max_output_code_points = 1024
+		#Maximum numeric components that may be projected back to an AFN REAL value.
+		# Default: 128
+		# Range: 1 ~ 128
+		max_real_array_components = 128
+		#Maximum digits accepted by round(source,digits).
+		# Default: 3
+		# Range: 0 ~ 3
+		max_round_digits = 3
+
+	#Fair tick scheduler budgets. Exhaustion defers dirty rules; it is not a rule error.
+	[structured_rules.scheduler]
+		#Maximum dirty rules evaluated for one device in one server tick.
+		# Default: 16
+		# Range: 1 ~ 64
+		max_rules_per_device_tick = 16
+		#Maximum aggregate node visits charged to one device in one server tick.
+		# Default: 4096
+		# Range: 128 ~ 262144
+		max_node_visits_per_device_tick = 4096
+		#Maximum devices admitted by the fair structured-rule scheduler in one server tick.
+		# Default: 64
+		# Range: 1 ~ 8192
+		max_devices_per_server_tick = 64
+		#Maximum live dirty-rule evaluations admitted server-wide in one tick.
+		# Default: 256
+		# Range: 1 ~ 65536
+		max_rules_per_server_tick = 256
+		#Maximum aggregate structured node visits charged server-wide in one tick.
+		# Default: 65536
+		# Range: 1024 ~ 16777216
+		max_node_visits_per_server_tick = 65536
+
+	#GUI preview throttling. Current previews are client-local, read-only, and never publish a result. The server-wide cap is reserved for a future authoritative preview endpoint;
+	[structured_rules.preview]
+		#Minimum ticks between accepted previews for the same player and edited field.
+		# Default: 10
+		# Range: 2 ~ 1200
+		interval_ticks = 10
+		#Reserved server-wide admission cap for future authoritative previews. Current client-local previews do not consume it; live device work will take priority.
+		# Default: 8
+		# Range: 1 ~ 256
+		max_evaluations_per_server_tick = 8
+
+	#Persistent cross-device feedback-loop protection.
+	[structured_rules.oscillation_guard]
+		#Rolling window used to recognize repeated semantic result changes.
+		# Default: 40
+		# Range: 40 ~ 1200
+		window_ticks = 40
+		#Result-change threshold within the rolling window before the output is latched off.
+		# Default: 12
+		# Range: 2 ~ 40
+		change_threshold = 12
+		#Source stability required before an explicit player/admin reset may clear a latched guard.
+		# Default: 100
+		# Range: 20 ~ 72000
+		reset_stable_ticks = 100

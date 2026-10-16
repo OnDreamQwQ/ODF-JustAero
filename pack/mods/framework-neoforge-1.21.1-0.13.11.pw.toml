@@ -1,0 +1,8 @@
+name = "framework-neoforge-1.21.1-0.13.11"
+filename = "framework-neoforge-1.21.1-0.13.11.jar"
+side = "both"
+
+[download]
+hash-format = "sha512"
+hash = "bcc662c5588d0bd898f0878913b6d94d13e8fe7d58b54ae4fa15cf584a6ed5a4d202533f71f7ca40affcbd221da3d29d8b3af06329ae84faf75c68da99f27551"
+url = "https://mediafilez.forgecdn.net/files/7530/361/framework-neoforge-1.21.1-0.13.11.jar"

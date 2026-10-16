@@ -1,0 +1,131 @@
+name: Build .mrpack
+
+# GitHub Actions cannot see your Minecraft instance, so the order is:
+#
+#   your instance  ->  tools\Update-Pack.ps1 (local)  ->  git push  ->  this workflow
+#
+# The workflow then normalises the index, exports a launcher-installable
+# .mrpack, uploads it as an artifact, and publishes/updates the release
+# tagged with the version in pack/pack.toml.
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+    inputs:
+      release:
+        description: Publish a GitHub Release with the .mrpack
+        type: boolean
+        default: true
+      update_mods:
+        description: Run `packwiz update --all` first (bumps every mod, may break the pack)
+        type: boolean
+        default: false
+  schedule:
+    - cron: "17 3 * * 1" # Mondays 03:17 UTC - rebuild so the release tracks the repo
+
+permissions:
+  contents: write
+
+concurrency:
+  group: build-mrpack-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  mrpack:
+    name: Export .mrpack
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Go
+        uses: actions/setup-go@v5
+        with:
+          go-version: "1.23"
+          cache: false
+
+      - name: Install packwiz
+        run: |
+          go install github.com/packwiz/packwiz@latest
+          echo "$(go env GOPATH)/bin" >> "$GITHUB_PATH"
+          "$(go env GOPATH)/bin/packwiz" help > /dev/null
+          echo "packwiz installed"
+
+      - name: Read pack metadata
+        id: meta
+        working-directory: pack
+        run: |
+          name=$(grep -m1 '^name'    pack.toml | sed -E 's/^[^"]*"([^"]*)".*/\1/')
+          ver=$(grep  -m1 '^version' pack.toml | sed -E 's/^[^"]*"([^"]*)".*/\1/')
+          echo "name=$name"       >> "$GITHUB_OUTPUT"
+          echo "version=$ver"     >> "$GITHUB_OUTPUT"
+          echo "mrpack=$name-$ver.mrpack" >> "$GITHUB_OUTPUT"
+          echo "pack = $name $ver"
+
+      # packwiz downloads every external file once to record its size.
+      # Caching this turns a ~3 minute export into a few seconds.
+      - name: Cache packwiz downloads
+        uses: actions/cache@v4
+        with:
+          path: .packwiz-cache
+          key: packwiz-${{ runner.os }}-${{ hashFiles('pack/index.toml') }}
+          restore-keys: |
+            packwiz-${{ runner.os }}-
+
+      - name: Refresh index
+        working-directory: pack
+        run: packwiz --cache ../.packwiz-cache refresh
+
+      - name: Check the committed index is not stale
+        working-directory: pack
+        run: |
+          if ! git diff --quiet -- index.toml pack.toml; then
+            echo "::warning::pack/index.toml was stale - run tools\\Update-Pack.ps1 locally and commit the result"
+          else
+            echo "index is up to date"
+          fi
+
+      - name: Bump every mod (optional)
+        if: ${{ github.event_name == 'workflow_dispatch' && inputs.update_mods }}
+        working-directory: pack
+        run: packwiz --cache ../.packwiz-cache update --all
+
+      - name: Export .mrpack
+        working-directory: pack
+        env:
+          OUT: ${{ steps.meta.outputs.mrpack }}
+        run: |
+          mkdir -p ../dist
+          packwiz --cache ../.packwiz-cache modrinth export \
+            -o "../dist/$OUT" \
+            --restrictDomains=false
+          ls -lh ../dist
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: ${{ steps.meta.outputs.mrpack }}
+          path: dist/*.mrpack
+          if-no-files-found: error
+          retention-days: 30
+
+      - name: Publish release
+        if: ${{ github.event_name == 'push' || (github.event_name == 'workflow_dispatch' && inputs.release) }}
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: v${{ steps.meta.outputs.version }}
+          name: ${{ steps.meta.outputs.name }} ${{ steps.meta.outputs.version }}
+          files: dist/*.mrpack
+          fail_on_unmatched_files: true
+          generate_release_notes: true
+          body: |
+            **${{ steps.meta.outputs.name }} ${{ steps.meta.outputs.version }}**
+
+            Minecraft 1.21.1 / NeoForge - install with Prism Launcher, Modrinth App,
+            ATLauncher or MultiMC: *Add instance -> Import from file* and pick the
+            `.mrpack` below.
+
+            This release was built automatically from the pack in this repository.

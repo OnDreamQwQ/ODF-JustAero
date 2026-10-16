@@ -1,0 +1,12 @@
+name = "FTB Ultimine Rewind"
+filename = "ultimine_rewind-2.1.0.jar"
+side = "both"
+
+[download]
+hash-format = "sha512"
+hash = "575eeecf90bfd1489f67e2631e53256d8fc6ced305c031f58ac495d2f85b889149a5641de2b4b31ba6efdbdf5726a209f44432b53d35eed74b442e04df677828"
+url = "https://cdn.modrinth.com/data/FTUEqY9e/versions/RM6IQdxA/ultimine_rewind-2.1.0.jar"
+
+[update.modrinth]
+mod-id = "FTUEqY9e"
+version = "RM6IQdxA"

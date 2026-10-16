@@ -1,0 +1,28 @@
+#Maximum number of components a single Factory Controller may hold.
+#Higher values increase the controller's saved data and its GUI sync packet size.
+# Default: 512
+# Range: 1 ~ 1024
+maxComponents = 512
+#Largest square mechanical-crafter grid a recipe may be laid out into in the recipe screen
+# Default: 10
+# Range: 3 ~ 32
+maxCraftGridSize = 10
+#When hovering the Stock Keeper's Send button over an order containing Production Patterns,
+#compute and show whether the network has enough ingredients to produce the order.
+#Must also be enabled in the client config to show. Disable to skip the server-side computation.
+checkIngredientsOnSend = false
+#Preserve a Factory Controller's board setup 
+#on the dropped controller item when the block is broken, restoring it when re-placed.
+#When off, the controller drops empty and its gauges drop as separate items instead.
+preserveControllerData = true
+#Alternative passive-request strategy. When disabled, a passive gauge's target tracks one
+#recipe set per demanding consumer, so demand ripples one hop per tick. When enabled, the controller
+#sizes each passive gauge's target storage to the TOTAL remaining downstream demand (scaled by
+#recipe ratios, minus stock and open promises at every stage) in one consistent pass — so the
+#whole chain stays active and produces continuously until the total is met, ramping far faster
+#for deep production chains.
+passiveTotalDemand = false
+#Internal config migration version.
+# Default: 0
+# Range: 0 ~ 1
+configVersion = 1

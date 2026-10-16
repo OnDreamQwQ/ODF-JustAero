@@ -1,0 +1,12 @@
+name = "Dashpanels: Extra"
+filename = "dashpanelsextra-1.4.1.jar"
+side = "both"
+
+[download]
+hash-format = "sha512"
+hash = "0ee62d79186e5743a9444afe9f085bf4718eb0ac0d3943d1327617f9f7fe9f97d45dbd8cd56ef37418cd71cc7d5a79dec27b073eb0f85f55f28c0b0a1b344ad9"
+url = "https://cdn.modrinth.com/data/bPbnsb3f/versions/MppwLqKx/dashpanelsextra-1.4.1.jar"
+
+[update.modrinth]
+mod-id = "bPbnsb3f"
+version = "MppwLqKx"

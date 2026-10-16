@@ -1,0 +1,12 @@
+name = "Sable: Ragdoll Corpse"
+filename = "ragdoll_corpse-1.21.1-0.3.0.jar"
+side = "both"
+
+[download]
+hash-format = "sha512"
+hash = "1a65ea95bbaa171611f57a4ef448064a9f0d8c6a13f2d6ef56c1001ef0df469ff42eb471e3d6d6fe3e23141f57f09fae64cc18175db60e8e32bb792531ff82b4"
+url = "https://cdn.modrinth.com/data/uetGbPKW/versions/DwA6a1pT/ragdoll_corpse-1.21.1-0.3.0.jar"
+
+[update.modrinth]
+mod-id = "uetGbPKW"
+version = "DwA6a1pT"

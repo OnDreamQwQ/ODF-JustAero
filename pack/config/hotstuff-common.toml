@@ -1,0 +1,4 @@
+#The maximum range of the Link Relay.
+# Default: 128
+# Range: 1 ~ 1024
+linkRelayRange = 128

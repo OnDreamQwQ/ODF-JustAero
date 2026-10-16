@@ -1,0 +1,14 @@
+{
+  "ingredientDedupe": true,
+  "debugItemStackModifications": false,
+  "version": 1,
+  "debugNativeImage": false,
+  "disableSearchTree": true,
+  "logIntervalInMinutes": 10,
+  "showSummaryOnDebugScreen": true,
+  "memoryUsageWarningPercentage": 85,
+  "debugChunkLoading": false,
+  "debugThreadsStuck": false,
+  "disableEternalStarlightProgress": false,
+  "skipTickingUnloadedFluxNetworks": true
+}

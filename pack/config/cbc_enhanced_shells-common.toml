@@ -1,0 +1,31 @@
+#Thermal pulse of nuclear detonations: scorched grass, burnt leaves, melted snow, fires.
+#Claimed chunks (FTB Chunks) are never modified.
+[thermal_pulse]
+	#Apply the thermal pulse to the terrain.
+	enabled = true
+	#Scorch radius as a multiple of the visual cloud radius (Nuke Mk.I cloud radius = 60 blocks).
+	# Default: 1.6
+	# Range: 0.0 ~ 4.0
+	radiusMultiplier = 1.6
+	#Hard cap of the scorch radius in blocks (keeps H-bombs from processing a million columns).
+	# Default: 140
+	# Range: 16 ~ 400
+	maxRadius = 140
+	#Burn away the top layer of leaves near ground zero.
+	burnLeaves = true
+	#Melt snow layers, snow blocks and ice near ground zero.
+	meltSnow = true
+	#Chance per scorched column to start a fire (only where fire can normally exist). 0 disables fires.
+	# Default: 0.015
+	# Range: 0.0 ~ 0.5
+	fireChance = 0.015
+	#Terrain columns processed per server tick (spreads the work over several seconds).
+	# Default: 600
+	# Range: 50 ~ 5000
+	columnsPerTick = 600
+	#The thermal pulse sets living entities on fire and throws them away from the blast.
+	entityThermalPulse = true
+	#Radius of the entity thermal pulse as a multiple of the visual cloud radius.
+	# Default: 1.2
+	# Range: 0.0 ~ 4.0
+	entityRadiusMultiplier = 1.2

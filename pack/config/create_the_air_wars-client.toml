@@ -1,0 +1,17 @@
+[camera_monitor]
+	#Render Distant Horizons terrain in camera monitors. Only active when Distant Horizons is installed.
+	distant_horizons = true
+
+[sound]
+	#Blend distant rocket whistles with a muffled atmospheric noise layer.
+	distant_rocket_degradation = true
+
+[computer_terminal]
+	#Computer UI scale on the physical monitor: larger values enlarge text and controls.
+	# Default: 1.0
+	# Range: 0.75 ~ 1.5
+	ui_scale = 1.0
+	#Console text RGB as a decimal integer. Default white: 16777215 (0xFFFFFF).
+	# Default: 16777215
+	# Range: 0 ~ 16777215
+	text_color = 16777215

@@ -1,0 +1,110 @@
+#Turn off the mod's own camera tilt.
+#This is not a full off switch: the mixins stay loaded, and a tilt
+#another mod drives through the API keeps running. Use suppressAll
+#for that one, or remove the jar to rule the mod out completely.
+enabled = true
+#Force use client
+clientOnly = false
+#Rotate camera
+rotateCamera = true
+#Move camera
+moveCamera = true
+#Drop tossed items from the tilted camera (origin + direction) instead of the hitbox head
+#Requires the mod to be installed on the server — no effect otherwise.
+dropFromCamera = true
+#Keep the shifted camera out of solid blocks (prevents seeing through walls / X-ray when tilted next to a wall)
+cameraCollision = true
+#How smoothly the tilt eases off as the camera nears a wall, in ticks (0 = instant snap, higher = smoother)
+# Default: 0.35
+# Range: 0.0 ~ 5.0
+cameraCollisionSmooth = 0.35
+#Tilt interpolation speed per frame (0.0 = instant snap, 9999 = never moves)
+# Default: 1.7
+# Range: 0.0 ~ 9999.0
+smoothSpeed = 1.7
+#Maximum tilt threshold (0.0 - 1.0)
+# Default: 0.8
+# Range: 0.0 ~ 1.0
+minNormalY = 0.8
+#Only tilt when the sub-level mass is at least the threshold (primary factor)
+gateMassEnabled = false
+#Minimum sub-level mass to allow tilt
+# Default: 10.0
+# Range: 0.0 ~ 1.0E8
+gateMassMin = 10.0
+#Only tilt when the sub-level block count is at least the threshold
+gateBlocksEnabled = false
+#Minimum sub-level block count to allow tilt
+# Default: 10
+# Range: 0 ~ 100000000
+gateBlocksMin = 10
+#Only tilt when the sub-level length (X) is at least the threshold
+gateLengthEnabled = false
+#Minimum sub-level length in blocks (X) to allow tilt
+# Default: 3
+# Range: 1 ~ 100000
+gateLengthMin = 3
+#Only tilt when the sub-level height (Y) is at least the threshold
+gateHeightEnabled = false
+#Minimum sub-level height in blocks (Y) to allow tilt
+# Default: 3
+# Range: 1 ~ 100000
+gateHeightMin = 3
+#Only tilt when the sub-level width (Z) is at least the threshold
+gateWidthEnabled = false
+#Minimum sub-level width in blocks (Z) to allow tilt
+# Default: 3
+# Range: 1 ~ 100000
+gateWidthMin = 3
+#Disable camera tilt when player holds a listed item (client-side)
+clientBlacklistEnabled = true
+#Consider item in offhand for blacklist checking
+considerOffhand = true
+#Automatically disable camera tilt for projectile-like and bucket-like items,
+#detected by item class instead of a fixed ID list. Covers modded snowballs,
+#throwables, buckets, bows, etc. and fixes their wrong throw/placement direction
+#while standing on a tilted sub-level.
+autoDisableForRaycastItems = true
+#Item IDs that disable camera tilt (client-side), e.g. minecraft:bow
+clientBlacklistIds = ["create:potato_cannon"]
+#Number of raycasts (10 is usually enough)
+# Default: 10
+# Range: 1 ~ 10000
+count = 10
+#Distance from player down to floor
+# Default: 7.0
+# Range: 0.1 ~ 12.0
+downLength = 7.0
+#Raycast start offset from foot
+# Default: 0.2
+# Range: -1.0 ~ 1.0
+upLength = 0.2
+#Vote weight of the ray straight under the player (0 disables it)
+# Default: 3
+# Range: 0 ~ 64
+centerWeight = 3
+#How many more rays a neighbouring deck needs before it takes the player over
+# Default: 1
+# Range: 1 ~ 64
+voteMargin = 1
+#Stop camera tilt when flying (Creative or Spectator)
+disableOnFlying = true
+#Render debug raycasts
+rays = false
+#Show tilted pick ray
+pickRays = false
+#time until the pick rays disappear
+# Default: 3.0
+# Range: 0.01 ~ 600.0
+pickRaysTime = 3.0
+#Show debug message in console
+debugMessages = false
+#Diagnostic: force the tilt off, including a tilt another mod drives
+#through the API. This silences the tilt, not the mod — to rule
+#ACS out entirely, remove it from the mods folder.
+suppressAll = false
+#Config schema version. Do not edit manually.
+#Used to detect when a config reset prompt should be shown.
+# Default: 0
+# Range: > 0
+configSchemaVersion = 5

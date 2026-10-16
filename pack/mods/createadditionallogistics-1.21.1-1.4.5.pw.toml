@@ -1,0 +1,12 @@
+name = "Create: Additional Logistics"
+filename = "createadditionallogistics-1.21.1-1.4.5.jar"
+side = "both"
+
+[download]
+hash-format = "sha512"
+hash = "0223a647558844c2a8c02ce63c78abade83f63013dbd4e09a5edbdb6e05a16f2c504f7328a113e5dca088cc112dc59f102f08e839ed1ebc5d9ed40a83481cb8a"
+url = "https://cdn.modrinth.com/data/CZaz7aje/versions/soesZiME/createadditionallogistics-1.21.1-1.4.5.jar"
+
+[update.modrinth]
+mod-id = "CZaz7aje"
+version = "soesZiME"

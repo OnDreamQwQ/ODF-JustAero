@@ -1,0 +1,29 @@
+[createrailwaysnavigator_client_config]
+	#The local code of the language that should be used for train specific UIs (example: en_us, de_de). Can be different from the game's language settings. (Default: <empty>)
+	language = ""
+	#The unit to be used to represent speed. (Default: KMH)
+	#Allowed Values: MS, KMH, MPH, FTS, KT, CMS
+	speed_unit = "KMH"
+	#Display Time Format. (Default: Hours 24)
+	#Allowed Values: HOURS_24, HOURS_12, TICKS
+	time_format = "HOURS_24"
+
+	[createrailwaysnavigator_client_config.general]
+		#[in Ticks]
+		#The interval in which the displays are updated with new information. Lower values can decrease performance and increase the network traffic, while larger values reduce the reaction speed of the displays. (Default: 50, Recommended: 50 - 100)
+		# Default: 50
+		# Range: 20 ~ 200
+		display_refresh_rate = 50
+		#Whether countdowns or durations in the UI (e.g. time until departure or transfer time) are shown as real time duration or in-game duration. OFF = in-game, ON = real life (Default: OFF)
+		realtime_durations = false
+
+	[createrailwaysnavigator_client_config.route_overlay]
+		#Scale of the route overlay UI. (Default: 0.75)
+		# Default: 0.75
+		# Range: 0.25 ~ 2.0
+		scale = 0.75
+		#If active, you will receive short toasts about important events on your trip, e.g. delays, changes, ... (Default: ON)
+		notifications = true
+		#The position on your screen where you want the overlay to appear. (Default: Top Left)
+		#Allowed Values: TOP_LEFT, TOP_RIGHT, BOTTOM_LEFT, BOTTOM_RIGHT
+		position = "TOP_LEFT"

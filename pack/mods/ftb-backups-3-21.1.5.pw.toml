@@ -1,0 +1,12 @@
+name = "ftb-backups-3-21.1.5"
+filename = "ftb-backups-3-21.1.5.jar"
+side = "both"
+
+[download]
+hash-format = "sha512"
+hash = "fd621376ab7e08a042878052ef27d3d18d3e91b9e39089fa871703d4f3289684b720a3c7ad3874b6b593083452fbf645d77040aa03f8c77390779b05982fb7b2"
+url = "https://mediafilez.forgecdn.net/files/8078/605/ftb-backups-3-21.1.5.jar"
+
+[update.curseforge]
+file-id = 8078605
+project-id = 1294188

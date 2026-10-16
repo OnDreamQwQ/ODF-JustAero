@@ -1,0 +1,8 @@
+name = "sophisticatedcore-1.21.1-1.5.7.2381"
+filename = "sophisticatedcore-1.21.1-1.5.7.2381.jar"
+side = "both"
+
+[download]
+hash-format = "sha512"
+hash = "59e4610e26e75c332d27b3752e701b672802380363b8bc666010c52de7102183319b3df53dbdf584a9a30f9a0320a25e3781e739905fc79772bbbb5b1d85186c"
+url = "https://mediafilez.forgecdn.net/files/9083/874/sophisticatedcore-1.21.1-1.5.7.2381.jar"

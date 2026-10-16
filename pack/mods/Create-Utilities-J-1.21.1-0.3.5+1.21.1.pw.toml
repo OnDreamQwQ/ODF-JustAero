@@ -1,0 +1,12 @@
+name = "Create-Utilities-J-1.21.1-0.3.5+1.21.1"
+filename = "Create-Utilities-J-1.21.1-0.3.5+1.21.1.jar"
+side = "both"
+
+[download]
+hash-format = "sha512"
+hash = "13392ed07dd4a07d6a67c6da72414767f1d804b94b2ef75d854794a97e9fc40f68287a415f453aec6d010fef58545a36840f07bc649a9789a5e90bf3af445eca"
+url = "https://mediafilez.forgecdn.net/files/8979/318/Create-Utilities-J-1.21.1-0.3.5%2b1.21.1.jar"
+
+[update.curseforge]
+file-id = 8979318
+project-id = 1437484

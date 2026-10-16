@@ -1,0 +1,30 @@
+#Create Big Cannons integration timings, recoil, and projectile parameters. Synced to clients to prevent desync.
+[cannon]
+	#Server ticks to wait after firing before opening the cannon breech.
+	# Default: 60
+	# Range: 0 ~ 600
+	postFireOpenDelayTicks = 60
+	#Server ticks to wait after opening before ejecting the spent cartridge.
+	# Default: 80
+	# Range: 0 ~ 600
+	cartridgeEjectDelayTicks = 80
+	#Minimum server ticks between two consecutive shots (cooldown).
+	# Default: 90
+	# Range: 0 ~ 1200
+	reloadCooldownTicks = 90
+	#Server ticks to wait before auto-closing the breech after reloading.
+	# Default: 20
+	# Range: 0 ~ 600
+	autoCloseDelayTicks = 20
+	#Search radius (blocks) around the cannon for contraption entities to apply recoil to.
+	# Default: 8.0
+	# Range: 1.0 ~ 32.0
+	contraptionSearchRadius = 8.0
+	#Magnitude of the recoil velocity applied to nearby contraption passengers.
+	# Default: 0.55
+	# Range: 0.0 ~ 2.0
+	backVelocityMagnitude = 0.55
+	#Initial charge power for the integrated BOPS projectile.
+	# Default: 25.0
+	# Range: 1.0 ~ 200.0
+	bopsIntegratedChargePower = 25.0

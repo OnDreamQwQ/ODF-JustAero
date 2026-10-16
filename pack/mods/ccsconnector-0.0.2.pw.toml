@@ -1,0 +1,12 @@
+name = "CC Synaxis Connector"
+filename = "ccsconnector-0.0.2.jar"
+side = "both"
+
+[download]
+hash-format = "sha512"
+hash = "77ce67c88193a59d87fd1774e5eccdfa2f9ca8b9c51f0d2d8f940f32e4db68dec909d6e48c88d60dc4f9c1c80cd86e4233a157ae93494313a7157a66c8c1ec52"
+url = "https://cdn.modrinth.com/data/RJW88pUc/versions/oUr01SY2/ccsconnector-0.0.2.jar"
+
+[update.modrinth]
+mod-id = "RJW88pUc"
+version = "oUr01SY2"

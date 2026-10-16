@@ -1,0 +1,12 @@
+name = "Create: Infinite Railways"
+filename = "create-infinite-railways-0.2.0.jar"
+side = "both"
+
+[download]
+hash-format = "sha512"
+hash = "6590f5e7075eeb34c12580bb8b72ae00712b2c069844173b44b6309a132cd6b800b304fa6c87d1a52255639de17b6bbb6e9f0c525c4589baea95725dcbbb7b9a"
+url = "https://edge.forgecdn.net/files/9101/403/create-infinite-railways-0.2.0.jar"
+
+[update.curseforge]
+file-id = 9101403
+project-id = 1722212

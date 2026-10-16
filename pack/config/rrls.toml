@@ -1,0 +1,25 @@
+#Allowed Values: ALL, LOADING, RELOADING, NONE
+hideOverlays = "ALL"
+#text.autoconfig.rrls.option.rgbProgress.@Tooltip
+rgbProgress = false
+#text.autoconfig.rrls.option.blockOverlay.@Tooltip
+blockOverlay = false
+miniRender = true
+#text.autoconfig.rrls.option.enableScissor.@Tooltip
+enableScissor = false
+#Allowed Values: PROGRESS, TEXT, TEXT_WITH_BACKGROUND
+type = "PROGRESS"
+reloadText = "Edit in config!"
+resetResources = true
+#text.autoconfig.rrls.option.reInitScreen.@Tooltip
+reInitScreen = true
+#text.autoconfig.rrls.option.removeOverlayAtEnd.@Tooltip
+removeOverlayAtEnd = true
+#text.autoconfig.rrls.option.earlyPackStatusSend.@Tooltip[0]
+#text.autoconfig.rrls.option.earlyPackStatusSend.@Tooltip[1]
+earlyPackStatusSend = false
+#Allowed Values: FORCE_LOAD, LOAD, NONE
+doubleLoad = "FORCE_LOAD"
+#text.autoconfig.rrls.option.animationSpeed.@Tooltip
+animationSpeed = 1000.0
+skipForgeOverlay = false

@@ -1,0 +1,12 @@
+name = "Create: The Air War"
+filename = "create_the_air_wars-5.00.jar"
+side = "both"
+
+[download]
+hash-format = "sha512"
+hash = "be45b4cfa6db193799f42620a7c13d63bfb4ff8bf583fd04617f883233a4e58225c092fb4453e72856205b3adaafebf52e952c5bf232ea8188e86acd142fc96c"
+url = "https://cdn.modrinth.com/data/GMrNnOis/versions/moqz93W3/create_the_air_wars-5.00.jar"
+
+[update.modrinth]
+mod-id = "GMrNnOis"
+version = "moqz93W3"

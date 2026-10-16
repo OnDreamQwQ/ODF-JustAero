@@ -1,0 +1,197 @@
+#Lower/upper bounds and step for physical-structure scale factors.
+[scale]
+	#Minimum scale factor. Default 1/16 (shrink to a sixteenth).
+	# Default: 0.0625
+	# Range: 0.0625 ~ 16.0
+	minScale = 0.0625
+	#Maximum scale factor. Default 16 (enlarge sixteen-fold).
+	# Default: 16.0
+	# Range: 0.0625 ~ 16.0
+	maxScale = 16.0
+	#Scale-factor step applied by the UI +/- buttons.
+	# Default: 0.1
+	# Range: 0.001 ~ 10.0
+	step = 0.1
+
+#Whether scaling also drives physics.
+[physics]
+	#true (default): the scaling engine handles colliders, mass, inertia, reach and
+	#interaction distances according to the scale factor.
+	#Mass follows the factor linearly: a 0.1x structure has 0.1x the mass; inertia follows the cube.
+	#Requires the engine on both client and server; falls back to visual-only scaling without it.
+	#This legacy switch is kept for config compatibility; with the engine installed,
+	#true physics scaling is always used.
+	enablePhysicsScaling = true
+	#Whether block values (mass, inertia and the diagram weight display) change
+	#with the structure scale.
+	#true (default): block-derived values follow the scale factor as before.
+	#false: the structure still resizes (visual size and collision geometry),
+	#but block values stay at their original unscaled numbers.
+	scaleBlockValues = true
+	#Only used for structures that are welded / hinged to another body.
+	#A mass ratio cap: at scale 1/16 the mass would normally fall to 1/4096,
+	#and the physics solver has to work extremely hard to hold a joint between
+	#bodies whose masses differ that much (visible as jitter, drifting coordinates
+	#and dropped frames). Below this factor the mass change is clamped.
+	#Set to 0 to disable the cap and always use the exact scaled values.
+	# Default: 64.0
+	# Range: 0.0 ~ 1000000.0
+	constrainedMassRatioLimit = 64.0
+
+#Related structures handled together during scaling.
+[compat]
+	#Scale an entire connected chain of structures (including ones welded by the
+	#compat welding mod) together so the joints stay aligned.
+	#The scaling engine does this itself; this switch mainly matters in visual-only mode.
+	scaleConnectedChain = true
+	#Whether the weld-point grid on a block face follows the structure scale.
+	#true (default): a structure scaled 2x offers a 2x denser grid per face
+	#(5x5 instead of 3x3), so the world-space gap between selectable weld points
+	#stays the same as on an unscaled structure.
+	#false: always the plain 3x3 points per block face.
+	weldPointGridScalesWithStructure = true
+
+#Rendering of scaled structures.
+[render]
+	#Skip provably invisible render work while this mod draws a scaled structure:
+	#sections whose whole world-space box lies outside the camera frustum, and
+	#sections fully enclosed by solid neighbouring sections (a box wrapped
+	#around redstone draws only the box; the inner blocks keep working).
+	#The frustum test uses each section's real scaled box — there is no size,
+	#distance or on-screen-pixel threshold anywhere: anything the camera could
+	#see keeps drawing in full, however small it looks. While the camera is
+	#inside the structure (e.g. third-person mods pushing the view into it) the
+	#interior cull switches off automatically, so nothing pops away.
+	#Distance-based detail reduction is the separate switch below; it never
+	#removes visible geometry, only far-away overlay effects.
+	#false: draw every section, as before.
+	cullHiddenSections = true
+	#Distance-based detail reduction for scaled structures — strictly separate
+	#from the culling above. Culling only ever hides provably invisible work;
+	#this switch alone decides whether a structure farther than
+	#'distantDetailDistance' blocks from the camera (measured to the nearest
+	#edge of the structure's world box, not its centre and not its pixel size)
+	#drops its translucent overlay pass — the water/glass sheen glint this mod
+	#draws on top of the baked geometry. Opaque and cutout geometry inside the
+	#view frustum is NEVER dropped by this, at any distance or size.
+	#false: the overlay draws at every distance, as before.
+	distantDetailReduction = true
+	#How far, in blocks from the camera to the nearest point of the scaled
+	#structure's world bounding box, the overlay reduction above starts.
+	#Default 96 (six chunks). Structures closer than this always keep full
+	#detail, so a small ship parked at your feet never loses its sheen.
+	# Default: 96.0
+	# Range: 16.0 ~ 1024.0
+	distantDetailDistance = 96.0
+	#How many sub-level sections may be recompiled SYNCHRONOUSLY on the render
+	#thread per game tick, across all scaled structures together (default 4).
+	#When scaled structures change blocks (or first fly into view), Sable rebuilds
+	#the nearby sections inline on the render thread; with many ships at once that
+	#is the 'random 0 fps' freeze, and the same burst floods the 16 MiB upload
+	#queue (the 'Transfer Queue' in F3).
+	#Sections beyond the budget take the ordinary background compile thread
+	#instead — finished a few frames later, never lost or corrupted.
+	#0: never compile sub-level sections on the render thread at all.
+	# Default: 4
+	# Range: 0 ~ 64
+	syncRebuildBudget = 4
+	#Fix for Sable's 16 MiB staging ring (the 'Transfer Queue' in F3): once every
+	#GPU transfer has retired the ring rewinds, but Sable forgets to clear the
+	#pending-region bookkeeping on that rewind; the stale entries then re-flush
+	#old ranges and the gauge sticks near the cap while native memory climbs.
+	#true (default): the rewind also resets the pending-region list.
+	#false: keep Sable's original behaviour (troubleshooting aid).
+	stagingRingFix = true
+	#While the upload queue is saturated, every failed section compile/upload
+	#task logs 'Error running sub-level task' with a full stack trace; with many
+	#scaled structures that is thousands of traces per second and it multiplies
+	#the stall it reports.
+	#true (default): keep one full error per 20 seconds and fold the repetitions
+	#into a one-line count.
+	#false: log every failure in full, exactly like before.
+	silenceCompileWarnings = true
+	#Skip the expensive biome lookup for the ambient-particle pass Sable runs on
+	#sub-levels every tick. Sable samples up to 667 random blocks per structure and
+	#vanilla then asks getBiome for each one, which runs the whole BiomeManager
+	#noise query (eight noise samples) - tens of thousands of queries per tick for
+	#a fleet of scaled structures. All of a structure's blocks live in one Sable
+	#plot that has a single biome, so the per-block query cannot return anything
+	#new. true (default): positions inside a sub-level plot take the client's own
+	#cheap fallback biome directly, skipping the query. Ordinary world positions
+	#keep their exact vanilla biome, and block/fluid particles (torch flames,
+	#campfire smoke, redstone) keep spawning at their normal rate.
+	#false: original Sable/vanilla behaviour.
+	cheapSubLevelBiome = true
+	#Optional extra lever for the same pass: keep only 1 in N sub-level ambient
+	#samples and drop the rest. Unlike the switch above this thins the WHOLE pass,
+	#so block/fluid particles on structures spawn more rarely too (torch flames
+	#become dimmer). It is meant as a fallback when cheapSubLevelBiome alone is not
+	#enough, which is why it is off by default.
+	#1 (default): keep every sample. 4: keep a quarter. 32: minimum.
+	# Default: 1
+	# Range: 1 ~ 32
+	subLevelAmbientDivisor = 1
+	#How many game ticks after switching the camera perspective (F5: first person /
+	#third person / front view) every sub-level section rebuild is forced onto the
+	#background compile thread instead of the render thread (default 10 = half a second).
+	#A perspective switch resets the view frustum: a fleet of scaled structures can become
+	#visible and dirty in the same instant, and compiling them inline is the 'F5 freezes
+	#for a moment' spike. During the debounce the frame is never blocked on a compile;
+	#sections finish a few frames later and nothing is skipped.
+	#0 disables the debounce (compile exactly as the syncRebuildBudget allows).
+	# Default: 10
+	# Range: 0 ~ 100
+	perspectiveSwitchDebounce = 10
+	#With a shader pack (Iris) the game draws the world a second time into the
+	#shadow map, and scaled structures are drawn a second time with it. A structure
+	#that is itself tiny on screen, or far outside the shadow camera's useful range,
+	#contributes nothing visible to that shadow map, so this switch skips its
+	#shadow-map draw only. The normal (non-shadow) picture is completely unaffected:
+	#the structure still draws in full in the main pass.
+	#true (default): skip the shadow-map draw for structures below
+	#'shadowPassMinScale' or farther than 'shadowPassDistance' blocks.
+	#false: original behaviour (every scaled structure is drawn into shadows too).
+	#No effect at all without a shader pack, because then there is no shadow pass.
+	cullSubLevelShadowPass = true
+	#Scale factor below which a structure is left out of the shadow map
+	#(default 0.2). Its shadow would be a sub-pixel speck. Only the shadow is
+	#skipped; the structure itself keeps drawing normally.
+	# Default: 0.2
+	# Range: 0.01 ~ 1.0
+	shadowPassMinScale = 0.2
+	#Distance in blocks from the camera beyond which a structure is left out of
+	#the shadow map (default 64). The shadow camera is centred on the player, so
+	#this is measured from the player's eyes. Only the shadow is skipped.
+	# Default: 64.0
+	# Range: 16.0 ~ 512.0
+	shadowPassDistance = 64.0
+	#Level of detail for the block-entity pass Sable runs once per frame over
+	#every sub-level ('preRenderBEs'): a structure that is far away and provably
+	#outside the camera view frustum is skipped, and a structure scaled so small
+	#that its block entities would be sub-pixel is skipped as well. Blocks,
+	#physics and logic are untouched — only their client-side rendering is skipped.
+	#true (default): apply both distance and scale level-of-detail.
+	#false: original behaviour.
+	blockEntityLevelOfDetail = true
+	#Scale factor below which a structure's block entities (chests, signs,
+	#furnaces, ...) are skipped entirely (default 0.05). At a twentieth of normal
+	#size they are far smaller than one pixel. The same threshold also drops the
+	#translucent overlay pass for such a structure.
+	# Default: 0.05
+	# Range: 0.0 ~ 1.0
+	blockEntityLodScale = 0.05
+	#Distance in blocks beyond which the block-entity pass is skipped for a
+	#structure that is also outside the camera view frustum (default 32). A
+	#structure inside the view keeps its block entities at any distance.
+	# Default: 32.0
+	# Range: 8.0 ~ 256.0
+	blockEntityLodDistance = 32.0
+
+#Blueprint / camera save-print scale handling.
+[blueprint]
+	#Debug aid: show the scale factor each blueprint saved with on the
+	#survival blueprint item's tooltip (e.g. 'Scale: 0.20').
+	#true (default): blueprints printed by this mod display their stored
+	#preset; old blueprints without a stored preset show nothing.
+	#false: no extra tooltip line is ever added.
+	showSavedScaleTooltip = true

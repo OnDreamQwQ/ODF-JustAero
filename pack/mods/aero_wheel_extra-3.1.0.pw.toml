@@ -1,0 +1,12 @@
+name = "aero_wheel_extra-3.1.0"
+filename = "aero_wheel_extra-3.1.0.jar"
+side = "both"
+
+[download]
+hash-format = "sha512"
+hash = "4e575799b9240d4b8cf6ac1fcd273016a77e880f351c2acb78f93d3061b03b1f0dfced70372a1e91bbfda380ec0c772299bb26068fbf6e48aa8c47f8fd19d05e"
+url = "https://mediafilez.forgecdn.net/files/9118/329/aero_wheel_extra-3.1.0.jar"
+
+[update.curseforge]
+file-id = 9118329
+project-id = 1729455

@@ -1,0 +1,12 @@
+name = "alltheleaks-1.1.13+1.21.1-neoforge"
+filename = "alltheleaks-1.1.13+1.21.1-neoforge.jar"
+side = "both"
+
+[download]
+hash-format = "sha512"
+hash = "49710a09e8874f0abd2a9e3c7c8fdd477a990b9bd477863b6ab2622afb95d6b8faa6dc9793f96d155431ad2f94a225588e91869e1fd2c2aeb86697420f741a4a"
+url = "https://mediafilez.forgecdn.net/files/8943/912/alltheleaks-1.1.13%2b1.21.1-neoforge.jar"
+
+[update.curseforge]
+file-id = 8943912
+project-id = 1091339

@@ -1,0 +1,6 @@
+[formula]
+	#每服务端 tick 的 FORMULA 预算池总量(毫秒),仅影响计算节奏、不影响计算结果。
+	#Total FORMULA budget pool per server tick (ms); affects timing only, never results.
+	# Default: 3.0
+	# Range: 0.5 ~ 20.0
+	formulaBudgetMs = 3.0

@@ -1,0 +1,12 @@
+name = "ftb-ultimine-neoforge-2101.1.15"
+filename = "ftb-ultimine-neoforge-2101.1.15.jar"
+side = "both"
+
+[download]
+hash-format = "sha512"
+hash = "5938cf3f58b210769539de86e97769f84fe72d60eec6a6d13ecf9d26da5d24c9863c98b70ae688eea9433aef52d0226fd2c9b6f5196012a3a2cba0792e6e3985"
+url = "https://mediafilez.forgecdn.net/files/8231/400/ftb-ultimine-neoforge-2101.1.15.jar"
+
+[update.curseforge]
+file-id = 8231400
+project-id = 386134

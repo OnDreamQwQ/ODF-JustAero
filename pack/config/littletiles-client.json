@@ -1,0 +1,87 @@
+{
+  "building": {
+    "buildingMode": {
+      "proportional": {
+        "key": {
+          "key": 71,
+          "scan": -1,
+          "modifier": 3
+        },
+        "defaultValue": false
+      },
+      "zoom": {
+        "levels": [
+          1,
+          2,
+          4,
+          8,
+          16
+        ]
+      },
+      "grid": {
+        "key": {
+          "key": 86,
+          "scan": -1,
+          "modifier": 3
+        }
+      },
+      "measures": {
+        "key": {
+          "key": 78,
+          "scan": -1,
+          "modifier": 3
+        },
+        "defaultValue": false,
+        "measureTapeColors": [
+          -214525,
+          -3305472,
+          -5151232,
+          -6338304,
+          -8307968,
+          -10344448
+        ]
+      },
+      "cycle_measures": {
+        "key": {
+          "key": 71,
+          "scan": -1,
+          "modifier": 3
+        }
+      },
+      "rules": {
+        "key": {
+          "key": 82,
+          "scan": -1,
+          "modifier": 3
+        }
+      },
+      "include": {
+        "color": -16711936
+      },
+      "exclude": {
+        "color": -65536
+      }
+    },
+    "invertStickToGrid": false,
+    "maxSavedActions": 32,
+    "useALTForEverything": false,
+    "useAltWhenFlying": true,
+    "lowResolutionBoxCount": 2000
+  },
+  "rendering": {
+    "useCubeCache": true,
+    "renderingThreadCount": 2,
+    "highlightStructureBox": true,
+    "previewLines": false,
+    "previewLineThickness": 2,
+    "enableRandomDisplayTick": false,
+    "uploadToVBODirectly": true,
+    "showTooltip": true,
+    "itemCacheDuration": 5000,
+    "itemLowResolutionBoxCount": 1000,
+    "entityCacheBuildThreads": 1,
+    "connectedShapeBlocksLimit": 128,
+    "wrenchInfoRange": 5,
+    "wrenchInfoRefresh": 1
+  }
+}

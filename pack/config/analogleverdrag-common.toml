@@ -1,0 +1,27 @@
+[enabled_controls]
+	#Server/common toggle: enable drag control for Create analog lever for all players.
+	enable_create_analog_lever = true
+	#Server/common toggle: enable drag control for DnDecor stepped lever for all players.
+	enable_dndecor_stepped_lever = true
+	#Server/common toggle: enable drag control for DnDecor breaker switch for all players.
+	enable_dndecor_breaker_switch = true
+	#Server/common toggle: enable drag control for Caverns & Chasms resistor for all players.
+	enable_caverns_and_chasms_resistor = true
+	#Server/common toggle: enable lever drugster input helpers for Compact Gearbox manual gear selector / sequential gearbox for all players.
+	enable_compact_gearbox = true
+	#Server/common toggle: enable drag control for Supplementaries crank for all players.
+	enable_supplementaries_crank = true
+
+[server]
+	#Server/common toggle: allow Create-wrench inversion for supported linear levers.
+	allow_wrench_inversion = true
+	#Server/common toggle: allow clients to use the Unlock camera mode while a lever interface is open.
+	allow_unlock_camera = true
+	#Internal compatibility value. ALD always respects vanilla right-click/item-use delay; this is kept only so old config files load cleanly.
+	respect_item_use_cooldown = true
+	#Fair crank mode: circular UI rotates Supplementaries crank by timed steps instead of selecting a redstone number directly. Fixed delay: 4 ticks per step.
+	fair_crank_mode = false
+	#Force an extra block update around Supplementaries pulley/rope/chain after ALD crank steps. Helps fast crank movement show immediately.
+	force_pulley_sync = true
+	#Debug logging for lever drugster compatibility. Enable only when collecting latest.log for bug reports.
+	debug_logs = false

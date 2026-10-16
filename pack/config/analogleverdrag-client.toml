@@ -1,0 +1,95 @@
+[position]
+	#Horizontal offset for the linear lever UI.
+	# Default: 0
+	# Range: -400 ~ 400
+	linear_offset_x = 0
+	#Vertical offset for the linear lever UI.
+	# Default: 0
+	# Range: -400 ~ 400
+	linear_offset_y = 0
+	#Horizontal offset for the circular crank UI.
+	# Default: 0
+	# Range: -400 ~ 400
+	circular_offset_x = 0
+	#Vertical offset for the circular crank UI.
+	# Default: 0
+	# Range: -400 ~ 400
+	circular_offset_y = 0
+	#Scale for the drag interface overlay. 0.85 is the original size.
+	# Default: 0.85
+	# Range: 0.1 ~ 10.0
+	interface_scale = 0.85
+	#Scale for the circular crank interface overlay. 0.85 is the normal size.
+	# Default: 0.85
+	# Range: 0.1 ~ 10.0
+	circular_interface_scale = 0.85
+
+[interface]
+	#If enabled, wall-mounted linear levers use inverted vertical UI: signal 0 at top and 15 at bottom. Disable to keep one direction everywhere.
+	orientation_aware_linear_ui = true
+	#If enabled, using a Create wrench to invert a lever also flips the linear drag interface. Wall-mounted inversion remains a separate setting.
+	wrench_inverts_interface = true
+	#If enabled, Create and DnDecor linear levers use the texture-packable throttle-style overlay instead of the classic ALD slider.
+	throttle_style_linear_ui = false
+	#UI smoothing for the linear/throttle interface. 0.15 matches the quick Aeronautics-style catch-up; 0.00 snaps instantly; higher values are slower.
+	# Default: 0.15
+	# Range: 0.0 ~ 0.8
+	ui_smoothing = 0.15
+	#UI smoothing for the circular crank interface only. 0.15 matches the linear throttle-style catch-up; 0.00 snaps instantly; higher values are slower.
+	# Default: 0.15
+	# Range: 0.0 ~ 0.8
+	circular_ui_smoothing = 0.15
+	#Deprecated/internal compatibility flag. Wrench inversion now always preserves the in-world handle position for Create and DnDecor levers; this value is ignored by gameplay code.
+	wrench_preserves_handle_position = true
+	#If enabled, the drag interface overlay is shown. Disable to keep drag control active but hide all drag HUD/interface visuals.
+	show_interface = true
+	#If enabled, click a supported lever once to open the drag interface and click Use again to close it. Disable for the classic hold-to-drag behavior.
+	toggle_interaction = false
+	#If enabled, the outer rectangular overlay panel is drawn around the lever UI. Disable to show only the lever element itself.
+	show_interface_panel = true
+	#If enabled, discrete step markers are drawn on the linear lever UI.
+	show_step_markers = true
+	#If enabled, DnDecor breaker switch uses its own dark red/gray overlay theme. If disabled, it uses the normal DnDecor linear lever colors.
+	breaker_switch_block_theme = true
+	#If enabled, DnDecor breaker switch shows 0/8/15 labels next to its three allowed positions. Requires step markers to be enabled.
+	show_breaker_switch_step_labels = true
+	#If enabled, the circular crank UI shows 0..15 numbers in both normal and fair crank modes. Visual only; does not change timing or redstone.
+	show_fair_crank_numbers = true
+
+[controls]
+	#If enabled, the drag interface changes signal with the mouse wheel instead of mouse movement while Use is held.
+	use_mouse_wheel_control = false
+	#If enabled, the camera stays unlocked while the lever interface is open. Mouse movement looks around; use the mouse wheel or lever keybinds to change signal.
+	unlock_camera = false
+	#If enabled, the configured increase/decrease lever signal keys work while the lever interface is open.
+	enable_signal_keybinds = true
+	#Client-side toggle: show/use ALD UI for Create analog lever on this client.
+	client_enable_create_analog_lever = true
+	#Client-side toggle: show/use ALD UI for DnDecor stepped lever on this client.
+	client_enable_dndecor_stepped_lever = true
+	#Client-side toggle: show/use ALD UI for DnDecor breaker switch on this client.
+	client_enable_dndecor_breaker_switch = true
+	#Client-side toggle: show/use ALD UI for Caverns & Chasms resistor on this client.
+	client_enable_caverns_and_chasms_resistor = true
+	#Client-side toggle: enable lever drugster input helpers for Compact Gearbox manual gear selector / sequential gearbox on this client without replacing the original gearbox UI.
+	client_enable_compact_gearbox = true
+	#If enabled, Compact Gearbox mouse input behaves like a manual H-pattern shifter: move through neutral first, then up/down into a gear. If disabled, diagonal quick zones select gears immediately.
+	compact_gearbox_manual_gate = true
+	#If enabled, Compact Gearbox manual H-gate uses real mouse-driven stick movement through neutral and along the H path. If disabled, it uses the older firm stepped lane/gear clicks.
+	compact_gearbox_smooth_manual_gate = true
+	#Client-side toggle: show/use ALD UI for Supplementaries crank on this client.
+	client_enable_supplementaries_crank = true
+
+[sensitivity]
+	#Sensitivity for Create and DnDecor linear levers.
+	# Default: 0.65
+	# Range: 0.01 ~ 10.0
+	linear_sensitivity = 0.65
+	#Sensitivity for the Supplementaries circular crank.
+	# Default: 0.6
+	# Range: 0.01 ~ 10.0
+	circular_sensitivity = 0.6
+	#Sensitivity for Compact Gearbox manual selector mouse input. Lower values make H-gate movement stiffer and less likely to skip through neutral.
+	# Default: 0.1
+	# Range: 0.01 ~ 10.0
+	compact_gearbox_sensitivity = 0.1

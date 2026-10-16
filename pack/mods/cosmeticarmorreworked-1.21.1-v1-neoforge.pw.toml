@@ -1,0 +1,8 @@
+name = "cosmeticarmorreworked-1.21.1-v1-neoforge"
+filename = "cosmeticarmorreworked-1.21.1-v1-neoforge.jar"
+side = "both"
+
+[download]
+hash-format = "sha512"
+hash = "0bfae4647f98b172edc8029b782b4d812eb9a439decfb9f30460890e565f5c684b64e2377e1b8a1b820e9dc69f65e6cd48fee5d1d9fcebb8cd3278e9a4b8b318"
+url = "https://mediafilez.forgecdn.net/files/5610/814/cosmeticarmorreworked-1.21.1-v1-neoforge.jar"

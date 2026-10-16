@@ -1,0 +1,4 @@
+#Defines the sensibility of the Small Switch module
+# Default: 50
+# Range: 10 ~ 500
+smallSwitchSensibility = 50

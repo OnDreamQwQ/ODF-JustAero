@@ -1,0 +1,12 @@
+name = "shaolib-0.1.1"
+filename = "shaolib-0.1.1.jar"
+side = "both"
+
+[download]
+hash-format = "sha512"
+hash = "a8416c0b1801daf0ca6c1464c0d8b64913b35c0ab20f9881b636f15dbb77fc79519e5eb8e0f582f01fe4c753c868a03111ae45a8c125c54427a03d53603f3864"
+url = "https://mediafilez.forgecdn.net/files/9028/490/shaolib-0.1.1.jar"
+
+[update.curseforge]
+file-id = 9028490
+project-id = 1427600

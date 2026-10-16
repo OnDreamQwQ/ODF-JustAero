@@ -1,0 +1,12 @@
+name = "Create: Electro Energetics"
+filename = "electroenergetics-1.21.1-1.1.3.jar"
+side = "both"
+
+[download]
+hash-format = "sha512"
+hash = "080f4ed9cafe27b897cf14236ee92798a1c29fb08c0456208cf4a2bcc4164934a3ef40e202aeb25c9f5ae58f3f1739fcf0ab21f5f3c7e241f602a79f53a1cf00"
+url = "https://cdn.modrinth.com/data/qYJdIoAx/versions/KWxEmmON/electroenergetics-1.21.1-1.1.3.jar"
+
+[update.modrinth]
+mod-id = "qYJdIoAx"
+version = "KWxEmmON"

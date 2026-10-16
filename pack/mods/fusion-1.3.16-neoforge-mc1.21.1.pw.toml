@@ -1,0 +1,12 @@
+name = "Fusion (Connected Textures)"
+filename = "fusion-1.3.16-neoforge-mc1.21.1.jar"
+side = "client"
+
+[download]
+hash-format = "sha512"
+hash = "0b65c3a78db5785c76a222639a56da0cd09fc8445e02cdfb84e4bb7c88dc2c5622ccb468291a12df30440205a881db2023d9857fdb7252e7d21238876fcc8608"
+url = "https://cdn.modrinth.com/data/p19vrgc2/versions/AYDaLPK8/fusion-1.3.16-neoforge-mc1.21.1.jar"
+
+[update.modrinth]
+mod-id = "p19vrgc2"
+version = "AYDaLPK8"

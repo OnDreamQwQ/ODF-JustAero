@@ -1,0 +1,12 @@
+name = "Create Aeronautics: Portable Engine Liquid Fuel"
+filename = "portable_engine_liquid_fuel-2.0.0-neoforge-1.21.1.jar"
+side = "both"
+
+[download]
+hash-format = "sha512"
+hash = "f262adfdc441cf718d01549de2f52b81d71492825c4e24e42d5cf87fb02787e8f81a28071995124271caf42eb61840b47beaff6a86e709f74be221572748f7b1"
+url = "https://cdn.modrinth.com/data/HLbPoouI/versions/L6KPVFxI/portable_engine_liquid_fuel-2.0.0-neoforge-1.21.1.jar"
+
+[update.modrinth]
+mod-id = "HLbPoouI"
+version = "L6KPVFxI"

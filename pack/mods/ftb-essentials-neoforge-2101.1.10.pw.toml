@@ -1,0 +1,8 @@
+name = "ftb-essentials-neoforge-2101.1.10"
+filename = "ftb-essentials-neoforge-2101.1.10.jar"
+side = "both"
+
+[download]
+hash-format = "sha512"
+hash = "430dfff9d26840d3b08c07dc819deab5c93f3619b83d03b98d448213b4fc9ea87b44680522d55b954fbe5e29d5d05306e6fc0be77bfcdbbef96c4322115ad3dd"
+url = "https://mediafilez.forgecdn.net/files/8442/866/ftb-essentials-neoforge-2101.1.10.jar"

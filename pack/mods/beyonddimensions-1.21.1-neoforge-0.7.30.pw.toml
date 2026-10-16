@@ -1,0 +1,12 @@
+name = "Beyond Dimensions"
+filename = "beyonddimensions-1.21.1-neoforge-0.7.30.jar"
+side = "both"
+
+[download]
+hash-format = "sha512"
+hash = "088dd46fdd4db0d6fdadabb450743308b8247eb6c481f303f3a92c5e5b948a420eca16523eff62efc7b11639b0155b9710b077ff02f2bb056e703932aaea63b0"
+url = "https://cdn.modrinth.com/data/6zGxpbt7/versions/FP6mjH0z/beyonddimensions-1.21.1-neoforge-0.7.30.jar"
+
+[update.modrinth]
+mod-id = "6zGxpbt7"
+version = "FP6mjH0z"

@@ -1,0 +1,11 @@
+{
+  "FORCE_GIZMO": {
+    "x": 0,
+    "y": 0,
+    "width": 0,
+    "height": 0,
+    "userPlaced": false,
+    "visible": false
+  },
+  "CUSTOM_HUD": {}
+}

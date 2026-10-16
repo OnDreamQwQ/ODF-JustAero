@@ -1,0 +1,126 @@
+#Enable Voxy LOD rendering system
+enabled = true
+#Enable LOD terrain rendering (can be disabled while keeping data ingestion)
+enableRendering = true
+#Enable automatic chunk data ingestion for LOD generation
+ingestEnabled = true
+#LOD section render distance (multiplied by 32 for actual chunk distance)
+#Example: 16 = 512 chunks render distance
+# Default: 16
+# Range: 2 ~ 64
+sectionRenderDistance = 16
+#Number of background threads for LOD processing
+#Default is based on CPU core count.
+# Default: 4
+# Range: 1 ~ 6
+serviceThreads = 4
+#Subdivision size for LOD rendering (28-256)
+#Lower = more detailed LODs but more GPU load
+# Default: 123.0
+# Range: 28.0 ~ 256.0
+subDivisionSize = 123.0
+#Apply environmental fog to LOD terrain
+useEnvironmentalFog = true
+#Don't share threads with Sodium's chunk builder
+dontUseSodiumBuilderThreads = false
+#LOD boundary safety overlap in blocks
+# Default: 1
+# Range: 0 ~ 4
+lodBoundaryBuffer = 1
+#Use a camera-centred circular handoff between vanilla terrain and Voxy LOD.
+#Disable this when the active shader pack already supplies an LOD fade (for example Photon).
+enableLodBoundaryFade = true
+#Width of the stable dithered terrain handoff, in blocks
+# Default: 16
+# Range: 8 ~ 64
+lodBoundaryFadeLength = 16
+#Safety distance between the handoff outer edge and vanilla render distance, in blocks
+# Default: 8
+# Range: 8 ~ 32
+lodBoundaryInset = 8
+#Enable FakeSight-style extended chunk requests for Voxy ingestion
+enableExtendedRequestDistance = false
+#Requested chunk radius. Higher values increase world-generation load.
+# Default: 48
+# Range: 8 ~ 48
+requestDistance = 48
+#World curvature effect - simulates standing on a spherical planet
+#0 = disabled (flat world)
+#1 = real Earth curvature (6371km radius)
+#Higher values = more extreme curvature (smaller planet effect)
+#Valid range: 0 (off), or 50-5000. Values 1-49 are auto-corrected to 50.
+#Inspired by Distant Horizons' earth curvature feature
+# Default: 0
+# Range: 0 ~ 5000
+earthCurveRatio = 0
+#Render far players with lightweight server snapshots.
+#Multiplayer requires Voxy on the server; standalone SeeU takes precedence when installed.
+enableFarPlayerRendering = true
+#Render ridden vehicles and mounts from far-entity snapshots independently of players.
+enableFarVehicleRendering = true
+#Render name tags above far-player proxies.
+renderFarPlayerNames = true
+#Maximum distance in blocks for far-player walk animation.
+#Set to 0 to follow the LOD render distance.
+# Default: 0
+# Range: 0 ~ 32768
+farPlayerAnimationDistance = 0
+#Allow other Voxy clients on the same server to receive your far-player snapshot.
+shareFarPlayerPosition = true
+#Show render statistics in F3 debug screen
+#Displays LOD traversal counts, visible sections, and quad counts
+renderStatistics = false
+#Render Create trains beyond the vanilla view distance, in the LOD
+distantTrains = true
+#Max distance to render distant trains, in chunks. 0 = follow the LOD radius.
+#Lower renders trains nearer; on the integrated server it also shrinks the
+#server's train pose-stream window, cutting bandwidth.
+# Default: 0
+# Range: 0 ~ 192
+distantTrainMaxChunks = 0
+#Render the Create track network beyond the view distance, in the LOD
+distantTracks = true
+#Max distance to render the distant track network, in chunks. 0 = follow the LOD radius.
+# Default: 0
+# Range: 0 ~ 192
+distantTrackMaxChunks = 0
+#Render snapshots of Create contraptions (bearings/pistons/gantries/mounted)
+#beyond the view distance, in the LOD
+distantContraptions = true
+#Max distance to render distant contraptions, in chunks. 0 = follow the LOD radius.
+# Default: 0
+# Range: 0 ~ 192
+distantContraptionMaxChunks = 0
+#Draw beacon beams past vanilla's block-entity render range
+distantBeacons = true
+#Maximum beacon-beam distance in chunks. 0 follows Voxy's LOD radius.
+# Default: 0
+# Range: 0 ~ 512
+distantBeaconMaxChunks = 0
+#Cull placed kinetic machine moving parts (rotating shafts/gears) beyond the render
+#distance so they stop floating over the LOD. Off = Create draws them natively.
+distantKinetics = true
+#Render cached PowerGrid hanging wires beyond their entity tracking range
+distantPowerGridWires = true
+#Maximum PowerGrid wire LOD distance in chunks. 0 follows Voxy's LOD radius.
+# Default: 0
+# Range: 0 ~ 192
+distantPowerGridWireMaxChunks = 0
+#Render Simulated laser-pointer beams beyond block-entity render distance
+distantSimulatedLasers = true
+#Maximum Simulated laser LOD distance in chunks. 0 follows Voxy's LOD radius.
+# Default: 0
+# Range: 0 ~ 192
+distantSimulatedLaserMaxChunks = 0
+#Render cached LittleTiles microblock meshes beyond vanilla view distance
+distantLittleTiles = true
+#Maximum LittleTiles LOD distance in chunks. 0 follows Voxy's LOD radius.
+# Default: 0
+# Range: 0 ~ 192
+distantLittleTilesMaxChunks = 0
+#Render detailed Domum Ornamentum models in the LOD
+distantDomum = true
+#Maximum Domum Ornamentum LOD distance in chunks. 0 follows Voxy's LOD radius.
+# Default: 0
+# Range: 0 ~ 192
+distantDomumMaxChunks = 0

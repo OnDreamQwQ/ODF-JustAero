@@ -1,0 +1,37 @@
+	[createrailwaysnavigator_common_config.debug]
+		#Prints more details to the console to better observe the behavior of CRN. Only relevant for debugging.
+		advanced_logging = false
+
+	[createrailwaysnavigator_common_config.web]
+		#Enables the CRN web API, which opens a separate port for external websites and tools to read train data over HTTP. This is a network service, so it stays off unless you really need it. (Default: OFF)
+		enabled = false
+		#The network interface the web API listens on which decides who can reach it. '127.0.0.1' = only the same machine (singleplayer, or behind a reverse proxy). '0.0.0.0' = every network, like your LAN and the internet if the port is open. (Default: 0.0.0.0)
+		bind_address = "0.0.0.0"
+		#The port the web API listens on over plain HTTP. It must not be the Minecraft port and must not be used by another program. Use a reverse proxy for HTTPS. (Default: 25580)
+		# Default: 25580
+		# Range: 1 ~ 65535
+		port = 25580
+		#How many requests the web API can process at the same time. Higher values do not make the server faster, they only allow more clients to wait in parallel. (Default: 16)
+		# Default: 16
+		# Range: 4 ~ 64
+		threads = 16
+		#[in Bytes]
+		#The largest request body the web API accepts. Anything above is rejected with 413 before it is read into memory. (Default: 65536, 64 KiB)
+		# Default: 65536
+		# Range: 1024 ~ 8388608
+		max_request_bytes = 65536
+		#Compresses responses with gzip when the client accepts it. This cuts the size of large responses. (Default: ON)
+		gzip_enabled = true
+		#[in Bytes]
+		#Responses smaller than this are sent uncompressed, because gzipping a tiny payload costs more than it saves. Only used when gzip is enabled. (Default: 512)
+		# Default: 512
+		# Range: 0 ~ 1048576
+		gzip_min_bytes = 512
+		#Which websites hosted elsewhere may read responses from this API in a browser. Use the exact origin including the scheme, for example 'https://trains.example.com'. A single '*' allows every website. (Default: none)
+		cors_allowed_origins = []
+
+		[createrailwaysnavigator_common_config.web.debug]
+			#Writes one line to the server log for every request the web API handles, showing the method, path and response status. (Default: OFF)
+			request_log = false
+			#Logs the timing for every web API request. For debugging only and only takes effect after a restart. (Default: OFF)
+			timing_log = false

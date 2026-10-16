@@ -1,0 +1,7 @@
+#.
+#Here are the settings for big cannons.
+[big_cannons]
+	#.
+	#.
+	#If true the default Create Big Cannons calculation for the projectile velocity is used.
+	disablePhysicRework = false

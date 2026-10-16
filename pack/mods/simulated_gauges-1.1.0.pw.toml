@@ -1,0 +1,12 @@
+name = "Simulated Gauges"
+filename = "simulated_gauges-1.1.0.jar"
+side = "both"
+
+[download]
+hash-format = "sha512"
+hash = "1077eae5f13c8eb10fd5fb8aa933ea012724627087ce11727794a912b7e95d1a17eba974f46f9479ef57644d1082c0ff330a665645465338664ee0eeb2414e77"
+url = "https://cdn.modrinth.com/data/AwDdvIWn/versions/LWK7hUmm/simulated_gauges-1.1.0.jar"
+
+[update.modrinth]
+mod-id = "AwDdvIWn"
+version = "LWK7hUmm"

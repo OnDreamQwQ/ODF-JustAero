@@ -1,0 +1,12 @@
+name = "Aeronautics: MecanumWheels"
+filename = "MecanumWheels-1.21.1-1.0.1-1.0.1.jar"
+side = "both"
+
+[download]
+hash-format = "sha512"
+hash = "9135c080c4735db2269d464f8067b2909343f4d03f7c0c8dcc90ffd7f3eb560198d75e28fbe16478d098d1f8c42f50abe0d3926793636f3aca56516ac64723ad"
+url = "https://edge.forgecdn.net/files/9098/957/MecanumWheels-1.21.1-1.0.1-1.0.1.jar"
+
+[update.curseforge]
+file-id = 9098957
+project-id = 1711322

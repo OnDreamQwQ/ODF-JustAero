@@ -1,0 +1,10 @@
+#Client-only fire-control sight settings
+[scope]
+	#Last selected optical magnification. Mouse wheel changes this while scoped.
+	# Default: 4.0
+	# Range: 1.0 ~ 16.0
+	zoom = 4.0
+	#Last selected electro-optical pod magnification.
+	# Default: 4.0
+	# Range: 1.0 ~ 16.0
+	podZoom = 4.0

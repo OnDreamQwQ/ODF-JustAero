@@ -1,0 +1,57 @@
+["Client Setting"]
+	#是否固定手电筒光的位置。
+	enableFixedFlashlight = false
+	#是否启用其它玩家光束可见。
+	enablePlayerRay = true
+	#手电筒光照范围（方块）。
+	# Default: 14.0
+	# Range: 1.0 ~ 64.0
+	lightRange = 14.0
+	#手电筒光照角度（度），控制光锥张开程度。
+	# Default: 56.0
+	# Range: 10.0 ~ 120.0
+	lightAngle = 56.0
+	#手电筒光锥颜色列表（ARGB 十六进制，如 "FFFFFFFF"、"80FF0000"）。支持多色柔和渐变。
+	lightColorsARGB = ["FFFFFFFF"]
+	#多层圆锥尺寸缩放列表（字符串表示浮点数），默认 3 层：1.00,1.08,1.16
+	layerSizeScales = ["1.00", "1.08", "1.16"]
+	#多层中心透明度列表（字符串表示浮点数 0–1），默认：0.15,0.12,0.08
+	layerCenterAlphas = ["0.15", "0.12", "0.08"]
+	#多层边缘透明度列表（字符串表示浮点数 0–1），默认：0.00,0.00,0.00
+	layerEdgeAlphas = ["0.00", "0.00", "0.00"]
+	#每层基础颜色列表（ARGB 十六进制），可为空；为空时使用渐变调色与噪声混色
+	layerColorsARGB = []
+	#不规则渐变噪声幅度（0–1）
+	# Default: 0.35
+	# Range: 0.0 ~ 1.0
+	colorNoiseAmplitude = 0.35
+	#是否启用雾气层
+	fogEnabled = false
+	#雾气层尺寸缩放
+	# Default: 1.3
+	# Range: 1.0 ~ 2.0
+	fogSizeScale = 1.3
+	#雾气层中心透明度（0–1）
+	# Default: 0.06
+	# Range: 0.0 ~ 1.0
+	fogCenterAlpha = 0.06
+	#雾气层边缘透明度（0–1）
+	# Default: 0.05
+	# Range: 0.0 ~ 1.0
+	fogEdgeAlpha = 0.05
+	#雾气层颜色（ARGB 十六进制），默认半透明白：80FFFFFF
+	fogColorARGB = "80FFFFFF"
+	#是否启用真实照明。
+	enableRealLight = true
+	#真实光照等级（0–15），影响亮度与覆盖范围。
+	# Default: 15.0
+	# Range: 0.0 ~ 15.0
+	realLightLuminance = 15.0
+	#手电筒光强度。
+	# Default: 0.3
+	# Range: 0.0 ~ 1.0
+	lightIntensity = 0.3
+	#启用光照遮挡，性能敏感，复杂地形慎用
+	enableLightOcclusion = false
+	#启用圆锥渲染的射线检测（截断）。
+	enableConeRaycast = false

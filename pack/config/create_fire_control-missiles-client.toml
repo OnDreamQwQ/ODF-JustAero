@@ -1,0 +1,21 @@
+#Virtual ballistic missile client rendering
+[virtualMissiles]
+	# Default: 32000.0
+	# Range: 64.0 ~ 100000.0
+	renderDistance = 32000.0
+	# Default: 256.0
+	# Range: 8.0 ~ 10000.0
+	nearLodDistance = 256.0
+	# Default: 2048.0
+	# Range: 16.0 ~ 20000.0
+	midLodDistance = 2048.0
+	# Default: 16000.0
+	# Range: 64.0 ~ 100000.0
+	flareRenderDistance = 16000.0
+	# Default: 96.0
+	# Range: 0.0 ~ 1000.0
+	unknownTerrainFadeAltitude = 96.0
+	# Default: 48
+	# Range: 4 ~ 128
+	trailSamples = 48
+	fadeWhenLowAndTerrainUnknown = true

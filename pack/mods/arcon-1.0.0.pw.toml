@@ -1,0 +1,12 @@
+name = "Create: Armored Constructs"
+filename = "arcon-1.0.0.jar"
+side = "both"
+
+[download]
+hash-format = "sha512"
+hash = "81075936a5b68d37563be4b3e186d8148f499f2137eb30fca3bce3d28642ae9b7082aafa48dce2ab028c517c164643f9898cf227e87b1f78ec63b714409cdf3f"
+url = "https://cdn.modrinth.com/data/3kX39rX0/versions/qLUonIb7/arcon-1.0.0.jar"
+
+[update.modrinth]
+mod-id = "3kX39rX0"
+version = "qLUonIb7"

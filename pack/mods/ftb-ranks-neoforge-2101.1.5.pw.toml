@@ -1,0 +1,12 @@
+name = "ftb-ranks-neoforge-2101.1.5"
+filename = "ftb-ranks-neoforge-2101.1.5.jar"
+side = "both"
+
+[download]
+hash-format = "sha512"
+hash = "05df68240243068d89b8edc60fe21a0d7f961014f429634c481173eb72277248c0707ce0cde72ba2b627c79edf73d0efb8f8009ba84aea2e61498c92958fa873"
+url = "https://mediafilez.forgecdn.net/files/8878/560/ftb-ranks-neoforge-2101.1.5.jar"
+
+[update.curseforge]
+file-id = 8878560
+project-id = 314905

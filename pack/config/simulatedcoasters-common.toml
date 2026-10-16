@@ -1,0 +1,18 @@
+#Fraction of dimension universal drag to compensate for engaged coaster carts and rivets hosted on cart sub-levels (0–1).
+#Higher resists damping more; values near 1 can overshoot when contacts share the same sub-step.
+# Default: 1.0
+# Range: 0.0 ~ 1.0
+universalDragCompensationFraction = 1.0
+#Maximum chain lift span length along the track centerline (blocks).
+# Default: 64.0
+# Range: 1.0 ~ 128.0
+maxChainLiftSpanBlocks = 64.0
+#Maximum straight-line distance between coaster anchorpoints when placing track (blocks).
+# Default: 45
+# Range: 1 ~ 128
+maxTrackConnectionSpanBlocks = 45
+#Maximum hosted sub-level mass (Sable mass units) a balloon can help support at the tether anchor.
+#Applies weight compensation only — does not change empty-balloon hover rise rate.
+# Default: 48.0
+# Range: 0.0 ~ 512.0
+maxBalloonPayloadMass = 48.0

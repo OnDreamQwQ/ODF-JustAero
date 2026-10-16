@@ -1,0 +1,8 @@
+name = "drivebywire-0.3.0"
+filename = "drivebywire-0.3.0.jar"
+side = "both"
+
+[download]
+hash-format = "sha512"
+hash = "f4c3721bbe1ceebed2e3f06103914ca8378337e4b8eabed38d2206d7ac553f308eb0127081411035b8be8b5092f5dac6915000e935f18d734e98f98a76a4684e"
+url = "https://mediafilez.forgecdn.net/files/8247/104/drivebywire-0.3.0.jar"

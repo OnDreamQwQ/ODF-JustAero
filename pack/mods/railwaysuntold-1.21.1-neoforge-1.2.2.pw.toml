@@ -1,0 +1,8 @@
+name = "railwaysuntold-1.21.1-neoforge-1.2.2"
+filename = "railwaysuntold-1.21.1-neoforge-1.2.2.jar"
+side = "both"
+
+[download]
+hash-format = "sha512"
+hash = "24121f4f29c748e25c89772f2e534453f6d918d5022d3508faca4796f12a8aa0c617b57d0218e7e565484f450b17a7eeb191debd6a931844ec43b5ac854650a3"
+url = "https://mediafilez.forgecdn.net/files/8755/353/railwaysuntold-1.21.1-neoforge-1.2.2.jar"

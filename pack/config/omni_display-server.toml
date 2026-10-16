@@ -1,0 +1,93 @@
+#Low-performance mode: whole-cabin transparency, doors interlocked, no open cabins or screen filters. False uses the default display-surface renderer.
+lowPerformanceMode = false
+
+#Screen-only filter. Unavailable in lowPerformanceMode. All values are controlled by the server; ordinary world, door openings and HUD are unaffected.
+[screenEffects]
+	#Powered-on hexagon seam visibility for all cabins. Does not change power animations.
+	# Default: 0
+	# Range: 0 ~ 100
+	seamOpacity = 0
+	# Default: 0.0
+	# Range: 0.0 ~ 1.0
+	tintStrength = 0.0
+	#Brightness multiplier on display surfaces; 1 = unchanged.
+	# Default: 1.0
+	# Range: 0.5 ~ 1.5
+	brightness = 1.0
+	#Contrast multiplier on display surfaces; 1 = unchanged.
+	# Default: 1.1
+	# Range: 0.5 ~ 1.5
+	contrast = 1.1
+	# Default: 80
+	# Range: 0 ~ 100
+	cabinLight = 80
+	#Lift dark areas slightly to retain visibility.
+	# Default: 0.0
+	# Range: 0.0 ~ 0.15
+	blackLift = 0.0
+	#Pixel cells per block face.
+	# Default: 96
+	# Range: 8 ~ 256
+	pixelsPerBlock = 96
+	# Default: 0.0
+	# Range: 0.0 ~ 1.0
+	pixelStrength = 0.0
+	# Default: 64
+	# Range: 8 ~ 256
+	scanlinesPerBlock = 64
+	# Default: 0.0
+	# Range: 0.0 ~ 1.0
+	scanlineStrength = 0.0
+	# Default: 0.0
+	# Range: 0.0 ~ 1.0
+	edgeStrength = 0.0
+
+#HUD appearance, shared server settings. Applies in both rendering modes.
+[hud]
+	informationWindows = true
+	radarWarnings = true
+	#Show a gaze indicator at the player crosshair on the HUD sphere.
+	gazeIndicator = true
+	#HUD saturation percent: 0 greyscale, 100 original palette; independent of opacity and brightness.
+	# Default: 75
+	# Range: 0 ~ 150
+	saturation = 75
+	#Overall HUD opacity including radar target marks; 0 hides HUD, 100 retains original coverage.
+	# Default: 100
+	# Range: 0 ~ 100
+	opacity = 100
+	#Adapt HUD brightness to exterior world sky/block light, with smooth transitions. Existing cabin brightness is the base value.
+	autoBrightness = true
+
+	[hud.informationWindow0]
+		# Default: 0
+		# Range: -75 ~ 75
+		horizontalOffset = 0
+		# Default: 0
+		# Range: -60 ~ 60
+		verticalOffset = 0
+		# Default: 100
+		# Range: 40 ~ 200
+		size = 100
+
+	[hud.informationWindow1]
+		# Default: 0
+		# Range: -75 ~ 75
+		horizontalOffset = 0
+		# Default: 0
+		# Range: -60 ~ 60
+		verticalOffset = 0
+		# Default: 100
+		# Range: 40 ~ 200
+		size = 100
+
+	[hud.informationWindow2]
+		# Default: 0
+		# Range: -75 ~ 75
+		horizontalOffset = 0
+		# Default: 0
+		# Range: -60 ~ 60
+		verticalOffset = 0
+		# Default: 100
+		# Range: 40 ~ 200
+		size = 100

@@ -1,0 +1,373 @@
+{
+    "_comment": "Server-owned defaults copied to config/createthrusters-fuels.json on first load. Datapacks are applied afterward as overrides.",
+    "fluid": {
+        "#c:fuels": {
+            "burn_time": 180,
+            "weight": 1.0,
+            "propulsion": 1.0,
+            "particle": "default"
+        },
+        "minecraft:lava": {
+            "burn_time": 180,
+            "weight": 1.0,
+            "propulsion": 1.0,
+            "particle": "default"
+        },
+        "minecraft:flowing_lava": {
+            "burn_time": 180,
+            "weight": 1.0,
+            "propulsion": 1.0,
+            "particle": "default"
+        },
+        "createaddition:seed_oil": {
+            "burn_time": 180,
+            "weight": 1.45,
+            "propulsion": 1.0,
+            "particle": "default"
+        },
+        "createaddition:bioethanol": {
+            "burn_time": 180,
+            "weight": 0.7,
+            "propulsion": 0.5,
+            "particle": "default"
+        },
+        "ad_astra:fuel": {
+            "burn_time": 180,
+            "weight": 1.45,
+            "propulsion": 1.25,
+            "particle": "default"
+        },
+        "immersiveengineering:biodiesel": {
+            "burn_time": 180,
+            "weight": 0.7,
+            "propulsion": 1.0,
+            "particle": "default"
+        },
+        "pneumaticcraft:ethanol": {
+            "burn_time": 180,
+            "weight": 0.7,
+            "propulsion": 0.5,
+            "particle": "default"
+        },
+        "createdieselgenerators:crude_oil": {
+            "burn_time": 120,
+            "weight": 1.2,
+            "propulsion": 0.65,
+            "particle": "default"
+        },
+        "createdieselgenerators:flowing_crude_oil": {
+            "burn_time": 120,
+            "weight": 1.2,
+            "propulsion": 0.65,
+            "particle": "default"
+        },
+        "createdieselgenerators:diesel": {
+            "burn_time": 180,
+            "weight": 1.2,
+            "propulsion": 1.5,
+            "particle": "default"
+        },
+        "createdieselgenerators:flowing_diesel": {
+            "burn_time": 180,
+            "weight": 1.2,
+            "propulsion": 1.5,
+            "particle": "default"
+        },
+        "createdieselgenerators:biodiesel": {
+            "burn_time": 180,
+            "weight": 1.2,
+            "propulsion": 1.0,
+            "particle": "default"
+        },
+        "createdieselgenerators:flowing_biodiesel": {
+            "burn_time": 180,
+            "weight": 1.2,
+            "propulsion": 1.0,
+            "particle": "default"
+        },
+        "createdieselgenerators:gasoline": {
+            "burn_time": 180,
+            "weight": 1.2,
+            "propulsion": 1.0,
+            "particle": "default"
+        },
+        "createdieselgenerators:flowing_gasoline": {
+            "burn_time": 180,
+            "weight": 1.2,
+            "propulsion": 1.0,
+            "particle": "default"
+        },
+        "createdieselgenerators:ethanol": {
+            "burn_time": 180,
+            "weight": 1.2,
+            "propulsion": 0.5,
+            "particle": "default"
+        },
+        "createdieselgenerators:flowing_ethanol": {
+            "burn_time": 180,
+            "weight": 1.2,
+            "propulsion": 0.5,
+            "particle": "default"
+        },
+        "createdieselgenerators:plant_oil": {
+            "burn_time": 180,
+            "weight": 1.2,
+            "propulsion": 0.5,
+            "particle": "default"
+        },
+        "createdieselgenerators:flowing_plant_oil": {
+            "burn_time": 180,
+            "weight": 1.2,
+            "propulsion": 0.5,
+            "particle": "default"
+        },
+        "tfmg:lpg": {
+            "burn_time": 180,
+            "weight": 0.7,
+            "propulsion": 0.75,
+            "particle": "default"
+        },
+        "tfmg:flowing_lpg": {
+            "burn_time": 180,
+            "weight": 0.7,
+            "propulsion": 0.75,
+            "particle": "default"
+        },
+        "tfmg:butane": {
+            "burn_time": 180,
+            "weight": 0.65,
+            "propulsion": 0.7,
+            "particle": "default"
+        },
+        "tfmg:flowing_butane": {
+            "burn_time": 180,
+            "weight": 0.65,
+            "propulsion": 0.7,
+            "particle": "default"
+        },
+        "tfmg:propane": {
+            "burn_time": 180,
+            "weight": 0.7,
+            "propulsion": 0.8,
+            "particle": "default"
+        },
+        "tfmg:flowing_propane": {
+            "burn_time": 180,
+            "weight": 0.7,
+            "propulsion": 0.8,
+            "particle": "default"
+        },
+        "tfmg:hydrogen": {
+            "burn_time": 180,
+            "weight": 0.35,
+            "propulsion": 1.15,
+            "particle": "default"
+        },
+        "tfmg:flowing_hydrogen": {
+            "burn_time": 180,
+            "weight": 0.35,
+            "propulsion": 1.15,
+            "particle": "default"
+        },
+        "tfmg:furnace_gas": {
+            "burn_time": 180,
+            "weight": 0.3,
+            "propulsion": 0.3,
+            "particle": "default"
+        },
+        "tfmg:flowing_furnace_gas": {
+            "burn_time": 180,
+            "weight": 0.3,
+            "propulsion": 0.3,
+            "particle": "default"
+        },
+        "tfmg:gasoline": {
+            "burn_time": 180,
+            "weight": 1.0,
+            "propulsion": 1.0,
+            "particle": "default"
+        },
+        "tfmg:flowing_gasoline": {
+            "burn_time": 180,
+            "weight": 1.0,
+            "propulsion": 1.0,
+            "particle": "default"
+        },
+        "tfmg:diesel": {
+            "burn_time": 180,
+            "weight": 0.8,
+            "propulsion": 1.35,
+            "particle": "default"
+        },
+        "tfmg:flowing_diesel": {
+            "burn_time": 180,
+            "weight": 0.8,
+            "propulsion": 1.35,
+            "particle": "default"
+        },
+        "tfmg:naphtha": {
+            "burn_time": 180,
+            "weight": 0.7,
+            "propulsion": 1.3,
+            "particle": "default"
+        },
+        "tfmg:flowing_naphtha": {
+            "burn_time": 180,
+            "weight": 0.7,
+            "propulsion": 1.3,
+            "particle": "default"
+        },
+        "tfmg:kerosene": {
+            "burn_time": 180,
+            "weight": 1.0,
+            "propulsion": 1.35,
+            "particle": "default"
+        },
+        "tfmg:flowing_kerosene": {
+            "burn_time": 180,
+            "weight": 1.0,
+            "propulsion": 1.35,
+            "particle": "default"
+        },
+        "tfmg:creosote": {
+            "burn_time": 180,
+            "weight": 0.4,
+            "propulsion": 0.5,
+            "particle": "default"
+        },
+        "tfmg:flowing_creosote": {
+            "burn_time": 180,
+            "weight": 0.4,
+            "propulsion": 0.5,
+            "particle": "default"
+        },
+        "tfmg:napalm": {
+            "burn_time": 120,
+            "weight": 0.75,
+            "propulsion": 1.8,
+            "particle": "default"
+        },
+        "tfmg:flowing_napalm": {
+            "burn_time": 120,
+            "weight": 0.75,
+            "propulsion": 1.8,
+            "particle": "default"
+        },
+        "tfmg:crude_oil": {
+            "burn_time": 120,
+            "weight": 1.2,
+            "propulsion": 0.55,
+            "particle": "default"
+        },
+        "tfmg:flowing_crude_oil": {
+            "burn_time": 120,
+            "weight": 1.2,
+            "propulsion": 0.55,
+            "particle": "default"
+        },
+        "tfmg:heavy_oil": {
+            "burn_time": 120,
+            "weight": 1.25,
+            "propulsion": 0.45,
+            "particle": "default"
+        },
+        "tfmg:flowing_heavy_oil": {
+            "burn_time": 120,
+            "weight": 1.25,
+            "propulsion": 0.45,
+            "particle": "default"
+        },
+        "tfmg:lubrication_oil": {
+            "burn_time": 120,
+            "weight": 0.9,
+            "propulsion": 0.25,
+            "particle": "default"
+        },
+        "tfmg:flowing_lubrication_oil": {
+            "burn_time": 120,
+            "weight": 0.9,
+            "propulsion": 0.25,
+            "particle": "default"
+        },
+        "oritech:still_fuel": {
+            "burn_time": 180,
+            "weight": 1.8,
+            "propulsion": 1.7,
+            "particle": "default"
+        },
+        "oritech:flowing_fuel": {
+            "burn_time": 180,
+            "weight": 1.8,
+            "propulsion": 1.7,
+            "particle": "default"
+        },
+        "oritech:still_biofuel": {
+            "burn_time": 120,
+            "weight": 0.75,
+            "propulsion": 0.8,
+            "particle": "default"
+        },
+        "oritech:flowing_biofuel": {
+            "burn_time": 120,
+            "weight": 0.75,
+            "propulsion": 0.8,
+            "particle": "default"
+        }
+    },
+    "solid": {
+        "minecraft:coal_block": {
+            "burn_time": 16000,
+            "propulsion": 1.0,
+            "particle": "default"
+        },
+        "#minecraft:coals": {
+            "burn_time": 1600,
+            "propulsion": 1.0,
+            "particle": "default"
+        },
+        "minecraft:blaze_rod": {
+            "burn_time": 2400,
+            "propulsion": 1.0,
+            "particle": "default"
+        },
+        "minecraft:magma_cream": {
+            "burn_time": 1500,
+            "propulsion": 1.0,
+            "particle": "default"
+        },
+        "minecraft:blaze_powder": {
+            "burn_time": 1200,
+            "propulsion": 1.0,
+            "particle": "default"
+        },
+        "minecraft:dried_kelp": {
+            "burn_time": 40,
+            "propulsion": 0.005,
+            "particle": "water_bubble"
+        },
+        "create:blaze_cake": {
+            "burn_time": 19200,
+            "propulsion": 1.2,
+            "particle": "default"
+        },
+        "create:creative_blaze_cake": {
+            "infinite_burn": true,
+            "propulsion": 1.5,
+            "particle": "default"
+        },
+        "createthrusters:oxidized_solid_fuel": {
+            "burn_time": 3200,
+            "propulsion": 1.5,
+            "particle": "default"
+        },
+        "createthrusters:oxidized_creative_blaze_cake": {
+            "infinite_burn": true,
+            "propulsion": 1.5,
+            "particle": "default"
+        }
+    },
+    "oxidized_fuels": {
+        "replace": false,
+        "values": []
+    }
+}

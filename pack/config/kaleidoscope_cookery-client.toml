@@ -1,0 +1,3 @@
+[cookery]
+	#Whether to show food effect tooltips when hovering over food items.
+	ShowFoodEffectTooltips = true

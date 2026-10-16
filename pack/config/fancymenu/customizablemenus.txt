@@ -1,0 +1,11 @@
+type = customizablemenus
+
+de.keksuccino.drippyloadingscreen.customization.DrippyOverlayScreen {
+}
+
+net.minecraft.client.gui.screens.TitleScreen {
+}
+
+com.gly091020.netMusicListNeoforge.client.MusicSearchScreen {
+}
+

@@ -1,0 +1,12 @@
+name = "Create: Factory Controller"
+filename = "createfactorycontroller-1.2.1-neoforge-1.21.1.jar"
+side = "both"
+
+[download]
+hash-format = "sha512"
+hash = "29534000c11747614ef95e2dc4eea2ed7a7fa4dafeaac5cdf0e4bf49a45468f7971763fc4238b46839e08eb8213f6326545a1679742835699edd51a93692a25d"
+url = "https://cdn.modrinth.com/data/VR3MrvE2/versions/CBUpgyAH/createfactorycontroller-1.2.1-neoforge-1.21.1.jar"
+
+[update.modrinth]
+mod-id = "VR3MrvE2"
+version = "CBUpgyAH"

@@ -1,0 +1,8 @@
+name = "HandheldMoon-neoforge-1.21.1-1.2.0"
+filename = "HandheldMoon-neoforge-1.21.1-1.2.0.jar"
+side = "both"
+
+[download]
+hash-format = "sha512"
+hash = "310332c66d05867e0ac1fe44517491dc13906aab3a9d40e113d7d67ed33409121b3711484cdec18f68e8648a4c871f50673208e1ca856b4ec2b1660550e00b48"
+url = "https://mediafilez.forgecdn.net/files/7978/840/HandheldMoon-neoforge-1.21.1-1.2.0.jar"

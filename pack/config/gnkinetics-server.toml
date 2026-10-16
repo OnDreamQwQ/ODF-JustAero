@@ -1,0 +1,65 @@
+#.
+#Parameters and abilities of Gears n' Kinetics's kinetic mechanisms
+[kinetics]
+	#.
+	#.
+	#Maximum length in blocks of chain conveyor connections.
+	# Default: 32
+	# Range: > 5
+	maxChainableCogwheelLength = 32
+	#.
+	#Maximum amount of connections each chain conveyor can have.
+	# Default: 6
+	# Range: > 1
+	maxChainableCogwheelConnections = 6
+	#.
+	#multiplier used for calculating exhaustion from speed when a cog crank is turned.
+	# Default: 0.009999999776482582
+	# Range: 0.0 ~ 1.0
+	cogCrankHungerMultiplier = 0.009999999776482582
+
+	#.
+	#Fine tune the kinetic stats of individual components
+	[kinetics.stressValues]
+
+		#.
+		#.
+		#[in Stress Units]
+		#Configure the individual stress impact of mechanical blocks. Note that this cost is doubled for every speed increase it receives.
+		[kinetics.stressValues.impact]
+			industrial_gear = 0.0
+			worm_gear = 0.0
+			large_magnet_gear = 0.0
+			magnet_gear = 0.0
+			shaftless_large_brass_gear = 0.0
+			cogstone = 0.0
+			chainable_cogwheel = 1.0
+			shaftless_brass_gear = 0.0
+			brass_gear = 0.0
+			shaftless_cogwheel = 0.0
+			shaftless_large_cogwheel = 0.0
+			tiny_brass_gear = 0.0
+			andesite_cogwheel = 0.0
+			shaftless_industrial_gear = 0.0
+			ring_gear = 0.0
+			planetary_gear = 0.0
+			shaftless_tiny_cogwheel = 0.0
+			hollow_large_brass_gear = 0.0
+			hollow_cogwheel = 0.0
+			large_industrial_gear = 0.0
+			shaftless_tiny_brass_gear = 0.0
+			shaftless_large_industrial_gear = 0.0
+			hollow_brass_gear = 0.0
+			hollow_large_cogwheel = 0.0
+			shaftless_cogstone = 0.0
+			large_brass_gear = 0.0
+			tiny_cogwheel = 0.0
+			shaftless_andesite_cogwheel = 0.0
+
+		#.
+		#[in Stress Units]
+		#Configure how much stress a source can accommodate for.
+		[kinetics.stressValues.capacity]
+			large_cog_crank = 8.0
+			creative_gear_motor = 16384.0
+			cog_crank = 8.0

@@ -1,0 +1,12 @@
+name = "vista"
+filename = "vista-1.21.1-5.5.7-neoforge.jar"
+side = "both"
+
+[download]
+hash-format = "sha512"
+hash = "fa279c2d300fc98dbb65ba4b70b21fd1eefffc3a065b2cfa8fd1703812503611cdde4e81b93635f5b511e3d6921e8eba3dac4f47c256db50a38962064d55dcf1"
+url = "https://cdn.modrinth.com/data/zuARv1N7/versions/mrDh5q89/vista-1.21.1-5.5.7-neoforge.jar"
+
+[update.modrinth]
+mod-id = "zuARv1N7"
+version = "mrDh5q89"

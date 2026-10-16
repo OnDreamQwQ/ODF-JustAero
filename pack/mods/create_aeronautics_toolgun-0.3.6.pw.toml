@@ -1,0 +1,12 @@
+name = "Create Aeronautics: Toolgun"
+filename = "create_aeronautics_toolgun-0.3.6.jar"
+side = "both"
+
+[download]
+hash-format = "sha512"
+hash = "d239d0438eabf369f4f2a8d07a05f15dca5d8d89fd24fd4f369d2173c92ca7b61a6b6d48a6172896b5f9e43ed15f4b742575390a76983de2de6d4c4639e76e79"
+url = "https://cdn.modrinth.com/data/5fUBLqeW/versions/pcD0Yutw/create_aeronautics_toolgun-0.3.6.jar"
+
+[update.modrinth]
+mod-id = "5fUBLqeW"
+version = "pcD0Yutw"
