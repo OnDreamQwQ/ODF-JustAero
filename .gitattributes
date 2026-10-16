@@ -1,0 +1,15 @@
+# ===========================================================================
+#  This repository stores CONTENT-HASHED files.
+#
+#  packwiz records the sha256 of the bytes as they exist on disk, and both the
+#  .mrpack manifest and the installer verify against those hashes. If git
+#  rewrites line endings on checkout or commit, the bytes change and every
+#  hash check fails ("Hash invalid!").
+#
+#  So: never touch line endings, anywhere. `-text` tells git to treat every
+#  file as raw bytes instead of text it may normalise.
+# ===========================================================================
+* -text
+
+# Keep the pack itself explicitly byte-exact even if someone edits this file.
+pack/** -text
