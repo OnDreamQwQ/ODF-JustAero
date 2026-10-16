@@ -153,6 +153,8 @@ jobs:
           body: |
             **Minecraft ${{ steps.meta.outputs.mc }} / NeoForge ${{ steps.meta.outputs.neoforge }}** ・ 共 **${{ steps.meta.outputs.mods }}** 个 mod
 
+            用**第三方启动器**导入即可。
+
             [更新日志](/${{ github.repository }}/blob/main/CHANGELOG.md#v${{ steps.meta.outputs.version }})
 
             ---
