@@ -73,10 +73,17 @@ jobs:
         run: |
           name=$(grep -m1 '^name'    pack.toml | sed -E 's/^[^"]*"([^"]*)".*/\1/')
           ver=$(grep  -m1 '^version' pack.toml | sed -E 's/^[^"]*"([^"]*)".*/\1/')
+          mc=$(grep   -m1 '^minecraft' pack.toml | sed -E 's/^[^"]*"([^"]*)".*/\1/')
+          nf=$(grep   -m1 '^neoforge'  pack.toml | sed -E 's/^[^"]*"([^"]*)".*/\1/')
+          # 238 *.pw.toml (downloaded) + 6 *.jar (bundled) = 244
+          mods=$(ls mods/*.pw.toml mods/*.jar 2>/dev/null | wc -l | tr -d ' ')
           echo "name=$name"       >> "$GITHUB_OUTPUT"
           echo "version=$ver"     >> "$GITHUB_OUTPUT"
           echo "mrpack=$name-$ver.mrpack" >> "$GITHUB_OUTPUT"
-          echo "pack = $name $ver"
+          echo "mc=$mc"           >> "$GITHUB_OUTPUT"
+          echo "neoforge=$nf"     >> "$GITHUB_OUTPUT"
+          echo "mods=$mods"       >> "$GITHUB_OUTPUT"
+          echo "pack = $name $ver (MC $mc / NeoForge $nf, $mods mods)"
 
       # packwiz downloads every external file once to record its size.
       # Caching this turns a ~3 minute export into a few seconds.
@@ -133,12 +140,28 @@ jobs:
           name: ${{ steps.meta.outputs.name }} ${{ steps.meta.outputs.version }}
           files: dist/*.mrpack
           fail_on_unmatched_files: true
-          generate_release_notes: true
+
+          # GitHub 自动生成的 "What's Changed" 区块是英文的，而且本仓库是直接往
+          # main 推提交、不走 PR，它只会列出一串原始提交标题，跟下面手写的中文
+          # 更新日志重复。所以关掉。想恢复自动生成就把它改成 true。
+          generate_release_notes: false
+
+          # 更新日志链接用的是「根相对路径」：以 / 开头、不写 https://github.com，
+          # 在 github.com 上打开 Release 页时能正确跳转。
+          # 锚点 #v<版本号> 由 CHANGELOG.md 里手写的 <a id="v0.5.0"></a> 提供；
+          # 万一忘了写，链接仍会打开 CHANGELOG.md，只是不会自动滚到那一节。
           body: |
-            **${{ steps.meta.outputs.name }} ${{ steps.meta.outputs.version }}**
+            **Minecraft ${{ steps.meta.outputs.mc }} / NeoForge ${{ steps.meta.outputs.neoforge }}** ・ 共 **${{ steps.meta.outputs.mods }}** 个 mod
 
-            Minecraft 1.21.1 / NeoForge - install with Prism Launcher, Modrinth App,
-            ATLauncher or MultiMC: *Add instance -> Import from file* and pick the
-            `.mrpack` below.
+            ### 安装
 
-            This release was built automatically from the pack in this repository.
+            用 Prism Launcher、Modrinth App、ATLauncher 或 MultiMC：
+            **添加实例 → 从文件导入**，选择下面的 `${{ steps.meta.outputs.mrpack }}`。
+
+            ### 更新日志
+
+            [更新日志](/${{ github.repository }}/blob/main/CHANGELOG.md#v${{ steps.meta.outputs.version }})
+
+            ---
+
+            本版本由 GitHub Actions 从仓库里的 `pack/` 自动构建，请勿手动修改。
