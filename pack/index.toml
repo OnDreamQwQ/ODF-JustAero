@@ -1757,7 +1757,7 @@ metafile = true
 
 [[files]]
 file = "mods/aeroadditionbridge-1.0.0.pw.toml"
-hash = "e12a7df4cf0c4f54db1fbb138824ed4f7d0ae1b13e8d33aae1b4446e0817b230"
+hash = "c80a8b9814f8efba73215ba551d4f685ed975961dd0c1cd51a4398cc20d11043"
 metafile = true
 
 [[files]]
@@ -2424,7 +2424,7 @@ metafile = true
 
 [[files]]
 file = "mods/lithostitched-1.8.1-neoforge-21.1.pw.toml"
-hash = "1e72808604ed1a1b5261aa2179422fb6cf79941ea0c16bdddf1e0e7f692725c6"
+hash = "dc031c78634cbeb3009b2d9e25f92aa4cf0bb22f16f526993204bc92a79ebd76"
 metafile = true
 
 [[files]]
@@ -2597,7 +2597,7 @@ metafile = true
 
 [[files]]
 file = "mods/servercore-neoforge-1.5.19+1.21.1.pw.toml"
-hash = "15cb36a57e80f5502684614f2c199bdcb4f3c5c522415482fab7515197b8f13f"
+hash = "6c97b2e565b39a0e548ae3a06cbc41522ee755bd23ca548000f45b6c40f001c6"
 metafile = true
 
 [[files]]

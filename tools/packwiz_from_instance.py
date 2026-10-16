@@ -51,6 +51,21 @@ DEFAULT_INCLUDE = ["config", "defaultconfigs", "resourcepacks", "options.txt"]
 # fire-control video in a cache dir and the netMusicListCache album-art/mp3 cache.
 DEFAULT_EXCLUDE_DIRS = {"cache", "netmusiclistcache", "logs", "crash-reports", "screenshots"}
 
+# Modrinth's client_side is author-supplied, and for three mods in this pack it is simply
+# wrong: the dev instance runs all three on the client every day. Emitting side = "server"
+# is the dangerous direction, because packwiz-installer and every .mrpack launcher then
+# SKIP the file on the client -- and a skipped LIBRARY breaks mod loading outright.
+# That is exactly what shipped in 0.5.0-0.5.2: Lithostitched was skipped, the only copy
+# left was the 1.4.8 jar-in-jar inside create_submarine, and the game died with
+# "Mod terralith requires lithostitched 1.7.7 or above / Currently, lithostitched is 1.4.8".
+# In a client install the "server" side is the integrated server, so server-side mods are
+# needed there too. Keyed by Modrinth PROJECT id so a rename cannot silently void it.
+FORCE_BOTH = {
+    "XaDC71GB",  # Lithostitched                              -- worldgen library Terralith requires
+    "tum2vG0T",  # Create: Crafts & Additions <-> Aeronautics -- docking energy transfer
+    "4WWQxlQP",  # ServerCore                                 -- also optimises the integrated server
+}
+
 VERISH = re.compile(r"^[vV]?\d")
 
 
@@ -1352,6 +1367,7 @@ def main() -> int:
     projects = modrinth_projects(project_ids) if project_ids else {}
 
     resolved: dict[str, dict] = {}
+    forced_both: set[str] = set()
     for fname, rec in info.items():
         v = mr_hits.get(rec["sha1"])
         if not v:
@@ -1361,7 +1377,11 @@ def main() -> int:
             continue
         proj = projects.get(v["project_id"], {})
         cs, ss = proj.get("client_side"), proj.get("server_side")
-        side = "client" if ss == "unsupported" else "server" if cs == "unsupported" else "both"
+        if v["project_id"] in FORCE_BOTH:
+            side = "both"
+            forced_both.add(v["project_id"])
+        else:
+            side = "client" if ss == "unsupported" else "server" if cs == "unsupported" else "both"
         resolved[fname] = {
             "kind": "modrinth",
             "name": proj.get("title") or v.get("name") or fname,
@@ -1372,6 +1392,11 @@ def main() -> int:
             "side": side,
             "update": ("modrinth", {"mod-id": v["project_id"], "version": v["id"]}),
         }
+
+    if forced_both:
+        names = ", ".join(sorted(projects.get(p, {}).get("title") or p for p in forced_both))
+        say(f"  side forced to both    : {len(forced_both)} ({names}) -- Modrinth says")
+        say( "                           client_side=unsupported, but the client needs them")
 
     # ---- resolver 2: previous pack --------------------------------------------
     by_sha1 = by_name = {}

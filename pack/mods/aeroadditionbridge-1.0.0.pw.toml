@@ -1,6 +1,6 @@
 name = "Create: Crafts & Additions and Aeronautics Compat"
 filename = "aeroadditionbridge-1.0.0.jar"
-side = "server"
+side = "both"
 
 [download]
 hash-format = "sha512"

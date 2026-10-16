@@ -1,6 +1,6 @@
 name = "Lithostitched"
 filename = "lithostitched-1.8.1-neoforge-21.1.jar"
-side = "server"
+side = "both"
 
 [download]
 hash-format = "sha512"
