@@ -159,8 +159,6 @@ jobs:
             入口一般叫「导入整合包」或「从文件导入」。各启动器的具体步骤见
             [README](/${{ github.repository }}#安装)。
 
-            ### 更新日志
-
             [更新日志](/${{ github.repository }}/blob/main/CHANGELOG.md#v${{ steps.meta.outputs.version }})
 
             ---
