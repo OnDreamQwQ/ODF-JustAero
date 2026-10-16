@@ -1,6 +1,16 @@
-# ODF-JustAero
+<div align="center">
+  <h1>ODF-JustAero</h1>
 
-<!-- TODO（你自己写）：一两句话介绍这个整合包是什么风格、给谁玩的 -->
+  <img src="icon.png" width="512" alt="ODF-JustAero">
+
+  [![Minecraft 1.21.1](https://img.shields.io/badge/Minecraft-1.21.1-62B47A?logo=minecraft&logoColor=white)](https://www.minecraft.net/)
+  [![NeoForge 21.1.259](https://img.shields.io/badge/NeoForge-21.1.259-EA6D0A)](https://neoforged.net/)
+  [![下载](https://img.shields.io/github/v/release/OnDreamQwQ/ODF-JustAero?label=%E4%B8%8B%E8%BD%BD&color=2F81F7&logo=github&logoColor=white)](https://github.com/OnDreamQwQ/ODF-JustAero/releases/latest)
+  [![License](https://img.shields.io/github/license/OnDreamQwQ/ODF-JustAero?color=blue)](LICENSE)
+
+  <!-- TODO（你自己写）：一句话口号，比如「让 XX 玩起来更 XX」 -->
+  <p>面向 Minecraft Java Edition 1.21.1 的 <strong>NeoForge</strong> 整合包，共 <strong>244</strong> 个 mod。</p>
+</div>
 
 > 面向玩家的整合包主页。技术细节、维护流程见仓库外的本地文档
 > `docs\使用文档.md`（**故意不进 git**）。
@@ -15,16 +25,13 @@
      - 大致规模、开荒时长
      - 单人 / 多人（有没有服务端） -->
 
-- **Minecraft**：1.21.1
-- **加载器**：NeoForge 21.1.259
-- **规模**：244 个 mod
-- **整合包版本**：`0.5.0`
-
 ---
 
 ## 下载
 
 [Releases](../../releases/latest) → `ODF-JustAero-<版本>.mrpack`
+
+用**第三方启动器**导入即可。
 
 ### 自动更新（可选）
 
@@ -57,4 +64,9 @@ java -jar packwiz-installer-bootstrap.jar https://raw.githubusercontent.com/OnDr
 
 ## 致谢 / 授权
 
-<!-- TODO（你自己写）：可以写"mod 版权归各自作者所有"之类的话 -->
+整合包本身（`pack/`、`tools/`、脚本与配置）以 **[MIT](LICENSE)** 授权。
+
+包里的每一个 mod、资源包、材质和模型，版权归各自作者所有、遵循各自的许可协议，
+**MIT 不覆盖它们**——它们不是可以随意再分发或商用的东西。
+
+<!-- TODO（你自己写）：可以在这里点名感谢特别重要的 mod 作者 -->
