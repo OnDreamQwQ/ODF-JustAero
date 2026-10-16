@@ -46,9 +46,11 @@ java -jar packwiz-installer-bootstrap.jar https://raw.githubusercontent.com/OnDr
 
 ## 更新日志
 
-<!-- TODO（你自己写）：每个版本一行，写清楚加了什么 mod / 改了什么配置 -->
+完整记录见 **[CHANGELOG.md](CHANGELOG.md)**。
 
-- `0.5.0` —— 首个 packwiz 版本
+<!-- TODO（你自己写）：这里只放最近两三版的摘要，详细内容写进 CHANGELOG.md -->
+
+- `0.5.0` —— 首个 packwiz 版本（244 个 mod，MC 1.21.1 / NeoForge 21.1.259）
 
 ---
 
