@@ -43,6 +43,22 @@ $ExcludeGlobs = @(
     '*.backup'
 )
 
+# --- extra instance-root entries to copy into the pack ---------------------
+# Only config\, defaultconfigs\, resourcepacks\ and options.txt are packed.
+# Anything a mod writes to the INSTANCE ROOT is missed; add its name here to
+# include it. Each name is a file or folder relative to the instance root.
+# Empty by default - add your own, then run Update-Pack.ps1 again.
+# Candidates seen in this instance (uncomment to pack them):
+#   'omni-display-packs',   # Omni Display HUD / instrument packs
+#   'visual_keybinder',     # on-screen key layout definitions
+#   'skin_palettes',        # skin palette presets
+#   'parachute',            # parachute model overrides
+#   'log4j2.xml'            # log configuration
+# Deliberately NOT listed: saves\, xaero\ (waypoints), exposures\, flashback\,
+# armourers_workshop\ (skin cache), fancymenu_data\ (per-player menu state),
+# and every launcher/cache/log folder - those are personal or regenerated.
+$IncludeExtra = @()
+
 # --- python launcher -------------------------------------------------------
 # Prefers the Windows `py` launcher, falls back to `python` on PATH.
 function Get-PythonCommand {

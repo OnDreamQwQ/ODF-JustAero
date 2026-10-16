@@ -129,6 +129,17 @@ if ($DryRun) { $extractArgs += '--dry-run' }
 # Keep per-player client state out of the shipped pack (see settings.ps1).
 foreach ($g in $ExcludeGlobs) { $extractArgs += @('--exclude-glob', $g) }
 
+# Copy the extra instance-root entries (mod-owned folders) as well.
+$extraInclude = @()
+if ($IncludeExtra) {
+    foreach ($e in $IncludeExtra) {
+        if (Test-Path (Join-Path $InstancePath $e)) { $extraInclude += $e }
+        else { Write-Warning "`$IncludeExtra entry not present in the instance: $e" }
+    }
+}
+foreach ($e in $extraInclude) { $extractArgs += @('--include', $e) }
+if ($extraInclude) { Write-Host ("  include  : {0}" -f ($extraInclude -join ', ')) }
+
 # The old .mrpack index is what lets CurseForge-only mods resolve back to a
 # real download URL instead of being bundled. Losing it costs ~14 bundled jars.
 if (Test-Path $OldIndex) {

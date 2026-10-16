@@ -53,6 +53,10 @@ $vargs = @(
 )
 if (-not $SkipUrls) { $vargs += '--check-urls' }
 
+# Tell the verifier which paths are excluded on purpose, otherwise the files
+# kept out by $ExcludeGlobs are reported as missing content.
+foreach ($g in $ExcludeGlobs) { $vargs += @('--exclude-glob', $g) }
+
 & $pyExe @($pyPre + $vargs)
 $code = $LASTEXITCODE
 
