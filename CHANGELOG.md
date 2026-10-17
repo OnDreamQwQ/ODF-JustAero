@@ -12,6 +12,7 @@ ODF-JustAero 整合包的全部版本记录。
 - 移除全周天显示模组（Omni Display），修复结构图解渲染异常
 - 移除 Nowheel 模组，修复在物理结构上坐下后飞轮渲染异常（飞轮渲染的实体消失）
 - 将 Vista 降级至 5.5.0，以兼容 Dashpanels: Expanded 的电视仪表
+- 启动器里可以看到整合包图标了（HMCL、PCL）
 
 ### 已知问题
 

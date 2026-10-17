@@ -1,6 +1,10 @@
 hash-format = "sha256"
 
 [[files]]
+file = "PCL/Logo.png"
+hash = "ce1b928ea48fd68f0d204ea5e727ef17b2af44617d92c06e3837f2021e1a4a87"
+
+[[files]]
 file = "config/CT_tablet_apps.json"
 hash = "f4e28b949db13e7aefe6dbd026e132aebfbdd01c1ec5d601151672913388d321"
 
@@ -1543,6 +1547,10 @@ hash = "7f1e58be2cf7db18181869804bb09823ee93a4ea863d560036e8a05954bcf806"
 [[files]]
 file = "defaultconfigs/ftbessentials-server.snbt"
 hash = "e63fbc2d25ccd2d86eb887562d3f5f544dadcb75b0c68dd7cc152f7197a1e2d7"
+
+[[files]]
+file = "icon.png"
+hash = "68c4f687ce7b45f605ca3eb6ce15c9b12f10d9e9fe7815d97bece74925711e35"
 
 [[files]]
 file = "mods/AeroEngine-1.3.0.pw.toml"

@@ -79,7 +79,18 @@ $ExcludeGlobs = @(
 # Deliberately NOT listed: saves\, xaero\ (waypoints), exposures\, flashback\,
 # armourers_workshop\ (skin cache), fancymenu_data\ (per-player menu state),
 # and every launcher/cache/log folder - those are personal or regenerated.
-$IncludeExtra = @()
+# --- launcher icon ---------------------------------------------------------
+# The icon a launcher shows for an installed instance is a file in the version
+# folder, not something the .mrpack format can carry (it has no icon field):
+#   HMCL : versions\<name>\icon.png
+#   PCL2 : versions\<name>\PCL\Logo.png
+# Both sit at the instance root, so packing them puts them in overrides\ and the
+# installer extracts them next to the version. HMCL only writes its own icon when
+# no icon.* exists, so ours is the one that survives.
+$IncludeExtra = @(
+    'icon.png',
+    'PCL/Logo.png'
+)
 
 # --- python launcher -------------------------------------------------------
 # Prefers the Windows `py` launcher, falls back to `python` on PATH.
