@@ -58,7 +58,11 @@ $ExcludeGlobs = @(
     'config/axiom/hotbars/*',
     'config/net_music_list.toml',
     'config/GeneralFeedback/*',
-    '*.backup'
+    '*.backup',
+    # A mod rewriting its own config leaves a "*.bak" next to the real file
+    # (downgrading Vista to 5.5.0 left vista-client-1.toml.bak and
+    # vista-common-1.toml.bak). That is your local state, not pack content.
+    '*.bak'
 )
 
 # --- extra instance-root entries to copy into the pack ---------------------

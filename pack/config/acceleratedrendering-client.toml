@@ -108,7 +108,7 @@
 	#- DISABLED: Disable accelerated entity rendering.
 	#- ENABLED: Enable accelerated entity rendering.
 	#Allowed Values: DISABLED, ENABLED
-	feature_status = "ENABLED"
+	feature_status = "DISABLED"
 	#- VANILLA: Entities will not be rendered into the accelerated pipeline unless mods explicitly enable it temporarily when rendering their own entities.
 	#- ACCELERATED: All entities will be rendered in the accelerated pipeline unless mods explicitly disable it temporarily when rendering their own entities.
 	#Allowed Values: VANILLA, ACCELERATED
@@ -128,7 +128,7 @@
 	#- DISABLED: Disable accelerated item rendering.
 	#- ENABLED: Enable accelerated item rendering.
 	#Allowed Values: DISABLED, ENABLED
-	feature_status = "ENABLED"
+	feature_status = "DISABLED"
 	#- DISABLED: Accelerated Rendering will not bake mesh for quads provided by dynamic item models (something that is not SimpleBakedModel) unless mods explicitly enable it temporarily when rendering their own item models.
 	#- ENABLED: Accelerated Rendering will bake mesh for all quads provided by dynamic item models (something that is not SimpleBakedModel) unless mods explicitly disable it temporarily when rendering their own item models, which will accelerate the rendering of these models but will crash if they keep allocating new quad data. (but who will?)
 	#Allowed Values: DISABLED, ENABLED
@@ -164,7 +164,7 @@
 	#- DISABLED: Disable accelerated text rendering.
 	#- ENABLED: Enable accelerated text rendering.
 	#Allowed Values: DISABLED, ENABLED
-	feature_status = "ENABLED"
+	feature_status = "DISABLED"
 	#- VANILLA: Text will not be rendered into the accelerated pipeline unless mods explicitly enable it temporarily when rendering their own text.
 	#- ACCELERATED: All text will be rendered in the accelerated pipeline unless mods explicitly disable it temporarily when rendering their own text.
 	#Allowed Values: VANILLA, ACCELERATED
@@ -180,7 +180,7 @@
 	#- DISABLED: Disable simple orientation face culling.
 	#- ENABLED: Enable simple orientation face culling.
 	#Allowed Values: DISABLED, ENABLED
-	feature_Status = "ENABLED"
+	feature_Status = "DISABLED"
 	#- DISABLED: Faces will not be culled unless mods explicitly enable it temporarily when rendering their own faces.
 	#- ENABLED: All faces will be culled unless mods explicitly disable it temporarily when rendering their own faces.
 	#Allowed Values: DISABLED, ENABLED

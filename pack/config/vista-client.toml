@@ -14,7 +14,7 @@
 	smooth_reflection = false
 
 	[mirror.recursion]
-		#How mirrors inside mirrors are handled. OFF: nested mirrors don't render at all.. SHARED (cheap): each mirror reuses its own reflection texture when seen inside another. Fine at a glance, but the deeper reflections won't slide correctly as you move. RECURSIVE (expensive): every chain gets its own render with correct parallax, up to max_depth. Past the cap the nested mirror isn't drawn. Also applies to tvs seen in mirrors.
+		#How mirrors inside mirrors are handled. OFF: nested mirrors don't render at all, you just see the frame. SHARED (cheap): each mirror reuses its own reflection texture when seen inside another. Fine at a glance, but the deeper reflections won't slide correctly as you move. RECURSIVE (expensive): every chain gets its own render with correct parallax, up to max_depth. Past the cap the nested mirror isn't drawn.
 		#Allowed Values: OFF, SHARED, RECURSIVE
 		mode = "RECURSIVE"
 		#Max nesting depth in RECURSIVE recursion mode. 0 = no recursion (equivalent to OFF). 1 = one level of correct nested reflection. Each extra level multiplies cost, but resolution_divider and distance_divider attenuate per-level cost.
@@ -100,9 +100,5 @@
 	#When wave gates with TVs videos play their audio. Speaker mode means  you need a speaker block or noteblock next to the TV (or other tagged blocks)
 	#Allowed Values: OFF, REQUIRE_SPEAKER, ON
 	audio_mode = "REQUIRE_SPEAKER"
-	#Volume scale for videos audio. Applied on top of the Blocks sound slider
-	# Default: 1.0
-	# Range: 0.0 ~ 1.0
-	audio_volume = 1.0
 	#A list of regex which will filter out valid URLs. At least one of these must match for a URL video to work
 	safe_urls = []
