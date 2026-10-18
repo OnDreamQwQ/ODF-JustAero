@@ -1,0 +1,12 @@
+name = "smsn-neoforge-1.4.5-1.21.1"
+filename = "smsn-neoforge-1.4.5-1.21.1.jar"
+side = "both"
+
+[download]
+hash-format = "sha512"
+hash = "8d58f0cfbf7b2e068298094187b65376c4ab3b3bd07f139b101f25bcce4d6d8123be17727f34c188ae3a691bce45dd22a1598118f3336419a3ad6035dbd33c98"
+url = "https://mediafilez.forgecdn.net/files/8862/254/smsn-neoforge-1.4.5-1.21.1.jar"
+
+[update.curseforge]
+file-id = 8862254
+project-id = 1129397

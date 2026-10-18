@@ -2066,8 +2066,9 @@ hash = "780f20dab2df7c3ff7949efc0beae0667830515c59ba55336448ada7ab892ca2"
 metafile = true
 
 [[files]]
-file = "mods/crashutilities-9.0.4.jar"
-hash = "67a47d02f7f7c8b291e920416eb96242bd48f0cbc50f947adb439c4212ea39f9"
+file = "mods/crashutilities-9.0.4.pw.toml"
+hash = "647daf28ed3a4a9889abe78fbdb019f6053686c5618c91fc34e46252958f582c"
+metafile = true
 
 [[files]]
 file = "mods/create-1.21.1-6.0.10.pw.toml"
@@ -2277,8 +2278,9 @@ hash = "2b7378069cdb5a9f87c6104627c6587631c3682dbbafae1b39403c04f6d99f3a"
 metafile = true
 
 [[files]]
-file = "mods/deployer_got_dizzy-0.1.2.jar"
-hash = "0ff774efc6baf2a568a91e169893236b5a4765ad25e28a6ab27eab51e57faf5a"
+file = "mods/deployer_got_dizzy-0.1.2.pw.toml"
+hash = "7fb3db0b21f7acad1cbf8323cf24d23d3cc8d56ad5feffe08e2ea4632c65b8b8"
+metafile = true
 
 [[files]]
 file = "mods/dragonlib-3.0.29+mc1.21.1-neoforge.pw.toml"
@@ -2793,8 +2795,9 @@ hash = "be1a8d7db40f4f0306147c3f44f079b6d23977507799c66cdaab546c28551d57"
 metafile = true
 
 [[files]]
-file = "mods/smsn-neoforge-1.4.5-1.21.1.jar"
-hash = "7e8b550baafe3546390b83a251ff777451f9a28678e2e9bbb6ca2bcb594a9200"
+file = "mods/smsn-neoforge-1.4.5-1.21.1.pw.toml"
+hash = "aa884d018db4266e9a7c7bed0bdb443b089cc0ef6ca9d31abcc7cc566826733a"
+metafile = true
 
 [[files]]
 file = "mods/sodium-extra-neoforge-0.9.4+mc1.21.1.pw.toml"

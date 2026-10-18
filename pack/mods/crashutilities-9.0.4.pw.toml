@@ -1,0 +1,12 @@
+name = "crashutilities-9.0.4"
+filename = "crashutilities-9.0.4.jar"
+side = "both"
+
+[download]
+hash-format = "sha512"
+hash = "b728916508cdbb866331173599c79edb0a4e90548d57f197f2b441e34b1a7e8a47c214c182c4ffb713ee9b8bc19579902e584a71c1053978d9fecda585cb33b3"
+url = "https://mediafilez.forgecdn.net/files/5993/450/crashutilities-9.0.4.jar"
+
+[update.curseforge]
+file-id = 5993450
+project-id = 371813

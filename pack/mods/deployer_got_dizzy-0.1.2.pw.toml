@@ -1,0 +1,12 @@
+name = "deployer_got_dizzy-0.1.2"
+filename = "deployer_got_dizzy-0.1.2.jar"
+side = "both"
+
+[download]
+hash-format = "sha512"
+hash = "21069327fe12507e4d8787a67d550080019112a55d9954d03f8bde0d0f19be62d4eb2a8a087f41b7cbede676750b8c57465f392bfeeeb104def5151a8ffcb9bb"
+url = "https://mediafilez.forgecdn.net/files/8094/798/deployer_got_dizzy-0.1.2.jar"
+
+[update.curseforge]
+file-id = 8094798
+project-id = 1544067

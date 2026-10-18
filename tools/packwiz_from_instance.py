@@ -66,6 +66,32 @@ FORCE_BOTH = {
     "4WWQxlQP",  # ServerCore                                 -- also optimises the integrated server
 }
 
+# Jars that are neither on Modrinth nor findable on CurseForge by filename, but whose
+# exact CurseForge file we identified by hand and confirmed: mediafilez.forgecdn.net
+# served a jar with the SAME sha1 as the one in the instance. Pinning lets players
+# download the author's own file (and gives the mod real update metadata) instead of us
+# re-hosting the jar in the pack. Value is (project id, file id).
+#
+# Only add an entry after downloading the URL and comparing sha1 -- a wrong pin produces a
+# pack whose downloads fail their hash check. Verify-Pack.ps1 re-checks these URLs, so a bad
+# pin is caught before release. The file id maps to the CDN path
+# files/<id // 1000>/<id % 1000:03d>/<filename>.
+# When the mod updates: update the file id, or delete the line so the jar is bundled again.
+CURSEFORGE_PINS = {
+    # name inside mods/                           project    file
+    "crashutilities-9.0.4.jar":                   (371813,   5993450),
+    "smsn-neoforge-1.4.5-1.21.1.jar":             (1129397,  8862254),
+    # Aeronautics: Deployer Direction Fix
+    "deployer_got_dizzy-0.1.2.jar":               (1544067,  8094798),
+}
+
+
+def forgecdn_url(file_id: int, filename: str) -> str:
+    """The CDN URL CurseForge hands out for one file id."""
+    return (f"https://mediafilez.forgecdn.net/files/"
+            f"{file_id // 1000}/{file_id % 1000:03d}/{filename}")
+
+
 VERISH = re.compile(r"^[vV]?\d")
 
 
@@ -1463,6 +1489,27 @@ def main() -> int:
         say(f"  CurseForge name match : {sum(1 for v in resolved.values() if v['kind'] == 'curseforge')} matched")
         if args.cache:
             Path(args.cache).write_text(json.dumps(cache, indent=1), encoding="utf-8")
+
+    # ---- resolver 3b: pinned CurseForge files ---------------------------------
+    # See CURSEFORGE_PINS. These jars could not be resolved automatically, but we do know
+    # exactly which CurseForge file each one is, so point packwiz at that file.
+    pinned = 0
+    for fname, (pid, fid) in CURSEFORGE_PINS.items():
+        if fname in resolved or fname not in info:
+            continue
+        resolved[fname] = {
+            "kind": "curseforge-pin",
+            "name": os.path.splitext(fname)[0],
+            "filename": fname,
+            "url": forgecdn_url(fid, fname),
+            "hash": info[fname]["sha512"],
+            "hash_format": "sha512",
+            "side": "both",
+            "update": ("curseforge", {"file-id": fid, "project-id": pid}),
+        }
+        pinned += 1
+    if pinned:
+        say(f"  CurseForge pinned     : {pinned} (hand-checked project/file ids)")
 
     # ---- resolver 4: give the previous-pack matches a project id ---------------
     # The old .mrpack gave us a forgecdn URL, which carries the FILE id but not the
