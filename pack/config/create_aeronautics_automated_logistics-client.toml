@@ -1,3 +1,15 @@
 [rendering]
 	#Render the passive route and vehicle preview on top of nearby Logistics Terminals.
 	renderLogisticsTerminalTopPreview = true
+
+[mapIntegrations]
+	#Show automated vehicle markers in FTB Chunks when it is installed.
+	enableFtbChunks = true
+	#Show automated vehicle markers in JourneyMap when it is installed.
+	enableJourneyMap = true
+	#Show automated vehicle markers in Xaero's World Map and Minimap when either is installed.
+	enableXaeroMaps = true
+	#Scale automated vehicle map icons in JourneyMap, Xaero Maps, and FTB Chunks. Labels follow this setting gently, staying between 65% and 125% for readability.
+	# Default: 100
+	# Range: 25 ~ 300
+	markerIconScalePercent = 100

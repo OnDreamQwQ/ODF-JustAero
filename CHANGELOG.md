@@ -4,6 +4,48 @@ ODF-JustAero 整合包的全部版本记录。
 
 ---
 
+<a id="v0.6.0"></a>
+
+## [0.6.0] —— 2026-10-18
+
+### 新增
+
+- 创世神（WorldEdit）
+- Tweakerge（Tweakerge | Tweakeroo Stub，附带前置库 MaFgLib）
+- 迷上城建（Mishang Urban Construction）
+- 模拟铁路大转向架（Wide Gauge Bogey Expansion）
+- 列车零件（Create Train Parts）
+- 崩溃助手（Crash Assistant）
+- 转辙机无线电（Create: Track Switch Radio）
+- 禁用聊天举报（No Chat Reports）
+- 可观性能监测（Observable）
+- 崩溃实用工具（Crash Utilities）
+- 重新加入全周天显示（Omni Display）
+- PlayerTilt（Aeronautics Player Tilt）
+- 机械手方向修复（Deployer Got Dizzy）
+- 航空学滑轨（LinearBearing，附带 Linear Bearings Fix）
+- 救救我的答辩网络（Save My Shit Network）
+
+### 更新
+
+- 机械深海（Create Deep Seas）3.3.0 → 3.4.1
+- 自动驾驶（Create Aeronautics: Automated Logistics）0.6.2 → 0.7.0
+- 模拟铁路（Create Simurail）0.1.0+6560762 → 0.1.0+0a4eb54
+
+### 改动
+
+- 优化了启动速度
+- 禁用了一些依赖网络的模块（Save My Shit Network）
+- 修复了物理结构上的机械手放置方块的方向会随物理结构朝向而改变的问题（Deployer Got Dizzy）
+
+### 已知问题
+
+- Copycats+ 模组在取消组装物理化时，有概率抛出异常导致游戏崩溃（概率较低）
+- 多人模式下可能遇到无法放置方块的问题（仍在排查，目前未能复现）
+- SimpleRadio 模组的电台从无线电调试台槽位拿出时，可能会导致崩溃
+
+---
+
 <a id="v0.5.4"></a>
 
 ## [0.5.4] —— 2026-10-17

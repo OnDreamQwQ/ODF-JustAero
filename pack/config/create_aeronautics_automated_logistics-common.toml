@@ -71,7 +71,7 @@
 	stationInteractionChunkRadius = 1
 
 [simurail]
-	#Keep active automated Simurail vehicles force-loaded through Sable for their full recorded route.
+	#Keep active automated Sable vehicles, including Drive Mode ships, force-loaded for their full recorded route.
 	#The Sable loading ticket is acquired when playback starts while the vehicle is live, then released when playback stops, faults, or completes.
 	#Disable this to use normal unloaded-travel behavior instead.
 	forceLoadSimurailVehicles = true
@@ -138,3 +138,7 @@
 	#Enable station/transponder menu, sync, and state-refresh debug logs.
 	#Only used when debugLogging is true.
 	uiSync = true
+	#Enable Advanced Transponder and Drive Module command diagnostics.
+	#Logs module links, output changes, vehicle position, route target, and drive error values.
+	#Only used when debugLogging is true.
+	driveModules = false

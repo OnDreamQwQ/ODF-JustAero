@@ -1,0 +1,12 @@
+name = "Create Aeronautics: Automated Logistics"
+filename = "create_aeronautics_automated_logistics-0.7.0.jar"
+side = "both"
+
+[download]
+hash-format = "sha512"
+hash = "7a3e7e2942bf076e545dc7abf258b0e014244bf14aae84134f31d4e27b8d50da525ff41d23eaebcd24483c6f1206f269931038b18e7be04606fccc6c752ef103"
+url = "https://cdn.modrinth.com/data/73ZXeRfx/versions/ESwTkggq/create_aeronautics_automated_logistics-0.7.0.jar"
+
+[update.modrinth]
+mod-id = "73ZXeRfx"
+version = "ESwTkggq"

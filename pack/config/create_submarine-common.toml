@@ -9,3 +9,8 @@
 	# Default: 10
 	# Range: 1 ~ 256
 	deeperOceansDepth = 10
+
+[experimental]
+	#Experimental: replace the Abyss terrain with the tectonic seafloor (plates, trenches, ridges, three biomes).
+	#Only new Abyss chunks change. The Abyss height range changes too, so test it on a new world.
+	experimentalAbyssWorldgen = false

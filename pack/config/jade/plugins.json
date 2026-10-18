@@ -67,6 +67,9 @@
     "entity": true,
     "entity_variant": true
   },
+  "create_aeronautics_automated_logistics": {
+    "logistics_identity": true
+  },
   "fluidlogistics": {
     "blaze_cooler_icon": true
   },

@@ -1,0 +1,10 @@
+tiltMobs = true
+tiltItems = true
+#Allowed Values: WORLD, DECK
+deckGravity = "DECK"
+enforceMaxTilt = false
+# Default: 0.8
+# Range: 0.0 ~ 1.0
+maxTilt = 0.8
+allowMagneticBoots = true
+allowStickyTilt = true

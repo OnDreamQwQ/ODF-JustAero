@@ -1,0 +1,12 @@
+name = "Create: Track Switch Radio"
+filename = "create_tsr-1.1.0.jar"
+side = "both"
+
+[download]
+hash-format = "sha512"
+hash = "52ab181b9e80e3abf5c6190ff29dd9044cc252781ba34a391956b23e13cebebdf7880845099b670f2b949f44ffc996b2ee23d9bb6579518dcdffd06ad0c7c6e7"
+url = "https://cdn.modrinth.com/data/2ZOOOMM6/versions/oGHTAJSu/create_tsr-1.1.0.jar"
+
+[update.modrinth]
+mod-id = "2ZOOOMM6"
+version = "oGHTAJSu"

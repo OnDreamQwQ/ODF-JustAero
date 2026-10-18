@@ -1,0 +1,12 @@
+name = "Create Deep Seas [BETA]"
+filename = "ALPHA-2 create_submarine-3.4.1.jar"
+side = "both"
+
+[download]
+hash-format = "sha512"
+hash = "04a8e9f7943fcda42cb5516d766d864c27a8d5a2f7809288f747de22be2165328a92550f97ae0157a7bbdb208071475218ea29ca0054559b68a88867c18b9547"
+url = "https://cdn.modrinth.com/data/mva5q4qZ/versions/hWpIqlWJ/ALPHA-2%20create_submarine-3.4.1.jar"
+
+[update.modrinth]
+mod-id = "mva5q4qZ"
+version = "hWpIqlWJ"

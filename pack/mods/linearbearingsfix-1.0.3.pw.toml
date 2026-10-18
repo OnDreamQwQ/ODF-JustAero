@@ -1,0 +1,12 @@
+name = "Linear Bearings Fix"
+filename = "linearbearingsfix-1.0.3.jar"
+side = "both"
+
+[download]
+hash-format = "sha512"
+hash = "a468de73f1cd009cd7ad522e7c998d68ad2cdb397359e42e9872a172a1dbcbd0117c712d6ed7ed6fc94b6a9f5788e5cb9234b553f0f018269855844e1c2b00e9"
+url = "https://cdn.modrinth.com/data/xLxyRluH/versions/MQ6XuOMQ/linearbearingsfix-1.0.3.jar"
+
+[update.modrinth]
+mod-id = "xLxyRluH"
+version = "MQ6XuOMQ"

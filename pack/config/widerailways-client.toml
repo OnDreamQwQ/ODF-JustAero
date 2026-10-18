@@ -1,0 +1,29 @@
+#宽轨版转向架
+[wide]
+	#横向（左右）放大倍率
+	# Default: 1.5
+	# Range: 0.1 ~ 5.0
+	lateralScale = 1.5
+	#竖向 / 纵向放大倍率（两者保持一致，轮子才不会变成椭圆）
+	# Default: 1.5
+	# Range: 0.1 ~ 5.0
+	modelScale = 1.5
+	#模型额外向下移动的格数：放大后离地就调大（如 0.25），陷进轨道就调小
+	# Default: 0.17
+	# Range: -2.0 ~ 2.0
+	verticalNudge = 0.17
+
+#窄轨版转向架
+[narrow]
+	#横向（左右）收窄倍率，0.547 对应窄轨轨距
+	# Default: 0.546999990940094
+	# Range: 0.1 ~ 5.0
+	lateralScale = 0.546999990940094
+	#竖向 / 纵向缩放倍率；默认 1 表示轮子大小不变
+	# Default: 1.0
+	# Range: 0.1 ~ 5.0
+	modelScale = 1.0
+	#模型额外向下移动的格数（一般不用改）
+	# Default: 0.0
+	# Range: -2.0 ~ 2.0
+	verticalNudge = 0.0

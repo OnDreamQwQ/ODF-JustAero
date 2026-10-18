@@ -1,6 +1,6 @@
 {
-  "welcomeScreenSeen": true,
   "lithostitchedScreenSeen": false,
   "safetyScreenSeen": true,
-  "ignoredUpdateVersion": "3.4.0"
+  "pressureChoiceSeen": true,
+  "ignoredUpdateVersion": "3.4.1"
 }

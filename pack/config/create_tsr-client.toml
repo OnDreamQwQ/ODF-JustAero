@@ -1,0 +1,31 @@
+#How much the zoom mode shrinks the field of view.
+#1.0 = no zoom, 0.05 = extreme zoom.
+#Default: 0.15, Range: 0.05 ~ 0.50
+# Default: 0.15
+# Range: 0.05 ~ 0.5
+zoomMultiplier = 0.15
+#When enabled, aiming the Track Switch Radio at a switch
+#will show Railway's switch direction hints (red/green lines)
+#and binding point indicators for all nearby switches.
+#Default: true
+showSwitchHints = true
+#Whether to display the HUD panel when aiming at a track switch.
+#Default: true
+showHud = true
+#Horizontal pixel offset for the HUD panel from its default position.
+#Default: 0, Range: -200 ~ 200
+# Default: 0
+# Range: -4000 ~ 4000
+hudOffsetX = 0
+#Vertical pixel offset for the HUD panel from its default position.
+#Default: 0, Range: -4000 ~ 4000
+# Default: 0
+# Range: -4000 ~ 4000
+hudOffsetY = 0
+#Screen position preset for the HUD panel.
+#CROSSHAIR_LEFT: left of crosshair (default), CROSSHAIR_RIGHT: right of crosshair,
+#CROSSHAIR_ABOVE: centered above crosshair, CROSSHAIR_BELOW: centered below crosshair,
+#TOP_LEFT, TOP_RIGHT, BOTTOM_LEFT, BOTTOM_RIGHT: screen corners.
+#Default: CROSSHAIR_LEFT
+#Allowed Values: CROSSHAIR_LEFT, CROSSHAIR_RIGHT, CROSSHAIR_ABOVE, CROSSHAIR_BELOW, TOP_LEFT, TOP_RIGHT, BOTTOM_LEFT, BOTTOM_RIGHT
+hudAnchor = "CROSSHAIR_LEFT"

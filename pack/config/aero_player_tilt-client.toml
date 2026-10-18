@@ -1,0 +1,273 @@
+#Config schema version. Do not edit manually.
+#Used to detect when a config reset prompt should be shown.
+# Default: 0
+# Range: > 0
+configSchemaVersion = 7
+
+#What the tilt is, and when it is allowed to exist at all.
+[general]
+	#Enable Mod. Turns the mod on or off.
+	enabled = true
+	#Tilt Player Body. Tilts the player's body
+	playerTilt = true
+	#Rotate Camera. Tilts the camera with the body. Off keeps the camera
+	#aligned with the world.
+	rotateCamera = true
+	#Max Tilt Threshold. The steepest floor you can still stand on.
+	#
+	#Past 37° you slide off. Turn on "Sticky tilt" below.
+	#A rule of this world, sent to everyone who joins. Turned on with
+	#enforceMaxTilt in the world's config.
+	#Set by the server, so nobody can lean further than anyone else.
+	# Default: 0.8
+	# Range: 0.0 ~ 1.0
+	minNormalY = 0.8
+	#Sticky tilt. Don't slide off tilted decks.
+	#
+	#Magnetic boots are on — they already hold you to any face.
+	gripSlopes = false
+	#Gravity. Which way you fall above a tilted sub-level.
+	#
+	#WORLD - Down is the world's own. A jump lands downhill of where you
+	#took off.
+	#DECK - Down is the sub-level's. A jump lands where you took off, as on
+	#flat ground.
+	#
+	#Set by the server for everyone.
+	#Allowed Values: WORLD, DECK
+	deckGravity = "DECK"
+	#Tilt multiplier. How much of the tilt the body takes. 0 = stay
+	#upright.
+	useTiltMultiplier = false
+	#Tilt multiplier. How much of the tilt the body takes. 0 = stay
+	#upright.
+	# Default: 0.5
+	# Range: 0.0 ~ 1.0
+	tiltMultiplier = 0.5
+	#On/off key bind. Bind a key.
+	toggleKey = "key.keyboard.o"
+	#Open this window. Bind a key.
+	openConfigKey = ""
+
+#How the tilt travels: how fast it follows the floor, and how long it is held
+#on to when the floor goes missing.
+[motion]
+	#Tilt Speed. How fast the body leans onto the floor under it. 0 = snap,
+	#higher = lazier.
+	# Default: 1.7
+	# Range: 0.0 ~ 9999.0
+	smoothSpeed = 1.7
+	#Straighten Speed. How fast the body straightens up again once it is
+	#off the sub-level.
+	# Default: 4.0
+	# Range: 0.0 ~ 9999.0
+	smoothSpeedExit = 4.0
+	#Camera take-over. How long the camera takes to move onto the body. 0 =
+	#at once, with a jolt.
+	# Default: 4.0
+	# Range: 0.0 ~ 40.0
+	takeoverTicks = 4.0
+	#Other Players' Smoothing. Smoothing of other players' tilt. 0 = off.
+	# Default: 1.5
+	# Range: 0.0 ~ 9999.0
+	remoteSmoothSpeed = 1.5
+	#Hold after losing the floor. How long the tilt survives with no floor
+	#found.
+	# Default: 5.0
+	# Range: 0.0 ~ 200.0
+	holdTicks = 5.0
+	#Hold through a jump. Keeps the tilt while you are in the air over your
+	#sub-level, so a jump does not straighten you. Needs landing
+	#prediction.
+	# Default: 60.0
+	# Range: 0.0 ~ 400.0
+	airborneHoldTicks = 60.0
+	#Stop sliding on slopes. Count as standing while there is floor within
+	#a step below. Stops the sliding on slopes.
+	stickToDeck = true
+	#Turn with the sub-level. On a spinning sub-level, keep facing the same
+	#way relative to it, not to the world.
+	turnWithDeck = true
+	#Carry momentum sub-level. Makes a fast-spinning sub-level comfortable
+	#to walk on. 1.0 = with the spin, 0 = off.
+	#
+	#Sable: Sure Footing does the same (rotate_ground_velocity). Leave one
+	#of the two on.
+	# Default: 1.0
+	# Range: 0.0 ~ 3.0
+	deckMomentum = 1.0
+	#Sub-level stickiness. How long a sub-level carries you while it only
+	#touches you from the side.
+	# Default: 20.0
+	# Range: 0.0 ~ 200.0
+	deckCarryTicks = 20.0
+
+#Which sub-levels are worth tilting onto at all, and when a tilt is dropped.
+[activation]
+	#Mass. Tilt only on sub-levels at least this heavy.
+	gateMassEnabled = false
+	#Mass. Tilt only on sub-levels at least this heavy.
+	# Default: 10.0
+	# Range: 0.0 ~ 1.0E8
+	gateMassMin = 10.0
+	#Block Count. Tilt only on sub-levels with at least this many blocks.
+	gateBlocksEnabled = false
+	#Block Count. Tilt only on sub-levels with at least this many blocks.
+	# Default: 10
+	# Range: 0 ~ 100000000
+	gateBlocksMin = 10
+	#Length (X). Tilt only on sub-levels at least this long.
+	gateLengthEnabled = false
+	#Length (X). Tilt only on sub-levels at least this long.
+	# Default: 3
+	# Range: 1 ~ 100000
+	gateLengthMin = 3
+	#Height (Y). Tilt only on sub-levels at least this tall.
+	gateHeightEnabled = false
+	#Height (Y). Tilt only on sub-levels at least this tall.
+	# Default: 3
+	# Range: 1 ~ 100000
+	gateHeightMin = 3
+	#Width (Z). Tilt only on sub-levels at least this wide.
+	gateWidthEnabled = false
+	#Width (Z). Tilt only on sub-levels at least this wide.
+	# Default: 3
+	# Range: 1 ~ 100000
+	gateWidthMin = 3
+	#Instantly forget Sublevel. Forget the sub-level as soon as every ray
+	#misses.
+	dropOnAllMiss = true
+	#Tilt inside the sub-level. How much a sub-level you are INSIDE decides
+	#which way is up.
+	#
+	#OFF - Only the rays underfoot decide.
+	#NO_FLOOR - The sub-level decides only where the rays find nothing.
+	#ALWAYS - The sub-level decides as long as you are inside it. Best
+	#while building.
+	#
+	#"Disable on flying" below switches this off while you fly.
+	#Allowed Values: OFF, NO_FLOOR, ALWAYS
+	zoneMode = "OFF"
+	#Zone reach. How far outside the hull still counts as inside, in
+	#blocks.
+	# Default: 2.0
+	# Range: 0.0 ~ 32.0
+	zoneReach = 2.0
+	#Keep after leaving. How long the vessel keeps you after you leave
+	#sub-level hitbox.
+	# Default: 10.0
+	# Range: 0.0 ~ 200.0
+	zoneLingerTicks = 10.0
+	#Disable on flying. Do not tilt while flying in Creative or Spectator
+	#
+	#This switches the tilt inside a sub-level off while you fly.
+	disableOnFlying = true
+
+#The rays that find the floor under the feet. More of them, and longer ones,
+#cost more per frame; the defaults are cheap and land on ordinary decks.
+[raycast]
+	#Raycast Count. How many rays sample the floor.
+	# Default: 10
+	# Range: 1 ~ 10000
+	count = 10
+	#Distance to Floor. How far down to look for a surface.
+	# Default: 7.0
+	# Range: 0.1 ~ 12.0
+	downLength = 7.0
+	#Foot Offset. Where the rays start, measured from the feet.
+	# Default: 0.2
+	# Range: -1.0 ~ 1.0
+	upLength = 0.2
+	#Ring radius. How wide the ring of rays spreads, in blocks.
+	# Default: 0.58
+	# Range: 0.0 ~ 2.0
+	radius = 0.58
+	#Blend underfoot. Read the floor from everything underfoot, not just
+	#one sub-level. Stops flickering.
+	blendFooting = true
+	#Footing depth. How far below the boots a surface still counts as your
+	#floor.
+	# Default: 0.6
+	# Range: 0.05 ~ 4.0
+	footingGrip = 0.6
+	#Swap margin. Standing across two sub-levels, how much more of your
+	#weight the other one has to take before it becomes the one holding
+	#you.
+	# Default: 0.2
+	# Range: 0.0 ~ 0.9
+	footingMargin = 0.2
+	#Swap delay. How many ticks it has to keep that lead. Together the two
+	#stop a seam throwing you between the sub-levels.
+	# Default: 4.0
+	# Range: 0.0 ~ 60.0
+	footingDwellTicks = 4.0
+
+#Unfinished work: may look wrong in cases nobody has walked into yet, and
+#may change shape between builds. Each entry says whether it is on.
+[experimental]
+	#Aim at the landing. Turn towards the floor you are going to land on
+	#during the flight.
+	predictLanding = true
+	#Look ahead. How far ahead a jump is simulated.
+	# Default: 40
+	# Range: 1 ~ 200
+	predictHorizonTicks = 40
+	#Settle before touchdown. Finish the turn this many ticks before
+	#landing.
+	# Default: 2.0
+	# Range: 0.0 ~ 20.0
+	landingLeadTicks = 2.0
+	#Magnetic boots. Any face becomes your floor — walls, ceilings. Jump
+	#again in the air to let go.
+	test = false
+	#Reach. How far below your feet to look for a surface.
+	# Default: 0.75
+	# Range: 0.1 ~ 4.0
+	testReach = 0.75
+	#Lean start. How close an edge has to be before the body leans over it.
+	#0 — no lean.
+	# Default: 0.3
+	# Range: 0.0 ~ 0.5
+	testLeanStart = 0.3
+	#Ledge height. How high a ledge you can still jump down from
+	# Default: 3.0
+	# Range: 1.0 ~ 6.0
+	testDrop = 3.0
+	#Grip. How hard the boots press into the face. Doesn't affect jumps.
+	# Default: 1.0
+	# Range: 0.25 ~ 6.0
+	testPull = 1.0
+	#Turn speed. How long the body takes to turn onto a new face. 0 —
+	#instant.
+	# Default: 1.0
+	# Range: 0.0 ~ 20.0
+	testSmooth = 1.0
+	#Mob tilting
+	#
+	#Yours only: this server has no mod.
+	#Set by the server: nothing is sent for a mob's tilt, so the host
+	#decides.
+	tiltMobs = false
+	#Item tilting
+	#
+	#Yours only: this server has no mod.
+	#Set by the server: nothing is sent for a mob's tilt, so the host
+	#decides.
+	tiltItems = false
+
+#Only useful when something is wrong.
+[debug]
+	#Show Debug Rays. Draw the floor rays and what they hit.
+	rays = false
+	#Show debug messages in console. Write the tilt's log lines to the
+	#console.
+	debugMessages = false
+	#Tilt vs camera panel. Panel comparing body tilt with Camera Sync's
+	#camera tilt.
+	tiltSyncPanel = false
+	#Frame trace. Log every frame around a landing or a camera jump.
+	frameTrace = false
+	#Jump threshold
+	# Default: 0.75
+	# Range: 0.05 ~ 45.0
+	frameTraceJump = 0.75

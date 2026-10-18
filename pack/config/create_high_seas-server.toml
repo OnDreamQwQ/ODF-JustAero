@@ -34,9 +34,10 @@
 	# Default: 14.0
 	# Range: 0.5 ~ 30.0
 	sailMaxSpeed = 14.0
-	#Share of its speed a ship keeps when sailing straight into the wind.
-	#0 = dead in the water against the wind, 1 = heading no longer matters.
-	# Default: 0.6
+	#Share of its speed a ship keeps on a heading none of its sails can use,
+	#such as square sails beating upwind or any sail straight into the wind.
+	#0 = dead in the water, 1 = heading and rig no longer matter.
+	# Default: 0.1
 	# Range: 0.0 ~ 1.0
 	sailUpwindEfficiency = 0.6
 	#How much canvas a ship needs for its size to reach full speed.
@@ -84,6 +85,19 @@
 	# Default: 0.45
 	# Range: 0.0 ~ 5.0
 	seaglideMaxSpeed = 0.45
+	#Speed the seaglide pulls you to while gliding with an elytra, in blocks per tick.
+	#0.425 is about 8.5 blocks per second, a quarter of the speed of a firework rocket (about 1.7).
+	# Default: 0.425
+	# Range: 0.0 ~ 5.0
+	seaglideFlightSpeed = 0.425
+	#Run the seaglide on the air of a worn Create backtank instead of the player's hunger.
+	#It stops when every backtank is empty.
+	seaglideUsesBacktank = false
+	#Backtank air used per second of running when seaglideUsesBacktank is on.
+	#Gliding with an elytra counts double. A plain copper backtank holds 900.
+	# Default: 1
+	# Range: 1 ~ 100
+	seaglideAirPerSecond = 1
 
 [buoy]
 	#Fastest a buoy climbs back to the surface, in blocks per second.
@@ -101,3 +115,10 @@
 	# Default: 2000.0
 	# Range: 0.0 ~ 100000.0
 	anchorHoldingMass = 2000.0
+
+[hull]
+	#How hard a floating boat swings back upright, like a weighted keel, in rad/s² at a full side tilt.
+	#Keeps tall masts from tipping narrow hulls over. 0 leaves only the buoyancy of the hold.
+	# Default: 4.0
+	# Range: 0.0 ~ 20.0
+	selfRighting = 4.0

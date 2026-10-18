@@ -1,0 +1,2106 @@
+﻿{
+  "neoforge-21.1.259 (modloader)": {
+    "jarName": "neoforge-21.1.259 (modloader)",
+    "modId": "neoforge",
+    "name": "neoforge",
+    "version": "neoforge-21.1.259"
+  },
+  "[战斗机座舱]fixed_tweaked_controller-1.4.0.jar": {
+    "jarName": "[战斗机座舱]fixed_tweaked_controller-1.4.0.jar",
+    "modId": "fixed_tweaked_controller",
+    "name": "Fixed Tweaked Controller",
+    "version": "1.4.0",
+    "curseForgeHash": 4242123192,
+    "modrinthHash": "e33875739e45ea6bcc7751a1bd10a9754e87b944"
+  },
+  "acceleratedrendering-1.0.14-1.21.1-alpha.jar": {
+    "jarName": "acceleratedrendering-1.0.14-1.21.1-alpha.jar",
+    "modId": "acceleratedrendering",
+    "name": "Accelerated Rendering",
+    "version": "1.0.14-1.21.1-alpha",
+    "curseForgeHash": 3396758715,
+    "modrinthHash": "b5c9cf25e6aab6b8b9912fbf45e44b4bb4e7df43"
+  },
+  "aero_cam_sync-1.4.0.jar": {
+    "jarName": "aero_cam_sync-1.4.0.jar",
+    "modId": "aero_cam_sync",
+    "name": "Aeronautics Camera Sync",
+    "version": "1.4.0",
+    "curseForgeHash": 2395724920,
+    "modrinthHash": "d2abb5fee04cfc0b71aace1cba9fd426e49babf4"
+  },
+  "aero_no_horizon-1.0.4.jar": {
+    "jarName": "aero_no_horizon-1.0.4.jar",
+    "modId": "aero_no_horizon",
+    "name": "Aeronautics No Horizon",
+    "version": "1.0.4",
+    "curseForgeHash": 226027017,
+    "modrinthHash": "b68f9cee25f6bdce90a7dacd2a924b47dbf48705"
+  },
+  "aero_player_tilt-0.2.3.jar": {
+    "jarName": "aero_player_tilt-0.2.3.jar",
+    "modId": "aero_player_tilt",
+    "name": "Aeronautics Player Tilt",
+    "version": "0.2.3",
+    "curseForgeHash": 2526282532,
+    "modrinthHash": "e6defee0e491161bcbaea17204fa36be65f8c20d"
+  },
+  "aero_reformation-1.3.3.5.jar": {
+    "jarName": "aero_reformation-1.3.3.5.jar",
+    "modId": "aero_reformation",
+    "name": "Aero Reformation",
+    "version": "1.3.3.5",
+    "curseForgeHash": 1158846104,
+    "modrinthHash": "79f8be8e9fa70b16bf4eb1f095b2dabb8037f69a"
+  },
+  "aero_wheel_extra-3.1.0.jar": {
+    "jarName": "aero_wheel_extra-3.1.0.jar",
+    "modId": "aero_wheel_extra",
+    "name": "机械动力：轮子拓展",
+    "version": "3.1.0",
+    "curseForgeHash": 988960417,
+    "modrinthHash": "6f5ad24092d4a4935bc62c55b36c431492f59f65"
+  },
+  "aeroadditionbridge-1.0.0.jar": {
+    "jarName": "aeroadditionbridge-1.0.0.jar",
+    "modId": "aeroadditionbridge",
+    "name": "Crafts-Aero-Bridge",
+    "version": "1.0.0",
+    "curseForgeHash": 4142812794,
+    "modrinthHash": "d0b3df817ee16da492b1c0c215a9b3e086be95bf"
+  },
+  "aerocopycats-1.1.1.jar": {
+    "jarName": "aerocopycats-1.1.1.jar",
+    "modId": "aerocopycats",
+    "name": "aero_copycats",
+    "version": "1.1.0",
+    "curseForgeHash": 4044611422,
+    "modrinthHash": "3a93862421d0a8cdae1e3a3d7f0d4bd01e049007"
+  },
+  "aeroencasedpipe-1.0.7.jar": {
+    "jarName": "aeroencasedpipe-1.0.7.jar",
+    "modId": "aeroencasedpipe",
+    "name": "Create Aeronautics: Encased Fluid Pipes",
+    "version": "1.0.7",
+    "curseForgeHash": 2375911101,
+    "modrinthHash": "94012ef7cb564267caa91e29a63d48c32be0b341"
+  },
+  "AeroEngine-1.3.0.jar": {
+    "jarName": "AeroEngine-1.3.0.jar",
+    "modId": "aeroengineering",
+    "name": "AeroEngine",
+    "version": "1.0.2",
+    "curseForgeHash": 4209701012,
+    "modrinthHash": "071a030a04ee45ccd611f719e7095341ddaf30af"
+  },
+  "aeronauticadditions_neoforge_mc_1.21.1-1.2.0.jar": {
+    "jarName": "aeronauticadditions_neoforge_mc_1.21.1-1.2.0.jar",
+    "modId": "aeronauticadditions",
+    "name": "AeronauticAdditions",
+    "version": "1.2.0",
+    "curseForgeHash": 2709278580,
+    "modrinthHash": "0eeab8d01b2fa363c67cfebae58eb3a4445542bf"
+  },
+  "aeronautics_windsound-1.0.1.jar": {
+    "jarName": "aeronautics_windsound-1.0.1.jar",
+    "modId": "aeronautics_windsound",
+    "name": "Aeronautics Wind Sound",
+    "version": "1.0.1",
+    "curseForgeHash": 147711947,
+    "modrinthHash": "85217302bce01231cbed608a2edfecc1f2cb2a81"
+  },
+  "aeronauticscompat-1.1.3.jar": {
+    "jarName": "aeronauticscompat-1.1.3.jar",
+    "modId": "aeronauticscompat",
+    "name": "AeronauticsCompat",
+    "version": "1.1.3",
+    "curseForgeHash": 3695437736,
+    "modrinthHash": "4d1aea2d6e27705e284d4603aa3422d84464e406"
+  },
+  "aeroworks-1.5.0.jar": {
+    "jarName": "aeroworks-1.5.0.jar",
+    "modId": "aeroworks",
+    "name": "Create: Aeroworks",
+    "version": "1.5.0",
+    "curseForgeHash": 3519269381,
+    "modrinthHash": "0dffcd74781e2f7d0495c4aad1165eb3473476ec"
+  },
+  "alltheleaks-1.1.13+1.21.1-neoforge.jar": {
+    "jarName": "alltheleaks-1.1.13+1.21.1-neoforge.jar",
+    "modId": "alltheleaks",
+    "name": "All The Leaks",
+    "version": "1.1.13+1.21.1-neoforge",
+    "curseForgeHash": 16446104,
+    "modrinthHash": "ea11d23e0f8c48544a269dc7c56f6593cb1cafe2"
+  },
+  "ALPHA-2 create_submarine-3.4.1.jar": {
+    "jarName": "ALPHA-2 create_submarine-3.4.1.jar",
+    "modId": "create_submarine",
+    "name": "Create Deep Seas",
+    "version": "3.4.1",
+    "curseForgeHash": 1445566649,
+    "modrinthHash": "f9446a6ae9ad462e1991cb0b03483dbd1fa762eb"
+  },
+  "amendments-1.21-2.1.11-neoforge.jar": {
+    "jarName": "amendments-1.21-2.1.11-neoforge.jar",
+    "modId": "amendments",
+    "name": "Amendments",
+    "version": "1.21-2.1.11",
+    "curseForgeHash": 3577065769,
+    "modrinthHash": "3d1ba6f88621e4f7f4264d262eb20a2d98bf1f59"
+  },
+  "architectury-13.0.11-neoforge.jar": {
+    "jarName": "architectury-13.0.11-neoforge.jar",
+    "modId": "architectury",
+    "name": "Architectury",
+    "version": "13.0.11",
+    "curseForgeHash": 3623028036,
+    "modrinthHash": "008656a0702801174b8ec245ed7aad1921d6e9f1"
+  },
+  "arcon-1.0.0.jar": {
+    "jarName": "arcon-1.0.0.jar",
+    "modId": "arcon",
+    "name": "Create: Armored Constructs",
+    "version": "1.0.0",
+    "curseForgeHash": 3312376694,
+    "modrinthHash": "db7447e81bda71f4c16113c9bfa4e861165af66c"
+  },
+  "armourersworkshop-forge-1.21.1-3.4.0-beta.3.jar": {
+    "jarName": "armourersworkshop-forge-1.21.1-3.4.0-beta.3.jar",
+    "modId": "armourers_workshop",
+    "name": "Armourer\u0027s Workshop",
+    "version": "3.4.0-beta.3",
+    "curseForgeHash": 1795771203,
+    "modrinthHash": "7b1b46880205764247b7450236f827523f9bde5e"
+  },
+  "athena-neoforge-1.21.1-4.0.6.jar": {
+    "jarName": "athena-neoforge-1.21.1-4.0.6.jar",
+    "modId": "athena",
+    "name": "Athena",
+    "version": "4.0.6",
+    "curseForgeHash": 669268138,
+    "modrinthHash": "4bcbdf388bd5e387beca7c627224aac33584b55b"
+  },
+  "Axiom-6.0.5-for-MC1.21.1.jar": {
+    "jarName": "Axiom-6.0.5-for-MC1.21.1.jar",
+    "modId": "axiom",
+    "name": "Axiom",
+    "version": "6.0.5",
+    "curseForgeHash": 2833589806,
+    "modrinthHash": "589dc29b3f03530f9404b2ab5c501c56dc5b02f1"
+  },
+  "azimuth-1.4.10.jar": {
+    "jarName": "azimuth-1.4.10.jar",
+    "modId": "azimuth",
+    "name": "Azimuth",
+    "version": "1.4.10",
+    "curseForgeHash": 1503825637,
+    "modrinthHash": "911e255bd09a6bcb2ca85ea172d1812e0f4665f1"
+  },
+  "BadOptimizations-2.4.1-1.21.1.jar": {
+    "jarName": "BadOptimizations-2.4.1-1.21.1.jar",
+    "modId": "badoptimizations",
+    "name": "BadOptimizations",
+    "version": "2.4.1",
+    "curseForgeHash": 3053351722,
+    "modrinthHash": "1461d8e46391efd32a3085150e86094c9f6f5c9d"
+  },
+  "balm-neoforge-1.21.1-21.0.66.jar": {
+    "jarName": "balm-neoforge-1.21.1-21.0.66.jar",
+    "modId": "balm",
+    "name": "Balm",
+    "version": "21.0.66",
+    "curseForgeHash": 198610954,
+    "modrinthHash": "dd3606a349f4a3c8fb5bd0ab22905675c02b0d74"
+  },
+  "bellsandwhistles-0.4.7-1.21.1.jar": {
+    "jarName": "bellsandwhistles-0.4.7-1.21.1.jar",
+    "modId": "bellsandwhistles",
+    "name": "Create: Bells \u0026 Whistles",
+    "version": "0.4.7-1.21.1",
+    "curseForgeHash": 2624670150,
+    "modrinthHash": "85944080f8bd47dad64a8193a70662cd9ddbb200"
+  },
+  "BetterAdvancements-NeoForge-1.21.1-0.4.3.21.jar": {
+    "jarName": "BetterAdvancements-NeoForge-1.21.1-0.4.3.21.jar",
+    "modId": "betteradvancements",
+    "name": "Better Advancements",
+    "version": "0.4.3.21",
+    "curseForgeHash": 2324986114,
+    "modrinthHash": "870521cfaa1a4cb6c830e2409e8b9e4cf179aff2"
+  },
+  "beyonddimensions-1.21.1-neoforge-0.7.30.jar": {
+    "jarName": "beyonddimensions-1.21.1-neoforge-0.7.30.jar",
+    "modId": "beyonddimensions",
+    "name": "Beyond Dimensions",
+    "version": "0.7.30",
+    "curseForgeHash": 3585237090,
+    "modrinthHash": "10941d74546e75d50c50df7597b01fc12f874575"
+  },
+  "bits_n_bobs-2.3.5.jar": {
+    "jarName": "bits_n_bobs-2.3.5.jar",
+    "modId": "bits_n_bobs",
+    "name": "Create Bits \u0027n\u0027 Bobs",
+    "version": "2.3.5",
+    "curseForgeHash": 3758458701,
+    "modrinthHash": "50119ba6849f2b165ab692ab312dbe4867444ac0"
+  },
+  "c2me-neoforge-mc1.21.1-0.4.0-alpha.0.123.jar": {
+    "jarName": "c2me-neoforge-mc1.21.1-0.4.0-alpha.0.123.jar",
+    "modId": "c2me",
+    "name": "Concurrent Chunk Management Engine",
+    "version": "0.4.0-alpha.0.123+1.21.1",
+    "curseForgeHash": 4085473444,
+    "modrinthHash": "50fe2e38c6369b51e4dee1106d0295185e6251c4"
+  },
+  "catalogue-neoforge-1.21.1-1.11.2.jar": {
+    "jarName": "catalogue-neoforge-1.21.1-1.11.2.jar",
+    "modId": "catalogue",
+    "name": "Catalogue",
+    "version": "1.11.2",
+    "curseForgeHash": 3329807613,
+    "modrinthHash": "6d67f855c20bc6392763cfb22e1152da4e8015b4"
+  },
+  "CBC-Military-Supplement-1.21.1-3.0.0.jar": {
+    "jarName": "CBC-Military-Supplement-1.21.1-3.0.0.jar",
+    "modId": "cbcmoreshells",
+    "name": "CBC Military Supplement",
+    "version": "2.1.9-1.21.1",
+    "curseForgeHash": 2821388045,
+    "modrinthHash": "56e4c84318fb41a3aec8c4fa6693dbe46bd6ed9c"
+  },
+  "cbc_at_Neoforge_1.21.1_0.1.4c.jar": {
+    "jarName": "cbc_at_Neoforge_1.21.1_0.1.4c.jar",
+    "modId": "cbc_at",
+    "name": "CBC Advanced Technology",
+    "version": "0.1.4c-1.21.1",
+    "curseForgeHash": 3229943035,
+    "modrinthHash": "c209e451ae6830dc2cc83c3b3cc9cb0490778998"
+  },
+  "cbc_compact_mount-1.2.2.jar": {
+    "jarName": "cbc_compact_mount-1.2.2.jar",
+    "modId": "cbc_compact_mount",
+    "name": "CBC: Compact Mount",
+    "version": "1.2.2",
+    "curseForgeHash": 3866257340,
+    "modrinthHash": "636f26509f919a8520c1d9a2ac3f536354684b7e"
+  },
+  "cbcmodernwarfare-0.0.6v+mc.1.21.1-neoforge.jar": {
+    "jarName": "cbcmodernwarfare-0.0.6v+mc.1.21.1-neoforge.jar",
+    "modId": "cbcmodernwarfare",
+    "name": "CBC Neo Warfare",
+    "version": "0.0.6v+mc.1.21.1-neoforge",
+    "curseForgeHash": 2183945557,
+    "modrinthHash": "c8cd9d1fd4a3913f7f453b397fcc5ef36aec4749"
+  },
+  "CBCmoreshells-1.4.0.jar": {
+    "jarName": "CBCmoreshells-1.4.0.jar",
+    "modId": "cbc_enhanced_shells",
+    "name": "CBC Enhanced Shells",
+    "version": "1.4.0",
+    "curseForgeHash": 1089497205,
+    "modrinthHash": "da992f1b16d4a9b4cfa2e7ff0f7c8222d4b153a7"
+  },
+  "cc-tweaked-1.21.1-forge-1.120.2.jar": {
+    "jarName": "cc-tweaked-1.21.1-forge-1.120.2.jar",
+    "modId": "computercraft",
+    "name": "CC: Tweaked",
+    "version": "1.120.2",
+    "curseForgeHash": 1213916390,
+    "modrinthHash": "f35d4f636c2eb1b30c5d3f5c08e110c6acb8e02f"
+  },
+  "ccsconnector-0.0.2.jar": {
+    "jarName": "ccsconnector-0.0.2.jar",
+    "modId": "ccsconnector",
+    "name": "CC Synaxis Connector",
+    "version": "0.0.2",
+    "curseForgeHash": 1567863132,
+    "modrinthHash": "ac662fb8f12ab6f271a59adfcbbeb21b6ded1829"
+  },
+  "chipped-neoforge-1.21.1-4.0.2.jar": {
+    "jarName": "chipped-neoforge-1.21.1-4.0.2.jar",
+    "modId": "chipped",
+    "name": "Chipped",
+    "version": "4.0.2",
+    "curseForgeHash": 527531260,
+    "modrinthHash": "6f5395f58139802edfde7cb9170279f92f291971"
+  },
+  "Chunky-NeoForge-1.4.23.jar": {
+    "jarName": "Chunky-NeoForge-1.4.23.jar",
+    "modId": "chunky",
+    "name": "Chunky",
+    "version": "1.4.23",
+    "curseForgeHash": 233801764,
+    "modrinthHash": "ab0c74743a653020fe2dfc4986b43e893947f3e9"
+  },
+  "climbable_ropes-2.1.4.jar": {
+    "jarName": "climbable_ropes-2.1.4.jar",
+    "modId": "climbable_ropes",
+    "name": "Climbable Ropes for Create Aeronautics",
+    "version": "2.1.4",
+    "curseForgeHash": 1960919057,
+    "modrinthHash": "7b830925ecde368f0848470d52d840f6b74a6de8"
+  },
+  "cloth-config-15.0.140-neoforge.jar": {
+    "jarName": "cloth-config-15.0.140-neoforge.jar",
+    "modId": "cloth_config",
+    "name": "Cloth Config v15 API",
+    "version": "15.0.140",
+    "curseForgeHash": 1440957232,
+    "modrinthHash": "c3e5733ba4503b102589a026000fd5ce0212f6f2"
+  },
+  "coastersengineered-1.21.1-1.1.1.jar": {
+    "jarName": "coastersengineered-1.21.1-1.1.1.jar",
+    "modId": "coastersengineered",
+    "name": "Coasters: Engineered",
+    "version": "1.1.1",
+    "curseForgeHash": 3613805037,
+    "modrinthHash": "71238147443c0cf85bc661f0c56a9e6d4d36fd74"
+  },
+  "coastersmagnetized-1.1.0.jar": {
+    "jarName": "coastersmagnetized-1.1.0.jar",
+    "modId": "coastersmagnetized",
+    "name": "Coasters: Magnetized",
+    "version": "1.1.0",
+    "curseForgeHash": 152631012,
+    "modrinthHash": "26332fc0110181036d58b4135fd1cf431d842cb0"
+  },
+  "configured-neoforge-1.21.1-2.6.3.jar": {
+    "jarName": "configured-neoforge-1.21.1-2.6.3.jar",
+    "modId": "configured",
+    "name": "Configured",
+    "version": "2.6.3",
+    "curseForgeHash": 1001771497,
+    "modrinthHash": "e977d86eec39d49295df4e2c4265d6710ae065e8"
+  },
+  "connectedglass-1.1.14-neoforge-mc1.21.jar": {
+    "jarName": "connectedglass-1.1.14-neoforge-mc1.21.jar",
+    "modId": "connectedglass",
+    "name": "Connected Glass",
+    "version": "1.1.14",
+    "curseForgeHash": 3174804230,
+    "modrinthHash": "0a44c13d6744e0eeec5bf38f58756a8e86e96f55"
+  },
+  "connector-2.0.0-beta.17+1.21.1-full.jar": {
+    "jarName": "connector-2.0.0-beta.17+1.21.1-full.jar",
+    "curseForgeHash": 3680378172,
+    "modrinthHash": "15e652d3628b1bcb644b93576fcab154496f770a"
+  },
+  "ConnectorExtras-1.12.1+1.21.1.jar": {
+    "jarName": "ConnectorExtras-1.12.1+1.21.1.jar",
+    "modId": "connectorextras",
+    "name": "Connector Extras",
+    "version": "1.12.1+1.21.1",
+    "curseForgeHash": 423041515,
+    "modrinthHash": "8ea07df55b26c8343d06df77936505a23e0d2140"
+  },
+  "Controlling-neoforge-1.21.1-19.0.5.jar": {
+    "jarName": "Controlling-neoforge-1.21.1-19.0.5.jar",
+    "modId": "controlling",
+    "name": "Controlling",
+    "version": "19.0.5",
+    "curseForgeHash": 1306717928,
+    "modrinthHash": "8a34424fc1428778be2fdbfa4da67b21b70bcbfe"
+  },
+  "copycats-3.0.9+mc.1.21.1-neoforge.jar": {
+    "jarName": "copycats-3.0.9+mc.1.21.1-neoforge.jar",
+    "modId": "copycats",
+    "name": "Create: Copycats+",
+    "version": "3.0.9+mc.1.21.1-neoforge",
+    "curseForgeHash": 154763757,
+    "modrinthHash": "74de17876c43f5f780bac478b9f9eb11e687b8d7"
+  },
+  "copyfoxies-2.0.0.jar": {
+    "jarName": "copyfoxies-2.0.0.jar",
+    "modId": "copyfoxies",
+    "name": "Copyfoxies",
+    "version": "2.0.0",
+    "curseForgeHash": 2115718975,
+    "modrinthHash": "dcb94ec28a4418b5a995fb1fa122ca64faeec712"
+  },
+  "cosmeticarmorreworked-1.21.1-v1-neoforge.jar": {
+    "jarName": "cosmeticarmorreworked-1.21.1-v1-neoforge.jar",
+    "modId": "cosmeticarmorreworked",
+    "name": "CosmeticArmorReworked",
+    "version": "1.21.1-v1-neoforge",
+    "curseForgeHash": 499008780,
+    "modrinthHash": "5f1e699cd0888b857ec63f01adaeb3571848bfea"
+  },
+  "cosmonautics-26.08.307.jar": {
+    "jarName": "cosmonautics-26.08.307.jar",
+    "modId": "rocketnautics",
+    "name": "Create: Cosmonautics",
+    "version": "26.08.307",
+    "curseForgeHash": 1170283851,
+    "modrinthHash": "9b70ebf3ff2beaee0ab0ba6c8f46643da3e4f4fc"
+  },
+  "craftingtweaks-neoforge-1.21.1-21.1.11.jar": {
+    "jarName": "craftingtweaks-neoforge-1.21.1-21.1.11.jar",
+    "modId": "craftingtweaks",
+    "name": "Crafting Tweaks",
+    "version": "21.1.11",
+    "curseForgeHash": 383153493,
+    "modrinthHash": "b6252039445978a742f439fc398f2a198b86bd4e"
+  },
+  "CrashAssistant-neoforge-1.20.6-1.21.4-1.11.12.jar": {
+    "jarName": "CrashAssistant-neoforge-1.20.6-1.21.4-1.11.12.jar",
+    "modId": "crash_assistant",
+    "name": "Crash Assistant",
+    "version": "1.11.12",
+    "curseForgeHash": 815653576,
+    "modrinthHash": "ec9e35065ce3a49ecec6bd6ff7fec6992476f7bb"
+  },
+  "crashutilities-9.0.4.jar": {
+    "jarName": "crashutilities-9.0.4.jar",
+    "modId": "crashutilities",
+    "name": "Crash Utilities",
+    "version": "9.0.4",
+    "curseForgeHash": 1154470864,
+    "modrinthHash": "5117a448b0611f60fbe743a4a631e431dd31740e"
+  },
+  "create-1.21.1-6.0.10.jar": {
+    "jarName": "create-1.21.1-6.0.10.jar",
+    "modId": "create",
+    "name": "Create",
+    "version": "6.0.10",
+    "curseForgeHash": 522093599,
+    "modrinthHash": "0e97e49837bed766e6f28a4c95b04885d6acc353"
+  },
+  "create-aeronautics-bundled-1.21.1-1.3.2.jar": {
+    "jarName": "create-aeronautics-bundled-1.21.1-1.3.2.jar",
+    "modId": "aeronautics_bundled",
+    "name": "Create Aeronautics",
+    "version": "1.3.2",
+    "curseForgeHash": 634506361,
+    "modrinthHash": "ddbe9cbc25e8f663218aa1e9fdfc4b99f0e11e4b"
+  },
+  "create-fire-control-0.8.5.jar": {
+    "jarName": "create-fire-control-0.8.5.jar",
+    "modId": "create_fire_control",
+    "name": "Create: Fire Control",
+    "version": "0.8.4",
+    "curseForgeHash": 2616720809,
+    "modrinthHash": "a3275bf79371c7f2b9a10b3c84684e8b06200d19"
+  },
+  "create-infinite-railways-0.2.0.jar": {
+    "jarName": "create-infinite-railways-0.2.0.jar",
+    "modId": "infiniterailways",
+    "name": "Create: Infinite Railways",
+    "version": "0.2.0",
+    "curseForgeHash": 802810066,
+    "modrinthHash": "093ea01ce7cfa199eb264a6003794e4a9e27f311"
+  },
+  "create-schematic-compute-1.2.5.2.jar": {
+    "jarName": "create-schematic-compute-1.2.5.2.jar",
+    "modId": "create_schematic_compute",
+    "name": "Create: Schematic Compute",
+    "version": "1.2.5.2",
+    "curseForgeHash": 3746326661,
+    "modrinthHash": "ab27432000064524c4b74fbba6907c140ff0f9da"
+  },
+  "Create-Utilities-J-1.21.1-0.3.5+1.21.1.jar": {
+    "jarName": "Create-Utilities-J-1.21.1-0.3.5+1.21.1.jar",
+    "modId": "createutilities",
+    "name": "Create Utilities J",
+    "version": "0.3.5+1.21.1",
+    "curseForgeHash": 195365339,
+    "modrinthHash": "a6e44f35f3a869d657c62bc1fce8ceec538d16bb"
+  },
+  "create_aeronautics_automated_logistics-0.7.0.jar": {
+    "jarName": "create_aeronautics_automated_logistics-0.7.0.jar",
+    "modId": "create_aeronautics_automated_logistics",
+    "name": "Create Aeronautics: Automated Logistics",
+    "version": "0.7.0",
+    "curseForgeHash": 1154328317,
+    "modrinthHash": "0da40850bdb4f3eb18340e6adb466d2af5fba50f"
+  },
+  "create_aeronautics_throwable_rope_connector-0.4.3.jar": {
+    "jarName": "create_aeronautics_throwable_rope_connector-0.4.3.jar",
+    "modId": "create_aeronautics_throwable_rope_connector",
+    "name": "Create Aeronautics: Throwable Rope Connector",
+    "version": "0.4.3",
+    "curseForgeHash": 2791260394,
+    "modrinthHash": "63fcbbc960461d42a59b417665fb938c79919514"
+  },
+  "create_aeronautics_toolgun-0.3.6.jar": {
+    "jarName": "create_aeronautics_toolgun-0.3.6.jar",
+    "modId": "create_aeronautics_toolgun",
+    "name": "Create Aeronautics: Toolgun",
+    "version": "0.3.6",
+    "curseForgeHash": 3473222908,
+    "modrinthHash": "81103160768a52a5bc7fffb5fadc1c441883d5d5"
+  },
+  "create_aeronautics_transmission_linkage-0.2.8.jar": {
+    "jarName": "create_aeronautics_transmission_linkage-0.2.8.jar",
+    "modId": "aeronautics_utility_objects",
+    "name": "Create Aeronautics: Transmission \u0026 Linkage",
+    "version": "0.2.8",
+    "curseForgeHash": 3167170006,
+    "modrinthHash": "bccaf90652905ae5f28dcc7e1134099d188ca020"
+  },
+  "create_afn-1.5.3.jar": {
+    "jarName": "create_afn-1.5.3.jar",
+    "modId": "create_afn",
+    "name": "Create: Advanced Frequency Network",
+    "version": "1.5.3",
+    "curseForgeHash": 2656458349,
+    "modrinthHash": "cbe2c4b676897f4bb49ce7bcabf0c9b37bc9af1f"
+  },
+  "create_avionics-neoforge-1.21.1-0.6.0.jar": {
+    "jarName": "create_avionics-neoforge-1.21.1-0.6.0.jar",
+    "modId": "create_avionics",
+    "name": "Create: Avionics",
+    "version": "0.6.0",
+    "curseForgeHash": 1064044725,
+    "modrinthHash": "a6b59ae72dae7e54b98fc88825fa6106d68298e4"
+  },
+  "create_bb-1.0.8-1.21.1.jar": {
+    "jarName": "create_bb-1.0.8-1.21.1.jar",
+    "modId": "create_bb",
+    "name": "Create: Blocks \u0026 Bogies",
+    "version": "1.0.8",
+    "curseForgeHash": 3169538326,
+    "modrinthHash": "59220d82cf962773e26778fc24c454e761368092"
+  },
+  "create_compact_transmission-1.0.7.jar": {
+    "jarName": "create_compact_transmission-1.0.7.jar",
+    "modId": "create_compact_transmission",
+    "name": "Create Compact Transmission",
+    "version": "1.0.7",
+    "curseForgeHash": 890598363,
+    "modrinthHash": "30a695f6fb661798966f26770c9226604aae2a59"
+  },
+  "create_connected-1.3.3-mc1.21.1.jar": {
+    "jarName": "create_connected-1.3.3-mc1.21.1.jar",
+    "modId": "create_connected",
+    "name": "Create: Connected",
+    "version": "1.3.3-mc1.21.1",
+    "curseForgeHash": 1415576880,
+    "modrinthHash": "96ae45fa44cd7028a31b9613cb672009e811b145"
+  },
+  "create_flight_control-neoforge-0.7.8.jar": {
+    "jarName": "create_flight_control-neoforge-0.7.8.jar",
+    "modId": "create_flight_control",
+    "name": "Create: Flight Control",
+    "version": "0.7.8",
+    "curseForgeHash": 2492781143,
+    "modrinthHash": "cacd030ddbfdd0825efeba86a8936cfe8cc944f9"
+  },
+  "create_mobile_packages-1.21.1-0.7.8.jar": {
+    "jarName": "create_mobile_packages-1.21.1-0.7.8.jar",
+    "modId": "create_mobile_packages",
+    "name": "Create: Mobile Packages",
+    "version": "0.7.8",
+    "curseForgeHash": 785882817,
+    "modrinthHash": "1e5238c8764bcfc3c0af29c3ff5b4533a18364c7"
+  },
+  "create_parachute-1.1.4.jar": {
+    "jarName": "create_parachute-1.1.4.jar",
+    "modId": "create_parachute",
+    "name": "Create:Parachute",
+    "version": "1.1.4",
+    "curseForgeHash": 1978788288,
+    "modrinthHash": "0ecad17031cb53e48b8040c516b6900eb97b11b9"
+  },
+  "create_radar-0.4.9.4-1.21.1.jar": {
+    "jarName": "create_radar-0.4.9.4-1.21.1.jar",
+    "modId": "create_radar",
+    "name": "Create: Radars",
+    "version": "0.4.9.4-1.21.1",
+    "curseForgeHash": 2256721129,
+    "modrinthHash": "9726fced4bf86c9e2c0ea09b35bc39ed3ac007b6"
+  },
+  "create_the_air_wars-5.00.jar": {
+    "jarName": "create_the_air_wars-5.00.jar",
+    "modId": "create_the_air_wars",
+    "name": "Create: The Air War",
+    "version": "5.00",
+    "curseForgeHash": 1108899548,
+    "modrinthHash": "d725b4b8cb2ef1de64ff7f593a8c0de06de6c1b9"
+  },
+  "create_train_parts-0.5.2-1.21.1-6.0.10-281.jar": {
+    "jarName": "create_train_parts-0.5.2-1.21.1-6.0.10-281.jar",
+    "modId": "create_train_parts",
+    "name": "Create Train Parts",
+    "version": "0.5.2",
+    "curseForgeHash": 3835206067,
+    "modrinthHash": "2d0dc7d7838f5bdaabdd96080b1e4b950bfd3306"
+  },
+  "create_tsr-1.1.0.jar": {
+    "jarName": "create_tsr-1.1.0.jar",
+    "modId": "create_tsr",
+    "name": "Create: Track Switch Radio",
+    "version": "1.1.0",
+    "curseForgeHash": 815254004,
+    "modrinthHash": "8a91c702e8339d765376c5b71dc07765a083165c"
+  },
+  "create_tweaked_controllers-1.21.1-1.2.7.jar": {
+    "jarName": "create_tweaked_controllers-1.21.1-1.2.7.jar",
+    "modId": "create_tweaked_controllers",
+    "name": "Create Tweaked Controllers",
+    "version": "1.21.1-1.2.7",
+    "curseForgeHash": 1528704832,
+    "modrinthHash": "6358da213d0eff982c3431a8d004a3e912f7957a"
+  },
+  "createaddition-1.7.2.jar": {
+    "jarName": "createaddition-1.7.2.jar",
+    "modId": "createaddition",
+    "name": "Create Crafts \u0026 Additions",
+    "version": "1.7.2",
+    "curseForgeHash": 519369048,
+    "modrinthHash": "8e7158d3144b1ee97e58092fe006675b0e09f6d8"
+  },
+  "createadditionallogistics-1.21.1-1.4.5.jar": {
+    "jarName": "createadditionallogistics-1.21.1-1.4.5.jar",
+    "modId": "createadditionallogistics",
+    "name": "Create: Additional Logistics",
+    "version": "1.4.5",
+    "curseForgeHash": 4040856701,
+    "modrinthHash": "6acf4d30516b6bf66928aa5d79d6bac6283de44e"
+  },
+  "createbetterfps-1.21.1-1.1.5.jar": {
+    "jarName": "createbetterfps-1.21.1-1.1.5.jar",
+    "modId": "createbetterfps",
+    "name": "CreateBetterFps",
+    "version": "1.1.5",
+    "curseForgeHash": 3461735046,
+    "modrinthHash": "c06111569e30af58d1cec4b4ee4b545f0021172a"
+  },
+  "createbigcannons-5.11.7+mc.1.21.1.jar": {
+    "jarName": "createbigcannons-5.11.7+mc.1.21.1.jar",
+    "modId": "createbigcannons",
+    "name": "Create Big Cannons",
+    "version": "5.11.7",
+    "curseForgeHash": 2349503858,
+    "modrinthHash": "c90ee0b2142e2c58d233e150cb3a24c7cb07eb2d"
+  },
+  "CreateCyberGoggles-1.21.1-8.6.9-NeoForge.jar": {
+    "jarName": "CreateCyberGoggles-1.21.1-8.6.9-NeoForge.jar",
+    "modId": "create_cyber_goggles",
+    "name": "Create: Cyber Goggles",
+    "version": "8.6.9",
+    "curseForgeHash": 1288828269,
+    "modrinthHash": "6191ead08adaaf173274ab0af975ff9d525add91"
+  },
+  "createdeco-2.1.3.jar": {
+    "jarName": "createdeco-2.1.3.jar",
+    "modId": "createdeco",
+    "name": "Create Deco",
+    "version": "2.1.3",
+    "curseForgeHash": 2186625105,
+    "modrinthHash": "93d9eff58b46c6953e907d071e6be4e3ce07be38"
+  },
+  "createdieselgenerators-1.21.1-1.3.15.jar": {
+    "jarName": "createdieselgenerators-1.21.1-1.3.15.jar",
+    "modId": "createdieselgenerators",
+    "name": "Create Diesel Generators",
+    "version": "1.21.1-1.3.15",
+    "curseForgeHash": 1915107997,
+    "modrinthHash": "7f751dabfa83c141c1d13025cd16f06553ba459b"
+  },
+  "CreateDragonsPlus-1.11.9.jar": {
+    "jarName": "CreateDragonsPlus-1.11.9.jar",
+    "modId": "create_dragons_plus",
+    "name": "Create: Dragons Plus",
+    "version": "1.11.9",
+    "curseForgeHash": 916066222,
+    "modrinthHash": "67ffcb61207a7dbc6b1e70f0473ddbacb19d44eb"
+  },
+  "createendertransmission-2.1.1-1.21.1.jar": {
+    "jarName": "createendertransmission-2.1.1-1.21.1.jar",
+    "modId": "createendertransmission",
+    "name": "Create Ender Transmission",
+    "version": "2.1.1-1.21.1",
+    "curseForgeHash": 2211549688,
+    "modrinthHash": "fbf165d068a3a9c6d24f1bcf68fb1af380ee2603"
+  },
+  "createfactorycontroller-1.2.1-neoforge-1.21.1.jar": {
+    "jarName": "createfactorycontroller-1.2.1-neoforge-1.21.1.jar",
+    "modId": "createfactorycontroller",
+    "name": "Create: Factory Controller",
+    "version": "1.2.1-neoforge-1.21.1",
+    "curseForgeHash": 473036712,
+    "modrinthHash": "96c7dc65775a0c1032af43399644ba9cf915366f"
+  },
+  "createfirefightingadd-0.2.5-beta-fix2.jar": {
+    "jarName": "createfirefightingadd-0.2.5-beta-fix2.jar",
+    "modId": "createfirefightingadd",
+    "name": "CreateFireFightingAdd",
+    "version": "0.2.5-beta-fix2",
+    "curseForgeHash": 1074757863,
+    "modrinthHash": "c53d8d366a02b429ff012f32f32569beab788489"
+  },
+  "createimp-1.4.2.jar": {
+    "jarName": "createimp-1.4.2.jar",
+    "modId": "createimp",
+    "name": "Create Improve",
+    "version": "1.4.2",
+    "curseForgeHash": 1773088415,
+    "modrinthHash": "88b9a005f92db97f4b842b62c99275929f562511"
+  },
+  "createnuclear-2.0.0-neoforge.jar": {
+    "jarName": "createnuclear-2.0.0-neoforge.jar",
+    "modId": "createnuclear",
+    "name": "Create Nuclear",
+    "version": "2.0.0",
+    "curseForgeHash": 3935059516,
+    "modrinthHash": "1e635e4d1d4f636d3f07f17f4fe178e567de128c"
+  },
+  "createpropulsion-1.1.5.jar": {
+    "jarName": "createpropulsion-1.1.5.jar",
+    "modId": "createpropulsion",
+    "name": "Create Propulsion: Simulated",
+    "version": "1.1.5",
+    "curseForgeHash": 3388102795,
+    "modrinthHash": "928e9428ee92d07426c296b04a7fffb1e737e290"
+  },
+  "createrailwaysnavigator-neoforge-1.21.1-beta-0.10.0-C6.jar": {
+    "jarName": "createrailwaysnavigator-neoforge-1.21.1-beta-0.10.0-C6.jar",
+    "modId": "createrailwaysnavigator",
+    "name": "Create Railways Navigator",
+    "version": "1.21.1-beta-0.10.0-C6",
+    "curseForgeHash": 763685882,
+    "modrinthHash": "bf0ff70b421fb6fdb899f21e8e2899bbc9bd5e33"
+  },
+  "createredstonelinkgui-1.21.1-1.9.3.jar": {
+    "jarName": "createredstonelinkgui-1.21.1-1.9.3.jar",
+    "modId": "createredstonelinkgui",
+    "name": "Create: Redstone Link GUI",
+    "version": "1.21.1-1.9.3",
+    "curseForgeHash": 3956276278,
+    "modrinthHash": "2c9e8d5d0906447e682902082cbd7dd077098cc0"
+  },
+  "createrenxin-1.0.0.jar": {
+    "jarName": "createrenxin-1.0.0.jar",
+    "modId": "createrenxin",
+    "name": "create-renxin",
+    "version": "1.0.0",
+    "curseForgeHash": 4155078,
+    "modrinthHash": "9068799a6a06fe2b1106eb5129b26e01397cec88"
+  },
+  "CreativeCore_NEOFORGE_v2.13.51_mc1.21.1.jar": {
+    "jarName": "CreativeCore_NEOFORGE_v2.13.51_mc1.21.1.jar",
+    "modId": "creativecore",
+    "name": "CreativeCore",
+    "version": "2.13.51",
+    "curseForgeHash": 1571443006,
+    "modrinthHash": "eb2242b3d4442ad4017ba0624a7f9588e778b157"
+  },
+  "CTM-1.21-1.2.1+3.jar": {
+    "jarName": "CTM-1.21-1.2.1+3.jar",
+    "modId": "ctm",
+    "name": "ConnectedTexturesMod",
+    "version": "1.21-1.2.1+3",
+    "curseForgeHash": 2872335516,
+    "modrinthHash": "284232c08d3b999f05417761a3efba9b08ba20a7"
+  },
+  "curios-neoforge-9.5.1+1.21.1.jar": {
+    "jarName": "curios-neoforge-9.5.1+1.21.1.jar",
+    "modId": "curios",
+    "name": "Curios API",
+    "version": "9.5.1+1.21.1",
+    "curseForgeHash": 933317947,
+    "modrinthHash": "418fcd42e3a7844c9bdc71c9b6401fdb3894e0c4"
+  },
+  "dashpanels-2.1+neoforge1.21.1.jar": {
+    "jarName": "dashpanels-2.1+neoforge1.21.1.jar",
+    "modId": "dashpanels",
+    "name": "Dashpanels",
+    "version": "2.1",
+    "curseForgeHash": 2519274428,
+    "modrinthHash": "2d8b1f07b0ef3f24610324ec3e594edf356b8f36"
+  },
+  "dashpanels_expanded-2.0.1.jar": {
+    "jarName": "dashpanels_expanded-2.0.1.jar",
+    "modId": "dashpanels_expanded",
+    "name": "Dashpanels: Expanded",
+    "version": "2.0.1",
+    "curseForgeHash": 477839171,
+    "modrinthHash": "48f8fb30cf30b22022e129a68aa7194190b0011e"
+  },
+  "dashpanelsextra-1.4.1.jar": {
+    "jarName": "dashpanelsextra-1.4.1.jar",
+    "modId": "dashpanelsextra",
+    "name": "DashPanels Extra",
+    "version": "1.4.1",
+    "curseForgeHash": 2686576199,
+    "modrinthHash": "6741ad2e8c1a0b309466c04b7c23dfc47da1c9dc"
+  },
+  "deployer-0.1.3.jar": {
+    "jarName": "deployer-0.1.3.jar",
+    "modId": "deployer",
+    "name": "Deployer",
+    "version": "0.1.3",
+    "curseForgeHash": 2406589999,
+    "modrinthHash": "e3a39672f10f2d141ef87e69fd1615042c4985d3"
+  },
+  "deployer_got_dizzy-0.1.2.jar": {
+    "jarName": "deployer_got_dizzy-0.1.2.jar",
+    "modId": "deployer_got_dizzy",
+    "name": "Deployer Got Dizzy",
+    "version": "0.1.2",
+    "curseForgeHash": 492784107,
+    "modrinthHash": "69612ac5675840de8847507ef029e28a9c929494"
+  },
+  "Design-n-Decor-1.21.1-2.2b.jar": {
+    "jarName": "Design-n-Decor-1.21.1-2.2b.jar",
+    "modId": "dndecor",
+    "name": "Design n\u0027 Decor",
+    "version": "2.2b",
+    "curseForgeHash": 3871573007,
+    "modrinthHash": "ff5f0411a3d82e15d69b65617128f6d54e818e1b"
+  },
+  "dragonlib-3.0.29+mc1.21.1-neoforge.jar": {
+    "jarName": "dragonlib-3.0.29+mc1.21.1-neoforge.jar",
+    "modId": "dragonlib",
+    "name": "DragonLib",
+    "version": "3.0.29",
+    "curseForgeHash": 2526690451,
+    "modrinthHash": "ca7227b30334cb50117efe5cf76a01772e053eed"
+  },
+  "drippyloadingscreen_neoforge_3.1.5_MC_1.21.1.jar": {
+    "jarName": "drippyloadingscreen_neoforge_3.1.5_MC_1.21.1.jar",
+    "modId": "drippyloadingscreen",
+    "name": "Drippy Loading Screen",
+    "version": "3.1.5",
+    "curseForgeHash": 2326404052,
+    "modrinthHash": "9d27991a7f5a551265692abf8ed40ece10ea1958"
+  },
+  "drivebywire-0.3.0.jar": {
+    "jarName": "drivebywire-0.3.0.jar",
+    "modId": "drivebywire",
+    "name": "Drive By Wire",
+    "version": "0.3.0",
+    "curseForgeHash": 1002494075,
+    "modrinthHash": "217cb078513ba01d542d3665ed7271af1f270ecb"
+  },
+  "drivebywire-typewriter-1.2.0.jar": {
+    "jarName": "drivebywire-typewriter-1.2.0.jar",
+    "modId": "drivebywiretypewriter",
+    "name": "Drive By Wire - Typewriter",
+    "version": "1.2.0",
+    "curseForgeHash": 2780399893,
+    "modrinthHash": "ec9eff217478db0250560cb40294f64966ea0ffe"
+  },
+  "dyeable-components-1.0.4+mc1.21.1.jar": {
+    "jarName": "dyeable-components-1.0.4+mc1.21.1.jar",
+    "modId": "aeronautics_dyeable_components",
+    "name": "Create Aeronautics: Dyeable Components",
+    "version": "1.0.4+mc1.21.1",
+    "curseForgeHash": 2812740799,
+    "modrinthHash": "caf60f71d89a3068cd07283f45bffc31704a7474"
+  },
+  "electroenergetics-1.21.1-1.1.3.jar": {
+    "jarName": "electroenergetics-1.21.1-1.1.3.jar",
+    "modId": "electroenergetics",
+    "name": "Create Electro Energetics",
+    "version": "1.21.1-1.1.3",
+    "curseForgeHash": 1008043464,
+    "modrinthHash": "b8225d9ec60b5afaba8809e0bd96f224a0560e10"
+  },
+  "entity_model_features-3.3.11-1.21-neoforge.jar": {
+    "jarName": "entity_model_features-3.3.11-1.21-neoforge.jar",
+    "modId": "entity_model_features",
+    "name": "Entity Model Features",
+    "version": "3.3.11",
+    "curseForgeHash": 778102872,
+    "modrinthHash": "fc551f0a284a5864fbc1a11fde5e27ab0ac95f43"
+  },
+  "entity_texture_features-7.2.5-1.21-neoforge.jar": {
+    "jarName": "entity_texture_features-7.2.5-1.21-neoforge.jar",
+    "modId": "entity_texture_features",
+    "name": "Entity Texture Features",
+    "version": "7.2.5",
+    "curseForgeHash": 3530833203,
+    "modrinthHash": "ae5d4d282221a455ccd87bef7cd0f5122685426d"
+  },
+  "entityculling-neoforge-1.11.3-mc1.21.1.jar": {
+    "jarName": "entityculling-neoforge-1.11.3-mc1.21.1.jar",
+    "modId": "entityculling",
+    "name": "EntityCulling",
+    "version": "1.11.3",
+    "curseForgeHash": 737333498,
+    "modrinthHash": "f122f84f329793675b2625d51b77f990d7de3579"
+  },
+  "escalated-1.3.2+mc.1.21.1.jar": {
+    "jarName": "escalated-1.3.2+mc.1.21.1.jar",
+    "modId": "escalated",
+    "name": "Create: Escalated",
+    "version": "1.3.2",
+    "curseForgeHash": 1541023483,
+    "modrinthHash": "34854b74bd9c627b873cb21bb5ec15fbad038db6"
+  },
+  "exposure-neoforge-1.21.1-1.9.19.jar": {
+    "jarName": "exposure-neoforge-1.21.1-1.9.19.jar",
+    "modId": "exposure",
+    "name": "Exposure",
+    "version": "1.9.19",
+    "curseForgeHash": 2869463335,
+    "modrinthHash": "181d328a0328523fa99dd310937c40d917e91029"
+  },
+  "extra_gauges-2.1.3.jar": {
+    "jarName": "extra_gauges-2.1.3.jar",
+    "modId": "extra_gauges",
+    "name": "Create: Extra Gauges",
+    "version": "2.1.3",
+    "curseForgeHash": 381356131,
+    "modrinthHash": "c82761ebd4459869fd8eacf7da9ca2c3aa1e54f8"
+  },
+  "fancymenu_neoforge_3.9.14_MC_1.21.1.jar": {
+    "jarName": "fancymenu_neoforge_3.9.14_MC_1.21.1.jar",
+    "modId": "fancymenu",
+    "name": "FancyMenu",
+    "version": "3.9.14",
+    "curseForgeHash": 1216431347,
+    "modrinthHash": "cafbef98afb4f60adea426b950c5452655040c40"
+  },
+  "FarmersDelight-1.21.1-1.3.4.jar": {
+    "jarName": "FarmersDelight-1.21.1-1.3.4.jar",
+    "modId": "farmersdelight",
+    "name": "Farmer\u0027s Delight",
+    "version": "1.3.4",
+    "curseForgeHash": 1947313295,
+    "modrinthHash": "27675ddfcb8cc37e6ea1ab6c15051c7949d94657"
+  },
+  "FastSuite-1.21.1-6.0.7.jar": {
+    "jarName": "FastSuite-1.21.1-6.0.7.jar",
+    "modId": "fastsuite",
+    "name": "Fast Suite",
+    "version": "6.0.7",
+    "curseForgeHash": 3610425354,
+    "modrinthHash": "9dd867fe29642d9e3f2f9059f1abf372936fbabc"
+  },
+  "ferritecore-7.0.3-neoforge.jar": {
+    "jarName": "ferritecore-7.0.3-neoforge.jar",
+    "modId": "ferritecore",
+    "name": "Ferrite Core",
+    "version": "7.0.3",
+    "curseForgeHash": 2808038058,
+    "modrinthHash": "9563692efb708b6b568df27a01ec52f6311928ef"
+  },
+  "Flashback-0.39.10-for-MC1.21.1.jar": {
+    "jarName": "Flashback-0.39.10-for-MC1.21.1.jar",
+    "modId": "flashback",
+    "name": "Flashback",
+    "version": "0.39.10",
+    "curseForgeHash": 816777207,
+    "modrinthHash": "3705800d44eddbb417d8ca741116883525fbb3b2"
+  },
+  "flashback_neoforge_fixed-1.0.15.jar": {
+    "jarName": "flashback_neoforge_fixed-1.0.15.jar",
+    "modId": "flashback_neoforge_fixed",
+    "name": "Flashback NeoForge Fixed",
+    "version": "1.0.15",
+    "curseForgeHash": 1855091835,
+    "modrinthHash": "80f18e764b8fb4011436b4b4dc6b40f5faf86172"
+  },
+  "fluidlogistics-1.3.1-mc1.21.1.jar": {
+    "jarName": "fluidlogistics-1.3.1-mc1.21.1.jar",
+    "modId": "fluidlogistics",
+    "name": "Create FluidLogistics ",
+    "version": "1.3.1",
+    "curseForgeHash": 3473978221,
+    "modrinthHash": "683ae82a1ecba3641aa73c6fea8f0ba30505916e"
+  },
+  "flyhigher-1.21.1-1.0.2.jar": {
+    "jarName": "flyhigher-1.21.1-1.0.2.jar",
+    "modId": "flyhigher",
+    "name": "Fly Higher",
+    "version": "1.0.2",
+    "curseForgeHash": 577540953,
+    "modrinthHash": "454660ac9b6df0f1c35f46c55266157d3804e245"
+  },
+  "forgified-fabric-api-0.116.15+2.3.5+1.21.1.jar": {
+    "jarName": "forgified-fabric-api-0.116.15+2.3.5+1.21.1.jar",
+    "modId": "fabric_api",
+    "name": "Forgified Fabric API",
+    "version": "0.116.15+2.3.5+1.21.1",
+    "curseForgeHash": 2867190938,
+    "modrinthHash": "1a2c41d2efbe1c60159b90a165557e7c06d03a5c"
+  },
+  "FramedBlocks-10.6.3.jar": {
+    "jarName": "FramedBlocks-10.6.3.jar",
+    "modId": "framedblocks",
+    "name": "FramedBlocks",
+    "version": "10.6.3",
+    "curseForgeHash": 3357757667,
+    "modrinthHash": "4e3d28804fdc2c0be4d71d444f18b85d2c863b01"
+  },
+  "framework-neoforge-1.21.1-0.13.11.jar": {
+    "jarName": "framework-neoforge-1.21.1-0.13.11.jar",
+    "modId": "framework",
+    "name": "Framework",
+    "version": "0.13.11",
+    "curseForgeHash": 1313912180,
+    "modrinthHash": "e46eb138fbb13a12f37154fb4ec407d64b326475"
+  },
+  "ftb-backups-3-21.1.5.jar": {
+    "jarName": "ftb-backups-3-21.1.5.jar",
+    "modId": "ftbbackups3",
+    "name": "FTB Backups 3",
+    "version": "21.1.5",
+    "curseForgeHash": 2027643214,
+    "modrinthHash": "c375dd0e4c673b39297c09211f4bf225bf1141ba"
+  },
+  "ftb-essentials-neoforge-2101.1.10.jar": {
+    "jarName": "ftb-essentials-neoforge-2101.1.10.jar",
+    "modId": "ftbessentials",
+    "name": "FTB Essentials",
+    "version": "2101.1.10",
+    "curseForgeHash": 397785702,
+    "modrinthHash": "fa7b3d1b06c0285dcbe8e53a27d44cd7f8d15726"
+  },
+  "ftb-library-neoforge-2101.1.37.jar": {
+    "jarName": "ftb-library-neoforge-2101.1.37.jar",
+    "modId": "ftblibrary",
+    "name": "FTB Library",
+    "version": "2101.1.37",
+    "curseForgeHash": 4074313308,
+    "modrinthHash": "b6e503587afcd678ec257e4abdc6362ff18c2fef"
+  },
+  "ftb-quests-neoforge-2101.1.36.jar": {
+    "jarName": "ftb-quests-neoforge-2101.1.36.jar",
+    "modId": "ftbquests",
+    "name": "FTB Quests",
+    "version": "2101.1.36",
+    "curseForgeHash": 3317311066,
+    "modrinthHash": "b2ede29b98a3022c22065fbe9b1761e385a28683"
+  },
+  "ftb-ranks-neoforge-2101.1.5.jar": {
+    "jarName": "ftb-ranks-neoforge-2101.1.5.jar",
+    "modId": "ftbranks",
+    "name": "FTB Ranks",
+    "version": "2101.1.5",
+    "curseForgeHash": 1393894116,
+    "modrinthHash": "04fc76654d3818e658e35b597a056265b09920c2"
+  },
+  "ftb-teams-neoforge-2101.1.11.jar": {
+    "jarName": "ftb-teams-neoforge-2101.1.11.jar",
+    "modId": "ftbteams",
+    "name": "FTB Teams",
+    "version": "2101.1.11",
+    "curseForgeHash": 3675749658,
+    "modrinthHash": "62b65f752d0326edd13244e58d5f2aec035da4e9"
+  },
+  "ftb-ultimine-neoforge-2101.1.15.jar": {
+    "jarName": "ftb-ultimine-neoforge-2101.1.15.jar",
+    "modId": "ftbultimine",
+    "name": "FTB Ultimine",
+    "version": "2101.1.15",
+    "curseForgeHash": 805267901,
+    "modrinthHash": "c96a7cc0b52bf919660ea61c1536cebd9d5773b3"
+  },
+  "fusion-1.3.16-neoforge-mc1.21.1.jar": {
+    "jarName": "fusion-1.3.16-neoforge-mc1.21.1.jar",
+    "modId": "fusion",
+    "name": "Fusion",
+    "version": "1.3.16",
+    "curseForgeHash": 1385959600,
+    "modrinthHash": "c3cd7c2718583aa5a12e8502c6b92e050bad0c19"
+  },
+  "fzzy_config-0.7.7+1.21+neoforge.jar": {
+    "jarName": "fzzy_config-0.7.7+1.21+neoforge.jar",
+    "modId": "fzzy_config",
+    "name": "Fzzy Config",
+    "version": "0.7.7+1.21+neoforge",
+    "curseForgeHash": 588581031,
+    "modrinthHash": "518eadc53c065a74a49207769209c116e77d1849"
+  },
+  "gadgets-and-gizmos-bundled-V1.2.10.jar": {
+    "jarName": "gadgets-and-gizmos-bundled-V1.2.10.jar",
+    "modId": "createthrusters_bundled",
+    "name": "Create Gadgets \u0026 Gizmos Bundled",
+    "version": "1.2.10",
+    "curseForgeHash": 686267448,
+    "modrinthHash": "f19a50a30352916e136de831fe87f8c39dca2a97"
+  },
+  "geckolib-neoforge-1.21.1-4.9.3.jar": {
+    "jarName": "geckolib-neoforge-1.21.1-4.9.3.jar",
+    "modId": "geckolib",
+    "name": "GeckoLib 4",
+    "version": "4.9.3",
+    "curseForgeHash": 3402830604,
+    "modrinthHash": "5cfe835472a5c5457ae9ac192d9d7b317454d5ac"
+  },
+  "generalfeedback-1.0.0.jar": {
+    "jarName": "generalfeedback-1.0.0.jar",
+    "modId": "generalfeedback",
+    "name": "GeneralFeedback",
+    "version": "1.0.0",
+    "curseForgeHash": 2219283818,
+    "modrinthHash": "6bd91642bba281448bc26e8085f243c71cdb8e9c"
+  },
+  "gnetum-3.3.6.jar": {
+    "jarName": "gnetum-3.3.6.jar",
+    "modId": "gnetum",
+    "name": "Gnetum",
+    "version": "3.3.6",
+    "curseForgeHash": 1826892767,
+    "modrinthHash": "d017e2bb57af33bb8985e759ac929289da05ea4d"
+  },
+  "GnKinetics-1.21.1-1.0m.jar": {
+    "jarName": "GnKinetics-1.21.1-1.0m.jar",
+    "modId": "gnkinetics",
+    "name": "Gears n\u0027 Kinetics",
+    "version": "1.0m",
+    "curseForgeHash": 2276247865,
+    "modrinthHash": "15cc60c8864ac8b5329723a55a97a548980611de"
+  },
+  "handcrafted-neoforge-1.21.1-4.0.3.jar": {
+    "jarName": "handcrafted-neoforge-1.21.1-4.0.3.jar",
+    "modId": "handcrafted",
+    "name": "Handcrafted",
+    "version": "4.0.3",
+    "curseForgeHash": 2517848455,
+    "modrinthHash": "8ecd27f1d66f9b742cfae3c8ffa773765f574b52"
+  },
+  "HandheldMoon-neoforge-1.21.1-1.2.0.jar": {
+    "jarName": "HandheldMoon-neoforge-1.21.1-1.2.0.jar",
+    "modId": "handheldmoon",
+    "name": "HandheldMoon",
+    "version": "1.2.0",
+    "curseForgeHash": 1361462212,
+    "modrinthHash": "533b23d4e9ea311a1b7ebf65002ffaf1a7647018"
+  },
+  "hotstuff-1.1.7.jar": {
+    "jarName": "hotstuff-1.1.7.jar",
+    "modId": "hotstuff",
+    "name": "Hot\u0027s Aerostuff",
+    "version": "1.1.7",
+    "curseForgeHash": 870490538,
+    "modrinthHash": "8e93381dae43d8505f17c50dfa699e259e1dd463"
+  },
+  "I18nAutoUpdateMod-1.2.0-all.jar": {
+    "jarName": "I18nAutoUpdateMod-1.2.0-all.jar",
+    "modId": "i18nautoupdatemod",
+    "name": "I18nAutoUpdateMod",
+    "version": "1.2.0",
+    "curseForgeHash": 3734936467,
+    "modrinthHash": "6a562b0ea75caf8cbebe521096f2062ca9c2ca50"
+  },
+  "IMBlocker-5.6.2.1-neoforge+1.20.6-1.21.8.jar": {
+    "jarName": "IMBlocker-5.6.2.1-neoforge+1.20.6-1.21.8.jar",
+    "modId": "imblocker",
+    "name": "IMBlocker",
+    "version": "5.6.2.1",
+    "curseForgeHash": 4267678102,
+    "modrinthHash": "259f0c47808ae0d9476733e9f51e8dcf12210e72"
+  },
+  "imguimc-neoforge-2.0.5+mc1.21.1.jar": {
+    "jarName": "imguimc-neoforge-2.0.5+mc1.21.1.jar",
+    "modId": "imguimc",
+    "name": "ImGuiMC",
+    "version": "2.0.5+mc1.21.1",
+    "curseForgeHash": 4129120564,
+    "modrinthHash": "daeed0d0a4daba6543879bdb6c5444c421a13c90"
+  },
+  "ImmediatelyFast-NeoForge-1.6.14+1.21.1.jar": {
+    "jarName": "ImmediatelyFast-NeoForge-1.6.14+1.21.1.jar",
+    "modId": "immediatelyfast",
+    "name": "ImmediatelyFast",
+    "version": "1.6.14+1.21.1",
+    "curseForgeHash": 1823179712,
+    "modrinthHash": "fee59af2f39c66d09c4c09f441c799e76af70f97"
+  },
+  "immersive_paintings-neoforge-1.21.1-0.7.9.jar": {
+    "jarName": "immersive_paintings-neoforge-1.21.1-0.7.9.jar",
+    "modId": "immersive_paintings",
+    "name": "Immersive Paintings",
+    "version": "0.7.9",
+    "curseForgeHash": 3560312877,
+    "modrinthHash": "0386ff2db20edfcafc890760adb96073cd38c1a2"
+  },
+  "interiors-0.6.1 v3.jar": {
+    "jarName": "interiors-0.6.1 v3.jar",
+    "modId": "interiors",
+    "name": "Create: Interiors",
+    "version": "0.6.1",
+    "curseForgeHash": 3552569482,
+    "modrinthHash": "1c1cca4888ca30e12e6dee53f466ffa8af4ab796"
+  },
+  "iris-flywheel-compat-NeoForge-2.4.0.jar": {
+    "jarName": "iris-flywheel-compat-NeoForge-2.4.0.jar",
+    "modId": "irisflw",
+    "name": "Iris Flywheel Compat",
+    "version": "2.4.0",
+    "curseForgeHash": 127369717,
+    "modrinthHash": "b8630517b6017f4d075ce594e5ef333b38748029"
+  },
+  "iris-neoforge-1.8.14-beta.1+mc1.21.1.jar": {
+    "jarName": "iris-neoforge-1.8.14-beta.1+mc1.21.1.jar",
+    "modId": "iris",
+    "name": "Iris",
+    "version": "1.8.14-beta.1+mc1.21.1",
+    "curseForgeHash": 1155826160,
+    "modrinthHash": "1bd129cf7bce65d6b1c0543045f0620c98a0f885"
+  },
+  "irisveil-0.4.0.jar": {
+    "jarName": "irisveil-0.4.0.jar",
+    "modId": "irisveil",
+    "name": "Iris Veil Compat",
+    "version": "0.4.0",
+    "curseForgeHash": 2262106073,
+    "modrinthHash": "16cf9ea1a129d8aeccdff75affcd722bd2753948"
+  },
+  "Jade-1.21.1-NeoForge-15.10.6.jar": {
+    "jarName": "Jade-1.21.1-NeoForge-15.10.6.jar",
+    "modId": "jade",
+    "name": "Jade",
+    "version": "15.10.6+neoforge",
+    "curseForgeHash": 2677633875,
+    "modrinthHash": "88ee316e68900080b017f60c12162e2731924cf8"
+  },
+  "jecharacters-1.21.1-neoforge-4.5.29.jar": {
+    "jarName": "jecharacters-1.21.1-neoforge-4.5.29.jar",
+    "modId": "jecharacters",
+    "name": "Just Enough Characters",
+    "version": "4.5.29",
+    "curseForgeHash": 2346381780,
+    "modrinthHash": "2325c72eadfb19c9feb3901435ca5a9cebc7a46c"
+  },
+  "jei-1.21.1-neoforge-19.57.0.451.jar": {
+    "jarName": "jei-1.21.1-neoforge-19.57.0.451.jar",
+    "modId": "jei",
+    "name": "Just Enough Items",
+    "version": "19.57.0.451",
+    "curseForgeHash": 970416414,
+    "modrinthHash": "d639d83bf108b258e722a53f40a41a69e83f8ca6"
+  },
+  "justzoom_neoforge_3.0.1_MC_1.21.1.jar": {
+    "jarName": "justzoom_neoforge_3.0.1_MC_1.21.1.jar",
+    "modId": "justzoom",
+    "name": "Just Zoom",
+    "version": "3.0.1",
+    "curseForgeHash": 2062273146,
+    "modrinthHash": "3151a603551f8794c4bc80ae65b4e03b17578cde"
+  },
+  "kaleidoscope_compat-2.9.7-neoforge+mc1.21.1-Patch.2.jar": {
+    "jarName": "kaleidoscope_compat-2.9.7-neoforge+mc1.21.1-Patch.2.jar",
+    "modId": "kaleidoscope_compat",
+    "name": "Kaleidoscope Compat",
+    "version": "2.9.7-neoforge+mc1.21.1",
+    "curseForgeHash": 3446721743,
+    "modrinthHash": "3a3c849e5629a604c90b36741ab379a0a2e5f871"
+  },
+  "kaleidoscope_doll_workshop-1.0.5-neoforge+mc1.21.1.jar": {
+    "jarName": "kaleidoscope_doll_workshop-1.0.5-neoforge+mc1.21.1.jar",
+    "modId": "kaleidoscope_doll_workshop",
+    "name": "Kaleidoscope Doll Workshop",
+    "version": "1.0.5",
+    "curseForgeHash": 486639233,
+    "modrinthHash": "c7fbfd2b1d0201c0fd6ce5a481a53f30cad9f34a"
+  },
+  "kaleidoscopecookery-1.6.0-neoforge+mc1.21.1.jar": {
+    "jarName": "kaleidoscopecookery-1.6.0-neoforge+mc1.21.1.jar",
+    "modId": "kaleidoscope_cookery",
+    "name": "Kaleidoscope Cookery",
+    "version": "1.6.0-neoforge+mc1.21.1",
+    "curseForgeHash": 2347051103,
+    "modrinthHash": "9093e830c91a8f2e19eca7dda78713f0bbc21327"
+  },
+  "kaleidoscopedoll-1.4.2-neoforge+mc1.21.1.jar": {
+    "jarName": "kaleidoscopedoll-1.4.2-neoforge+mc1.21.1.jar",
+    "modId": "kaleidoscope_doll",
+    "name": "Kaleidoscope Doll",
+    "version": "1.4.2-neoforge+mc1.21.1",
+    "curseForgeHash": 2283624892,
+    "modrinthHash": "c6a0094abd25823155adada78aeac7742d0e9828"
+  },
+  "kaleidoscopetavern-1.2.0-neoforge+mc1.21.1.jar": {
+    "jarName": "kaleidoscopetavern-1.2.0-neoforge+mc1.21.1.jar",
+    "modId": "kaleidoscope_tavern",
+    "name": "Kaleidoscope Tavern",
+    "version": "1.2.0-neoforge+mc1.21.1",
+    "curseForgeHash": 2932722711,
+    "modrinthHash": "bf026cb97921749adf6155181d2f9639d37a7261"
+  },
+  "konkrete_neoforge_1.9.9_MC_1.21.jar": {
+    "jarName": "konkrete_neoforge_1.9.9_MC_1.21.jar",
+    "modId": "konkrete",
+    "name": "Konkrete",
+    "version": "1.9.9",
+    "curseForgeHash": 3128317181,
+    "modrinthHash": "97771eb287d5ac7fe667d1df9493d5e54c8ca1fa"
+  },
+  "kotlinforforge-5.12.0-all.jar": {
+    "jarName": "kotlinforforge-5.12.0-all.jar",
+    "curseForgeHash": 2384807424,
+    "modrinthHash": "d10d062caf1aad9aec82d7852f2fee1781735c1f"
+  },
+  "lambdynamiclights-4.8.11+1.21.1.jar": {
+    "jarName": "lambdynamiclights-4.8.11+1.21.1.jar",
+    "modId": "lambdynlights",
+    "name": "LambDynamicLights",
+    "version": "4.8.11+1.21.1",
+    "curseForgeHash": 2584922068,
+    "modrinthHash": "7b5afc75a094b4e8a7118f9856eec959b10f2422"
+  },
+  "lanserverproperties-1.13.2-neoforge.jar": {
+    "jarName": "lanserverproperties-1.13.2-neoforge.jar",
+    "modId": "lanserverproperties",
+    "name": "Lan Server Properties",
+    "version": "1.13.2",
+    "curseForgeHash": 1793204134,
+    "modrinthHash": "96fa378bcfb822f753366fded4991f1eeba78e21"
+  },
+  "ldlib2-neoforge-1.21.1-2.2.42-all.jar": {
+    "jarName": "ldlib2-neoforge-1.21.1-2.2.42-all.jar",
+    "modId": "ldlib2",
+    "name": "LowDragLib2",
+    "version": "2.2.42",
+    "curseForgeHash": 1055345168,
+    "modrinthHash": "42fd60ad891e07b7534f43d9ef2b1beef6a81042"
+  },
+  "lever-drugster-1.8.8.jar": {
+    "jarName": "lever-drugster-1.8.8.jar",
+    "modId": "analogleverdrag",
+    "name": "lever drugster",
+    "version": "1.8.8",
+    "curseForgeHash": 3282558342,
+    "modrinthHash": "5a523e3966260bc85b3e4e0b3af966d0019126cb"
+  },
+  "lexiconfig-neoforge-1.4.21-novel.jar": {
+    "jarName": "lexiconfig-neoforge-1.4.21-novel.jar",
+    "modId": "lexiconfig",
+    "name": "Lexiconfig",
+    "version": "1.4.21-novel",
+    "curseForgeHash": 4274090199,
+    "modrinthHash": "f862c78f4d27938208913d1c3ee4d9be1a13d166"
+  },
+  "linearbearing-1.3.5.jar": {
+    "jarName": "linearbearing-1.3.5.jar",
+    "modId": "linearbearing",
+    "name": "LinearBearing",
+    "version": "1.3.5",
+    "curseForgeHash": 2782542311,
+    "modrinthHash": "eea526a9e5b22ef1482f3f6f739d65a53681f1f0"
+  },
+  "linearbearingsfix-1.0.3.jar": {
+    "jarName": "linearbearingsfix-1.0.3.jar",
+    "modId": "linearbearingsfix",
+    "name": "Linear Bearings Fix",
+    "version": "1.0.3",
+    "curseForgeHash": 1230196416,
+    "modrinthHash": "035f3e0654522796aab12ba9161fe5e7fbeb9fa3"
+  },
+  "lithium-neoforge-0.15.4+mc1.21.1.jar": {
+    "jarName": "lithium-neoforge-0.15.4+mc1.21.1.jar",
+    "modId": "lithium",
+    "name": "Lithium",
+    "version": "0.15.4+mc1.21.1",
+    "curseForgeHash": 557102447,
+    "modrinthHash": "97212e45c963730bbfc7c44780df99317814c21b"
+  },
+  "lithostitched-1.8.1-neoforge-21.1.jar": {
+    "jarName": "lithostitched-1.8.1-neoforge-21.1.jar",
+    "modId": "lithostitched",
+    "name": "Lithostitched",
+    "version": "1.8.1",
+    "curseForgeHash": 1833100066,
+    "modrinthHash": "88cdded5b617e19b4d2676948b5550699de23578"
+  },
+  "LittleTiles_BETA_v1.6.0-pre234_mc1.21.1.jar": {
+    "jarName": "LittleTiles_BETA_v1.6.0-pre234_mc1.21.1.jar",
+    "modId": "littletiles",
+    "name": "LittleTiles",
+    "version": "1.6.0-pre234",
+    "curseForgeHash": 3873271446,
+    "modrinthHash": "fa457b7ae25f497e901c8a64e136cbda2ee0a7e2"
+  },
+  "lootr-neoforge-1.21.1-1.11.38.127.jar": {
+    "jarName": "lootr-neoforge-1.21.1-1.11.38.127.jar",
+    "modId": "lootr",
+    "name": "Lootr",
+    "version": "1.21.1-1.11.38.127",
+    "curseForgeHash": 1432197188,
+    "modrinthHash": "7a305b581abd90e1a8b7c1bb5eb4511d2653aa58"
+  },
+  "mafglib-0.4.3+mc1.21.1.jar": {
+    "jarName": "mafglib-0.4.3+mc1.21.1.jar",
+    "modId": "mafglib",
+    "name": "MaFgLib",
+    "version": "0.4.3+mc1.21.1",
+    "curseForgeHash": 3731601635,
+    "modrinthHash": "9f62df832b1d5c9fe1aead873bd65cb8defacac7"
+  },
+  "MecanumWheels-1.21.1-1.0.1-1.0.1.jar": {
+    "jarName": "MecanumWheels-1.21.1-1.0.1-1.0.1.jar",
+    "modId": "mecanumwheels",
+    "name": "Mecanum Wheels",
+    "version": "1.0.1",
+    "curseForgeHash": 139099797,
+    "modrinthHash": "0f8bfbaff30269cea689dc390d13017217c4904f"
+  },
+  "melody_neoforge_1.0.10_MC_1.21.jar": {
+    "jarName": "melody_neoforge_1.0.10_MC_1.21.jar",
+    "modId": "melody",
+    "name": "Melody",
+    "version": "1.0.10",
+    "curseForgeHash": 2029427820,
+    "modrinthHash": "e83052a92c4ca0016bcfe7f0207273983dc84698"
+  },
+  "mianbaos_modernwarfare-2.6.4-neoforge.jar": {
+    "jarName": "mianbaos_modernwarfare-2.6.4-neoforge.jar",
+    "modId": "mianbaos_modernwarfare",
+    "name": "Mianbao\u0027s NewModernWarfare",
+    "version": "2.6.0b5-neoforge",
+    "curseForgeHash": 1353976804,
+    "modrinthHash": "f2d57a5fd15b0486f5712226d172bd45095c9feb"
+  },
+  "mishanguc-1.6.5+mc1.21.1.jar": {
+    "jarName": "mishanguc-1.6.5+mc1.21.1.jar",
+    "modId": "mishanguc",
+    "name": "Mishang Urban Construction",
+    "version": "1.6.5",
+    "curseForgeHash": 2056590646,
+    "modrinthHash": "92d4c38b92bfc1f2ca03dc5c2cc2319b17e9311a"
+  },
+  "modernfix-neoforge-5.27.26+mc1.21.1.jar": {
+    "jarName": "modernfix-neoforge-5.27.26+mc1.21.1.jar",
+    "modId": "modernfix",
+    "name": "ModernFix",
+    "version": "5.27.26+mc1.21.1",
+    "curseForgeHash": 1070793718,
+    "modrinthHash": "69d468b70e53f6a014c778a81116a41a38fbab33"
+  },
+  "ModernUI-NeoForge-1.21.1-3.13.0.1-universal.jar": {
+    "jarName": "ModernUI-NeoForge-1.21.1-3.13.0.1-universal.jar",
+    "modId": "modernui",
+    "name": "Modern UI",
+    "version": "3.13.0.1",
+    "curseForgeHash": 3629308867,
+    "modrinthHash": "d6dc4131595f6b38274e5c16ef13895ab2125010"
+  },
+  "moonlight-1.21.1-3.7.2-neoforge.jar": {
+    "jarName": "moonlight-1.21.1-3.7.2-neoforge.jar",
+    "modId": "moonlight",
+    "name": "Moonlight Lib",
+    "version": "1.21.1-3.7.2",
+    "curseForgeHash": 2419221823,
+    "modrinthHash": "0da45e6bc941f4b9b18dda24f8d047431ddc7226"
+  },
+  "MouseTweaks-neoforge-mc1.21-2.26.1.jar": {
+    "jarName": "MouseTweaks-neoforge-mc1.21-2.26.1.jar",
+    "modId": "mousetweaks",
+    "name": "Mouse Tweaks",
+    "version": "2.26.1",
+    "curseForgeHash": 845432825,
+    "modrinthHash": "6dae57f4f50f7808d2ed9a18f6cd1c0d4640c6bc"
+  },
+  "NaturesCompass-1.21.1-3.4.0-neoforge.jar": {
+    "jarName": "NaturesCompass-1.21.1-3.4.0-neoforge.jar",
+    "modId": "naturescompass",
+    "name": "Nature\u0027s Compass",
+    "version": "1.21.1-3.4.0-neoforge",
+    "curseForgeHash": 1427430770,
+    "modrinthHash": "e19721873bebc4dbc1674bb101af39d0ea406b95"
+  },
+  "neo-voxy.jar": {
+    "jarName": "neo-voxy.jar",
+    "modId": "voxy",
+    "name": "Neo-Voxy",
+    "version": "0.4.5-beta.2",
+    "curseForgeHash": 1570287810,
+    "modrinthHash": "80cd3951fd54eba65a4f473f0ddc2ee67a493efd"
+  },
+  "net_music_list-4.3.jar": {
+    "jarName": "net_music_list-4.3.jar",
+    "modId": "net_music_list",
+    "name": "Net Music: Better Experience",
+    "version": "4.3",
+    "curseForgeHash": 2038358224,
+    "modrinthHash": "27e86b4fd18f9f12e459a18ab1ab163c996c134b"
+  },
+  "netmusic-1.5.2-neoforge+mc1.21.1.jar": {
+    "jarName": "netmusic-1.5.2-neoforge+mc1.21.1.jar",
+    "modId": "netmusic",
+    "name": "Net Music Mod",
+    "version": "1.5.2-neoforge+mc1.21.1",
+    "curseForgeHash": 329276363,
+    "modrinthHash": "8d272bb183986f734d0e414b3d5217ff780e08a4"
+  },
+  "NoChatReports-NEOFORGE-1.21.1-v2.9.1.jar": {
+    "jarName": "NoChatReports-NEOFORGE-1.21.1-v2.9.1.jar",
+    "modId": "nochatreports",
+    "name": "No Chat Reports",
+    "version": "1.21.1-v2.9.1",
+    "curseForgeHash": 1237891864,
+    "modrinthHash": "9edfc7861277ff661141304dc8216f83eacdd9af"
+  },
+  "observable-5.4.4.jar": {
+    "jarName": "observable-5.4.4.jar",
+    "modId": "observable",
+    "name": "Observable",
+    "version": "5.4.4",
+    "curseForgeHash": 1811166438,
+    "modrinthHash": "e17417eee213aac8291ff8bad1c6a5f710636b72"
+  },
+  "omni-display-1.5beta21.jar": {
+    "jarName": "omni-display-1.5beta21.jar",
+    "modId": "omni_display",
+    "name": "Omni Display",
+    "version": "1.5beta21",
+    "curseForgeHash": 1401787856,
+    "modrinthHash": "9c444a04524f719fc89584dba9434501927db999"
+  },
+  "packetfixer-3.3.1-1.20.5-1.21.X-merged.jar": {
+    "jarName": "packetfixer-3.3.1-1.20.5-1.21.X-merged.jar",
+    "modId": "packetfixer",
+    "name": "PacketFixer",
+    "version": "3.3.1",
+    "curseForgeHash": 3606950632,
+    "modrinthHash": "a8bb6e25807682e72c23bf4065f3cd5f6373ece3"
+  },
+  "Pehkui-3.8.3+1.21-neoforge.jar": {
+    "jarName": "Pehkui-3.8.3+1.21-neoforge.jar",
+    "modId": "pehkui",
+    "name": "Pehkui",
+    "version": "3.8.3+1.21-neoforge",
+    "curseForgeHash": 1271357501,
+    "modrinthHash": "4ae35b04b0fca7b170417a12d6da6a693281574b"
+  },
+  "pipeorgans-0.8.2+1.21.1.jar": {
+    "jarName": "pipeorgans-0.8.2+1.21.1.jar",
+    "modId": "pipeorgans",
+    "name": "Create: Sound of Steam",
+    "version": "0.8.2+1.21.1",
+    "curseForgeHash": 1494603004,
+    "modrinthHash": "112adb2a6f8d9ff60ebd52602f1b01ea96a37920"
+  },
+  "Placebo-1.21.1-9.9.4.jar": {
+    "jarName": "Placebo-1.21.1-9.9.4.jar",
+    "modId": "placebo",
+    "name": "Placebo",
+    "version": "9.9.4",
+    "curseForgeHash": 3528719163,
+    "modrinthHash": "007d52a42020a331d5272495f6d676e0ad1a2c13"
+  },
+  "player-animation-lib-forge-2.0.4+1.21.1.jar": {
+    "jarName": "player-animation-lib-forge-2.0.4+1.21.1.jar",
+    "modId": "playeranimator",
+    "name": "Player Animator",
+    "version": "2.0.4+1.21.1",
+    "curseForgeHash": 533269171,
+    "modrinthHash": "05be8ddcc78532b9a5520c718edc6c971cd0057c"
+  },
+  "polymorph-neoforge-1.2.0+1.21.1.jar": {
+    "jarName": "polymorph-neoforge-1.2.0+1.21.1.jar",
+    "modId": "polymorph",
+    "name": "Polymorph",
+    "version": "1.2.0+1.21.1",
+    "curseForgeHash": 995117117,
+    "modrinthHash": "fa6c5fa8a21229c85d564b47c73df7160b3bd4df"
+  },
+  "portable_engine_liquid_fuel-2.0.0-neoforge-1.21.1.jar": {
+    "jarName": "portable_engine_liquid_fuel-2.0.0-neoforge-1.21.1.jar",
+    "modId": "portable_engine_liquid_fuel",
+    "name": "Create Aeronautics: Portable Engine Liquid Fuel",
+    "version": "2.0.0",
+    "curseForgeHash": 622087083,
+    "modrinthHash": "f9602c7f9a8268507a835bfa47db1512d356dae7"
+  },
+  "powergrid-mc1.21.1-0.6.2.jar": {
+    "jarName": "powergrid-mc1.21.1-0.6.2.jar",
+    "modId": "powergrid",
+    "name": "Create: Power Grid",
+    "version": "0.6.2",
+    "curseForgeHash": 4046963084,
+    "modrinthHash": "e09452dac8202e31f282149d45c49dcdb218bd54"
+  },
+  "Quark-4.1-487.jar": {
+    "jarName": "Quark-4.1-487.jar",
+    "modId": "quark",
+    "name": "Quark",
+    "version": "4.1-487",
+    "curseForgeHash": 2837386831,
+    "modrinthHash": "d421f58ef6d31dc456c25890a5770b2609917d09"
+  },
+  "ragdoll_corpse-1.21.1-0.3.0.jar": {
+    "jarName": "ragdoll_corpse-1.21.1-0.3.0.jar",
+    "modId": "ragdoll_corpse",
+    "name": "Sable: Ragdoll Corpse",
+    "version": "0.3.0",
+    "curseForgeHash": 3432911749,
+    "modrinthHash": "de18acfec47517ec51c3d6692e5d5167661da7d4"
+  },
+  "ragdoll_reactions-1.21.1-0.7.0.jar": {
+    "jarName": "ragdoll_reactions-1.21.1-0.7.0.jar",
+    "modId": "ragdoll_reactions",
+    "name": "Ragdoll Reactions",
+    "version": "0.7.0",
+    "curseForgeHash": 2898524709,
+    "modrinthHash": "60fd4e9695b4cc3055ef728dc1023f0a335cfc32"
+  },
+  "railways-0.3.0-beta.2+neoforge-mc1.21.1.jar": {
+    "jarName": "railways-0.3.0-beta.2+neoforge-mc1.21.1.jar",
+    "modId": "railways",
+    "name": "Create: Steam \u0027n\u0027 Rails 1.21.1",
+    "version": "0.3.0-beta.2+neoforge-mc1.21.1",
+    "curseForgeHash": 3526984518,
+    "modrinthHash": "82a28ce51fdbc583477d7ae7c4c94cc6d23ec2b4"
+  },
+  "railwaysuntold-1.21.1-neoforge-1.2.2.jar": {
+    "jarName": "railwaysuntold-1.21.1-neoforge-1.2.2.jar",
+    "modId": "railwaysuntold",
+    "name": "Railways Untold",
+    "version": "1.2.2",
+    "curseForgeHash": 1178885217,
+    "modrinthHash": "54f2a838702e38b17cc85ceb29aea4de52819300"
+  },
+  "rechiseled-1.2.6-neoforge-mc1.21.jar": {
+    "jarName": "rechiseled-1.2.6-neoforge-mc1.21.jar",
+    "modId": "rechiseled",
+    "name": "Rechiseled",
+    "version": "1.2.6",
+    "curseForgeHash": 1497346203,
+    "modrinthHash": "a7ca83d2f99520233bfa9ce769a157fe05201639"
+  },
+  "reeses-sodium-options-neoforge-2.2.4+mc1.21.1.jar": {
+    "jarName": "reeses-sodium-options-neoforge-2.2.4+mc1.21.1.jar",
+    "modId": "reeses_sodium_options",
+    "name": "Reese\u0027s Sodium Options",
+    "version": "2.2.4+mc1.21.1",
+    "curseForgeHash": 312094340,
+    "modrinthHash": "e9e6d101b31acb51539141937ad5b069ff2ccc4d"
+  },
+  "refurbished_furniture-neoforge-1.21.1-1.0.22.jar": {
+    "jarName": "refurbished_furniture-neoforge-1.21.1-1.0.22.jar",
+    "modId": "refurbished_furniture",
+    "name": "MrCrayfish\u0027s Furniture Mod: Refurbished",
+    "version": "1.0.22",
+    "curseForgeHash": 2252929595,
+    "modrinthHash": "6c209e6b755ff26218efd55aedf2dea49183d29b"
+  },
+  "resourcefullib-neoforge-1.21-3.0.12.jar": {
+    "jarName": "resourcefullib-neoforge-1.21-3.0.12.jar",
+    "modId": "resourcefullib",
+    "name": "Resourceful Lib",
+    "version": "3.0.12",
+    "curseForgeHash": 539815838,
+    "modrinthHash": "24389c8e48ff0e8594e4686b750c494c66a5f8df"
+  },
+  "ritchiesprojectilelib-2.1.2-mc.1.21.1-neoforge.jar": {
+    "jarName": "ritchiesprojectilelib-2.1.2-mc.1.21.1-neoforge.jar",
+    "modId": "ritchiesprojectilelib",
+    "name": "Ritchie\u0027s Projectile Library",
+    "version": "2.1.2",
+    "curseForgeHash": 1530428859,
+    "modrinthHash": "ec2e4996f8bee8714173e603e379fef8a6901765"
+  },
+  "sable-dynamic-lights-1.21.1-2.0.1.jar": {
+    "jarName": "sable-dynamic-lights-1.21.1-2.0.1.jar",
+    "modId": "sabledynlights",
+    "name": "Sable Dynamic Lights",
+    "version": "2.0.1",
+    "curseForgeHash": 1562136556,
+    "modrinthHash": "349f34f68105c4b1925b631ba199a536bd4c24e5"
+  },
+  "sable-neoforge-1.21.1-2.0.6.jar": {
+    "jarName": "sable-neoforge-1.21.1-2.0.6.jar",
+    "modId": "sable",
+    "name": "Sable",
+    "version": "2.0.6",
+    "curseForgeHash": 492654774,
+    "modrinthHash": "cf46f7e8c1511f170abcdbee739944f0540549bf"
+  },
+  "sable-photomancy-1.0.1.jar": {
+    "jarName": "sable-photomancy-1.0.1.jar",
+    "modId": "sable_schematic_api",
+    "name": "Sable Photomancy",
+    "version": "1.0.1",
+    "curseForgeHash": 4267920528,
+    "modrinthHash": "4f33a1ce8f4c241afe0963d7c96e2d612cc62ee1"
+  },
+  "sable_aeronautics_scaling-1.0.0-r77.jar": {
+    "jarName": "sable_aeronautics_scaling-1.0.0-r77.jar",
+    "modId": "sable_aeronautics_scaling",
+    "name": "Sable Aeronautics Scaling",
+    "version": "1.0.0-r77",
+    "curseForgeHash": 957234065,
+    "modrinthHash": "aa17ab4d0ef05498e370d26ef9f275e90b53da14"
+  },
+  "sable_player_ragdoll-1.21.1-0.7.5.jar": {
+    "jarName": "sable_player_ragdoll-1.21.1-0.7.5.jar",
+    "modId": "sable_player_ragdoll",
+    "name": "Sable Ragdolls",
+    "version": "0.7.5",
+    "curseForgeHash": 3877880340,
+    "modrinthHash": "114a953a830673ebfe2af154f5a1ce535fc4d90c"
+  },
+  "sable_player_ragdoll_patch-1.21.1-1.9.jar": {
+    "jarName": "sable_player_ragdoll_patch-1.21.1-1.9.jar",
+    "modId": "sable_player_ragdoll_patch",
+    "name": "Sable Ragdolls Patch",
+    "version": "1.9",
+    "curseForgeHash": 1482640535,
+    "modrinthHash": "a1dd6aba1c4f26d5f42efa32518f2aebc026371d"
+  },
+  "sable_xaero_bridge-0.1.11.jar": {
+    "jarName": "sable_xaero_bridge-0.1.11.jar",
+    "modId": "sable_xaero_bridge",
+    "name": "Sable Xaero Bridge",
+    "version": "0.1.11",
+    "curseForgeHash": 3405238171,
+    "modrinthHash": "a9aa4658dadf3c7ea6c1bcbfd53e001567682611"
+  },
+  "sclp-neoforge-3.17.8.jar": {
+    "jarName": "sclp-neoforge-3.17.8.jar",
+    "modId": "sclp",
+    "name": "Sodium/Embeddium Chinese Localized Package",
+    "version": "3.17.8",
+    "curseForgeHash": 3193508949,
+    "modrinthHash": "8cb8ee40055762a4532a887d61a9d6a513a63063"
+  },
+  "screenshot-to-clipboard-neoforge-1.0.10.jar": {
+    "jarName": "screenshot-to-clipboard-neoforge-1.0.10.jar",
+    "modId": "screenshotclipboard",
+    "name": "Screenshot to Clipboard",
+    "version": "1.0.10",
+    "curseForgeHash": 1822651659,
+    "modrinthHash": "0ead4d47c48afc4525efd9bf7c949eb7d1e15f0e"
+  },
+  "Searchables-neoforge-1.21.1-1.0.2.jar": {
+    "jarName": "Searchables-neoforge-1.21.1-1.0.2.jar",
+    "modId": "searchables",
+    "name": "Searchables",
+    "version": "1.0.2",
+    "curseForgeHash": 2093242437,
+    "modrinthHash": "5b8a0b43a474c066371b2e16f9bfb88622552a74"
+  },
+  "servercore-neoforge-1.5.19+1.21.1.jar": {
+    "jarName": "servercore-neoforge-1.5.19+1.21.1.jar",
+    "modId": "servercore",
+    "name": "ServerCore",
+    "version": "1.5.19+1.21.1",
+    "curseForgeHash": 72204408,
+    "modrinthHash": "62ce692654e09271b5c55cbb3a1ef7606d067132"
+  },
+  "shaolib-0.1.1.jar": {
+    "jarName": "shaolib-0.1.1.jar",
+    "modId": "shaolib",
+    "name": "Shaolib II",
+    "version": "0.1.1",
+    "curseForgeHash": 347952386,
+    "modrinthHash": "f649593586495144d07c25196b37b30bf7020951"
+  },
+  "shaolib_munitions-0.1.0.jar": {
+    "jarName": "shaolib_munitions-0.1.0.jar",
+    "modId": "shaolib_munitions",
+    "name": "Shaolib Munitions",
+    "version": "0.1.0",
+    "curseForgeHash": 3805297002,
+    "modrinthHash": "35e95b33422e9add00896a56443e3b3f82022b23"
+  },
+  "simpleradio-neoforge-1.21.1-4.5.7.9.jar": {
+    "jarName": "simpleradio-neoforge-1.21.1-4.5.7.9.jar",
+    "modId": "simpleradio",
+    "name": "Simple Radio",
+    "version": "1.21.1-4.5.7.9",
+    "curseForgeHash": 1472390051,
+    "modrinthHash": "91d73ced322f4707ace24f4b51eb77598b14b1f8"
+  },
+  "simulated_gauges-1.1.0.jar": {
+    "jarName": "simulated_gauges-1.1.0.jar",
+    "modId": "simulated_gauges",
+    "name": "Simulated Gauges",
+    "version": "1.1.0",
+    "curseForgeHash": 3431725003,
+    "modrinthHash": "3588378ea8d5e424ecd00fdaa16a4e3355f09365"
+  },
+  "simulatedcoasters-0.1.5.jar": {
+    "jarName": "simulatedcoasters-0.1.5.jar",
+    "modId": "simulatedcoasters",
+    "name": "Create: Coasters Simulated",
+    "version": "0.1.5",
+    "curseForgeHash": 1342844258,
+    "modrinthHash": "4d3381b781a1129f793358b8ae13e0abcd2e655b"
+  },
+  "simurail-0.1.0+mc1.21.1+0a4eb54.jar": {
+    "jarName": "simurail-0.1.0+mc1.21.1+0a4eb54.jar",
+    "modId": "simurail",
+    "name": "Create Simurail",
+    "version": "0.1.0+mc1.21.1+0a4eb54",
+    "curseForgeHash": 2855940593,
+    "modrinthHash": "62703da46cd856a76d339b6d28c863a5add795d6"
+  },
+  "skinlayers3d-neoforge-1.11.3-mc1.21.1.jar": {
+    "jarName": "skinlayers3d-neoforge-1.11.3-mc1.21.1.jar",
+    "modId": "skinlayers3d",
+    "name": "3d-Skin-Layers",
+    "version": "1.11.3",
+    "curseForgeHash": 88496326,
+    "modrinthHash": "c3ca1000cf0e82608bc4a96067e15a20ecdbec1b"
+  },
+  "smsn-neoforge-1.4.5-1.21.1.jar": {
+    "jarName": "smsn-neoforge-1.4.5-1.21.1.jar",
+    "modId": "smsn",
+    "name": "Save My Shit Network",
+    "version": "1.4.5-1.21.1",
+    "curseForgeHash": 633967164,
+    "modrinthHash": "19fc927214ccfa2dafaebdbd297e6bc730c9080b"
+  },
+  "sodium-extra-neoforge-0.9.4+mc1.21.1.jar": {
+    "jarName": "sodium-extra-neoforge-0.9.4+mc1.21.1.jar",
+    "modId": "sodium_extra",
+    "name": "Sodium Extra",
+    "version": "0.9.4+mc1.21.1",
+    "curseForgeHash": 1898666156,
+    "modrinthHash": "75f9c202e8384cb5de039cdcc47d5e1c8fde8fe5"
+  },
+  "sodium-neoforge-0.8.13+mc1.21.1.jar": {
+    "jarName": "sodium-neoforge-0.8.13+mc1.21.1.jar",
+    "modId": "sodium",
+    "name": "Sodium",
+    "version": "0.8.13+mc1.21.1",
+    "curseForgeHash": 1375682531,
+    "modrinthHash": "1757289be21ed18db5b0d90703fa3db1b2de5693"
+  },
+  "sophisticatedbackpacks-1.21.1-3.26.9.2195.jar": {
+    "jarName": "sophisticatedbackpacks-1.21.1-3.26.9.2195.jar",
+    "modId": "sophisticatedbackpacks",
+    "name": "Sophisticated Backpacks",
+    "version": "3.26.9",
+    "curseForgeHash": 2742687751,
+    "modrinthHash": "a628a502c6faf34bf77139f93bb47c53bea63ffe"
+  },
+  "sophisticatedcore-1.21.1-1.5.7.2381.jar": {
+    "jarName": "sophisticatedcore-1.21.1-1.5.7.2381.jar",
+    "modId": "sophisticatedcore",
+    "name": "Sophisticated Core",
+    "version": "1.5.7",
+    "curseForgeHash": 2764250396,
+    "modrinthHash": "eb40e4ddea0c5f6e5f1b206ad18184647131cd9a"
+  },
+  "spark-1.10.124-neoforge.jar": {
+    "jarName": "spark-1.10.124-neoforge.jar",
+    "modId": "spark",
+    "name": "spark",
+    "version": "1.10.124",
+    "curseForgeHash": 3447435049,
+    "modrinthHash": "9430cc2ab64ff89d698be593769fb9f9ee4efae6"
+  },
+  "struts-1.3.1.jar": {
+    "jarName": "struts-1.3.1.jar",
+    "modId": "struts",
+    "name": "Strut Your Stuff",
+    "version": "1.3.1",
+    "curseForgeHash": 3509396128,
+    "modrinthHash": "131663d29e0dd944e03299b35bda18aefacd1932"
+  },
+  "supermartijn642configlib-1.1.8-neoforge-mc1.21.jar": {
+    "jarName": "supermartijn642configlib-1.1.8-neoforge-mc1.21.jar",
+    "modId": "supermartijn642configlib",
+    "name": "SuperMartijn642\u0027s Config Library",
+    "version": "1.1.8",
+    "curseForgeHash": 1923939184,
+    "modrinthHash": "07452242e389975e8a88b97066f4bae6a4ebe574"
+  },
+  "supermartijn642corelib-1.1.25-neoforge-mc1.21.jar": {
+    "jarName": "supermartijn642corelib-1.1.25-neoforge-mc1.21.jar",
+    "modId": "supermartijn642corelib",
+    "name": "SuperMartijn642\u0027s Core Lib",
+    "version": "1.1.25",
+    "curseForgeHash": 774364099,
+    "modrinthHash": "60d45feac8cd2f0b497b013c7fd501b3ae8b6f6d"
+  },
+  "supplementaries-1.21.1-4.0.1-neoforge.jar": {
+    "jarName": "supplementaries-1.21.1-4.0.1-neoforge.jar",
+    "modId": "supplementaries",
+    "name": "Supplementaries",
+    "version": "1.21.1-4.0.1",
+    "curseForgeHash": 275197031,
+    "modrinthHash": "104225e17001c68a1c1aaac6d928fc5377c93427"
+  },
+  "synaxis-1.5.0.jar": {
+    "jarName": "synaxis-1.5.0.jar",
+    "modId": "synaxis",
+    "name": "Synaxis",
+    "version": "1.5.0",
+    "curseForgeHash": 3526495018,
+    "modrinthHash": "3b3dfa037f4766c00bb78634eb3b4ba1c7575268"
+  },
+  "tectonic-3.0.28-neoforge-21.1.jar": {
+    "jarName": "tectonic-3.0.28-neoforge-21.1.jar",
+    "modId": "tectonic",
+    "name": "Tectonic",
+    "version": "3.0.28",
+    "curseForgeHash": 2181773827,
+    "modrinthHash": "db15156eec4320c2997c4dd4948119472de01224"
+  },
+  "Terralith_1.21.x_v2.6.2.jar": {
+    "jarName": "Terralith_1.21.x_v2.6.2.jar",
+    "modId": "terralith",
+    "name": "Terralith",
+    "version": "2.6.2",
+    "curseForgeHash": 1984680410,
+    "modrinthHash": "d4a9fe71b841f70edfb4b280f9bf5c58e4a28224"
+  },
+  "tracks-neoforge-1.21.1-1.0.1.jar": {
+    "jarName": "tracks-neoforge-1.21.1-1.0.1.jar",
+    "modId": "tracks",
+    "name": "Create Tracks",
+    "version": "1.0.1",
+    "curseForgeHash": 3934045438,
+    "modrinthHash": "cccd208606d7ac33f483e1e8a237092712a1a2c0"
+  },
+  "treephysics-neoforge-1.21.1-2.4.jar": {
+    "jarName": "treephysics-neoforge-1.21.1-2.4.jar",
+    "modId": "treephysics",
+    "name": "Tree Physics",
+    "version": "2.4",
+    "curseForgeHash": 1773025166,
+    "modrinthHash": "3f7f2c9058876865aa5c7d8d0bb7467df3d94499"
+  },
+  "tweakerge-0.4.3+mc1.21.1.jar": {
+    "jarName": "tweakerge-0.4.3+mc1.21.1.jar",
+    "modId": "tweakerge",
+    "name": "Tweakerge",
+    "version": "0.4.3+mc1.21.1",
+    "curseForgeHash": 2337487833,
+    "modrinthHash": "73900f60c434ae33c1af9267b09d2551029e0486"
+  },
+  "ultimine_rewind-2.1.0.jar": {
+    "jarName": "ultimine_rewind-2.1.0.jar",
+    "modId": "ultimine_rewind",
+    "name": "Ultimine Rewind",
+    "version": "2.1.0",
+    "curseForgeHash": 2629662700,
+    "modrinthHash": "594a50803e07b3c097227476d541350f13a41a70"
+  },
+  "veil-neoforge-1.21.1-4.5.2.jar": {
+    "jarName": "veil-neoforge-1.21.1-4.5.2.jar",
+    "modId": "veil",
+    "name": "Veil",
+    "version": "4.5.2",
+    "curseForgeHash": 3342193253,
+    "modrinthHash": "b9994fd16bac1f78633e17b69ea04b76c0f2654f"
+  },
+  "vista-1.21.1-5.5.0-neoforge.jar": {
+    "jarName": "vista-1.21.1-5.5.0-neoforge.jar",
+    "modId": "vista",
+    "name": "Vista",
+    "version": "1.21.1-5.5.0",
+    "curseForgeHash": 2794577286,
+    "modrinthHash": "2ce2f15cbe747bf675ff2975a81866e2e4fec17d"
+  },
+  "visual_keybinder-1.21.1-0.1.13-neoforge.jar": {
+    "jarName": "visual_keybinder-1.21.1-0.1.13-neoforge.jar",
+    "modId": "visual_keybinder",
+    "name": "Raw\u0027s Visual Keybinder",
+    "version": "1.21.1 - 0.1.13-neoforge",
+    "curseForgeHash": 2953617019,
+    "modrinthHash": "58204c60c8f8b983dcb184b6104193ebf488b79f"
+  },
+  "voicechat-neoforge-1.21.1-2.6.24.jar": {
+    "jarName": "voicechat-neoforge-1.21.1-2.6.24.jar",
+    "modId": "voicechat",
+    "name": "Simple Voice Chat",
+    "version": "1.21.1-2.6.24",
+    "curseForgeHash": 2588747037,
+    "modrinthHash": "436ee200d5192ffda65fcf70c42c086fcdc00826"
+  },
+  "VS-Sable-HoseConnectors-0.2.1-1.21.1.jar": {
+    "jarName": "VS-Sable-HoseConnectors-0.2.1-1.21.1.jar",
+    "modId": "vsfluidlink",
+    "name": "VS Sable Hose Connectors",
+    "version": "0.2.1",
+    "curseForgeHash": 130792368,
+    "modrinthHash": "e88b322c997ebe579f6c7aa5a13f8f1b9fbf913e"
+  },
+  "waystones-neoforge-1.21.1-21.1.46.jar": {
+    "jarName": "waystones-neoforge-1.21.1-21.1.46.jar",
+    "modId": "waystones",
+    "name": "Waystones",
+    "version": "21.1.46",
+    "curseForgeHash": 3029398592,
+    "modrinthHash": "75718161662d9ec957ba22e10e497788ec1687ba"
+  },
+  "waystonessable-1.0.7.jar": {
+    "jarName": "waystonessable-1.0.7.jar",
+    "modId": "waystonessable",
+    "name": "WaystonesSable",
+    "version": "1.0.7",
+    "curseForgeHash": 1534281127,
+    "modrinthHash": "cebbc2cf9a7a8b2255caff04f2109d9611b28091"
+  },
+  "widerailways-1.8.0.jar": {
+    "jarName": "widerailways-1.8.0.jar",
+    "modId": "widerailways",
+    "name": "Wide Gauge Bogey Expansion",
+    "version": "1.8.0",
+    "curseForgeHash": 421539393,
+    "modrinthHash": "e9da53e0a1cc9a5d358e36650a910924abe3d36c"
+  },
+  "windtunnel-1.2.1.jar": {
+    "jarName": "windtunnel-1.2.1.jar",
+    "modId": "windtunnel",
+    "name": "Wind Tunnel",
+    "version": "1.2.1",
+    "curseForgeHash": 1690406856,
+    "modrinthHash": "08489f40018bc411d7e15aabda8e6c3b542ac89e"
+  },
+  "worldedit-mod-7.3.8.jar": {
+    "jarName": "worldedit-mod-7.3.8.jar",
+    "modId": "worldedit",
+    "name": "WorldEdit",
+    "version": "7.3.8+6939-7d32b45",
+    "curseForgeHash": 683807693,
+    "modrinthHash": "924fe181a29bd66be6783f6d589968ab0ee02250"
+  },
+  "xaerominimap-neoforge-1.21.1-26.6.0.jar": {
+    "jarName": "xaerominimap-neoforge-1.21.1-26.6.0.jar",
+    "modId": "xaerominimap",
+    "name": "Xaero\u0027s Minimap",
+    "version": "26.6.0",
+    "curseForgeHash": 638024693,
+    "modrinthHash": "551e8e2aa3498b506cc949a74606cdc0380e5e00"
+  },
+  "xaeros_waystones_compatibility-NeoForge-1.21.1-2.1.0.jar": {
+    "jarName": "xaeros_waystones_compatibility-NeoForge-1.21.1-2.1.0.jar",
+    "modId": "w2w2",
+    "name": "Waystones2Waypoints2",
+    "version": "2.1.0",
+    "curseForgeHash": 1437945741,
+    "modrinthHash": "88abd70fae3e78dc6c2fdfc726bc453f97494c19"
+  },
+  "xaeroworldmap-neoforge-1.21.1-1.47.0.jar": {
+    "jarName": "xaeroworldmap-neoforge-1.21.1-1.47.0.jar",
+    "modId": "xaeroworldmap",
+    "name": "Xaero\u0027s World Map",
+    "version": "1.47.0",
+    "curseForgeHash": 3642320361,
+    "modrinthHash": "2936c9cb9dfbdab145fe6f1e8ae2c68915246a5f"
+  },
+  "yeetusexperimentus-neoforge-87.0.0.jar": {
+    "jarName": "yeetusexperimentus-neoforge-87.0.0.jar",
+    "modId": "yeetusexperimentus",
+    "name": "Yeetus Experimentus",
+    "version": "87.0.0",
+    "curseForgeHash": 767515430,
+    "modrinthHash": "7132c346103d75a7c84da64b35b92e3a6f1ce3da"
+  },
+  "yuushya-1.21.0-neoforge-2.3.0.jar": {
+    "jarName": "yuushya-1.21.0-neoforge-2.3.0.jar",
+    "modId": "yuushya",
+    "name": "Yuushya",
+    "version": "2.3.0",
+    "curseForgeHash": 3841665315,
+    "modrinthHash": "060f0961b08031d8054bebcf5328ce03797babb5"
+  },
+  "yuushya_modelling-1.21.1-2.4.1.jar": {
+    "jarName": "yuushya_modelling-1.21.1-2.4.1.jar",
+    "modId": "yuushya_modelling",
+    "name": "Yuushya Modelling",
+    "version": "2.4.1",
+    "curseForgeHash": 1675299593,
+    "modrinthHash": "c067f0939ba6d215f5e9076400e7c7725979dbe3"
+  },
+  "Zeta-1.1-40.jar": {
+    "jarName": "Zeta-1.1-40.jar",
+    "modId": "zeta",
+    "name": "Zeta",
+    "version": "1.1-40",
+    "curseForgeHash": 2109350600,
+    "modrinthHash": "72f6efe421cfc0547c774ae8241d727b7d996754"
+  }
+}

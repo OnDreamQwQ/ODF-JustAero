@@ -1,0 +1,5 @@
+#Maximum range (in blocks) at which the Track Switch Radio can remotely control switches.
+#Default: 128, Min: 16, Max: 512
+# Default: 128
+# Range: 16 ~ 512
+maxReach = 128

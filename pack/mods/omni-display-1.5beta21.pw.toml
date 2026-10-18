@@ -1,0 +1,12 @@
+name = "[全周天驾驶舱]Omni Display"
+filename = "omni-display-1.5beta21.jar"
+side = "both"
+
+[download]
+hash-format = "sha512"
+hash = "58a760b50147177db972d5994a5f0f89ae6039f5acd392af4eddba099c89a2b942ec5b20af48d9b8321bade3133b3e24820fb74186daf16ce979b3ed21f43e02"
+url = "https://edge.forgecdn.net/files/9219/225/omni-display-1.5beta21.jar"
+
+[update.curseforge]
+file-id = 9219225
+project-id = 1719206

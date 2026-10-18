@@ -12,3 +12,6 @@ com.gly091020.netMusicListNeoforge.client.MusicSearchScreen {
 com.sighs.generalfeedback.client.FeedbackScreen {
 }
 
+net.minecraft.client.gui.screens.PauseScreen {
+}
+
