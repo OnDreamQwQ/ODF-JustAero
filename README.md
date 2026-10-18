@@ -12,7 +12,7 @@
   <p>一个<strong>机械动力：航空学</strong>整合包，包含了大部分航空学附属，和可能会用上的模组</p>
 </div>
 
-> Minecraft 1.21.1 NeoForge，240+ mod
+> Minecraft 1.21.1 NeoForge，260+ mod
 
 > 包含了深海、模拟铁路、航天学等扩展航空学内容的大附属
 
