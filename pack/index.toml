@@ -2249,8 +2249,9 @@ file = "mods/createredstonelinkgui-1.21.1-1.9.3.jar"
 hash = "6c0624e404f5b40d0fd87f96b75d5ec317e1301cf7858f97406b9d122b7e5caf"
 
 [[files]]
-file = "mods/createrenxin-1.0.0.jar"
-hash = "04da1ade43497ff939df27bf79770668374adb4fa35d4337ffd2776c7563d245"
+file = "mods/createrenxin-1.0.0.pw.toml"
+hash = "6228e32902a1bb0b5fb944c9990620b79e3f58aca8acac244e002e478d5e4635"
+metafile = true
 
 [[files]]
 file = "mods/curios-neoforge-9.5.1+1.21.1.pw.toml"

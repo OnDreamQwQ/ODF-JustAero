@@ -1,0 +1,12 @@
+name = "createrenxin-1.0.0"
+filename = "createrenxin-1.0.0.jar"
+side = "both"
+
+[download]
+hash-format = "sha512"
+hash = "04dabb0d38cbc0af034dd7ba8f3ceefc4fc9fa8b91d14c674f5e4988b18326443ad8ba5f570a5d776a01574247cb5cdab4974da998eaf1210e9ad9f6603f8b76"
+url = "https://mediafilez.forgecdn.net/files/8263/717/createrenxin-1.0.0.jar"
+
+[update.curseforge]
+file-id = 8263717
+project-id = 1570710

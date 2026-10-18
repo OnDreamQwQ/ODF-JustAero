@@ -83,6 +83,9 @@ CURSEFORGE_PINS = {
     "smsn-neoforge-1.4.5-1.21.1.jar":             (1129397,  8862254),
     # Aeronautics: Deployer Direction Fix
     "deployer_got_dizzy-0.1.2.jar":               (1544067,  8094798),
+    # Create Cannon Gun Sight (the author's unreleased-name build; metadata is still the
+    # untouched Forge MDK template, which is why filename search never finds the project)
+    "createrenxin-1.0.0.jar":                     (1570710,  8263717),
 }
 
 
