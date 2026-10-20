@@ -43989,6 +43989,14 @@
     "maxWaterDepth": 52,
     "implosionChance": 0.43337092
   },
+  "drive_by_dashpanels:panel_link_center": {
+    "maxWaterDepth": 72,
+    "implosionChance": 0.30540898
+  },
+  "drive_by_dashpanels:panel_remote_receiver": {
+    "maxWaterDepth": 72,
+    "implosionChance": 0.30540898
+  },
   "drivebywire:backup_block": {
     "maxWaterDepth": 85,
     "implosionChance": 0.25540897

@@ -866,6 +866,14 @@
     "curseForgeHash": 2326404052,
     "modrinthHash": "9d27991a7f5a551265692abf8ed40ece10ea1958"
   },
+  "Drive-By-Dashpanels-1.21.1-0.3.22.jar": {
+    "jarName": "Drive-By-Dashpanels-1.21.1-0.3.22.jar",
+    "modId": "drive_by_dashpanels",
+    "name": "Drive By Dashpanels",
+    "version": "0.3.22",
+    "curseForgeHash": 3031404624,
+    "modrinthHash": "9a8e1c00797d3b69d58d4923ed6208d0787b1770"
+  },
   "drivebywire-0.3.0.jar": {
     "jarName": "drivebywire-0.3.0.jar",
     "modId": "drivebywire",

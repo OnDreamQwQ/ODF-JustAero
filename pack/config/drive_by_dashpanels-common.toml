@@ -1,0 +1,20 @@
+#Rename a module and the cables bound to it are moved to the new name.
+#When false the old name is kept as an alias instead: the cable keeps working,
+#the old name stays selectable, but the channel list grows by one per rename.
+migrateConnectionsOnRename = true
+#Delete a module's cable links as soon as the module is removed from the panel.
+#Off by default: while a chunk holding the panels is unloaded the network looks
+#empty for a tick, and deleting then would wipe real wiring. Sneak-right-click
+#the panel link center to clean up manually instead.
+removeConnectionsOnModuleLoss = false
+#Degrees the panel remote's camera leans off the panel face.
+#Positive looks down at the panel, negative looks up at it, 0 is face on.
+# Default: 45.0
+# Range: -89.0 ~ 89.0
+cameraTilt = 45.0
+#Draw the name and reading box in the panel remote's top left corner.
+#Turn this off if you would rather look at the panels without anything over them.
+infoBox = true
+#Project the panels in perspective instead of orthographically.
+#Off keeps every panel the same size; on makes the ones further back smaller.
+perspective = false

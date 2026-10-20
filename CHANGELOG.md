@@ -4,6 +4,21 @@ ODF-JustAero 整合包的全部版本记录。
 
 ---
 
+<a id="v0.6.1"></a>
+
+## [0.6.1] —— 2026-10-20
+
+### 更新
+
+- 面板遥控终端（Drive By Dashpanels）0.3.22 → 0.4.0
+  - 修复遥控界面里模块画在面板上方的问题
+  - 新增配置项：`showCrosshair`（是否画准星）、`showConnectionFrames`（是否画黄色/灰色连线框）、`rotateSensitivity`（拖动旋转灵敏度）
+
+### 改动
+
+- 随包附带 `config/drive_by_dashpanels-common.toml`，三项配置都能在配置文件里改
+
+---
 <a id="v0.6.0"></a>
 
 ## [0.6.0] —— 2026-10-18
