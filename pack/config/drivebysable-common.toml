@@ -1,0 +1,157 @@
+#Whether making a connection consumes a Cable from the player's stack.
+#Cables are refunded when a connection is removed.
+#Creative mode players are never charged.
+shouldConsumeCables = true
+#Whether the Cable itself can remove an existing connection in survival.
+#When false, pointing a Cable at a connection it already made does nothing,
+#and the Cable Cutter becomes the only way to remove connections.
+#Creative mode players can always remove connections with the Cable.
+#The Cable Cutter is unaffected by this option.
+allowCableDisconnect = false
+
+#How far connections may reach and how many of them may exist.
+#Raising these costs more memory and may affect loading times.
+[networkConstraints]
+	#Whether a connection may cross between different levels.
+	#When true, both ends must sit in the same place: both loose in the world,
+	#or both inside the same sublevel.
+	forbidCrossLevelConnections = false
+	#Whether a Backup Drive or Network Anchor may save connections whose ends
+	#sit on a different level to itself, such as a sublevel beside it.
+	#The region still applies: an end is only saved when it falls inside the
+	#region, measured where the block appears in the world rather than where
+	#it is stored. When false, anything on another level is skipped and
+	#reported to the player.
+	allowCrossLevelConnectionSaving = true
+	#Furthest a connection may reach, in blocks, when rangeLimitEnforced is true.
+	#Measured as straight line distance between the two block positions.
+	#0 blocks any connection between separate blocks. Has no effect while
+	#rangeLimitEnforced is false.
+	# Default: 512
+	# Range: 0 ~ 512
+	rangeLimit = 512
+	#Whether connections are limited by distance between the source and the output.
+	#When false, connections can be made at any distance and rangeLimit is ignored.
+	rangeLimitEnforced = false
+	#How many distinct Cable Sources may exist loose in the world.
+	#Everything outside a sublevel shares this single budget.
+	# Default: 128
+	# Range: 0 ~ 2048
+	maxSourcesInWorld = 128
+	#How many distinct Cable Sources may exist inside one sublevel.
+	#Each sublevel gets its own budget. Counted per Source block, not per
+	#connection, so a Source already in use is never counted again.
+	# Default: 64
+	# Range: 0 ~ 2048
+	maxSourcesPerSubLevel = 64
+	#How many Outputs a single Channel on one Source may drive.
+	#Counted per Source and per Channel, so a Hub with several Channels
+	#gets this budget on each of them independently.
+	# Default: 64
+	# Range: 0 ~ 2048
+	maxOutputsPerChannel = 64
+
+#Optional blocks that act as extensions of existing features.
+#Disabling one makes it unobtainable, including through /give.
+[extensions]
+	#Whether the Network Anchor is available.
+	#A creative only block that stores connections within a radius and
+	#restores them wherever it is pasted.
+	#Existing Anchors already placed in a world are unaffected.
+	networkAnchor = true
+	#Whether the Multi-Channel Cable Bus is available.
+	#A hundred channel source a ComputerCraft computer can drive directly.
+	#Needs ComputerCraft to be useful, though the block still places without it.
+	#Existing Buses already placed in a world are unaffected.
+	multiChannelCableBus = true
+	#Whether the Integrated Sensor Bus is available.
+	#Reports position, velocity, altitude and gimbal data for the sublevel it
+	#rides on, and carries a hundred output channels of its own.
+	#Has no effect unless Simulated is installed, which supplies the
+	#sensors this block reads and everything its recipe needs.
+	#ComputerCraft is optional, and adds raw telemetry reads.
+	#Existing Sensor Buses already placed in a world are unaffected.
+	integratedSensorBus = true
+	#Whether the Handheld Typewriter Controller is available.
+	#A portable Linked Typewriter that can drive redstone links, a Typewriter
+	#Cable Hub's channels, or sit on a lectern.
+	#Has no effect unless Simulated is installed.
+	#Controllers already placed on lecterns are unaffected.
+	handheldTypewriterController = true
+
+	#Stress, range and placement rules for Radio-Kinetic Transceivers.
+	[extensions.radioKineticTransceiver]
+		#Whether the Radio-Kinetic Transceiver is available.
+		#A block that sends rotation and stress wirelessly to others of its kind, linked by Cable or frequency.
+		#Existing Radio-Kinetic Transceivers already placed in a world are unaffected.
+		enabled = true
+		#Stress, in SU per RPM, a Radio-Kinetic Transceiver costs it's power source.
+		#Calculated as transmitterStressPerRpm * Input RPM.
+		# Default: 2.0
+		# Range: 0.0 ~ 64.0
+		transmitterStressPerRpm = 2.0
+		#What each Receiver unit adds to the network cost.
+		#NONE: nothing. FLAT: receiverFlatCost, static cost regardless of RPM.
+		#PER_RPM: receiverStressPerRpm, cost directly scales with RPM.
+		#Allowed Values: NONE, FLAT, PER_RPM
+		receiverCost = "NONE"
+		#Stress, in SU, each driven Receiver unit adds while receiverCost is FLAT.
+		# Default: 64.0
+		# Range: 0.0 ~ 16384.0
+		receiverFlatCost = 64.0
+		#Stress, in SU per RPM, each Receiver unit adds while receiverCost is PER_RPM.
+		# Default: 1.5
+		# Range: 0.0 ~ 64.0
+		receiverStressPerRpm = 1.5
+		#The cost of a linked network is added up and paid by Transmitter units in the network.
+		#True: each pays in proportion to its speed, so a faster one pays more. False: split evenly.
+		splitCostBySpeed = true
+		#Whether there is a limit on the stress a network passes on.
+		#Calculated as transferStressPerRpm * Input RPM. More RPM = more output stress.
+		limitTransfer = false
+		#With limitTransfer on: stress, in SU, a network passes on for each RPM of the Transmitter
+		#units in network. Every Transmitter adds its limited output stress to the shared capacity.
+		# Default: 16.0
+		# Range: 0.0 ~ 1024.0
+		transferStressPerRpm = 16.0
+		#How far, in blocks, a Transmitter unit can reach Receivers for each RPM it turns at.
+		#Number directly translates to blocks per Input RPM. 0RPM = 0 blocks of connection range.
+		#A linked Transceiver outside that reach stays linked, but is not driven until it is back in
+		#reach or the driving side speeds up. Measured where each Transceiver appears in the world.
+		# Default: 1.5
+		# Range: 0.0 ~ 64.0
+		rangePerRpm = 1.5
+		#The most reach a Transmitter unit can ever have, in blocks.
+		#Also the furthest apart two Transceivers may be to stay linked at all.
+		#Applies on top of the general networkConstraints range limit.
+		# Default: 256
+		# Range: 0 ~ 2048
+		maxRange = 256
+		#Whether Radio-Kinetic Transceivers only link while they sit inside a sublevel.
+		#Applies to every Transceiver: one outside a sublevel neither links nor passes rotation on.
+		subLevelOnly = true
+
+#Limits for the /dbs commands.
+[commands]
+	#Largest radius, in blocks, the radius target of a /dbs command may use.
+	#Measured from the command's position to where each Source appears in the world.
+	# Default: 1000
+	# Range: 1 ~ 10000
+	commandRadiusLimit = 1000
+
+#Alternate recipes and textures for certain blocks.
+#Everything here is reloaded automatically when it changes.
+[recipesAndTextures]
+	#Whether the Network Backup Drive uses its expensive recipe.
+	#Recipes are reloaded automatically when this changes.
+	expensiveBackupDrive = false
+	#Whether the Cable Hub and Advanced Cable Hub use Andesite and Brass theming.
+	#Changes recipes, retextures blocks, and swaps the hub block sounds.
+	#On a server, clients may need to enable the resourcepack individually.
+	#Recipes and textures are reloaded automatically when this changes.
+	andesiteHub = false
+	#Whether the connections shown in Setup Mode are drawn as hanging cables
+	#instead of straight lines. Covers a selected Source's connections and the
+	#links of a selected Transceiver. Purely visual, and read on the client,
+	#so each player can choose for themselves.
+	fancyCables = true

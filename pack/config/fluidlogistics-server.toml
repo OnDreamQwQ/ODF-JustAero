@@ -20,10 +20,11 @@
 	phantomChainEnabled = true
 	fluidHatchEnabled = true
 	fluidFactoryGaugeEnabled = true
-	blazeCoolerEnabled = true
 	copperSchematicannonEnabled = true
 	fluidSchematicEnabled = true
-	frostCakeEnabled = true
+	oscillatingSteamEngineEnabled = true
+	copperBasketEnabled = true
+	snowGolemFreezerEnabled = true
 
 [blockProperties]
 	#Maximum fluid amount a fluid package can hold (in mB)

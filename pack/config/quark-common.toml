@@ -642,6 +642,8 @@
 	[tweaks.lock_rotation]
 		#When true, lock rotation indicator in the same style as crosshair
 		"Render Like Cross Hair" = true
+		#When true, the keybind for rotation lock will be displayed next to the indicator
+		"Show Keybind" = true
 
 	[tweaks.map_washing]
 		#This feature disables itself if any of the following mods are loaded:

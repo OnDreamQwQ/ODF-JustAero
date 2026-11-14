@@ -1,7 +1,7 @@
 #These are the configurations for the wires.
 [wire]
-	#This is the amount of time (in ticks) per block a wire effect lasts. Best if matching 'transmissionTime'. Defaults to 4.
-	effectTime = 4
+	#This is the amount of time (in seconds) per block a wire effect lasts. Best if matching 'transmissionTime'. Defaults to 0.1.
+	effectTime = 0.1
 	#This is how much wires drop per block from gravity. Defaults to 0.075.
 	distanceSag = 0.075
 	#This is how much wires drop from gravity. Defaults to 0.75.

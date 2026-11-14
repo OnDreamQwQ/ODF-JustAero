@@ -1,0 +1,42 @@
+#Maximum number of tasks one operation table can hold (main task + sub-task library).
+#一张操作表最多能存多少个任务（主任务 + 子任务库）。默认 32。
+# Default: 32
+# Range: 1 ~ 1024
+maxTasks = 32
+#Maximum number of redstone-link frequencies the arm can hold at the same time.
+#一条臂同时保持的信号（红石链接频率）条数上限。默认 64。
+# Default: 64
+# Range: 1 ~ 1024
+maxHeldSignals = 64
+#Maximum total number of entries across the whole program.
+#整份程序的条目总数上限（所有任务合计）。默认 1024 —— 见下面的实测说明。
+#Storage note: a program is saved as .sma TEXT (not as compiled NBT), so the real ceiling is
+#the 60 KiB text limit (NBT strings are 16-bit: 65535 bytes). A setting larger than what the
+#text limit can hold simply gets refused at save time (the whole program is rejected, never
+#silently truncated). See the selftest log line for the measured entries-per-60KiB.
+#存储说明：盘上存的是 .sma 文本，所以真正的天花板是 60 KiB 的文本上限（NBT 字符串 16 位 = 65535 字节）。
+#填得比文本装得下的还大，多出来的部分在保存时会被整份拒绝（不是静默丢）。能放多少条见自检日志。
+# Default: 1024
+# Range: 1 ~ 4096
+maxEntriesTotal = 1024
+#How many target-less entries the arm advances per tick (fractional values accumulate across ticks).
+#每 tick 推进多少条「一瞬间就出结果」的条目（小数会跨 tick 累积）。
+#0.5 = one entry every 2 ticks; 2 = two entries per tick (default).
+#0.5 = 每 2 tick 一条；2 = 每 tick 两条（默认）。
+#Only control-ish entries are paced by this: filter / receive / call / exit / throw / signal send.
+#Entries that move the arm or wait (move / wait / retry) are NOT sped up
+#by this setting: they still take real ticks, exactly like the old behaviour.
+#只对控制类条目生效；有动作的条目（移动 / 等待 / 重试）不受它影响，仍然按真实 tick 走。
+# Default: 2.0
+# Range: 0.05 ~ 64.0
+entriesPerTick = 2.0
+#How many run-log lines each arm keeps in memory (ring buffer; 0 = off).
+#The log is what 'sneak-use a Create clipboard on the arm' writes into that clipboard:
+#entry starts, failure/retry reasons, jump landings, call stack push/pop and halts.
+#每条臂在内存里保留多少行运行日志（环形缓冲，满了丢最旧的）。0 = 关闭，一行都不记录。
+#数值越大越占内存：每行约几十字节（一行 ≈ 64 字节，256 行 ≈ 16 KiB/臂）。
+#日志只在内存里（不写存档），内容 = 潜行右键持剪贴板时写进那块剪贴板的东西。
+#默认 256：正常节奏每秒只有几行，够回看几分钟；0 = 关闭记录（省内存 / 不想让玩家导出）。
+# Default: 256
+# Range: 0 ~ 4096
+logLines = 256

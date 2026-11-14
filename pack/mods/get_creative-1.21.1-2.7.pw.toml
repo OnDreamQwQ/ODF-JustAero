@@ -1,0 +1,12 @@
+name = "Get Creative"
+filename = "get_creative-1.21.1-2.7.jar"
+side = "both"
+
+[download]
+hash-format = "sha512"
+hash = "d9a3972aeefcc503eafa9a2a47ca37a21b4bb3ec631d9850b337a22d68d209c8d16d6a0f251779d889811e19481066a78fadd8b326950e16ee5558aa4a7dc462"
+url = "https://cdn.modrinth.com/data/cIpw2cmr/versions/vC337ay8/get_creative-1.21.1-2.7.jar"
+
+[update.modrinth]
+mod-id = "cIpw2cmr"
+version = "vC337ay8"

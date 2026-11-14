@@ -1,16 +1,33 @@
-#碎片转化间隔
-# Default: 3600
-# Range: 1 ~ 9223372036854775807
-fragmentTransferTime = 3600
-#结晶生成间隔（0代表不生成）
-# Default: 600
-# Range: > 0
-crystalGenerateTime = 600
-#禁止网络接口向维度网络输入的资源大类 ID；空列表表示不限制。
-#常见资源大类 ID：
-#物品：beyonddimensions:stack_type/item
-#流体：beyonddimensions:stack_type/fluid
-#能量：beyonddimensions:stack_type/energy
-#示例：同时禁止流体和能量输入，可填写 ["beyonddimensions:stack_type/fluid", "beyonddimensions:stack_type/energy"]。
-#查找其他资源大类 ID：在对应的 IStackKey 实现中查看 getTypeId() 的返回值，或查找其静态 ID 常量。
-interfaceBlockedInputStackTypes = []
+#网络接口
+[interface]
+	#是否允许网络接口将资源送入网络
+	receive = true
+	#是否允许网络接口从网络提取标记的资源
+	output = true
+	#是否允许网络接口将内容物弹出到附近容器
+	push_out = true
+	#网络接口有多少个槽位实际可用？
+	#改动只对之后放置或重新载入的接口生效；在线的玩家要重新进入服务器才会拿到新值。
+	#注意：仅在确定需要时使用，后续版本更新会将其移除并添加其他替代方案，会保证存档兼容。
+	# Default: 27
+	# Range: 1 ~ 27
+	capacity = 27
+	#禁止网络接口向维度网络输入的资源大类 ID；空列表表示不限制。
+	#常见资源大类 ID：
+	#物品：beyonddimensions:stack_type/item
+	#流体：beyonddimensions:stack_type/fluid
+	#能量：beyonddimensions:stack_type/energy
+	#示例：同时禁止流体和能量输入，可填写 ["beyonddimensions:stack_type/fluid", "beyonddimensions:stack_type/energy"]。
+	#查找其他资源大类 ID：在对应的 IStackKey 实现中查看 getTypeId() 的返回值，或查找其静态 ID 常量。
+	blocked_input_types = []
+
+#时空材料
+[space_time]
+	#碎片转化间隔
+	# Default: 3600
+	# Range: 1 ~ 9223372036854775807
+	fragment_transfer_time = 3600
+	#结晶生成间隔（0代表不生成）
+	# Default: 600
+	# Range: > 0
+	crystal_generate_time = 600

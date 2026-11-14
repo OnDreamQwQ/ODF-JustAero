@@ -1,0 +1,12 @@
+name = "CC : My Peripheral Extender"
+filename = "ccpe-1.2.0-1.21.1.jar"
+side = "both"
+
+[download]
+hash-format = "sha512"
+hash = "4f6b9d8f457dcf82461571d4d97f66468b82cb629ec2b1233638fb5bbdd90bfdee4f2ccca0e9d434c3b22bc40e74c49431f058b4570b79e42738b47c33f10d3c"
+url = "https://cdn.modrinth.com/data/e27JVsdR/versions/IjOt61Hz/ccpe-1.2.0-1.21.1.jar"
+
+[update.modrinth]
+mod-id = "e27JVsdR"
+version = "IjOt61Hz"

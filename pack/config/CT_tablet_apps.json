@@ -1,18 +1,125 @@
 {
-    "schema": 1,
-    "defaults": {
+  "schema": 1,
+  "defaults": {
+    "item": "minecraft:emerald",
+    "count": 2
+  },
+  "apps": {
+    "createthrusters:app_store": {
+      "item": "minecraft:emerald",
+      "count": 0,
+      "icon": {
+        "color": "#66BB6A",
         "item": "minecraft:emerald",
-        "count": 2
+        "force_fallback": true
+      }
     },
-    "apps":{
-        "createthrusters:app_store": {"item": "minecraft:emerald", "count": 0},
-        "createthrusters:settings": {"item": "minecraft:emerald", "count": 0},
-        "createthrusters:rdp": {"item": "minecraft:emerald", "count": 8},
-        "createthrusters:scm": {"item": "minecraft:emerald", "count": 20},
-        "createthrusters:block360": {"item": "minecraft:emerald", "count": 0},
-        "createthrusters:journey": {"item": "minecraft:emerald", "count": 0},
-        "createthrusters:redstone_link": {"item": "minecraft:emerald", "count": 0},
-        "createthrusters:gg_auto": {"item": "minecraft:emerald", "count": 0},
-        "createthrusters:nfc": {"item": "minecraft:emerald", "count": 0}
+    "createthrusters:settings": {
+      "item": "minecraft:emerald",
+      "count": 0,
+      "icon": {
+        "color": "#90A4AE",
+        "item": "create:cogwheel",
+        "force_fallback": true
+      }
+    },
+    "createthrusters:rdp": {
+      "item": "minecraft:emerald",
+      "count": 8,
+      "icon": {
+        "color": "#00B8D4",
+        "item": "createthrusters:advanced_contraption_controller",
+        "force_fallback": true
+      }
+    },
+    "createthrusters:scm": {
+      "item": "minecraft:emerald",
+      "count": 20,
+      "icon": {
+        "color": "#FFB74D",
+        "item": "createthrusters:ship_control_module",
+        "force_fallback": true
+      }
+    },
+    "createthrusters:block360": {
+      "item": "minecraft:emerald",
+      "count": 0,
+      "icon": {
+        "color": "#7AC943",
+        "item": "minecraft:player_head",
+        "force_fallback": true
+      }
+    },
+    "createthrusters:journey": {
+      "item": "minecraft:emerald",
+      "count": 0,
+      "icon": {
+        "color": "#00A88F",
+        "item": "createthrusters:shipping_schedule",
+        "force_fallback": true
+      }
+    },
+    "createthrusters:redstone_link": {
+      "item": "minecraft:emerald",
+      "count": 0,
+      "icon": {
+        "color": "#7C4DFF",
+        "item": "create:redstone_link",
+        "force_fallback": true
+      }
+    },
+    "createthrusters:gg_auto": {
+      "item": "minecraft:emerald",
+      "count": 0,
+      "icon": {
+        "color": "#5AC8FA",
+        "item": "simulated:steering_wheel",
+        "force_fallback": true
+      }
+    },
+    "createthrusters:nfc": {
+      "item": "minecraft:emerald",
+      "count": 0,
+      "icon": {
+        "color": "#90A4AE",
+        "item": "createthrusters:gyroscope_link",
+        "force_fallback": true
+      }
+    },
+    "createthrusters:media": {
+      "icon": {
+        "color": "#49B9A2",
+        "item": "createthrusters:music_disc_twisted_alive",
+        "force_fallback": true
+      }
+    },
+    "createthrusters:digisable": {
+      "icon": {
+        "color": "#5EBAF2",
+        "item": "create:schematic",
+        "force_fallback": true
+      }
+    },
+    "createthrusters:manifest": {
+      "icon": {
+        "color": "#DCB75F",
+        "item": "createthrusters:shipping_manifest",
+        "force_fallback": true
+      }
+    },
+    "createthrusters:blockmates": {
+      "icon": {
+        "color": "#80C978",
+        "item": "createthrusters:worker_pod",
+        "force_fallback": true
+      }
+    },
+    "createthrusters:cctv": {
+      "icon": {
+        "color": "#5BAAA3",
+        "item": "createthrusters:camera",
+        "force_fallback": true
+      }
     }
+  }
 }

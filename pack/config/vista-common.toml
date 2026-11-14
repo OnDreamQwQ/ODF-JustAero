@@ -11,7 +11,7 @@
 	# Default: 20
 	# Range: 1 ~ 10000
 	energy_consumption_rate = 20
-	#Whether TVs act as Refurbished Furniture electricity modules. When on they can be wired up with the wrench and only display something while their network powers them. Takes priority over consume_energy. Requires Refurbished Furniture to be installed.
+	#Makes TVs consume energy from the Refurbished Furnitures mod
 	use_furniture_electricity = false
 
 [picture_tape]

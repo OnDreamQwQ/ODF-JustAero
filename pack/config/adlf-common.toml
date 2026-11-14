@@ -1,0 +1,2 @@
+#Enable verbose debug logging for DisplayLink offset correction. Set to true to trace every Case 3 detection and fix in the game log. Default: false (only warnings and errors are logged).
+debug = false

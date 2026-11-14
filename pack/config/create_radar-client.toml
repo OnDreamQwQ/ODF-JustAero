@@ -63,3 +63,69 @@ neutralEntityColor = 16777215
 	# Default: 0.5
 	# Range: 0.0 ~ 3.4028234663852886E38
 	monitorLabelScale = 0.5
+	#.
+	#Render Sable sublevel hull silhouettes on radar monitors when available
+	renderSableSilhouettes = true
+	#.
+	#Show surrounding collision geometry in controller movement-limit screens
+	showControllerSurroundings = true
+	#.
+	#Maximum target distance from a monitor center for drawing Sable silhouettes
+	# Default: 2048
+	# Range: > 1
+	sableSilhouetteMaxRenderDistance = 2048
+	#.
+	#Maximum Sable silhouette line segments rendered per radar contact
+	# Default: 3000
+	# Range: > 4
+	sableSilhouetteMaxRenderedSegments = 3000
+	#.
+	#Projected grid cell size for Sable radar silhouettes. Lower values make diagonals smoother but cost more render work
+	# Default: 0.3499999940395355
+	# Range: 0.10000000149011612 ~ 3.4028234663852886E38
+	sableSilhouetteCellSize = 0.3499999940395355
+	#.
+	#Render Sable radar silhouettes in a distinct debug color
+	sableSilhouetteDebugOverlay = false
+	#.
+	#Render a simple debug rectangle for Sable contacts whose silhouette geometry is missing
+	sableSilhouetteDebugFallbackRectangle = false
+
+#.
+#Mod Sounds
+[modSounds]
+	#.
+	#Master volume for Create: Radars sounds
+	# Default: 100
+	# Range: 0 ~ 100
+	modSoundsVolume = 100
+	#.
+	#RWR lock warning volume
+	# Default: 100
+	# Range: 0 ~ 100
+	rwrLockVolume = 100
+	#.
+	#RWR in-range warning volume
+	# Default: 100
+	# Range: 0 ~ 100
+	rwrInRangeVolume = 100
+	#.
+	#RWR sweep warning volume
+	# Default: 100
+	# Range: 0 ~ 100
+	rwrSweepVolume = 100
+	#.
+	#RWR engagement warning volume
+	# Default: 100
+	# Range: 0 ~ 100
+	rwrEngagedVolume = 100
+	#.
+	#Sonar ping volume
+	# Default: 100
+	# Range: 0 ~ 100
+	sonarPingVolume = 100
+	#.
+	#Sonar ambient hum volume
+	# Default: 100
+	# Range: 0 ~ 100
+	sonarHumVolume = 100

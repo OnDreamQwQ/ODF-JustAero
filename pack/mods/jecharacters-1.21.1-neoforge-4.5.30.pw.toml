@@ -1,0 +1,12 @@
+name = "JustEnoughCharacters"
+filename = "jecharacters-1.21.1-neoforge-4.5.30.jar"
+side = "client"
+
+[download]
+hash-format = "sha512"
+hash = "e30efe9687d36db5815d5aed7bbe8a143f15e8113310668985d0f26f279096606555e2c58765be56d8af2daa5a324c6db38696ea5933c78f6e29280aab6db3cc"
+url = "https://cdn.modrinth.com/data/I7k4B65h/versions/iNnJuUnx/jecharacters-1.21.1-neoforge-4.5.30.jar"
+
+[update.modrinth]
+mod-id = "I7k4B65h"
+version = "iNnJuUnx"

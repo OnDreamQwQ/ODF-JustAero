@@ -1,0 +1,2 @@
+#Remembers the walk key held when leaving the pilot controls.
+rememberWalkKeys = true

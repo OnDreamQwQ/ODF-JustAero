@@ -1,0 +1,12 @@
+name = "Create: Cyber Goggles"
+filename = "create_cyber_goggles-1.21.1-8.7.0-neoforge.jar"
+side = "client"
+
+[download]
+hash-format = "sha512"
+hash = "ca36fb78369806eaeca7f261cd2174348f2cb559b59fad3d33de6f5a0975c75fdf0108988650652c2113c50d37541773862c326d2a59d6e119302b4d7193f6fa"
+url = "https://cdn.modrinth.com/data/TlQAWQCY/versions/Lc4pHIbd/create_cyber_goggles-1.21.1-8.7.0-neoforge.jar"
+
+[update.modrinth]
+mod-id = "TlQAWQCY"
+version = "Lc4pHIbd"

@@ -11,3 +11,7 @@
 		afn = true
 		#Allow the zero-cost simple coordinate grid fallback.
 		grid = true
+
+[recommendations]
+	#AFN version whose optional-mod reminder was dismissed.
+	dismissed_version = ""

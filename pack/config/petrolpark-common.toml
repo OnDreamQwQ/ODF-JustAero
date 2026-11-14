@@ -1,0 +1,21 @@
+#.
+#Add NeoForge Fluid Capability to Glass Bottle items, making them act more like Buckets
+#[May override other mods' functionality]
+glassBottleFluidCapability = true
+
+#.
+[compatibility]
+
+	#.
+	[compatibility.create]
+		#.
+		#The maximum Stress Capacity a Horse can provide on a Horse Mill
+		# Default: 8192.0
+		# Range: 256.0 ~ 3.4028234663852886E38
+		horseMillStressCapacityAttributeMaximum = 8192.0
+
+	#.
+	[compatibility.brewinAndChewin]
+		#.
+		#Some Fermenting/Pouring Recipes are possible in Lidded Basins and Spouts, if enabled.
+		fermentingInLiddedBasin = true

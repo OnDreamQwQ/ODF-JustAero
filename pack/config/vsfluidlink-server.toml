@@ -30,6 +30,14 @@
 	restrictWorldToWorldConnection = false
 	#If true, connections between two blocks that are on the SAME ship will be blocked.
 	restrictIntraShipConnection = false
+	#Allow non-wrench items and an empty hand to connect or disconnect manual connectors.
+	#Sneaking with a non-wrench item bypasses linking so items can be used normally.
+	connectWithoutWrench = true
+	#ROTATE: wrench right-click rotates, sneak-right-click picks up the connector.
+	#CONNECT: wrench right-click links manual connectors, sneak-right-click rotates (legacy behavior).
+	#Magnet connectors remain automatic and cannot be manually linked.
+	#Allowed Values: CONNECT, ROTATE
+	wrenchRightClickAction = "ROTATE"
 
 [buffers]
 	#Fluid capacity per normal or magnet hose connector, in mB. Restart the world after changing.

@@ -1,0 +1,12 @@
+name = "CC: Sable"
+filename = "cc_sable-neoforge-1.3.4.jar"
+side = "both"
+
+[download]
+hash-format = "sha512"
+hash = "70e7e09c8a4a566fe8bd67a8d53069083e8285a15cb680412b415f5104b5be3ad3b623c9ccd99f165996933ef5d81aa1966633796d7439f562b6e35ae59af717"
+url = "https://cdn.modrinth.com/data/OPNBxiZD/versions/j0UWQoMG/cc_sable-neoforge-1.3.4.jar"
+
+[update.modrinth]
+mod-id = "OPNBxiZD"
+version = "j0UWQoMG"

@@ -1,0 +1,6 @@
+#Allow rotating the sloped-roof texture of corner slopes whose material looks the same on all
+#sides (e.g. planks). Right-click the block with its own material to toggle the plank grain
+#between running along the eave (default) and running up the slope. Materials that already
+#have a rotatable property (logs, pillars, ...) keep their normal cycling behaviour.
+#Disabling this only stops the toggle gesture; blocks already rotated keep their look.
+enableExtraRotation = true

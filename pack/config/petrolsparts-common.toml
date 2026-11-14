@@ -1,0 +1,45 @@
+#.
+#recipes for Petrol's Parts components
+[recipes]
+	#.
+	#Enable default recipe for the Bevel Cogwheel
+	bevelCogwheel = true
+	#.
+	#Enable default recipe for the Brass Depot
+	brassDepot = true
+	#.
+	#Enable default recipes for the Shaftless and Coaxial Small and Large Cogwheels
+	assemblage = true
+	#.
+	#Enable default recipe for the Colossal Cogwheel
+	colossalCogwheel = true
+	#.
+	#Enable default recipes for the Corner Shaft
+	cornerShaft = true
+	#.
+	#Enable default recipe for the Differential
+	differential = true
+	#.
+	#Enable default recipe for the Friction Heater
+	frictionHeater = true
+	#.
+	#Enable default recipe for the Hydraulic Transmission
+	hydraulicTransmission = true
+	#.
+	#Enable default recipe for the Movement
+	movement = true
+	#.
+	#Enable default recipe for the Overload Clutch
+	overloadClutch = true
+	#.
+	#Enable default recipe for the Planetary Gearset
+	planetaryGearset = true
+	#.
+	#Enable default recipe for the Pneumatic Tube
+	pneumaticTube = true
+	#.
+	#Enable default recipe for the Redstone Programmer
+	redstoneProgrammer = true
+	#.
+	#Enable default recipe for the Redstone Transmission
+	redstoneTransmission = true

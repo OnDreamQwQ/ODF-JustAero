@@ -1,0 +1,3 @@
+[easter_eggs]
+	#Easter egg items that don't affect gameplay.
+	enableEasterEggItems = true

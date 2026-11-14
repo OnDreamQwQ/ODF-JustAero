@@ -1,0 +1,13 @@
+[client]
+	#Disable Flywheel block entity visualization and let Create render kinetic blocks with its normal block entity renderer. Bits 'n' Tracks cogwheels and tracks are then drawn the same way.
+	disableFlywheelVisualization = false
+	#Draw Bits 'n' Tracks cogwheels and tracks through Flywheel instancing when Flywheel is active. Turn off to draw them with the block entity renderer instead. Has no effect while Disable Flywheel Rendering is on.
+	flywheelRendering = true
+	#How many times a second a track drawn through Flywheel recomputes its shape within 32 blocks. Tracks within 64 blocks update at half this rate and farther ones at a third, and the scroll in between is carried on smoothly. 0 recomputes every frame.
+	# Default: 30
+	# Range: 0 ~ 240
+	trackUpdateRate = 30
+	#Blocks from the camera past which tracks drawn through Flywheel stop scrolling and suspension is drawn at its resting pose, so a far vehicle's running gear looks rigid. 0 animates them at any distance.
+	# Default: 48
+	# Range: 0 ~ 1024
+	animationDistance = 48

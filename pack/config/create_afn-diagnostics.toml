@@ -1,0 +1,3 @@
+[diagnostics]
+	#Enable AFN diagnostic logs while reproducing a problem.
+	enabled = false

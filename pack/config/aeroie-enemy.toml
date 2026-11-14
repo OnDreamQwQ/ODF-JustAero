@@ -1,0 +1,2 @@
+#Enable enemy AI obstacle scanning and steering. False preserves navigation, attacks and physical collisions.
+avoidanceEnabled = true

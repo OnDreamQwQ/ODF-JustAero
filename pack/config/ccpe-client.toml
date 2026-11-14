@@ -1,0 +1,122 @@
+#Monitor 模块边框颜色 - 红 (0-255)。默认: 90
+# Default: 90
+# Range: 0 ~ 255
+monitorOutlineR = 90
+#Monitor 模块边框颜色 - 绿 (0-255)。默认: 143
+# Default: 143
+# Range: 0 ~ 255
+monitorOutlineG = 143
+#Monitor 模块边框颜色 - 蓝 (0-255)。默认: 60
+# Default: 60
+# Range: 0 ~ 255
+monitorOutlineB = 60
+#Monitor 模块边框颜色 - 透明度 (0-255)。默认: 255
+# Default: 255
+# Range: 0 ~ 255
+monitorOutlineA = 255
+#Monitor 棋盘网格线粗细倍率 (0.0-2.0)。默认: 1.0
+# Default: 1.0
+# Range: 0.0 ~ 2.0
+monitorGridLineWidth = 1.0
+#Monitor 模块边框/预览框线条粗细倍率 (0.0-2.0)。默认: 1.0
+# Default: 1.0
+# Range: 0.0 ~ 2.0
+monitorOutlineLineWidth = 1.0
+#坐垫操作模式下显示虚拟摇杆 HUD（默认关闭，避免破坏沉浸感；需要时在客户端配置中开启）。
+joystickOverlayEnabled = false
+#流体燃烧室活塞'噗嗤'音效音量 (0.0-2.0，0 = 关闭该音效逻辑节省性能)。默认: 0.05（每活塞周期触发一次，Create STEAM 声，频率随转速）。
+# Default: 0.05
+# Range: 0.0 ~ 2.0
+engineFluidPuffVolume = 0.05
+#蒸汽动力室活塞'噗嗤'音效音量 (0.0-2.0，0 = 关闭该音效逻辑节省性能)。默认: 0.1（每活塞周期触发一次，Create STEAM 声，频率随转速）。
+# Default: 0.1
+# Range: 0.0 ~ 2.0
+engineSteamPuffVolume = 0.1
+#高空尾迹总开关。关闭 = 完全没有尾迹（只剩喷口排气）。默认: 开启
+contrailEnabled = true
+#尾迹寿命下限（tick，20 tick = 1 秒）：适宜度为 0 时用这个值。默认: 360 (18 秒)
+# Default: 360
+# Range: 20 ~ 24000
+contrailLifeMin = 360
+#尾迹寿命上限（tick）：越冷越接近它。<b>性能主旋钮</b> —— 同屏粒子数 ≈ 发射密度 × 寿命。默认: 1200 (60 秒)
+# Default: 1200
+# Range: 20 ~ 24000
+contrailLifeMax = 1200
+#尾迹发射间距（格）：机体每飞这么远吐一颗（温度不够冷时会按适宜度变稀，最多稀到 1/0.35）。<b>性能主旋钮</b>。默认: 1.2
+# Default: 1.2
+# Range: 0.1 ~ 32.0
+contrailSpacing = 1.2
+#尾迹单 tick 最多补发几颗（防低帧率/瞬移时一帧吐出一长串）。默认: 6
+# Default: 6
+# Range: 1 ~ 64
+contrailMaxPerTick = 6
+#尾迹粒子存活总数上限（0 = 不限）。性能安全阀：满了就停止发射，旧粒子死亡后腾出配额；表现为「尾迹长到某处不再延长」而不是掉帧。默认: 6000
+# Default: 6000
+# Range: 0 ~ 200000
+contrailMaxLive = 6000
+#尾迹发射距离上限（格，0 = 不限）：离最近玩家超过它就不再发射（远处看不见还每 tick 推进是纯浪费）。默认: 96
+# Default: 96.0
+# Range: 0.0 ~ 512.0
+contrailMaxDistance = 96.0
+#尾迹出生宽度（格，quad 半径；可见宽度约 2 倍），寿命内按 sqrt(t) 继续扩散。越大越糊、填充率开销越大。默认: 1.0
+# Default: 1.0
+# Range: 0.05 ~ 8.0
+contrailWidth = 1.0
+#尾迹扩散时间常数（tick）：宽度 = 出生宽度 × sqrt(1 + age/本值)，越小散得越快。经验值 ≈ 寿命/4（寿命改了记得一起改）。默认: 300
+# Default: 300
+# Range: 10 ~ 24000
+contrailWidthTau = 300
+#尾迹出生不透明度上限（0~1）：实际会随扩散倍数同步变淡（质量守恒），再叠淡入淡出。默认: 0.6
+# Default: 0.6
+# Range: 0.0 ~ 1.0
+contrailAlpha = 0.6
+#单颗粒子一生飘荡距离（格）：速度 = 本值 ÷ 寿命，方向随机、匀速直线。越大尾迹越蓬松。默认: 4.0
+# Default: 4.0
+# Range: 0.0 ~ 64.0
+contrailDriftDistance = 4.0
+#排气粒子在满转速（256 RPM）时每 tick 生成的颗数，按 |转速|/256 线性缩放。<b>性能主旋钮</b>。默认: 10
+# Default: 10
+# Range: 0 ~ 128
+exhaustParticlesPerTick = 10
+#排气粒子基准寿命（tick），实际再加 0~9 的随机。默认: 16
+# Default: 16
+# Range: 2 ~ 600
+exhaustLifetime = 16
+#排气粒子出生尺寸（格）。默认: 0.3
+# Default: 0.3
+# Range: 0.01 ~ 8.0
+exhaustScale = 0.3
+#排气粒子出生速度（格/tick，1 = 20 格/秒），实际再乘 (0.65 + 0.35×油门)。默认: 2.0
+# Default: 2.0
+# Range: 0.0 ~ 16.0
+exhaustSpeed = 2.0
+#排气粒子的轻微重力（格/tick²，0 = 不受重力）。实际终端下沉速度 = 重力 × f/(1−f)，f = 0.965×(1−0.28×寿命进度)，所以下坠是前重后轻的（出生后最快、末期几乎挂住）。默认: 0.02（用户进游戏实测定稿）
+# Default: 0.02
+# Range: 0.0 ~ 0.1
+exhaustGravity = 0.02
+#排气粒子发射距离上限（格，0 = 不限）。原版 addParticle 有 32 格硬限制，本模组用 9 参数 addAlwaysVisibleParticle 绕过，所以这里自己给上限。默认: 64
+# Default: 64.0
+# Range: 0.0 ~ 512.0
+exhaustMaxDistance = 64.0
+#吸力（负转速）时的进气粒子总开关。关闭 = 反转风扇时喷口完全没有粒子。默认: 开启
+intakeEnabled = true
+#进气粒子在满转速（256 RPM）时每 tick 生成的颗数，按 |转速|/256 线性缩放。<b>性能主旋钮</b>。默认: 8
+# Default: 8
+# Range: 0 ~ 128
+intakeParticlesPerTick = 8
+#进气漏斗长度（格）：<b>满转速 256 RPM 时</b>粒子最远在喷口前方这么远的位置出生，然后加速被吸进口面。实际按 |转速|/256 线性缩放（128 RPM ⇒ 一半，64 RPM ⇒ 四分之一）。越大越像"长吸气柱"。默认: 8.0
+# Default: 8.0
+# Range: 0.4 ~ 32.0
+intakeFunnelLength = 8.0
+#进气速度（格/tick，1 = 20 格/秒）：寿命 = 出生距离 ÷ 本值，所以调大 = 吸得更快、粒子更短命；实际再乘 (0.6 + 0.4×油门)。默认: 0.5
+# Default: 0.5
+# Range: 0.05 ~ 8.0
+intakeSpeed = 0.5
+#进气粒子出生尺寸（格），寿命内缩小到 0.3 倍后消失。默认: 0.28
+# Default: 0.28
+# Range: 0.01 ~ 8.0
+intakeScale = 0.28
+#进气粒子发射距离上限（格，0 = 不限）：离最近玩家超过它就不再发射。默认: 64
+# Default: 64.0
+# Range: 0.0 ~ 512.0
+intakeMaxDistance = 64.0

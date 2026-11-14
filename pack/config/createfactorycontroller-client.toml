@@ -28,3 +28,14 @@ enableSmoothAnimation = true
 # Default: 250
 # Range: 0 ~ 1000
 connectionTooltipDelay = 250
+#Style of component and connection tooltips in the Controller GUI.
+#Allowed Values: ENHANCED, CLASSIC
+componentTooltipStyle = "ENHANCED"
+#Background opacity of Enhanced-style component and connection tooltips.
+# Default: 191
+# Range: 0 ~ 255
+enhancedTooltipBackgroundOpacity = 191
+#Horizontal margin (in pixels) kept on each side of the Controller screen.
+# Default: 160
+# Range: 40 ~ 200
+controllerScreenSideMargin = 160

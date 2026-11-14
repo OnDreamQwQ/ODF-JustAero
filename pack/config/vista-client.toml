@@ -12,9 +12,25 @@
 	update_mode = "RENDER_TICK_END"
 	#Smooth the mirror reflection with bilinear texture filtering. Enabled gives a softer, less pixelated reflection; disabled keeps it crisp and pixelated.
 	smooth_reflection = false
+	#How many times per second a mirror re-renders its reflection at most. Throttling and the idle rate below can only lower it. Lowering this will improve performance but make the reflection choppier
+	# Default: 60.0
+	# Range: 1.0 ~ 240.0
+	max_update_fps = 60.0
+	#The minimum update fps for mirrors. The mod will throttle update rate when fps are low so this serves as a lower limit
+	# Default: 10.0
+	# Range: 1.0 ~ 240.0
+	min_update_fps = 10.0
+	#Caps the update fps while the camera stands still. A flat mirror only changes when the eye moves, so standing still only needs to keep up with moving entities
+	# Default: 10.0
+	# Range: 1.0 ~ 240.0
+	idle_update_fps = 10.0
+	#The maximum number of milliseconds all mirror reflections can take per frame before fps throttling begins
+	# Default: 6.0
+	# Range: 0.0 ~ 1000000.0
+	throttling_update_ms = 6.0
 
 	[mirror.recursion]
-		#How mirrors inside mirrors are handled. OFF: nested mirrors don't render at all, you just see the frame. SHARED (cheap): each mirror reuses its own reflection texture when seen inside another. Fine at a glance, but the deeper reflections won't slide correctly as you move. RECURSIVE (expensive): every chain gets its own render with correct parallax, up to max_depth. Past the cap the nested mirror isn't drawn.
+		#How mirrors inside mirrors are handled. OFF: nested mirrors don't render at all.. SHARED (cheap): each mirror reuses its own reflection texture when seen inside another. Fine at a glance, but the deeper reflections won't slide correctly as you move. RECURSIVE (expensive): every chain gets its own render with correct parallax, up to max_depth. Past the cap the nested mirror isn't drawn. Also applies to tvs seen in mirrors.
 		#Allowed Values: OFF, SHARED, RECURSIVE
 		mode = "RECURSIVE"
 		#Max nesting depth in RECURSIVE recursion mode. 0 = no recursion (equivalent to OFF). 1 = one level of correct nested reflection. Each extra level multiplies cost, but resolution_divider and distance_divider attenuate per-level cost.
@@ -52,10 +68,6 @@
 		turn_off_animation = true
 
 	[television.live_feed]
-		#How many times per second the television updates its live feed texture. Lowering this will improve performance but make the video less smooth, fractions work too
-		# Default: 10.0
-		# Range: 1.0 ~ 60.0
-		update_fps = 10.0
 		#The minimum update fps for live feed. The mod will throttle update rate when fps are low so this serves at a lower limit
 		# Default: 4.0
 		# Range: 1.0 ~ 60.0
@@ -79,9 +91,13 @@
 		linked_feed_display_mode = "CIPHERED"
 		#Attempts to disable iris shaders in the live feed view
 		iris_off_hack = true
+		#How many times per second the television updates its live feed texture at most. Throttling can only lower it. Lowering this will improve performance but make the video less smooth, fractions work too
+		# Default: 10.0
+		# Range: 1.0 ~ 60.0
+		max_update_fps = 10.0
 
 [picture_tape]
-	#How a picture is fitted onto the TV screen when the two don't have the same shape. STRETCH: distorts the picture to fill the screen. CONTAIN: shows all of it, leaving bars on the two shorter sides. COVER: fills the screen, cropping whatever sticks out. FIT_WIDTH / FIT_HEIGHT: match that side of the screen and let the other one bar or crop
+	#How a picture is fitted onto the TV screen when the two don't have the same shape
 	#Allowed Values: STRETCH, FIT_WIDTH, FIT_HEIGHT, CONTAIN, COVER
 	scaling_mode = "CONTAIN"
 
@@ -102,3 +118,13 @@
 	audio_mode = "REQUIRE_SPEAKER"
 	#A list of regex which will filter out valid URLs. At least one of these must match for a URL video to work
 	safe_urls = []
+	#Volume scale for videos audio. Applied on top of the Blocks sound slider
+	# Default: 1.0
+	# Range: 0.0 ~ 1.0
+	audio_volume = 1.0
+
+[general]
+	#Disables the warning screen shown when Iris is installed without Iris Bonk
+	no_iris_warn_screen = true
+	#Disables the warning screen shown when Veil is installed without Veil Bonk
+	no_veil_warn_screen = true

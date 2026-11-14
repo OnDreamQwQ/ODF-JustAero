@@ -196,3 +196,7 @@
 		# Default: 100
 		# Range: 20 ~ 72000
 		reset_stable_ticks = 100
+
+[readout]
+	#Mailbox name output: server follows the server language; use zh_cn or another locale to override.
+	language = "server"

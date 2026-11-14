@@ -18,5 +18,8 @@
     "use_just_zoom_for_spyglass": true,
     "spyglass_overlay": "only_spyglass",
     "spyglass_sounds": "spyglass_and_keybind_zoom"
+  },
+  "server": {
+    "allow_standalone_zoom": true
   }
 }

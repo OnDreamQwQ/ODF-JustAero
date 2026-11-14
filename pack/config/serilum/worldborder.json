@@ -1,0 +1,87 @@
+{
+	"//": "These settings are easier to change in-game! Mod List -> World Border -> Config",
+	"Enable World Border": {
+		"//": "Whether World Border is enabled. When disabled, none of its features run and its other settings are hidden. Takes effect after a restart.",
+		"value": true
+	},
+	"enableCustomOverworldBorder": {
+		"//": "When enabled, uses the overworldBorderCoords to set the border.",
+		"value": true
+	},
+	"enableCustomNetherBorder": {
+		"//": "When enabled, uses the netherBorderCoords to set the border.",
+		"value": false
+	},
+	"enableCustomEndBorder": {
+		"//": "When enabled, uses the endBorderCoords to set the border.",
+		"value": true
+	},
+	"shouldLoopToOppositeBorder": {
+		"//": "When enabled, instead of teleporting the player inside near where they were, teleports them from the positive to the negative x/z coord and vice versa.",
+		"value": true
+	},
+	"distanceTeleportedBack": {
+		"//": "The amount of blocks the player is teleported inside after hitting the border. min: 0, max: 1,000",
+		"value": 10
+	},
+	"nearBorderMessage": {
+		"//": "The message which will be sent to the player when they are within 'distanceTeleportedBack' to the world border.",
+		"value": "You're getting close to the world border!"
+	},
+	"hitBorderMessage": {
+		"//": "The message which will be sent to the player when they hit the world border.",
+		"value": "You've hit the world border, and were teleported inside!"
+	},
+	"loopBorderMessage": {
+		"//": "The message sent to the player when they hit the border and 'shouldLoopToOppositeBorder' is enabled.",
+		"value": "You've hit the world border, and have looped around the world!"
+	},
+	"overworldBorderPositiveX": {
+		"//": "The overworld border located at the positive x coordinate. min: 0, max: 100,000",
+		"value": 5000
+	},
+	"overworldBorderNegativeX": {
+		"//": "The overworld border located at the negative x coordinate. min: -100,000, max: 0",
+		"value": -5000
+	},
+	"overworldBorderPositiveZ": {
+		"//": "The overworld border located at the positive z coordinate. min: 0, max: 100,000",
+		"value": 5000
+	},
+	"overworldBorderNegativeZ": {
+		"//": "The overworld border located at the negative z coordinate. min: -100,000, max: 0",
+		"value": -5000
+	},
+	"netherBorderPositiveX": {
+		"//": "The nether border located at the positive x coordinate. min: 0, max: 100,000",
+		"value": 625
+	},
+	"netherBorderNegativeX": {
+		"//": "The nether border located at the negative x coordinate. min: -100,000, max: 0",
+		"value": -625
+	},
+	"netherBorderPositiveZ": {
+		"//": "The nether border located at the positive z coordinate. min: 0, max: 100,000",
+		"value": 625
+	},
+	"netherBorderNegativeZ": {
+		"//": "The nether border located at the negative z coordinate. min: -100,000, max: 0",
+		"value": -625
+	},
+	"endBorderPositiveX": {
+		"//": "The end border located at the positive x coordinate. min: 0, max: 100,000",
+		"value": 5000
+	},
+	"endBorderNegativeX": {
+		"//": "The end border located at the negative x coordinate. min: -100,000, max: 0",
+		"value": -5000
+	},
+	"endBorderPositiveZ": {
+		"//": "The end border located at the positive z coordinate. min: 0, max: 100,000",
+		"value": 5000
+	},
+	"endBorderNegativeZ": {
+		"//": "The end border located at the negative z coordinate. min: -100,000, max: 0",
+		"value": -5000
+	}
+}

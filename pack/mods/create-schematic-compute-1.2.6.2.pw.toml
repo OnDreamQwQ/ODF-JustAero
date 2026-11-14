@@ -1,0 +1,12 @@
+name = "create-schematic-compute"
+filename = "create-schematic-compute-1.2.6.2.jar"
+side = "both"
+
+[download]
+hash-format = "sha512"
+hash = "c05f23545d6c5bde416d45ff7e8add542060c8d2d87a241cfc7852129da3ffc0db0006eff856ee600540fd278cd30b7f6507498ad812a2c8348058a97101f612"
+url = "https://cdn.modrinth.com/data/1bUvJALH/versions/GpYwrARe/create-schematic-compute-1.2.6.2.jar"
+
+[update.modrinth]
+mod-id = "1bUvJALH"
+version = "GpYwrARe"

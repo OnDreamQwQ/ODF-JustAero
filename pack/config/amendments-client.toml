@@ -4,8 +4,6 @@
 	texture_pack_support = false
 	#Allowed Values: ALWAYS, CACHED, CACHED_ZIPPED, NEVER
 	dynamic_assets_generation_mode = "CACHED"
-	#Disables the chat warning shown when Enhanced Block Entities is installed
-	no_enhanced_block_entities_warn = false
 
 [sign]
 	#Gives signs a pixel consistent model and texture. Also affects other mods. This also makes them use a Block Model, making them render much much much faster than as block entities
@@ -30,8 +28,10 @@
 	dragon_fireball_trail = true
 	#Makes 3D charges tumble in the air when moving
 	charges_tumble = true
-	#Makes 3D snowballs and slimeballs (supp compat) tumble in the air when moving
+	#Makes 3D snowballs, slimeballs (supp compat) and mud balls (environmental compat) tumble in the air when moving
 	projectiles_tumble = false
+	#Makes snowballs leave a trail of snowflakes and spawn more of them on hit
+	extra_particles = true
 
 	[projectiles.dragon_fireball]
 		#Makes dragon's breath particles emissive to better match new visuals
@@ -123,13 +123,24 @@
 	torch_item_flame = false
 	#Gives a special animation to supplementaries candle holders when held in hand
 	candle_holder_item_holding = true
-	#Size lanterns when held in hand
-	# Default: 0.625
-	# Range: 0.0 ~ 2.0
-	handle_holder_item_size = 0.625
 	#Makes Torch and Lantern holding animation be fixed, not changing with player facing
 	fixed_holding_animations = false
 	#Prevents campfire smoke from rendering if there is a solid block above it
 	campfire_smoke_through_blocks = false
 	#Gives the villager trade buttons the same look loom and stonecutter buttons have
 	villager_trade_buttons = true
+	#Size of candle holders when held in hand
+	# Default: 0.625
+	# Range: 0.0 ~ 2.0
+	candle_holder_item_size = 0.625
+
+	[misc.hotbar_slot_animation]
+		#Makes the selected hotbar slot slide to its new position. Higher is faster, 0 for vanilla behavior
+		# Default: 2.5
+		# Range: 0.0 ~ 5.0
+		speed = 2.5
+		#If the hotbar slot animation wraps around the edges
+		wrap = true
+		#What the animation does when the selection texture is opaque. NONE keeps it on top of the items, IN_BACKGROUND moves it behind them, TURNS_OFF disables the animation
+		#Allowed Values: NONE, IN_BACKGROUND, TURNS_OFF
+		opaque_behavior = "IN_BACKGROUND"

@@ -254,6 +254,20 @@ configSchemaVersion = 7
 	#Set by the server: nothing is sent for a mob's tilt, so the host
 	#decides.
 	tiltItems = false
+	#Mob list mode. BLACKLIST: mobList is never tilted. WHITELIST: only
+	#mobList is tilted. Yours only: this server has no mod.
+	#Allowed Values: BLACKLIST, WHITELIST
+	mobListMode = "BLACKLIST"
+	#Mob list. Mob ids, "#" tags or "modid:*", e.g.
+	#["minecraft:cow", "#minecraft:raiders", "alexsmobs:*"]
+	mobList = []
+	#Item list mode. BLACKLIST: itemList is never tilted. WHITELIST: only
+	#itemList is tilted. Yours only: this server has no mod.
+	#Allowed Values: BLACKLIST, WHITELIST
+	itemListMode = "BLACKLIST"
+	#Item list. Dropped item ids, "#" tags or "modid:*", e.g.
+	#["minecraft:diamond", "#minecraft:swords"]
+	itemList = []
 
 #Only useful when something is wrong.
 [debug]

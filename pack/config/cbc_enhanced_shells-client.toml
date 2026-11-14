@@ -26,8 +26,6 @@
 	flashIntensity = 1.0
 	#Orange thermal wash on the screen after the flash.
 	heatWash = true
-	#Faint retinal afterimage of the fireball (a soft violet spot fading over a few seconds) when you looked straight at the blast.
-	afterimage = true
 	#Camera shake when the shock front arrives.
 	cameraShake = true
 	#Camera shake strength multiplier.

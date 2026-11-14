@@ -80,7 +80,7 @@
 
 	#Gyroscope and gearbox controls
 	[common.gearbox]
-		#Maximum static per-face angle reported by the bi-directional gearbox from gyro input
+		#Default per-face angle limit for gyro input; explicit Smart Gearbox face limits override this value
 		# Default: 90.0
 		# Range: 1.0 ~ 180.0
 		gearboxMaxStaticAngleDeg = 90.0
@@ -185,11 +185,23 @@
 		# Default: 512
 		# Range: 32 ~ 4096
 		maxNodes = 512
+		#Enable experimental inverse-kinematics locomotion in the Advanced Contraption Controller
+		enableIk = false
 
 	#App Ownership and persistance
 	[common.diagnostic_tablet]
-		#Enable the Smart Tablet block, item, user interface, apps and networking
-		enabled = false
 		#Who owns the paid apps, PLAYER is shared across tablets, DEVICE is not.
 		#Allowed Values: PLAYER, DEVICE
 		appPurchaseScope = "PLAYER"
+
+	#Dye Applicator
+	[common.dye_applicator]
+		#Allow the Dye Applicator on Flight Control thruster plumes. The server controls application; each client controls visibility. Disabled clients see the native plume. Saved presets are retained.
+		flightControl = true
+		#Allow the Dye Applicator on Propulsion Simulated thruster plumes. The server controls application; each client controls visibility. Disabled clients see the native plume. Saved presets are retained.
+		propulsionSimulated = true
+
+	#Flight Control graph integration
+	[common.flight_control]
+		#Easy Flight control integration. Allow control nodes without dedicated Flight Control blocks. A Creative Flight Control Computer on the sublevel also enables this. Its node always requires the physical block. Existing blocks synchronize with their nodes in either mode. The HUD node is always available.
+		easyFlightControlIntegration = false

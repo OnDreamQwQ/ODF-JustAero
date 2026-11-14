@@ -1,0 +1,12 @@
+name = "Create:Advanced Frequency Network"
+filename = "create_afn-1.8.6.jar"
+side = "both"
+
+[download]
+hash-format = "sha512"
+hash = "847dc5770f878b78c92838ecbf1d7a9b19d24edc48016fc9cddd402fe79b05c1421afba2122feb8c14f374b94523a5b5922acaefcd8d8012bb1db5445e210921"
+url = "https://mediafilez.forgecdn.net/files/9540/738/create_afn-1.8.6.jar"
+
+[update.curseforge]
+file-id = 9540738
+project-id = 1646446

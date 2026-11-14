@@ -1,0 +1,225 @@
+#Write belt layout changes, kinetic repairs and a once a second wheel summary for every vehicle to the log. Use it to diagnose a track that wraps its cogwheels wrongly or throws its vehicle.
+debugLogging = false
+
+#Suspension response. Forces are sized per contact point: each cogwheel takes a share of the vehicle mass, so a long track does not apply the whole vehicle's suspension force once per wheel. Stiffness, damping, travel and spring strength are set on each cogwheel with the Suspension Tool.
+[suspension]
+	#How fast a drawn wheel catches up to the terrain under it. One snaps to every block edge, lower eases the step out over several ticks.
+	# Default: 0.7
+	# Range: 0.01 ~ 1.0
+	suspensionSmoothing = 0.7
+	#Converts the suspension gain into the per-tick impulse ceiling.
+	# Default: 200.0
+	# Range: 0.0 ~ 10000.0
+	impulseScale = 200.0
+	#Extra impulse headroom while the suspension is fully compressed.
+	# Default: 3.0
+	# Range: 1.0 ~ 100.0
+	bumpStopScale = 3.0
+	#Fastest a wheel may push its share of the vehicle off a surface, in blocks per second, on top of whatever it takes to stop the approach. Bounds the kick a wheel gets when it ends up buried in terrain or in another vehicle, which is what happens for a moment when a structure breaks in two.
+	# Default: 6.0
+	# Range: 0.0 ~ 1000.0
+	maxSuspensionSpeed = 6.0
+	# Default: 1.0
+	# Range: 0.0 ~ 100.0
+	trackMaxImpulseMultiplier = 1.0
+
+#Per size geometry. Sizes are tiny, intermediate, small, medium, medium-large and large.
+[geometry]
+	# Default: 0.25
+	# Range: 0.01 ~ 8.0
+	tinyCollisionRadius = 0.25
+	# Default: 0.375
+	# Range: 0.01 ~ 8.0
+	intermediateCollisionRadius = 0.375
+	# Default: 0.5
+	# Range: 0.01 ~ 8.0
+	smallCollisionRadius = 0.5
+	# Default: 0.75
+	# Range: 0.01 ~ 8.0
+	mediumCollisionRadius = 0.75
+	# Default: 0.875
+	# Range: 0.01 ~ 8.0
+	mediumLargeCollisionRadius = 0.875
+	# Default: 0.8
+	# Range: 0.01 ~ 8.0
+	largeCollisionRadius = 0.8
+	# Default: 0.35
+	# Range: 0.01 ~ 8.0
+	tinyTrackRadius = 0.35
+	# Default: 0.425
+	# Range: 0.01 ~ 8.0
+	intermediateTrackRadius = 0.425
+	# Default: 0.55
+	# Range: 0.01 ~ 8.0
+	smallTrackRadius = 0.55
+	# Default: 0.74
+	# Range: 0.01 ~ 8.0
+	mediumTrackRadius = 0.74
+	# Default: 0.925
+	# Range: 0.01 ~ 8.0
+	mediumLargeTrackRadius = 0.925
+	# Default: 1.1
+	# Range: 0.01 ~ 8.0
+	largeTrackRadius = 1.1
+	# Default: -0.1
+	# Range: -8.0 ~ 8.0
+	tinyVerticalOffset = -0.1
+	# Default: -0.09
+	# Range: -8.0 ~ 8.0
+	intermediateVerticalOffset = -0.09
+	# Default: -0.08
+	# Range: -8.0 ~ 8.0
+	smallVerticalOffset = -0.08
+	# Default: 0.0
+	# Range: -8.0 ~ 8.0
+	mediumVerticalOffset = 0.0
+	# Default: 0.05
+	# Range: -8.0 ~ 8.0
+	mediumLargeVerticalOffset = 0.05
+	# Default: 0.1
+	# Range: -8.0 ~ 8.0
+	largeVerticalOffset = 0.1
+	#How much higher than its collision radius a cogwheel rests above the ground, in blocks. Set so the outside of the track rests on the ground: track radius plus half a track link, plus the vertical offset, less the collision radius.
+	# Default: 0.0625
+	# Range: -8.0 ~ 8.0
+	tinyVisualVerticalOffset = 0.0625
+	# Default: 0.0225
+	# Range: -8.0 ~ 8.0
+	intermediateVisualVerticalOffset = 0.0225
+	# Default: 0.0325
+	# Range: -8.0 ~ 8.0
+	smallVisualVerticalOffset = 0.0325
+	# Default: 0.0525
+	# Range: -8.0 ~ 8.0
+	mediumVisualVerticalOffset = 0.0525
+	# Default: 0.1625
+	# Range: -8.0 ~ 8.0
+	mediumLargeVisualVerticalOffset = 0.1625
+	# Default: 0.4625
+	# Range: -8.0 ~ 8.0
+	largeVisualVerticalOffset = 0.4625
+
+#How fast a track carries the vehicle. The speed a track aims for is fixed by its cogwheel sizes and its rotational speed, so a track always travels at the speed its links are moving. How hard it may push to get there is its grip.
+[drive]
+	#Share of the remaining difference between track speed and ground speed corrected each physics step.
+	# Default: 0.35
+	# Range: 0.0 ~ 1.0
+	tractionResponse = 0.35
+
+#Grip of the track on the ground. Only the track grips: cogwheels shape it and carry the suspension, and a cogwheel without a track rolls freely.
+[friction]
+	#How hard a track grips ordinary ground, as a share of the weight resting on it. At 1 a track can push forward, sideways or both together with as much force as that weight. Slippery and sticky blocks scale it, and a redstone brake cannot hold beyond it.
+	# Default: 1.25
+	# Range: 0.0 ~ 10.0
+	trackGrip = 1.25
+	#Ground pressure at which a track grips soft ground as well as that ground is listed for, in mass per square block of track touching it. A track pressing less, because it is wider, longer or carries less, grips soft ground better, and one pressing more grips it worse.
+	# Default: 12.0
+	# Range: 0.01 ~ 1000.0
+	softGroundPressure = 12.0
+	#Share of its grip a track keeps once it skids sideways over the ground. It fades in as the skid grows from a quarter of a block per second to one block per second, and grip returns as the skid stops.
+	# Default: 0.8
+	# Range: 0.0 ~ 1.0
+	slidingGrip = 0.8
+	#Share of its grip soft ground keeps while rain falls on it. It eases in and out with the rain, and ground under a roof or in a biome where it does not rain stays dry.
+	# Default: 0.75
+	# Range: 0.0 ~ 1.0
+	wetSoftGrip = 0.75
+	#How much of the turn the drive asks for the tracks may scrub through. At 0 they resist that turn as hard as any other sideways slide, which is what stops a vehicle from turning in place. At 1 the vehicle turns at exactly the rate its two track speeds work out to, which is quicker than a real tracked vehicle manages, since real tracks slip. Either way the vehicle stops turning as soon as the track speeds match again.
+	# Default: 0.7
+	# Range: 0.0 ~ 1.0
+	pivotScrub = 0.7
+	#Drag of a track that is not driven, as a share of the weight resting on it. A redstone brake raises it toward the track's full grip.
+	# Default: 0.09
+	# Range: 0.0 ~ 1.0
+	trackRollingResistance = 0.09
+
+#How the run of track between two cogwheels meets the ground, and how tension changes that. Tension is set per chain with the alignment lever, from fully slack to fully taut.
+[belt]
+	#Let the track between cogwheels rest on terrain. With this off only the cogwheels themselves touch the ground.
+	beltCollisionEnabled = true
+	#Let the run of track between two cogwheels bend over what it crosses instead of passing through it. Turning this off leaves it a straight line.
+	beltDrapeEnabled = true
+	#Distance between the points a run of track is shaped by, in blocks. Smaller follows the ground more closely and costs more to work out.
+	# Default: 0.25
+	# Range: 0.05 ~ 4.0
+	beltNodeSpacing = 0.25
+	#Extra gap the track keeps above anything it climbs over, in blocks, on top of how it already sits on flat ground.
+	# Default: 0.15
+	# Range: 0.0 ~ 1.0
+	beltSurfaceClearance = 0.15
+	#Maximum belt hang, in blocks, so a long run does not droop through the floor.
+	# Default: 1.0
+	# Range: 0.0 ~ 8.0
+	beltMaxSag = 1.0
+	#Spread between slack and taut. A taut belt pushes back this many times harder than a neutral one, a fully slack one this many times softer.
+	# Default: 2.0
+	# Range: 1.0 ~ 20.0
+	beltStiffnessRange = 2.0
+	#Tension change from one click of the alignment lever.
+	# Default: 0.1
+	# Range: 0.01 ~ 1.0
+	beltTensionStep = 0.1
+	#Length of one track link, in blocks. A loop is always a whole number of links, and slack is the surplus of that length over the taut path.
+	# Default: 0.25
+	# Range: 0.0625 ~ 2.0
+	beltLinkPitch = 0.25
+	#Links drawn by one pass of the belt texture. The default texture is sixteen rows tall and shows four links.
+	# Default: 4
+	# Range: 1 ~ 64
+	beltLinksPerTexture = 4
+	#Links of slack a fully slack loop carries beyond the taut path. The hang follows the lever evenly, so this sets how deep the slackest setting hangs.
+	# Default: 2
+	# Range: 0 ~ 256
+	beltMaxSlackLinks = 2
+	#Length a fully taut loop is fitted short by, in blocks, so it pulls on its wheels instead of merely reaching round them. At zero a taut loop is exactly the length of the path it wraps.
+	# Default: 0.3
+	# Range: 0.0 ~ 8.0
+	beltPreTension = 0.3
+	#Mass of one block of track, in kilograms. Runs that are not resting on anything hang from the cogwheels under this weight.
+	# Default: 0.1
+	# Range: 0.0 ~ 1000.0
+	beltMassPerBlock = 0.1
+	#Share of its slack a run gives up when the sprocket is pulling into it. At zero the loop holds one tension all the way round.
+	# Default: 0.85
+	# Range: 0.0 ~ 1.0
+	beltTightSideBias = 0.85
+	#Chain speed at which the tight side reaches its full bias, in revolutions per minute.
+	# Default: 32.0
+	# Range: 1.0 ~ 1024.0
+	beltTightSideSpeed = 32.0
+	#Let a loop that has run out of length hold its drooping wheels up instead of stretching to follow them.
+	beltHoldEnabled = true
+	#Furthest the track may hold one wheel above the ground it would otherwise drop to, in blocks.
+	# Default: 2.0
+	# Range: 0.0 ~ 8.0
+	beltMaxHold = 2.0
+
+#Create stress consumed by each cogwheel size.
+[stress]
+	# Default: 2.0
+	# Range: 0.0 ~ 1024.0
+	tinyStressImpact = 2.0
+	# Default: 3.0
+	# Range: 0.0 ~ 1024.0
+	intermediateStressImpact = 3.0
+	# Default: 4.0
+	# Range: 0.0 ~ 1024.0
+	smallStressImpact = 4.0
+	# Default: 6.0
+	# Range: 0.0 ~ 1024.0
+	mediumStressImpact = 6.0
+	# Default: 7.0
+	# Range: 0.0 ~ 1024.0
+	mediumLargeStressImpact = 7.0
+	# Default: 8.0
+	# Range: 0.0 ~ 1024.0
+	largeStressImpact = 8.0
+
+#Sounds played by the suspension.
+[feedback]
+	#Play an impact sound when a wheel lands.
+	landingSoundsEnabled = true
+	#Minimum fall height, in blocks, before a landing sound plays.
+	# Default: 2.0
+	# Range: 0.0 ~ 256.0
+	landingSoundMinFallBlocks = 2.0

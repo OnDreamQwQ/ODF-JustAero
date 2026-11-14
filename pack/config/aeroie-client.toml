@@ -1,0 +1,61 @@
+#Control-seat mouse settings. Changes reload automatically; restart control after changing input mode.
+#控制椅鼠标设置：支持文件热重载；切换输入模式后建议重新锁定视角。带速率的配置会同步给服务端并再次限制范围。
+[seatMouse]
+	#Mouse-coordinate distance from center to full input on either axis. 两轴满输入位移。
+	# Default: 400.0
+	# Range: 100.0 ~ 2000.0
+	fullScaleDistance = 400.0
+	#Yaw sensitivity multiplier. 水平灵敏度，越大越灵敏。
+	# Default: 1.0
+	# Range: 0.1 ~ 4.0
+	yawSensitivity = 1.0
+	#Pitch sensitivity multiplier. 垂直灵敏度，默认与水平一致。
+	# Default: 1.0
+	# Range: 0.1 ~ 4.0
+	pitchSensitivity = 1.0
+	#Fraction of full input ignored around center. 中心死区比例，默认约两单位鼠标位移。
+	# Default: 0.005
+	# Range: 0.0 ~ 0.15
+	deadzone = 0.005
+	#1 is linear; larger values soften the center. 曲线指数，1为线性，增大可降低中心灵敏度。
+	# Default: 1.15
+	# Range: 1.0 ~ 3.0
+	curveExponent = 1.15
+	#Mouse smoothing time constant in milliseconds; 0 disables it. 鼠标平滑时间常数（毫秒），0关闭。
+	# Default: 25.0
+	# Range: 0.0 ~ 150.0
+	smoothingMillis = 25.0
+	#False: virtual stick retains displacement; true: input follows mouse movement speed. false为位置摇杆，true为增量模式。
+	velocityMode = false
+	#Mouse-coordinate units per second for full input in velocity mode. 增量模式满输入移动速度。
+	# Default: 600.0
+	# Range: 100.0 ~ 3000.0
+	velocityFullScale = 600.0
+	#Invert horizontal mouse input. 反转水平输入。
+	invertYaw = false
+	#Invert vertical mouse input. 反转垂直输入。
+	invertPitch = false
+	#Minimum input packet interval in milliseconds, sampled on render frames without a new thread. 输入包最短间隔（毫秒）。
+	# Default: 25
+	# Range: 16 ~ 100
+	sendIntervalMillis = 25
+
+#Assisted turn-rate targets; physical thruster authority still limits actual acceleration.
+#力矩辅助开启时跟踪目标转速；关闭后松手保留惯性。实际响应仍受推进器能力限制。
+[seatSteering]
+	#Maximum yaw rate in degrees per second. 最大偏航角速度（度/秒）。
+	# Default: 75.0
+	# Range: 15.0 ~ 180.0
+	maxYawDegreesPerSecond = 75.0
+	#Maximum pitch rate in degrees per second. 最大俯仰角速度（度/秒）。
+	# Default: 75.0
+	# Range: 15.0 ~ 180.0
+	maxPitchDegreesPerSecond = 75.0
+	#Maximum keyboard roll rate in degrees per second. 最大滚转角速度（度/秒）。
+	# Default: 90.0
+	# Range: 15.0 ~ 240.0
+	maxRollDegreesPerSecond = 90.0
+	#Rate response per second; larger values turn and stop faster. 转速响应，越大转向及回中刹停越快。
+	# Default: 8.0
+	# Range: 2.0 ~ 20.0
+	rateResponse = 8.0

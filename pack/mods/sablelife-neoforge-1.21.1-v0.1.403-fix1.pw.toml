@@ -1,0 +1,12 @@
+name = "Sable Life"
+filename = "sablelife-neoforge-1.21.1-v0.1.403-fix1.jar"
+side = "both"
+
+[download]
+hash-format = "sha512"
+hash = "be707829c2699da41a0632ab989209e3e1efad0bd562011bff2fb3b31d0a2bac4ed86c5f98c1fb24ae80cbf59c88a9127c97439f050710b1229ce48321aea5ab"
+url = "https://mediafilez.forgecdn.net/files/9541/216/sablelife-neoforge-1.21.1-v0.1.403-fix1.jar"
+
+[update.curseforge]
+file-id = 9541216
+project-id = 1777721

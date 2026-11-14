@@ -1,0 +1,261 @@
+#Check that a block may host inner redstone (full, opaque cube) before storing anything.
+#Turn this off to allow putting redstone inside ANY block (debug/creative only).
+validateHosts = true
+#Log every placement and retrieval, including refused ones, to the game log.
+#Off in release builds; set it to true when you need a diagnostic log.
+debugLog = false
+#Allow shift-right-clicking a block that already holds a component to replace it.
+#Off by default: a second placement falls through to vanilla instead.
+allowReplace = false
+#Let the block placer create a standalone one-block structure when it is itself physical.
+#On by default; turned off, the placement is refused and nothing is spent.
+placerCreatesStructures = true
+#When the block holding redstone is drawn as a translucent, framed cube with the component visible inside.
+#GOGGLES (default) only while wearing the redstone goggles, ALWAYS, or OFF for no overlay at all.
+#Allowed Values: GOGGLES, ALWAYS, OFF
+hostOverlayMode = "GOGGLES"
+#Opacity of the shell, 0-255. Around 150 reads as frosted glass; 0 draws the border only.
+# Default: 150
+# Range: 0 ~ 255
+hostOverlayAlpha = 150
+#Shell colour as RRGGBB hex (a leading '#' is allowed).
+hostOverlayColor = "9FB6FF"
+#Opacity of the border drawn around each face of the shell, 0-255.
+#0 draws the shell without a border.
+# Default: 170
+# Range: 0 ~ 255
+hostOverlayFrameAlpha = 170
+#Border colour as RRGGBB hex (a leading '#' is allowed).
+hostOverlayFrameColor = "E03020"
+#Border colour for a block holding SUPERCONDUCTING wire, as RRGGBB hex.
+#Tells the two wire materials apart; set it equal to hostOverlayFrameColor to drop the distinction.
+superconductorFrameColor = "FF8C00"
+#Whether a host block is powered by the strong power a neighbouring SOLID block carries, as in vanilla.
+#Turn this off so inner redstone reacts only to blocks that emit a signal themselves.
+hostAcceptsStrongPower = true
+#Whether a host block passes on the strong power a neighbouring diode pushes into it.
+#Off by default, so that power stops at the component inside; on gives vanilla block semantics.
+hostConductsStrongPower = false
+#Draw the component itself inside the shell, so a wire, a repeater's facing and a
+#lit torch can be read from outside the block. Off leaves only the coloured shell.
+showInnerComponents = true
+#Draw the component even when a solid block is in the way.
+#Off (the default) so the effect never becomes X-ray vision through a wall.
+seeInnerComponentsThroughWalls = false
+#DEBUG. Draw the shell and component for every known host, ignoring the colour and visibility settings.
+#Off by default; hostOverlayMode=OFF still draws nothing.
+forceOverlayDraw = false
+#Require the redstone goggles to be worn before the wrench will do anything.
+#On by default. Turn it off to adjust connections without them.
+wrenchNeedsGoggles = true
+#Shift-right-clicking the block already selected with the wrench clears its connection overrides.
+#On by default; without it there is no way back to automatic behaviour from the item.
+wrenchClearOnSameBlock = true
+#Require the redstone goggles to be worn before the rotation rod will turn anything.
+#On by default, like the wrench: aiming a component is done by looking at it.
+rotationRodNeedsGoggles = true
+#Require the redstone goggles before a bare hand can change a setting inside a block (a delay, a mode).
+#On by default. Levers and buttons are exempt, and a refusal is silent.
+innerAdjustNeedsGoggles = true
+#Log every component update sent to clients. Very noisy while a circuit runs; it
+#answers 'is the client being told about this block at all'.
+traceSlotSync = false
+#Let inner redstone components travel with the Create contraption or Sable sub-level that picks their block up.
+#On by default. Turn it off to leave components behind at their world position.
+carrierEnabled = true
+#Log every contraption callback, including the ones that carry nothing.
+#Off by default (one line per block of a machine); use it to check whether your block type is hooked.
+traceCarrier = false
+#Close the bridge between a carried component and the world it is flying through.
+#Off by default: the two sides can see each other, so a machine lights the redstone it passes over.
+carrierFreezeWorldIo = false
+#Let the redstone inside a moving structure read the signal sources the structure itself is carrying.
+#On by default: a lever carried next to a host block powers the redstone inside it. Off reads only the world outside.
+carrierStructureSignals = true
+#Also notify the neighbours of a carried host's OWN structure coordinate when its output changes.
+#On by default: a piston, lamp or wire the machine carries wakes up, as it would on the ground. Off notifies only the projected world position.
+carrierNotifyStructureNeighbours = true
+#Drop the component as an item when a block a structure is CARRYING is broken, as in the world.
+#On by default; it drops once, where the block was. Never fires for a release or a landing.
+carrierBlockDrops = true
+#Migrate a component in the WORLD's own store at a moving structure's own coordinate into that structure's record.
+#On by default; this repairs a save that already has such an entry.
+adoptWorldComponents = true
+#How many blocks riding a moving structure the self-healing sweep may examine per tick.
+#It drops the component of a carried block removed without a break event (a drill or saw). 0 turns it off.
+# Default: 8
+# Range: 0 ~ 4096
+carrierSelfHealCheckPerTick = 8
+#Let the redstone inside an ordinary block in the world read the output of a host a structure is CARRYING.
+#On by default, at the world position that host occupies; off reads only vanilla's own query.
+carrierWorldReadsProjection = true
+#Let the redstone wrench be used on a host block a moving structure is CARRYING: pick it, then shift-click a neighbour.
+#That steps the line through locked / cut / automatic. Off leaves a carried host untouched.
+carriedWrench = true
+#Let the rotation rod be used on a host block a moving structure is CARRYING.
+#Click a face to make it the component's input side, again for the output side.
+carriedRotationRod = true
+#Let a component be put INTO a block a moving structure is CARRYING, and taken back out again.
+#On by default. Turn it off first if placing components inside a carried block misbehaves.
+carriedInsert = true
+#Handle a coordinate a moving structure OWNS on the carrier side before the world's own click handling.
+#On by default. Turn it off first if a click on a carried block misbehaves.
+carriedInsertPriority = true
+#Let a bare hand work a component inside a block a moving structure is CARRYING: flick a lever, step a delay, swap a mode.
+#On by default. Buttons are not included, as their release needs a fixed level position.
+carriedSwitches = true
+#Log every individual solver step. Very noisy: one tick of an ordinary build can produce hundreds of lines.
+#Off by default; a summary line every 20 ticks carries the same information.
+verboseSolverLog = false
+#Log the client's carried-render diagnostics every frame instead of only when the picture changes.
+#Off by default, as it grows the log to tens of megabytes. It never changes what is drawn.
+verboseRenderLog = false
+#How many times ONE host may be recomputed inside a single tick before a 'solver spin' warning names it.
+#Only a defective circuit reaches this; the warning is written at most once per host per tick.
+# Default: 8
+# Range: 1 ~ 4096
+solverSpinWarnPerTick = 8
+#Coalesce the solver's neighbour notifications to the tick boundary.
+#On by default, so the solver cannot re-feed itself inside one tick. Off sends one notification per change.
+solverCoalesceNotifications = true
+#How many settle-and-flush passes one tick may run when the world answers the solver's own notifications with more work.
+#1 turns the cascade off, which is exactly the behaviour without it. The adaptive backoff is built in and not configurable: a dimension whose previous tick did not converge gets half its budget, so an oscillating clock costs what it costs today, while a converging machine keeps the whole budget.
+# Default: 8
+# Range: 1 ~ 32
+solverCascadeLimit = 8
+#Let Jade show the component hidden inside a block a moving structure is CARRYING, as it does for a world block.
+#On by default; the lines Jade shows for ordinary world blocks are unaffected.
+carriedJade = true
+#How long, in ticks, a moving structure's pose stays trustworthy on the client.
+#Past this age the client stops drawing the component inside it, so keep it well above carrierPoseHeartbeatTicks.
+# Default: 60
+# Range: 5 ~ 1200
+carrierPoseStaleTicks = 60
+#How often, in ticks, the server re-sends the pose of every structure that is holding something, moved or not.
+#The heartbeat is what lets the client tell a parked machine from one that has gone away. Default 20.
+# Default: 20
+# Range: 1 ~ 600
+carrierPoseHeartbeatTicks = 20
+#How often, in ticks, the server re-sends the pose of a structure holding something while it may be turning.
+#The upper bound on how old a rotating angle can be on screen. 0 disables sampling.
+# Default: 2
+# Range: 0 ~ 600
+carrierPoseSampleTicks = 2
+#Recompute the redstone inside a moving structure from its own local layout.
+#On by default; off leaves every component at the value it had when the block was picked up.
+carrierSolveEnabled = true
+#How many components one structure may settle in a single tick.
+#A ceiling on work, not on machine size: a larger structure keeps settling over the following ticks.
+# Default: 64
+# Range: 1 ~ 4096
+carrierSolveMaxComponentsPerTick = 64
+#How many of one structure's host blocks may be used as a starting point for a solve, per tick.
+#The remaining hosts are solved over the following ticks.
+# Default: 256
+# Range: 1 ~ 4096
+carrierSolveMaxNodesPerCarrier = 256
+#Log one line per pass for every structure that has components riding it.
+#Off by default; it prints once a tick.
+traceCarrierSolve = false
+#How far component updates reach, in blocks. 0 sends them to everyone in the dimension.
+#0 is the safe default: a client that misses an update keeps drawing the old state.
+# Default: 0.0
+# Range: 0.0 ~ 512.0
+slotSyncRange = 0.0
+#The longest axis a captured structure may have, in blocks; 48 is vanilla's own structure block limit.
+#The load budget is counted from it: 48³ plus the context shell is 16 chunk columns.
+# Default: 48
+# Range: 1 ~ 128
+structureMaxSize = 48
+#How large the downsampled preview that travels with a structure may be, in bytes.
+#The preview is what a client draws on the placed block; keep it well below the game's 1 MiB payload cap.
+# Default: 65536
+# Range: 1024 ~ 524288
+structurePreviewBytes = 65536
+#How many cells the downsampled preview may have, as a volume - not how many are filled.
+#Together with structurePreviewBytes this decides the preview's scale; the coarser of the two wins.
+#A 48³ structure at 4096 cells is drawn at scale 3 (16³ cells).
+# Default: 4096
+# Range: 1024 ~ 110592
+structurePreviewCells = 4096
+#Emit a structure preview's geometry once and redraw it, instead of rebuilding the miniature every frame.
+#On by default: this is what makes a placed structure cost a fraction of what it did.
+#Turn it off if a preview crashes or draws wrongly - the game then draws one cell at a time again.
+structurePreviewCached = true
+#Drop the cells of a structure preview that are completely buried inside it.
+#On by default. Turn it off to draw every cell, which tells a culling problem from a sampling one.
+structurePreviewCull = true
+#Leave out the faces of a structure preview that the cell behind them hides.
+#On by default: a wall spends two faces out of six on the picture instead of six.
+#Turn it off to draw every face, which tells a face-culling problem from a sampling one.
+structurePreviewFaces = true
+#Draw a structure at half resolution wherever it is drawn as an icon (hand, slot, ground).
+#On by default: an icon is a few dozen pixels, and the full picture costs what a placed block costs.
+#Turn it off to draw the full picture everywhere.
+structurePreviewIconDetail = true
+#Snapshot the one block of world around a selection when capturing it.
+#On by default: the shell travels into the plot but is never written into the payload or released.
+structureCaptureContextShell = true
+#How far from a structure a player may be and still press its manual keys, in blocks.
+#Measured from the player's eyes to the block, and checked by the server on every press.
+# Default: 8.0
+# Range: 1.0 ~ 64.0
+structureManualRange = 8.0
+#How long one press pushes, in ticks. A press is a pulse, never a hold, so it cannot be left running.
+#10 ticks (half a second) is enough for a repeater, a piston or a dispenser.
+# Default: 10
+# Range: 1 ~ 200
+structureManualPulseTicks = 10
+#The least number of ticks between two accepted presses from one player.
+#Keeps a held or spammed key from driving a machine at tick speed.
+# Default: 2
+# Range: 0 ~ 40
+structureManualCooldownTicks = 2
+#The least number of ticks between two changes of the signal a structure injects into one cell of its plot.
+#A change that arrives too soon is held and let through when its window opens. Default 4.
+# Default: 4
+# Range: 0 ~ 40
+structureInjectionLimitTicks = 4
+#How many chunk columns may be held loaded by structures at once, counted in COLUMNS, never structures.
+#A structure that does not fit is asleep: it still exists and can be released, but is not ticked.
+# Default: 256
+# Range: 0 ~ 65536
+structureMaxLoadedColumns = 256
+#How many structures may be ticked at once, whatever their size.
+#Checked together with the column budget: both have to allow a structure before it ticks.
+# Default: 16
+# Range: 0 ~ 4096
+structureMaxLoadedPockets = 16
+#How many entries the manual-mode panel may hold in one structure.
+# Default: 32
+# Range: 0 ~ 512
+structureManualEntryLimit = 32
+#Keep the pocket dimension's time and weather equal to the overworld's.
+#On by default: a weather detector or a daylight-dependent block reads what it read where it stood.
+structurePocketSyncEnvironment = true
+#Play the sounds a captured structure makes where the structure stands.
+#On by default: the blocks inside a structure run in the hidden pocket dimension, where no player
+#ever is, so a note block or a lever in there was silent.
+structurePocketSounds = true
+#Allow the copying tier at all. It copies container contents along with the blocks, so a chest of items is duplicated too.
+#Creative mode only; survival is always cut-only, whatever this says.
+structureAllowCopy = true
+#How many structures deep a capture may go. 1 means a structure may hold another structure, but not a third.
+#0 forbids any structure block inside a capture; raising it multiplies how many pockets tick at once.
+# Default: 1
+# Range: 0 ~ 16
+structureMaxNestingDepth = 1
+#Block ids that may not be captured. Bedrock, the portals and the command blocks are here because a captured one can be released anywhere.
+#An unknown id is logged and skipped rather than refusing to start.
+structureBlockBlacklist = ["minecraft:bedrock", "minecraft:barrier", "minecraft:command_block", "minecraft:chain_command_block", "minecraft:repeating_command_block", "minecraft:structure_block", "minecraft:structure_void", "minecraft:jigsaw", "minecraft:end_portal", "minecraft:end_portal_frame", "minecraft:end_gateway", "minecraft:nether_portal", "minecraft:light"]
+#Carry this mod's own components that live INSIDE blocks with a captured structure, and put them back on release.
+#On by default: without it a captured host block arrives empty inside.
+structureMigrateSlots = true
+#Ask before a release overwrites blocks.
+#On by default: a target holding anything is refused once, with the block count, and goes ahead when asked again.
+structureReleaseConflictGuard = true
+#How many blocks a release writes per tick. A 48³ structure is 110,592 blocks, too many for one tick.
+#4096 is about 27 ticks (1.4 s) for the largest allowed structure.
+# Default: 4096
+# Range: 1 ~ 110592
+structureReleaseBlocksPerTick = 4096

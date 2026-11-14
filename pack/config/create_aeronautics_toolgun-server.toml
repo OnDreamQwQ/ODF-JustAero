@@ -13,3 +13,13 @@
 	allowRotate = true
 	#Allow the survival structure tool gun to remove tracked toolgun constraints.
 	allowDisconnect = true
+
+[survivalMagneticGun]
+	#Maximum grabbing force per linear motor axis for the survival magnetic gun. Original value: 5500. Lower values weaken lifting and pulling. Does not affect the creative magnetic gun or launch impulses.
+	# Default: 5500.0
+	# Range: 0.01 ~ 1.0E9
+	linearMaxForce = 5500.0
+	#Maximum rotational motor force for the survival magnetic gun. Original value: 24000. Lower values weaken holding and turning. Does not affect the creative magnetic gun.
+	# Default: 24000.0
+	# Range: 0.01 ~ 1.0E9
+	angularMaxForce = 24000.0

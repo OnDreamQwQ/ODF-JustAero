@@ -1,0 +1,7 @@
+#.
+#Config options for TFMG's UI
+[ui]
+	#.
+	#.
+	#Whether the pressure needle wobbles for the aesthetics of extremely high or low pressure
+	enablePressureNeedleWobble = true

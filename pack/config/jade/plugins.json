@@ -14,8 +14,8 @@
     "animal_owner": true,
     "harvest_tool.effective_tool": true,
     "energy_storage.style": "PROGRESS_BAR",
-    "item_storage.normal_amount": 9,
     "item_storage": true,
+    "item_storage.normal_amount": 9,
     "harvest_tool": true,
     "armor_stand": true,
     "fluid_storage.detailed": false,
@@ -60,6 +60,11 @@
     "painting": true,
     "chiseled_bookshelf": true
   },
+  "redstonecircuit": {
+    "weather_detector": true,
+    "inner_component": true,
+    "repeater_delay": true
+  },
   "jade_access": {
     "held_item": true,
     "sign": true,
@@ -71,7 +76,7 @@
     "logistics_identity": true
   },
   "fluidlogistics": {
-    "blaze_cooler_icon": true
+    "snow_golem_freezer_icon": true
   },
   "jade": {
     "coordinates.rel": false,
@@ -83,6 +88,9 @@
     "registry_name": "OFF",
     "block_properties": false,
     "mod_name": true
+  },
+  "legworks": {
+    "leg_status": true
   },
   "kaleidoscope_doll": {
     "doll_block": true,
@@ -105,7 +113,8 @@
     "photograph_frame": true
   },
   "beyonddimensions": {
-    "net_info": true
+    "net_info": true,
+    "contents": true
   },
   "kaleidoscope_cookery": {
     "chopping_board": true,
@@ -124,10 +133,15 @@
   "kaleidoscope_tavern": {
     "barrel": true
   },
+  "petrolpark": {
+    "drying_rack": true,
+    "flags": true
+  },
   "waystones": {
     "waystone": true
   },
   "createthrusters": {
+    "smart_battery_energy": true,
     "thruster_resources": true
   }
 }

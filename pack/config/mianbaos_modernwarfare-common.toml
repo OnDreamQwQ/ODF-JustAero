@@ -1,0 +1,7 @@
+#模组敌对生物生成 / Mod hostile mob spawning
+[spawning]
+	#允许本模组敌对生物自然生成；关闭时所有维度禁止自然生成和区块生成。
+	#Allow this mod's hostile mobs to spawn naturally in all dimensions.
+	#Changed and saved immediately by /mianbao DroneSpawn true|false.
+	#Shared by all saves in this game/server instance; existing mobs and manual spawns are unaffected.
+	hostileMobSpawning = false

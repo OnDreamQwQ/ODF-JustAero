@@ -1,0 +1,12 @@
+name = "Create: Improve"
+filename = "createimp-1.4.4 HotFix.jar"
+side = "both"
+
+[download]
+hash-format = "sha512"
+hash = "449faba05df52c76bccc702e1b2fbf3c48e90726544009966ecff873ba3f5f71c90eed1a05993d33dd1d27cc1d3a9df386a78927c92622dc78ecea46de3a4e8b"
+url = "https://cdn.modrinth.com/data/3xu2jXe8/versions/X1siOWNC/createimp-1.4.4%20HotFix.jar"
+
+[update.modrinth]
+mod-id = "3xu2jXe8"
+version = "X1siOWNC"

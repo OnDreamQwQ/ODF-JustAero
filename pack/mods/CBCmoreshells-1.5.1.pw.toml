@@ -1,0 +1,12 @@
+name = "CBC Enchanced Shells [Create Big Cannons]"
+filename = "CBCmoreshells-1.5.1.jar"
+side = "both"
+
+[download]
+hash-format = "sha512"
+hash = "f3caa7097c11f371de9dc8f491aafba2ccf9afdaa6dc697aaa966c08e05277a255bde7cf2b9460a72b020b59b8c4aa84d9c49c34933449fec74062a695c5801b"
+url = "https://cdn.modrinth.com/data/Gwl4VXlb/versions/2gH1rhIf/CBCmoreshells-1.5.1.jar"
+
+[update.modrinth]
+mod-id = "Gwl4VXlb"
+version = "2gH1rhIf"

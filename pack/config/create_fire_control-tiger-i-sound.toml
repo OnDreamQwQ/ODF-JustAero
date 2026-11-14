@@ -1,0 +1,214 @@
+[reference]
+	#JVM override: -Dcreate_fire_control.tigerSoundMode=FMOD_REFERENCE or LEGACY
+	#Allowed Values: FMOD_REFERENCE, LEGACY
+	mode = "FMOD_REFERENCE"
+	#JVM override: -Dcreate_fire_control.tigerSoundLayers=BASE_ONLY / WITH_CLIMB / WITH_REVV / FULL
+	#Allowed Values: BASE_ONLY, WITH_CLIMB, WITH_REVV, FULL
+	layers = "FULL"
+	#Retained for configuration compatibility. RPM loudness compensation is inactive in this version, regardless of this value.
+	enableRpmLoudnessCompensation = false
+	# Default: 0.0
+	# Range: -80.0 ~ 12.0
+	referenceMasterDb = 0.0
+	# Default: 0.0
+	# Range: -80.0 ~ 12.0
+	referenceRevvDb = 0.0
+	# Default: 0.0
+	# Range: -80.0 ~ 12.0
+	referenceStartStopDb = 0.0
+	# Default: 35.0
+	# Range: 1.0 ~ 200.0
+	climbFullAcceleration = 35.0
+	# Default: 0.12
+	# Range: 0.05 ~ 3.0
+	climbAttackSeconds = 0.12
+	# Default: 0.65
+	# Range: 0.1 ~ 5.0
+	climbReleaseSeconds = 0.65
+	# Default: 25.0
+	# Range: 1.0 ~ 100.0
+	loadswitchFullDemand = 25.0
+	#Installed bank's measured random pitch range is about +/-1.2 st; XML serialized amount=5 is not assumed to mean 5 st.
+	# Default: 1.2
+	# Range: 0.0 ~ 12.0
+	revvRandomSemitones = 1.2
+
+[spatial]
+	# Default: 1.0
+	# Range: 0.1 ~ 10.0
+	distanceScale = 1.0
+	# Default: 256.0
+	# Range: 32.0 ~ 1024.0
+	cullDistance = 256.0
+	# Default: -12.0
+	# Range: -40.0 ~ 0.0
+	highFrequencyLossDb = -12.0
+
+#Tiger I only. Existing masterDb and family controls apply to Legacy; Reference uses referenceMasterDb and healthy broken=0.
+[mix]
+	# Default: -12.0
+	# Range: -80.0 ~ 12.0
+	masterDb = -12.0
+	# Default: 0.0
+	# Range: -80.0 ~ 12.0
+	loopsDb = 0.0
+	# Default: -14.0
+	# Range: -80.0 ~ 12.0
+	revvDb = -14.0
+	# Default: -18.0
+	# Range: -80.0 ~ 12.0
+	releaseDb = -18.0
+	# Default: -20.0
+	# Range: -80.0 ~ 12.0
+	blipsDb = -20.0
+	# Default: -4.0
+	# Range: -80.0 ~ 12.0
+	startStopDb = -4.0
+	# Default: 0.8
+	# Range: 0.1 ~ 0.95
+	peakCeiling = 0.8
+
+[smoothing]
+	# Default: 0.18
+	# Range: 0.05 ~ 5.0
+	rpmSeconds = 0.18
+	# Default: 100.0
+	# Range: 5.0 ~ 200.0
+	rpmSeekPerSecond = 100.0
+	# Default: 0.08
+	# Range: 0.05 ~ 2.0
+	pitchSeconds = 0.08
+	# Default: 0.5
+	# Range: 0.05 ~ 10.0
+	suLoadSeconds = 0.5
+	# Default: 0.12
+	# Range: 0.05 ~ 5.0
+	gainSeconds = 0.12
+	# Default: 24.0
+	# Range: 1.0 ~ 120.0
+	maxDbPerSecond = 24.0
+
+[suMapping]
+	# Default: 1.0
+	# Range: 0.25 ~ 4.0
+	utilizationExponent = 1.0
+	# Default: -2.0
+	# Range: -80.0 ~ 12.0
+	unloadedGroupDb = -2.0
+	# Default: 6.0
+	# Range: -80.0 ~ 12.0
+	loadedGroupDb = 6.0
+
+[takes]
+	enableRevv = true
+	#Optional directory take; not directly referenced by the exterior engine event.
+	enableRelease = false
+	#Optional directory take; not directly referenced by the exterior engine event.
+	enableBlips = false
+	# Default: 15.0
+	# Range: 2.0 ~ 100.0
+	triggerRpmPerSecond = 15.0
+	# Default: 4.0
+	# Range: 1.0 ~ 60.0
+	cooldownSeconds = 4.0
+	# Default: 12.0
+	# Range: 2.0 ~ 120.0
+	blipCooldownSeconds = 12.0
+	# Default: 1
+	# Range: 1 ~ 2
+	maxConcurrent = 1
+
+[debug]
+	enabled = false
+
+[trackTrimDb]
+	# Default: 0.0
+	# Range: -80.0 ~ 12.0
+	blips-001 = 0.0
+	# Default: 0.0
+	# Range: -80.0 ~ 12.0
+	blips-002 = 0.0
+	# Default: 0.0
+	# Range: -80.0 ~ 12.0
+	blips-003 = 0.0
+	# Default: 0.0
+	# Range: -80.0 ~ 12.0
+	blips-004 = 0.0
+	# Default: 0.0
+	# Range: -80.0 ~ 12.0
+	blips-005 = 0.0
+	# Default: 0.0
+	# Range: -80.0 ~ 12.0
+	blips-006 = 0.0
+	# Default: 0.0
+	# Range: -80.0 ~ 12.0
+	blips-007 = 0.0
+	# Default: 0.0
+	# Range: -80.0 ~ 12.0
+	blips-008 = 0.0
+	# Default: 0.0
+	# Range: -80.0 ~ 12.0
+	blips-009 = 0.0
+	# Default: 0.0
+	# Range: -80.0 ~ 12.0
+	fast_load = 0.0
+	# Default: 0.0
+	# Range: -80.0 ~ 12.0
+	fast_not_load = 0.0
+	# Default: 0.0
+	# Range: -80.0 ~ 12.0
+	idle_load = 0.0
+	# Default: 0.0
+	# Range: -80.0 ~ 12.0
+	med_load = 0.0
+	# Default: 0.0
+	# Range: -80.0 ~ 12.0
+	med_not_load = 0.0
+	# Default: 0.0
+	# Range: -80.0 ~ 12.0
+	release-001 = 0.0
+	# Default: 0.0
+	# Range: -80.0 ~ 12.0
+	release-002 = 0.0
+	# Default: 0.0
+	# Range: -80.0 ~ 12.0
+	release-003 = 0.0
+	# Default: 0.0
+	# Range: -80.0 ~ 12.0
+	release-004 = 0.0
+	# Default: 0.0
+	# Range: -80.0 ~ 12.0
+	release-005 = 0.0
+	# Default: 0.0
+	# Range: -80.0 ~ 12.0
+	release-006 = 0.0
+	# Default: 0.0
+	# Range: -80.0 ~ 12.0
+	release-007 = 0.0
+	# Default: 0.0
+	# Range: -80.0 ~ 12.0
+	revv-001 = 0.0
+	# Default: 0.0
+	# Range: -80.0 ~ 12.0
+	revv-002 = 0.0
+	# Default: 0.0
+	# Range: -80.0 ~ 12.0
+	revv-003 = 0.0
+	# Default: 0.0
+	# Range: -80.0 ~ 12.0
+	revv-004 = 0.0
+	# Default: 0.0
+	# Range: -80.0 ~ 12.0
+	revv-005 = 0.0
+	# Default: 0.0
+	# Range: -80.0 ~ 12.0
+	slow_load = 0.0
+	# Default: 0.0
+	# Range: -80.0 ~ 12.0
+	slow_not_load = 0.0
+	# Default: 0.0
+	# Range: -80.0 ~ 12.0
+	start = 0.0
+	# Default: 0.0
+	# Range: -80.0 ~ 12.0
+	stop = 0.0

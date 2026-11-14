@@ -1,0 +1,32 @@
+#Sensor NBT viewer poll interval in ticks (20 ticks = 1 second). Set to 0 to disable auto-refresh.
+# Default: 20
+# Range: 0 ~ 200
+sensorNbtPollInterval = 20
+#Whether sensors automatically force-load a 3x3 chunk area around themselves.
+sensorChunkLoadEnabled = true
+#Maximum number of sensors that can simultaneously force-load chunks. Set to 0 for unlimited.
+# Default: 32
+# Range: > 0
+sensorMaxForceLoad = 32
+#PORTAL ticket radius (in chunks) for Sable physics structures with sensors attached. Each sensor loads (2*R+1)² chunks around the structure's world position. Default: 3 (= 7×7 chunks).
+# Default: 3
+# Range: 1 ~ 32
+sensorPortalTicketRadius = 3
+#Stress coefficient for the Transmission Peripheral in transmission mode: actual stress = value × |output RPM − input RPM|.
+# Default: 2.0
+# Range: 0.0 ~ 1024.0
+servoStressImpact = 2.0
+#Stress coefficient for the Transmission Peripheral in servo mode: actual stress = value × |real output RPM| (the output speed may be overridden/accelerated by setServoSpeed).
+# Default: 2.0
+# Range: 0.0 ~ 1024.0
+servoModeStressImpact = 2.0
+#Engine source batch multiplier (K): each refill drains chamber count × K (water/fuel mb, or solid fuel items). Higher = fewer refills/availability checks but larger single drains. Cached once when entering a world.
+# Default: 1.0
+# Range: 0.25 ~ 64.0
+engineSourceBatchMultiplier = 1.0
+#Flight data recorder (debug): log per-tick body data for every FMC/AIC/INS-registered aircraft into <gameDir>/flight_logs/*.csv (see compat/cc/FlightDataRecorder.java). Active while at least one FMC/AIC/INS sensor is on a Sable physics body (INS-only bodies get kinematics/velocity columns; physics columns read nan). Default OFF; enable in the config only when you need to record a flight.
+flightDataRecorderEnabled = false
+#Flight data recorder sampling interval in ticks (1 = every tick / 20 Hz).
+# Default: 1
+# Range: 1 ~ 200
+flightDataRecorderIntervalTicks = 1

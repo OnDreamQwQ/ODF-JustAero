@@ -1,0 +1,190 @@
+# The following Create config options are also recommended:
+#   moveItemsToStorage: Make mined blocks drop items in-world for manual collection
+#   harvesterReplants: Prevent Harvesters from automatically replanting
+#
+# If item tooltips should document configuration changes
+# Note that #create:actor_collects_items must be populated to give proper feedback for the moveItemsToStorage option
+show_config_tooltips = true
+
+["Contraption Actors"]
+	#
+	# A list of blocks to remove from being registered as contraption actors.
+	actor_blacklist = []
+	# A list of blocks whose contraption actors should only be allowed to work while they are facing and moving downwards
+	# Note that the actor will still visually spin/animate regardless of context, except for the Mechanical Drill which has special handling
+	gravity_only_actors = []
+
+["Mechanical Saw"]
+	# If true, mining a tree with a Mechanical Saw will fell the whole tree
+	#   Applies to both blocks and contraption actors
+	saw_can_multibreak = true
+	#
+	# If true, the Mechanical Saw can break all block types, like the Mechanical Drill
+	#   Saplings remain unmineable by Mechanical Saws, as in base Create
+	saw_can_break_all_blocks = true
+	#
+	# If true, unfiltered Mechanical Saws will prefer processing a specific result, instead of cycling through every possible output
+	# Wood will prefer to become Stripped, then Planks. Blocks will prefer to become Stairs.
+	deterministic_saw_processing = false
+
+["Drill/Saw Specialties"]
+	# If a Mechanical Drill is breaking a block that is not in #create:mineable/mechanical_drill
+	#   Default values: #mineable/pickaxe + #mineable/shovel
+	# Default: 0.5
+	# Range: 0.0 ~ 64.0
+	drill_speed_modifier = 0.5
+	#
+	# If a Mechanical Saw is breaking a block that is not in #create:mineable/mechanical_saw
+	#   Default values: #mineable/axe + #mineable/hoe
+	# Default: 0.5
+	# Range: 0.0 ~ 64.0
+	saw_speed_modifier = 0.5
+
+["Automatic Train Assembly"]
+	# Ports the feature of Deployers being able to assemble/disassemble trains from Create: Steam 'n' Rails
+	#   Has no effect if Create: Steam 'n' Rails is loaded (with mod id 'railways')
+	deployers_disassemble_trains = true
+	#
+	# If true, when the player Shift-R-Clicks a Wrench on a Deployer, it will give the Deployer the Wrench, instead of breaking the Deployer.
+	can_give_wrench_to_deployer = true
+
+["Recipe Viewers"]
+	# Block ID for overriding the Fan Washing catalyst in Recipe Viewers. Defaults to 'minecraft:water'
+	jei_fan_washing_catalyst = ""
+	#
+	# Block ID for overriding the Fan Blasting catalyst in Recipe Viewers. Defaults to 'minecraft:lava'
+	jei_fan_blasting_catalyst = ""
+	#
+	# Block ID for overriding the Fan Smoking catalyst in Recipe Viewers. Defaults to 'minecraft:fire'
+	jei_fan_smoking_catalyst = ""
+	#
+	# Block ID for overriding the Fan Haunting catalyst in Recipe Viewers. Defaults to 'minecraft:soul_fire'
+	jei_fan_haunting_catalyst = ""
+	#
+	# A list of mysterious conversions to add to the Recipe Viewer category, e.g. 'create:empty_blaze_burner -> create:blaze_burner'
+	# Accepts an item definition in item[nbt] format, or an item tag in #tag format. Non-tag items may specify a count, e.g. '2x item'
+	mysterious_conversions = ["get_creative:empty_breeze_whirler -> get_creative:breeze_whirler", "get_creative:encapsulator -> get_creative:structure_capsule[get_creative:stored_structure={}]"]
+
+["Precision Assembly"]
+	precision_assembly_bulk_processing = false
+	#
+	# If true, Mechanical Arms performing assembly can pick up the next input item, even if they already holding something
+	# This allows a single Mechanical Arm to handle all applicable steps of a Sequenced Assembly recipe on its own
+	precision_assembly_can_swap_inputs = true
+	#
+	# If true, Mechanical Arms can be used for Deployer Application recipes, in the same way as Precision Assembly
+	mechanical_arms_handle_deploying_recipes = false
+	#
+	# If true, Mechanical Arms can be used for Deploying steps in Sequenced Assembly, in the same way as Precision Assembly
+	mechanical_arms_handle_sequenced_deploying_recipes = true
+	#
+	# Determines if the Sequenced Assembly category displays Mechanical Arms for Deploying steps, in Recipe Viewers
+	#Allowed Values: NEVER, ALTERNATING, ALWAYS
+	sequenced_deploying_displays_mech_arm = "NEVER"
+
+[Appliances]
+	# Default: 8.0
+	# Range: 0.0 ~ 16384.0
+	industrial_fan_stress_impact = 8.0
+	#
+	# When used with Sable, determines how much thrust an unblocked Industrial Fan provides, as a multiplier to that of the Encased Fan
+	# Default: 3.0
+	# Range: 0.0 ~ 16394.0
+	industrial_fan_propeller_thrust = 3.0
+
+	[Generators."Haunted Cogwheel"]
+		# Default: 4.0
+		# Range: 0.0 ~ 256.0
+		haunted_cogwheel_min_rotation_speed = 4.0
+		#
+		# Default: 32.0
+		# Range: 0.0 ~ 256.0
+		haunted_cogwheel_max_rotation_speed = 32.0
+		#
+		# When a new speed is chosen, a value in [0, 1] will be raised to this power before interpolating [min_rotation, max_rotation]
+		# Default: 3.0
+		# Range: 0.0 ~ 256.0
+		haunted_cogwheel_distribution_factor = 3.0
+		#
+		# Chance each tick that the Haunted Cogwheel changes to a new speed
+		# Default: 0.0025
+		# Range: 0.0 ~ 1.0
+		haunted_cogwheel_volatility = 0.0025
+		#
+		# Default: 8.0
+		# Range: 0.0 ~ 16384.0
+		haunted_cogwheel_stress_capacity = 8.0
+		#
+		# If true, the Haunted Cogwheel will break if other generators are added to the network
+		haunted_cogwheel_requires_uniquity = true
+
+	[Generators."Clockwork Motor and Wind-Up Key"]
+		# Default: 32.0
+		# Range: 0.0 ~ 16384.0
+		clockwork_motor_stress_capacity = 32.0
+		# Default: 8.0
+		# Range: 0.0 ~ 16384.0
+		wind_up_key_stress_capacity = 8.0
+		#
+		# A relative multiplier on the maximum charge the motor can be wound up to
+		# Default: 1.0
+		# Range: 0.0 ~ 1024.0
+		clockwork_motor_charge_capacity = 1.0
+		#
+		# By default, the ratio of wind-down output time to wind-up input time follows the following pattern:
+		# 16 RPM -> 3:1, 32 RPM -> 2:1, 64 RPM -> 1:1, 128 RPM -> 1:2, 256 RPM -> 1:3
+		#
+		# This determines the power of 2 at which the motor has a 1:1 ratio. The default 6 -> 2^6 = 64 RPM
+		# Default: 6
+		# Range: 1 ~ 8
+		clockwork_motor_even_point = 6
+		#
+		# The baseline wind-down duration is then multiplied by this value
+		# Default: 1.5
+		# Range: 0.0 ~ 16384.0
+		clockwork_motor_efficiency = 1.5
+
+	[Generators."Breeze Whirler"]
+		# Default: 16.0
+		# Range: 0.0 ~ 256.0
+		breeze_whirler_rotation_speed = 16.0
+		#
+		# Default: 32.0
+		# Range: 0.0 ~ 16384.0
+		breeze_whirler_stress_capacity = 32.0
+
+["Linked Devices"]
+	# The max range at which a player can interact with a Lectern with Linked Controller, as a multiplier to their base block interaction range
+	# Default: 0.4
+	# Range: 0.0 ~ 1024.0
+	lectern_controller_reach = 0.4
+
+["Fluid Barrel"]
+	# How many buckets of fluid a Fluid Barrel can hold per block
+	# Default: 4
+	# Range: 1 ~ 1024
+	fluid_barrel_capacity = 4
+	#
+	# The maximum height a Fluid Barrel can reach
+	# Default: 32
+	# Range: 1 ~ 1024
+	fluid_barrel_max_height = 32
+	#
+	# Max temperature in Kelvin that the Fluid Barrel may store
+	# For reference, the default fluid temperature is 300 (~27C), while lava is 1300 (~1000C). 340 is ~68C
+	# Default: 340
+	# Range: > -2147483648
+	fluid_barrel_max_temperature = 340
+	#
+	# Temperature in Kelvin that a player will receive the minimum damage from being burned by a fluid
+	# Default: 340
+	# Range: > -2147483648
+	fluid_barrel_min_burn_temperature = 340
+	#
+	# Temperature in Kelvin that a player will receive the full damage from being burned by a fluid
+	# Default: 1000
+	# Range: > -2147483648
+	fluid_barrel_max_burn_temperature = 1000
+	#
+	# Whether the Fluid Barrel may contain lighter-than-air fluids
+	fluid_barrel_can_store_gas = false

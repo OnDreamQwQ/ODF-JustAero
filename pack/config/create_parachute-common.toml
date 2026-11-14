@@ -91,6 +91,20 @@
 	# Default: 60.0
 	# Range: 0.0 ~ 180.0
 	objSmoothAngle = 60.0
+	#单个 .obj 文件的大小上限，单位 MB；超过就整个跳过不加载（0 = 不限，默认 2048 = 2 GB）。
+	#OBJ 是客户端读本地文件解析的，解析时整个文件进内存，所以超大文件会直接吃满堆。
+	#默认 2 GB 基本不会拦到正常模型；内存不够时把这里调小，或给客户端多分点堆内存。
+	#改这个值后重新加载该伞生效（在伞包界面里重新选一次模型即可）。
+	# Default: 2048
+	# Range: 0 ~ 65536
+	objMaxFileMB = 2048
+	#单个 .obj 最多加载的三角形数（0 = 不限，默认 400 万）。
+	#超过上限的多余面会被丢弃并打一条警告（模型会缺一块），用来防止超密模型卡死渲染线程。
+	#参考：AH-64D 模型约 98 万个面，离上限还很远。
+	#改这个值后重新加载该伞生效。
+	# Default: 4000000
+	# Range: 0 ~ 200000000
+	objMaxTriangles = 4000000
 
 [physics]
 	#阻力基础系数。所有拖拽力 = -速度 * dragCoefficient * dragBase * delta
@@ -125,6 +139,31 @@
 	# Default: 100000.0
 	# Range: 0.1 ~ 1000000.0
 	maxRotationalDampCoefficient = 100000.0
+	#切伞速度阈值上限（m/s）。GUI 中 disconnectSpeedThreshold 的最大值
+	#0 = 不限（阈值本身下限是 0，所以这里只需要上限）
+	# Default: 5.0
+	# Range: 0.0 ~ 10000.0
+	maxDisconnectSpeed = 5.0
+	#伞面旋转上限（度）。变换界面里 rotation 的钳制范围是 [-max, +max]（绝对值语义）。
+	#0 = 不限（默认，与旧版行为一致）。
+	# Default: 0.0
+	# Range: 0.0 ~ 100000.0
+	maxRotation = 0.0
+	#枢轴偏移上限（格）。变换界面里 pivot 的钳制范围是 [-max, +max]（绝对值语义）。
+	#0 = 不限（默认，与旧版行为一致）。
+	# Default: 0.0
+	# Range: 0.0 ~ 100000.0
+	maxPivot = 0.0
+	#整体偏移上限（格）。变换界面里 offset 的钳制范围是 [-max, +max]（绝对值语义）。
+	#0 = 不限（默认，与旧版行为一致）。
+	# Default: 0.0
+	# Range: 0.0 ~ 100000.0
+	maxOffset = 0.0
+	#渲染缩放上限。变换界面里 scale 的钳制范围是 [0, max]（缩放最小值是 0，不能为负）。
+	#默认 1000；调小可以让 GUI 里输入不了过大的缩放。
+	# Default: 1000.0
+	# Range: 0.05 ~ 100000.0
+	maxRenderScale = 1000.0
 
 [download]
 	#是否允许普通玩家自己用 /parachute list 和 /parachute download 拉服务器伞库。false 时这两个子指令只有 OP（权限等级 2）能用；上传、分发、删除始终需要 OP
@@ -134,6 +173,13 @@
 	# Range: 0 ~ 1048576
 	bytesPerTick = 65536
 	#单个玩家最多排队多少个待发文件，超了就拒绝并要求改用单把下载，防止刷指令撑爆队列
-	# Default: 512
+	#OBJ 伞的 .obj/.mtl/每张贴图都各算一个文件，默认 2048 够装整个文件夹
+	# Default: 2048
 	# Range: 1 ~ 8192
 	maxPendingFiles = 512
+	#分发伞模型时单个文件的大小上限，单位 MB，0 = 不限（默认 64）。
+	#按单个文件算：.obj / .mtl / 每张贴图各算一份，所以一个模型总分发量可以远超这个值。
+	#它只用来防止被封包塞满内存，模型里有单张超过 64 MB 的贴图时把它调大即可。
+	# Default: 64
+	# Range: 0 ~ 65536
+	maxFileMB = 64

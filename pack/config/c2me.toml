@@ -181,7 +181,7 @@ globalExecutorParallelism = "default"
 	# This option will attempt to aggressively unload unused chunks.
 	# Only applies when useLegacyScheduling is disabled.
 	# 
-	lowMemoryMode = true
+	lowMemoryMode = false
 	# ================================================================
 	# (Default: true) Whether to delay full chunk events to after full chunk future have been completed
 	# This restores the buggy behavior in NeoForge that the ecosystem have been relying on
@@ -204,7 +204,7 @@ globalExecutorParallelism = "default"
 	#  
 	# Incompatible with Dimensional Threading (dimthread)
 	# 
-	midTickChunkTasksInterval = 100000
+	midTickChunkTasksInterval = -1
 
 	[generalOptimizations.autoSave]
 		# ================================================================
@@ -244,7 +244,7 @@ globalExecutorParallelism = "default"
 		# (Default: true) Whether to modify maximum view distance
 		enabled = "default"
 		# ================================================================
-		# (Default: 61) Max render distance allowed in game options
+		# (Default: 56) Max render distance allowed in game options
 		maxViewDistance = "default"
 		# ================================================================
 		# (Default: true) Enable client-side support for extended render distance protocol (c2me:ext_render_distance_v1)
@@ -260,7 +260,7 @@ globalExecutorParallelism = "default"
 	replaceImpl = "default"
 	# ================================================================
 	# (Default: 8192) Soft limit for io worker nbt cache
-	chunkDataCacheSoftLimit = 4096
+	chunkDataCacheSoftLimit = 8192
 	# ================================================================
 	# (Default: 32678) Hard limit for io worker nbt cache
-	chunkDataCacheLimit = 16384
+	chunkDataCacheLimit = 32768

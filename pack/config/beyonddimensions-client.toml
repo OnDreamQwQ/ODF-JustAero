@@ -1,2 +1,47 @@
 #是否禁用多网络切换功能
 disable_multi_network_switching = false
+
+#存储界面；在界面中改动时会写回这里
+[storage]
+	#主排序方式
+	#Allowed Values: NAME, QUANTITY, MODID, CREATIVE_TAB, MAX_STACK, INSERTED_TIME, MODIFIED_TIME
+	sort = "NAME"
+	#是否使用次排序
+	use_secondary_sort = true
+	#次排序方式，主排序相同时再按它排列
+	#Allowed Values: NAME, QUANTITY, MODID, CREATIVE_TAB, MAX_STACK, INSERTED_TIME, MODIFIED_TIME
+	secondary_sort = "INSERTED_TIME"
+	#是否倒序排列
+	reverse = false
+	#首选的行数，界面会按屏幕高度自动收窄
+	# Default: 5
+	# Range: 2 ~ 99
+	rows = 5
+	#首选的列数，界面会按屏幕宽度自动收窄
+	# Default: 9
+	# Range: 9 ~ 99
+	columns = 9
+	#关闭界面后是否保留搜索框内容
+	keep_search = false
+	#保留下来的搜索框内容
+	search = ""
+	#空手右键存储里的资源时是否打开菜单（取出指定数量、加入分类）；关闭此项则像原版一样取出一半
+	right_click_menu = true
+	#工作区显示的工作台，在界面中用工作区左上角的下拉框选择
+	workbench = "beyonddimensions:crafting"
+	#是否展开工作区
+	workbench_shown = true
+
+#合成区
+[crafting]
+	#关闭界面或清空合成格时，物品优先退回存储；关闭此项则优先退回背包
+	return_to_storage = false
+	#关闭界面后是否保留合成格里的物品；合成格按玩家保存在服务器上
+	keep_grid = false
+
+#配方查看器（JEI / EMI）
+[recipe_viewer]
+	#是否与 JEI 或 EMI 的搜索框同步
+	sync_search = true
+	#是否允许 EMI 读取维度网络里的全部物品
+	emi_network_contents = false

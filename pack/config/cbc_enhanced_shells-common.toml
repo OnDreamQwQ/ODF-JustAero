@@ -29,3 +29,16 @@
 	# Default: 1.2
 	# Range: 0.0 ~ 4.0
 	entityRadiusMultiplier = 1.2
+
+#Missile Rack: small missiles (HE / incendiary / fragmentation). Claimed chunks are never modified.
+[missile_rack]
+	#Small missiles break blocks.
+	blockDamage = true
+	#Explosion power of a small HE missile (TNT = 4). Incendiary and fragmentation scale from it.
+	# Default: 1.8
+	# Range: 0.0 ~ 8.0
+	explosionPower = 1.8
+	#Ticks between two missiles of a salvo.
+	# Default: 3
+	# Range: 1 ~ 40
+	salvoInterval = 3

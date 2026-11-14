@@ -89,13 +89,6 @@ grabEnabled = true
 	# Range: 20 ~ 2400
 	step1BodyLifetimeTicks = 200
 
-#Ragdoll mass density. Individual parts scale by collision volume.
-[body_mass]
-	#Ragdoll mass per full 16x16x16 collision block. Player and mob parts scale by volume.
-	# Default: 1.4
-	# Range: 0.01 ~ 100.0
-	mobMassDensity = 1.4
-
 #Developer options.
 [debug]
 	#Log ragdoll trigger and seating details to the server console.

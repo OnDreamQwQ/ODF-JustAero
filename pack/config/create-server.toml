@@ -540,8 +540,8 @@
 	trainsCauseDamage = true
 	#.
 	#Maximum length of track that can be placed as one batch or turn.
-	# Default: 32
-	# Range: 16 ~ 256
+	# Default: 128
+	# Range: 16 ~ 1024
 	maxTrackPlacementLength = 256
 	#.
 	#Maximum length of a Train Stations' assembly track.

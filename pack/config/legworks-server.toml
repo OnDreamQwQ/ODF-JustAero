@@ -1,0 +1,76 @@
+#Leg springs and Foot grip
+[leg]
+	#How far a Limb with Stiffness x1 compresses under its full share of the Ship's weight, in blocks.
+	# Default: 0.5
+	# Range: 0.05 ~ 2.0
+	restSag = 0.5
+	#Damping ratio of Simple Legs (1 = critical).
+	# Default: 0.8
+	# Range: 0.05 ~ 3.0
+	simpleDampingRatio = 0.8
+	#Foot grip friction coefficient (tangential force cap = friction x normal force).
+	# Default: 1.2
+	# Range: 0.0 ~ 5.0
+	gripFriction = 1.2
+	#Foot grip anchor spring frequency, rad/s.
+	# Default: 8.0
+	# Range: 0.0 ~ 50.0
+	gripOmega = 8.0
+
+#Leveling (runs once per Ship per tick)
+[leveling]
+	#Slow length correction: rest rate per block of tilt displacement.
+	# Default: 0.4
+	# Range: 0.0 ~ 5.0
+	levelGain = 0.4
+	#Load term gain (evens the twist between diagonal Legs).
+	# Default: 1.0
+	# Range: 0.0 ~ 5.0
+	loadGain = 1.0
+	#Ride height term gain.
+	# Default: 0.3
+	# Range: 0.0 ~ 5.0
+	rideGain = 0.3
+	#Moves anti-roll work into leg lengths so flat ground ends level.
+	# Default: 1.0
+	# Range: 0.0 ~ 5.0
+	offloadGain = 1.0
+	#Maximum rest length change, blocks per second.
+	# Default: 0.5
+	# Range: 0.05 ~ 5.0
+	maxRestRate = 0.5
+	#Crouch speed of grounded Legs while a Foot is searching for Ground, blocks per second.
+	# Default: 3.0
+	# Range: 0.0 ~ 20.0
+	crouchRate = 3.0
+	#Anti-roll stiffness, in units of Ship weight x 3 blocks per radian.
+	# Default: 6.0
+	# Range: 0.0 ~ 50.0
+	antiRoll = 6.0
+	#Anti-roll damping time constant, seconds.
+	# Default: 0.04
+	# Range: 0.0 ~ 1.0
+	antiRollDamp = 0.04
+
+#Hydraulic Legs and Leg Controllers
+[hydraulic]
+	#Most Legs one Leg Controller can Link.
+	# Default: 8
+	# Range: 1 ~ 64
+	maxLegsPerController = 8
+	#Longest Link between a Leg Controller and a Leg, in blocks.
+	# Default: 16
+	# Range: 1 ~ 64
+	linkRange = 16
+	#Stress impact of a Hydraulic Leg Mount, SU per RPM. Applies after a restart.
+	# Default: 4.0
+	# Range: 0.0 ~ 64.0
+	hydraulicStressImpact = 4.0
+	#Seconds a full-Reach stroke (e.g. a Gear Up fold) takes at 1 RPM; at 16 RPM it takes this / 16.
+	# Default: 64.0
+	# Range: 1.0 ~ 10000.0
+	strokeRpmSeconds = 64.0
+	#How fast Softening follows power loss or a top redstone change, full range per second.
+	# Default: 2.0
+	# Range: 0.1 ~ 100.0
+	softenRate = 2.0

@@ -1,0 +1,7 @@
+[camera]
+	#Show the camcorder frame while controlling a camera.
+	showFrame = true
+	#Show a rule-of-thirds grid while controlling a camera.
+	showGrid = false
+	#Independent frame and grid settings for each camera source.
+	sources = []

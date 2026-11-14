@@ -1,0 +1,19 @@
+[containerCapture]
+	#Limit how many placed blocks a reusable or single-use vehicle container can pack. Applies to all players, including creative mode. Does not restrict releasing vehicles already stored.
+	limitCaptureBlocks = false
+	#Maximum blocks per packed vehicle when limitCaptureBlocks is true. Includes connected sublevels and supported moving contraptions; excludes inventory contents. A vehicle exactly at the limit is allowed.
+	# Default: 4096
+	# Range: > 1
+	maxCaptureBlocks = 4096
+	#Require holding use to pack a vehicle. Sneaking speeds up packing; movement slows or reverses progress. Disabling the timer makes packing instant; placing remains instant.
+	timedCapture = true
+	#Physical blocks packed per second while standing still, including connected structures and moving Create contraptions. Sneaking doubles this speed.
+	# Default: 50.0
+	# Range: 0.1 ~ 1000000.0
+	blocksPerSecond = 50.0
+	#Back up packed vehicles asynchronously to container-backups/<vehicle UUID>.excraft in the game/server directory. The latest capture replaces the same UUID. A full backup queue rejects capture before any originals are removed.
+	backupCapturedVehicles = true
+	#Maximum total size of completed .excraft files in container-backups, in MiB. Keep old backups until the limit is exceeded, then delete oldest files first. Cleanup runs on the backup thread after writing. A single backup exceeding the limit is also removed.
+	# Default: 256
+	# Range: 1 ~ 1048576
+	backupMaxSizeMB = 256

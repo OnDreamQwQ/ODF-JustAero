@@ -1,0 +1,12 @@
+name = "FTB Chunks x Xaero's Compat"
+filename = "ftbxaerocompat-neoforge-1.4.0-1.21.1.jar"
+side = "both"
+
+[download]
+hash-format = "sha512"
+hash = "29a11c661bc965a776e4e321c82047ab4d3792eda491da3b1c1c56bf793878812aa2ab18ec5d4370d562db539779ae2976eb237bbc0fe24484890d9796ce5f67"
+url = "https://mediafilez.forgecdn.net/files/9387/323/ftbxaerocompat-neoforge-1.4.0-1.21.1.jar"
+
+[update.curseforge]
+file-id = 9387323
+project-id = 1357724

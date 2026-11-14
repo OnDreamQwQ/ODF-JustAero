@@ -1,0 +1,37 @@
+[digisable]
+	allowStorage = true
+	allowLocate = true
+	allowTeleport = true
+	allowDelete = true
+	# Default: 16
+	# Range: 1 ~ 128
+	archivesPerPlayer = 16
+	# Default: 32
+	# Range: 1 ~ 128
+	bodiesPerArchive = 32
+	# Default: 32768
+	# Range: 1 ~ 262144
+	blocksPerArchive = 32768
+	# Default: 64
+	# Range: 1 ~ 256
+	storeRange = 64
+	# Default: 2048
+	# Range: 1 ~ 30000000
+	locateRange = 2048
+	# Default: 100
+	# Range: 20 ~ 12000
+	operationCooldownTicks = 100
+	allowSchematics = true
+	# Default: 100
+	# Range: 20 ~ 1200
+	schematicBuildTicks = 100
+
+[manifest]
+	# Default: 64
+	# Range: 1 ~ 1024
+	itemsPerSecond = 64
+
+[blockmates]
+	# Default: 4096
+	# Range: 1 ~ 1000000
+	maximumRequestItems = 4096

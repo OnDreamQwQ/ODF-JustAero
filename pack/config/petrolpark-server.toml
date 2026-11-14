@@ -1,0 +1,168 @@
+#.
+#Chiseled Bookshelves broadcast their data to clients
+syncChiseledBookshelves = true
+
+#.
+#Extended Inventory
+[extendedInventory]
+	#.
+	#Only attempt to attach the Extended Inventory to menus known not to cause problems
+	safeMode = true
+
+#.
+#Processing
+[processing]
+	#.
+	#Ageing Recipes are possible in Vanilla Barrels (and modded Barrels which extend it)
+	ageingInVanillaBarrels = true
+	#.
+	#Chiseled Bookshelves containing Recipe Books and Knowledge Books can provide the Recipes they contain to adjacent Blocks
+	chiseledBookShelfProvidesRecipeBooks = true
+
+#.
+#Flags
+[flags]
+	#.
+	#Simple shaped Crafting Recipes will propagate the inputs' Flags to the outputs, regardless of what they are crafted in
+	propagateShapedCrafting = true
+	#.
+	#Simple shapeless Crafting Recipes will propagate the inputs' Flags to the output, regardless of what they are crafted in
+	propagateShapelessCrafting = true
+	#.
+	#Recipes done in Crafting Tables and the Inventory will propagate the inputs' Flags to the the output
+	#This can include simple shaped and shapeless Crafting Recipes, as well as custom ones like crafting Firework Stars
+	propagateCraftingTable = true
+	#.
+	#Smelting, Blasting, Smoking etc. Recipes will propagate the Flags of the input to the output
+	propagateCooking = true
+	#.
+	#Brewing will propagate the Flags of inputs to the resultant Potion
+	propagateBrewing = true
+	#.
+	#The Flags of a Potion brewed from a Water Bottle depend only on the Flags of the added ingredient, not the Water Bottle
+	brewingIgnoreWaterBottle = true
+	#.
+	#Smithing will propagate the Flags of the base Item and added Item to the result
+	propagateSmithing = true
+
+#.
+#Mob Effects
+[effects]
+
+	#.
+	#Inebriation
+	[effects.inebriation]
+		#.
+		#Inebriation level above which players get the Nausea effect
+		# Default: 4
+		# Range: > 0
+		nauseaThreshold = 4
+		#.
+		#Inebriation level above which players get the Blindness effect
+		# Default: 6
+		# Range: > 0
+		blindnessThreshold = 6
+		#.
+		#Inebriation level above which players start taking damage
+		# Default: 10
+		# Range: > 0
+		damageThreshold = 10
+		#.
+		#Length of hangover applied when sleeping while Inebriated
+		# Default: 18000
+		# Range: > 0
+		hangoverDuration = 18000
+		#.
+		#Radius in which sounds will damage entities with a Hangover
+		# Default: 10
+		# Range: 0 ~ 32
+		hangoverRadius = 10
+
+#.
+[compatibility]
+
+	#.
+	[compatibility.create]
+
+		#.
+		[compatibility.create.stressValues]
+			#.
+			#Crushing Wheels can be encased in Brass Casing, allowing a Recipe filter to be set
+			encasedCrushingWheels = true
+			#.
+			#[Must be enabled by a dependent]
+			#Whether Mechanical Arms can take from and place on Chain Conveyors
+			armsTargetChainConveyors = false
+			#.
+			#Whether Drying Recipes can be done on Chain Conveyors
+			chainConveyorDrying = true
+
+			#.
+			#.
+			#[in Stress Units]
+			#Individual coefficients of stress impact of kinetic blocks.
+			[compatibility.create.stressValues.impact]
+				"shared/centrifuge" = 2.0
+				"shared/blender" = 2.0
+
+		#.
+		[compatibility.create.centrifuge]
+			#.
+			# Default: 2000
+			# Range: > 0
+			"Capacity of each Centrifuge tank" = 2000
+			#.
+			"Centrifuges can separate Potions into their Ingredients" = true
+			#.
+			#Centrifugation Recipes will propagate the Flags of the inputs to the outputs
+			propagateFlags = true
+
+		#.
+		[compatibility.create.flags]
+			#.
+			#How many mB of Fluid should be considered to be equal to one Item when weighting preserved Flags in any Recipes involving Fluids
+			#Set to 0 to not count the Flags of input Fluids. Flags will still propagate to output Fluids.
+			# Default: 100.0
+			# Range: 0.0 ~ 3.4028234663852886E38
+			fluidWeight = 100.0
+			#.
+			#Recipes done in a Basin will propagate the Flags of the input to the outputs
+			propagateBasin = true
+			#.
+			#Recipes done by Millstones and Crushing Wheels will propagate the Flags of the input to the outputs
+			propagateCrushing = true
+			#.
+			#Manual Sandpaper Polishing Recipes will propagate the Flags of the input to the output
+			propagateSanding = true
+			#.
+			#Cutting Recipes will propagate the Flags of the input to the output
+			propagateCutting = true
+			#.
+			#Pressing, Deploying, Washing and all Mechanical Fan Recipes propagate the Flags of the input to the outputs
+			propagateOther = true
+
+		#.
+		[compatibility.create.redstoneProgrammer]
+			#.
+			#Maximum number of channels in a single Redstone Programmer
+			# Default: 20
+			# Range: 1 ~ 256
+			maxChannels = 20
+			#.
+			#The shortest length (in ticks) a Redstone Programmer can change signal over.
+			#The lower this is, the greater the potential for players to cause lag.
+			# Default: 2
+			# Range: 1 ~ 20
+			minTicksPerBeat = 2
+
+	#.
+	[compatibility.farmersDelight]
+
+		#.
+		[compatibility.farmersDelight.flags]
+			#.
+			#Cuttin Board recipes will propagate the Flags of the input to the output(s)
+			propagateCutting = true
+			#.
+			#Cooking Recipes will propagate the Flags of the inputs to the output
+			propagateCooking = true

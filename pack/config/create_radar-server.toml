@@ -1,9 +1,4 @@
 #.
-#Maximum possible distance in blocks between radar links in blocks
-# Default: 128
-# Range: > 1
-radarLinkRange = 128
-#.
 #Maximum size of monitor MultiBlock
 # Default: 9
 # Range: > 1
@@ -33,33 +28,64 @@ controllerPhysbearingMaxSpeed = 25.0
 # Default: 512
 # Range: 1 ~ 1000
 binocularRange = 512
+#.
+#Maximum lateral pointing error allowed for automatic fire (blocks); the budget is shared across yaw and pitch
+# Default: 2.0
+# Range: 0.10000000149011612 ~ 64.0
+autoFireMaxLateralErrorBlocks = 2.0
+#.
+#Use the new simulated targeting computer as the primary CBC auto aiming path
+useNewTargetingComputer = true
+#.
+#Force CBC auto aiming to use the legacy lead solver instead of the new targeting computer
+forceLegacyCannonLeadSolver = false
+#.
+#Minimum horizontal target speed in blocks per tick for sprint-jump movement to count as erratic
+# Default: 0.1599999964237213
+# Range: 0.0 ~ 3.4028234663852886E38
+sprintJumpMinHorizontalSpeed = 0.1599999964237213
+#.
+#Minimum upward target speed in blocks per tick for sprint-jump movement to count as erratic
+# Default: 0.11999999731779099
+# Range: 0.0 ~ 3.4028234663852886E38
+sprintJumpVerticalSpeedThreshold = 0.11999999731779099
+#.
+#Required stable aim ticks when target motion is erratic
+# Default: 1
+# Range: 0 ~ 20
+erraticTargetStableTicks = 1
+#.
+#Extra target prediction ticks used to compensate for radar and cannon tracking latency
+# Default: 3
+# Range: 0 ~ 20
+targetTrackingLeadTicks = 3
 
 #.
 #Configs for radar bearing and radar stats
 [radarStatsConfig]
 	#.
 	#Maximum range of a Radar Contraption in blocks
-	# Default: 1000
+	# Default: 2048
 	# Range: > 1
 	maxRadarRange = 1000
 	#.
 	#Maximum vertical scan range of a radar in blocks
-	# Default: 20
+	# Default: 32
 	# Range: > 1
 	radarYScanRange = 20
 	#.
 	#Base range of a radar receiver in blocks
-	# Default: 20
+	# Default: 1
 	# Range: > 1
 	radarBaseRange = 20
 	#.
 	#Range increase per dish block in blocks
-	# Default: 10
+	# Default: 32
 	# Range: > 1
 	dishRangeIncrease = 10
 	#.
 	#increases the range of the plane radar(in blocks)
-	# Default: 250
+	# Default: 256
 	# Range: 1 ~ 1000
 	planeRadarRange = 250
 	#.
@@ -87,3 +113,365 @@ binocularRange = 512
 	#.
 	#Determines if the guided fuze can seek its target before it has began to fall
 	guidedFuzeSeekBeforeApex = false
+
+#.
+#Controller GUI collision snapshot limits
+[controllerCollisionViewConfig]
+	#.
+	#Maximum half-span of a controller collision view in blocks
+	# Default: 64
+	# Range: 5 ~ 256
+	maxHalfSpan = 64
+	#.
+	#Maximum block positions inspected for one controller collision snapshot
+	# Default: 100000
+	# Range: 500 ~ 1000000
+	maxScannedBlocks = 100000
+	#.
+	#Maximum collision boxes returned in one controller collision snapshot
+	# Default: 16384
+	# Range: 128 ~ 16384
+	maxCollisionBoxes = 16384
+
+#.
+#Automatic target visibility and retention
+[autoTargetRetentionConfig]
+	#.
+	#Cycle away from automatic targets that remain visible and detected after the configured drop delay
+	cycleVisibleTargets = false
+	#.
+	#Allow automatic targets to be released after losing line of sight or entering a safe zone
+	dropInvalidTargets = true
+	#.
+	#Maximum time in seconds to retain an automatic target after losing line of sight or entering a safe zone
+	# Default: 10
+	# Range: 1 ~ 600
+	dropDelaySeconds = 10
+	#.
+	#Seconds to retain an automatic target while all weapons are unloaded. -1 disables dropping; 0 drops immediately
+	# Default: 10
+	# Range: -1 ~ 600
+	unloadedDropDelaySeconds = 10
+	#.
+	#Exclude automatic entity targets deeper than the configured water depth
+	underwaterDepthLimitEnabled = false
+	#.
+	#Maximum continuous water blocks at and above an entity's eye position allowed for automatic targeting
+	# Default: 4
+	# Range: 0 ~ 64
+	maxUnderwaterDepthBlocks = 4
+
+#.
+#Firework chaff lock-breaking behavior
+[chaffConfig]
+	#.
+	#Allow fireworks to temporarily break radar locks
+	enabled = true
+	#.
+	#Broadcast chaff roll debug details to all players
+	debugChat = false
+	#.
+	#Maximum firework detonation distance from a selected target in blocks
+	# Default: 8.0
+	# Range: 0.0 ~ 64.0
+	radius = 8.0
+	#.
+	#Quiet time before nearby firework chaff starts a new probability volley
+	# Default: 40
+	# Range: 1 ~ 1200
+	volleyWindowTicks = 40
+	#.
+	#Lock-break chance for one small firework star
+	# Default: 0.20000000298023224
+	# Range: 0.0 ~ 1.0
+	minChance = 0.20000000298023224
+	#.
+	#Lock-break chance for a maximum-strength firework
+	# Default: 0.6000000238418579
+	# Range: 0.0 ~ 1.0
+	maxSingleChance = 0.6000000238418579
+	#.
+	#Absolute combined lock-break chance cap for one firework volley
+	# Default: 0.75
+	# Range: 0.0 ~ 1.0
+	maxVolleyChance = 0.75
+	#.
+	#Lock-break duration for one small firework star
+	# Default: 10
+	# Range: 1 ~ 1200
+	minDurationTicks = 10
+	#.
+	#Maximum lock-break duration for one firework (3.5 seconds by default)
+	# Default: 70
+	# Range: 1 ~ 1200
+	maxDurationTicks = 70
+	#.
+	#Reduced-success window after a chaff effect expires (5 seconds by default)
+	# Default: 100
+	# Range: 0 ~ 1200
+	resistanceTicks = 100
+	#.
+	#Chance multiplier while post-chaff resistance is active
+	# Default: 0.5
+	# Range: 0.0 ~ 1.0
+	resistanceChanceMultiplier = 0.5
+	#.
+	#Permanent lock-break chance added by each successful chaff roll
+	# Default: 0.019999999552965164
+	# Range: 0.0 ~ 1.0
+	permanentBreakChancePerSuccess = 0.019999999552965164
+
+#.
+#Configs for Sable radar monitor silhouettes
+[sableSilhouetteConfig]
+	#.
+	#Maximum loaded Sable sublevel blocks inspected while building one radar silhouette
+	# Default: 20000
+	# Range: > 1
+	sableSilhouetteMaxScannedBlocks = 20000
+	#.
+	#Maximum collision boxes stored in one Sable radar silhouette
+	# Default: 12000
+	# Range: > 1
+	sableSilhouetteMaxCollisionBoxes = 12000
+	#.
+	#Delay after Sable sublevel block changes before rebuilding a silhouette
+	# Default: 40
+	# Range: > 1
+	sableSilhouetteRebuildDebounceTicks = 40
+	#.
+	#Cooldown before retrying a failed or too-large Sable silhouette scan
+	# Default: 200
+	# Range: > 1
+	sableSilhouetteFailureCooldownTicks = 200
+	#.
+	#Conservative refresh interval for visible Sable silhouettes
+	# Default: 1200
+	# Range: > 20
+	sableSilhouetteRefreshTicks = 1200
+	#.
+	#Use a simple local bounding-box silhouette when detailed scanning is unavailable
+	sableSilhouetteUseFallbackBox = true
+	#.
+	#Log Sable silhouette builds, failures, and revision changes
+	sableSilhouetteDebugLogging = false
+
+#.
+#Block occlusion behavior for native radars
+[radarOcclusionConfig]
+	#.
+	#Allow solid blocks to obstruct native radar signals
+	enabled = true
+	#.
+	#Maximum number of solid blocks a ground radar signal can pass through
+	# Default: 16
+	# Range: > 0
+	groundRadarMaxSolidBlocks = 16
+	#.
+	#Maximum number of solid blocks a sky or plane radar signal can pass through
+	# Default: 8
+	# Range: > 0
+	skyPlaneRadarMaxSolidBlocks = 8
+
+#.
+#Directional jammer power and deception effects
+[directionalJammingConfig]
+	#.
+	#Seconds a directional jammer remains active during a discharge
+	# Default: 15
+	# Range: 1 ~ 600
+	dischargeDurationSeconds = 15
+	#.
+	#Seconds of rotational power required to recharge a directional jammer
+	# Default: 45
+	# Range: 1 ~ 600
+	rechargeDurationSeconds = 45
+	#.
+	#Allow directional jammers to corrupt the selected radar emitter
+	enabled = true
+	#.
+	#World-space radius connecting active directional jammers into one stacking-penalty cluster; zero disables proximity clustering
+	# Default: 50.0
+	# Range: 0.0 ~ 4096.0
+	jammerClusterRadiusBlocks = 50.0
+	#.
+	#World-space radius around a directly jammed radar that inherits its effects; zero disables spillover
+	# Default: 25.0
+	# Range: 0.0 ~ 4096.0
+	nearbyRadarSpilloverRadiusBlocks = 25.0
+	#.
+	#Jammer shaft RPM required for maximum jamming power
+	# Default: 256.0
+	# Range: 1.0 ~ 1024.0
+	fullPowerRpm = 256.0
+	#.
+	#Normalized jammer power where directional interference begins
+	# Default: 0.20000000298023224
+	# Range: 0.0 ~ 1.0
+	directionalOnsetFraction = 0.20000000298023224
+	#.
+	#Normalized jammer power where severe deception begins
+	# Default: 0.5
+	# Range: 0.0 ~ 1.0
+	severeOnsetFraction = 0.5
+	#.
+	#Maximum turret error for full jamming strength
+	# Default: 3.0
+	# Range: 0.0 ~ 180.0
+	fullAlignmentDegrees = 3.0
+	#.
+	#Turret error at which jamming strength reaches zero
+	# Default: 15.0
+	# Range: 0.0 ~ 180.0
+	zeroAlignmentDegrees = 15.0
+	#.
+	#Half-angle of the radar-to-jammer track-jitter cone
+	# Default: 30.0
+	# Range: 0.0 ~ 180.0
+	directionalConeHalfAngleDegrees = 30.0
+	#.
+	#Maximum hidden cannon guidance error in the outer tier
+	# Default: 1.5
+	# Range: 0.0 ~ 90.0
+	outerGuidanceErrorDegrees = 1.5
+	#.
+	#Maximum visible jitter in the radar-to-jammer cone
+	# Default: 3.0
+	# Range: 0.0 ~ 90.0
+	directionalJitterDegrees = 3.0
+	#.
+	#Maximum severe visible jitter applied to every track
+	# Default: 20.0
+	# Range: 0.0 ~ 90.0
+	severeJitterDegrees = 20.0
+	#.
+	#Sampling period for hidden guidance error
+	# Default: 40
+	# Range: 1 ~ 1200
+	outerNoisePeriodTicks = 40
+	#.
+	#Sampling period for directional track jitter
+	# Default: 10
+	# Range: 1 ~ 1200
+	directionalNoisePeriodTicks = 10
+	#.
+	#Sampling period for severe track jitter
+	# Default: 5
+	# Range: 1 ~ 1200
+	severeNoisePeriodTicks = 5
+	#.
+	#Sampling period for severe real-track dropouts
+	# Default: 20
+	# Range: 1 ~ 1200
+	severeStatePeriodTicks = 20
+	#.
+	#Real-track dropout chance at severe-tier onset
+	# Default: 0.10000000149011612
+	# Range: 0.0 ~ 1.0
+	minRealTrackDropoutChance = 0.10000000149011612
+	#.
+	#Real-track dropout chance at exact RPM matching
+	# Default: 0.6499999761581421
+	# Range: 0.0 ~ 1.0
+	maxRealTrackDropoutChance = 0.6499999761581421
+	#.
+	#Friendly-identification outage chance at severe-tier onset
+	# Default: 0.25
+	# Range: 0.0 ~ 1.0
+	minFriendlyOutageChance = 0.25
+	#.
+	#Friendly-identification outage chance at exact RPM matching
+	# Default: 0.75
+	# Range: 0.0 ~ 1.0
+	maxFriendlyOutageChance = 0.75
+	#.
+	#Sampling period for friendly-identification outages
+	# Default: 40
+	# Range: 1 ~ 1200
+	friendlyStatePeriodTicks = 40
+	#.
+	#Synthetic contacts at severe-tier onset
+	# Default: 2
+	# Range: 0 ~ 64
+	minSyntheticContacts = 2
+	#.
+	#Synthetic contacts at exact RPM matching
+	# Default: 6
+	# Range: 0 ~ 64
+	maxSyntheticContacts = 6
+	#.
+	#Chance that a newly created synthetic contact appears as a fake Sable ship
+	# Default: 0.10000000149011612
+	# Range: 0.0 ~ 1.0
+	syntheticShipContactChance = 0.10000000149011612
+	#.
+	#Generate procedural silhouettes for synthetic ship contacts
+	generateSyntheticShipSilhouettes = true
+	#.
+	#Minimum synthetic-contact lifetime
+	# Default: 40
+	# Range: 1 ~ 1200
+	minSyntheticLifetimeTicks = 40
+	#.
+	#Maximum synthetic-contact lifetime
+	# Default: 120
+	# Range: 1 ~ 1200
+	maxSyntheticLifetimeTicks = 120
+
+#.
+#Configs for sky radar
+[skyRadarStats]
+	#.
+	#Maximum horizontal range of a sky radar in blocks
+	# Default: 4096
+	# Range: > 1
+	maxSkyRadarRange = 4096
+	#.
+	#Field of view of a sky radar in degrees
+	# Default: 90
+	# Range: 1 ~ 360
+	skyRadarFOV = 90
+	#.
+	#The minimum Y level for a sky radar to function
+	# Default: 85
+	# Range: -64 ~ 256
+	skyRadarMinY = 85
+	#.
+	#Range increase per dish block in blocks for the sky radar
+	# Default: 64
+	# Range: > 1
+	skyRadarDishRangeIncrease = 64
+
+#.
+#Configs for sonar bearing and sonar stats
+[sonarStatsConfig]
+	#.
+	#Maximum range of a sonar contraption in blocks
+	# Default: 512
+	# Range: > 1
+	maxSonarRange = 512
+	#.
+	#Base range of a sonar in blocks
+	# Default: 0
+	# Range: > 0
+	sonarBaseRange = 0
+	#.
+	#Range increase per sonar sensor in blocks
+	# Default: 16
+	# Range: > 1
+	sonarRangeIncrease = 16
+	#.
+	#Maximum number of sonar sensors contributing to range
+	# Default: 32
+	# Range: 1 ~ 256
+	sonarMaxEffectivePanels = 32
+	#.
+	#Horizontal detection field of view of the sonar sweep in degrees
+	# Default: 20.200000762939453
+	# Range: 19.200000762939453 ~ 360.0
+	sonarFOV = 20.200000762939453
+	#.
+	#Detection range lost per air block crossed by a sonar signal
+	# Default: 16
+	# Range: 0 ~ 512
+	sonarAirRangePenalty = 16

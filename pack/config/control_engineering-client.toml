@@ -1,0 +1,11 @@
+[rendering]
+	#Afterburner Compatibility Mode (enabled by default): use a compatible renderer to address shader-pack color or occlusion problems.
+	#Only affects afterburner flames on this client. Saved changes apply on the next frame; no restart is required.
+	#加力尾焰兼容模式（默认开启）：解决部分光影下加力尾焰变色或遮挡异常的问题。
+	#仅影响本机加力尾焰显示，保存后下一帧生效，无需重启。
+	afterburnerCompatibilityMode = true
+	#Nozzle Compatibility Mode (disabled by default): use a compatible renderer to address shader-pack problems with dynamic nozzle colors or emission.
+	#Only affects dynamic nozzle surfaces on this client. Saved changes apply on the next frame; no restart is required.
+	#喷口兼容模式（默认关闭）：解决部分光影下喷口动态染色表面的颜色或发光异常。
+	#仅影响本机喷口动态染色部分，保存后下一帧生效，无需重启。
+	nozzleCompatibilityMode = false

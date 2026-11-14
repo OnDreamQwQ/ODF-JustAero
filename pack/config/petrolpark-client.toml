@@ -1,0 +1,30 @@
+#.
+[extraInventory]
+	#.
+	#Whether the extra slots render to the left rather than right of containers
+	extraHotbarLeft = true
+	#.
+	#Maximum width of extra inventory space
+	# Default: 3
+	# Range: > 1
+	extraInventoryWidth = 3
+	#.
+	#Where the additional hotbar slots go
+	#ALL_X - All slots on X
+	#START_X - Alternate sides, starting on X
+	#PRIORITIZE_X - Up to extraHotbarPrioritySlotCount on X, the rest on the other side
+	#Allowed Values: ALL_LEFT, ALL_RIGHT, START_LEFT, START_RIGHT, PRIORITY_LEFT, PRIORITY_RIGHT
+	extraHotbarSlotLocation = "ALL_LEFT"
+	#.
+	# Default: 3
+	# Range: > 0
+	extraHotbarPrioritySlotCount = 3
+
+#.
+[compatibiity]
+
+	#.
+	[compatibiity.create]
+		#.
+		#The Flags a fluid has are shown in its name when hovering a Create fluid-containing block
+		showFlagsInFluidName = true

@@ -1,0 +1,12 @@
+name = "Aeronautics Display Link Fix"
+filename = "aeronautics_display_link_fix-1.3-1.21.1.jar"
+side = "both"
+
+[download]
+hash-format = "sha512"
+hash = "1a32cf5a2f803518f8766a9d2fdcbf5edab573f47e903dfea473b01c005c30317545f76d3ec312be80cee8cfbaa7d903fa1ec11005a986832a5157d7c0877bda"
+url = "https://cdn.modrinth.com/data/Cgz0OfnH/versions/xDNjmgBl/aeronautics_display_link_fix-1.3-1.21.1.jar"
+
+[update.modrinth]
+mod-id = "Cgz0OfnH"
+version = "xDNjmgBl"

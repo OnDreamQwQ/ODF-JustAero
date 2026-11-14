@@ -1,0 +1,199 @@
+#.
+#Config options for TFMG's machinery
+[machines]
+	#.
+	#.
+	#Sets the internal resistance of the electric motor.
+	# Default: 30.0
+	# Range: 0.0 ~ 3.4028234663852886E38
+	electricMotorInternalResistance = 30.0
+	#.
+	#What voltage is created when FE is converted.
+	# Default: 230
+	# Range: > 1
+	forgeEnergyConversionVoltage = 230
+	#.
+	#The maximum length of engines.
+	# Default: 5
+	# Range: > 1
+	engineMaxLength = 5
+
+	#.
+	#Accumulator
+	[machines.accumulator]
+		#.
+		#Determines the storage space of accumulators.
+		# Default: 2500000
+		# Range: > 1
+		accumulatorStorage = 2500000
+
+	#.
+	#Firebox
+	[machines.firebox]
+		#.
+		#If set to true, fireboxes will require exhaust management.
+		fireboxExhaustRequirement = true
+		#.
+		#Determines the amount of fuel a firebox needs to run for 3 seconds.
+		# Default: 100
+		# Range: > 1
+		fireboxFuelConsumption = 100
+
+	#.
+	#Engines
+	[machines.engines]
+		#.
+		#Changes the volume of engines.
+		# Default: 1.0
+		# Range: 0.0 ~ 3.4028234663852886E38
+		engineLoudness = 1.0
+		#.
+		#Modifier of engine fuel consumption in %.
+		# Default: 100.0
+		# Range: 0.0 ~ 3.4028234663852886E38
+		engineFuelConsumption = 100.0
+		#.
+		#Modifier of engine stress capacity in %.
+		# Default: 100.0
+		# Range: 0.0 ~ 3.4028234663852886E38
+		enginePower = 100.0
+		#.
+		#Modifier of engine power generation in %.
+		# Default: 100.0
+		# Range: 0.0 ~ 3.4028234663852886E38
+		engineElectricPower = 100.0
+
+	#.
+	#Generators
+	[machines.generators]
+		#.
+		#Determines how powerful the large generator is.
+		# Default: 4.0
+		# Range: 0.0 ~ 3.4028234663852886E38
+		largeGeneratorModifier = 4.0
+		#.
+		#Changes the lowest speed the large generator can work on.
+		# Default: 70.0
+		# Range: 0.0 ~ 3.4028234663852886E38
+		largeGeneratorMinSpeed = 70.0
+		#.
+		#Determines how powerful the generator is.
+		# Default: 1.399999976158142
+		# Range: 0.0 ~ 3.4028234663852886E38
+		GeneratorModifier = 1.399999976158142
+		#.
+		#Changes the lowest speed the generator can work on.
+		# Default: 40.0
+		# Range: 0.0 ~ 3.4028234663852886E38
+		generatorMinSpeed = 40.0
+
+	#.
+	#Blast Furnace
+	[machines.blast_furnace]
+		#.
+		#Changes the maximum height of the blast furnace.
+		# Default: 10
+		# Range: > 3
+		blastFurnaceMaxHeight = 10
+		#.
+		#Sets the maximum time that can be saved by increasing blast furnace height.
+		# Default: 1.0
+		# Range: 0.10000000149011612 ~ 3.4028234663852886E38
+		blastFurnaceHeightSpeedModifier = 1.0
+		#.
+		#Determines how many ticks does it take to consume one fuel.
+		# Default: 600
+		# Range: > 1
+		blastFurnaceFuelConsumption = 600
+
+	#.
+	#Chemical Vat
+	[machines.chemical_vat]
+		#.
+		#Minimum current required for an Electrode Holder to operate.
+		# Default: 5
+		# Range: > 1
+		electrolysisMinimumCurrent = 5
+		#.
+		#The minimum current required for a Freezer to operate.
+		# Default: 3
+		# Range: > 1
+		freezerMinimumCurrent = 3
+		#.
+		#The minimum RPM required for a Compressor to operate.
+		# Default: 120
+		# Range: > 1
+		compressorMinimumRPM = 120
+		#.
+		#The minimum RPM required for an Industrial Mixer to operate.
+		# Default: 30
+		# Range: > 1
+		industrialMixerMinimumRPM = 30
+
+	#.
+	#Surface Scanner
+	[machines.surface_scanner]
+		#.
+		#The minimum RPM required for a Surface Scanner to operate.
+		# Default: 64
+		# Range: > 1
+		surfaceScannerMinimumRPM = 64
+
+	#.
+	#Coke Oven
+	[machines.coke_oven]
+		#.
+		#Determines the maximum size of coke ovens.
+		# Default: 5
+		# Range: > 1
+		cokeOvenMaxSize = 5
+
+	#.
+	#Distillation Tower
+	[machines.distillation_tower]
+		#.
+		#The amount of ticks to decrement before the Distillation Tower can process a recipe, affected by heat level.
+		# Default: 1200
+		# Range: > 20
+		distillationRecipeGapTicks = 1200
+
+	#.
+	#Config options for TFMG's World Generation
+	[worldgen.v1]
+
+		#.
+		[worldgen.v1.toggles]
+			#Toggle individual world generation features.
+			oil_deposits = true
+			oil_wells = true
+			lead_ore = true
+			nickel_ore = true
+			lithium_ore = true
+			bauxite = true
+			galena = true
+			lignite = true
+			fireclay = true
+			sulfur = true
+			nether_fireclay = true
+
+		#.
+		#Oil Deposits
+		[worldgen.v1.oilDeposits]
+			#.
+			#Sets the maximum oil reserves a reservoir can have.
+			# Default: 10000
+			# Range: > 1000
+			depositMaxReserves = 10000
+			#.
+			#Makes oil reservoirs bottomless.
+			infiniteDeposits = false
+
+#.
+#Config options for TFMG's equipment
+[equipment]
+	#.
+	#.
+	#Changes the radius fire extinguishers can remove fire in.
+	# Default: 1
+	# Range: > 0
+	fireExtinguisherClearRadius = 1

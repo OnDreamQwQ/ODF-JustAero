@@ -1,0 +1,12 @@
+name = "Handheld Moon - (with flashlight)"
+filename = "HandheldMoon-neoforge-1.21.1-1.3.0 (no dependency required).jar"
+side = "both"
+
+[download]
+hash-format = "sha512"
+hash = "ec1ccf442daeca477750365786990ad34dab37d1b5aeba00ca4f375ef906c2298befb643de502f232e2300a862bf4c7926aba533bfc1d4039afc27c8e58b915b"
+url = "https://mediafilez.forgecdn.net/files/9308/691/HandheldMoon-neoforge-1.21.1-1.3.0%20%28no%20dependency%20required%29.jar"
+
+[update.curseforge]
+file-id = 9308691
+project-id = 1398036

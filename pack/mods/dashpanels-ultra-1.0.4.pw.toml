@@ -1,0 +1,12 @@
+name = "dashpanels: ultra"
+filename = "dashpanels-ultra-1.0.4.jar"
+side = "both"
+
+[download]
+hash-format = "sha512"
+hash = "b81d62b0bf5f16f29ab678f1d3d287f59f40b3623c8ce6b034a637b058db43ae8ff928a9fbd789df743f6b20c18fe0299dfbed70c420aeef07434cf26eced912"
+url = "https://mediafilez.forgecdn.net/files/9512/526/dashpanels-ultra-1.0.4.jar"
+
+[update.curseforge]
+file-id = 9512526
+project-id = 1769066

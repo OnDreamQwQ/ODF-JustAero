@@ -39,6 +39,23 @@ from pathlib import Path
 
 MODRINTH = "https://api.modrinth.com/v2"
 CF = "https://api.curse.tools/v1/cf"
+# api.curse.tools is behind Cloudflare these days, and the official API needs a key, so
+# cfwidget (a community mirror that serves a whole project incl. its file list) is the only
+# keyless way left to turn a local jar into a CurseForge download. It has no search endpoint,
+# so it is queried by slug -- hence the alias table for slugs that do not follow the file name.
+CFWIDGET = "https://api.cfwidget.com/minecraft/mc-mods"
+CFW_ALIASES = {
+    # normalised file stem -> extra slugs to try
+    "createafn": ["create-advanced-frequency-network"],
+    "createprism": ["create-prismatic-shine"],
+    "createliquidfuel": ["create-liquid-fuel"],
+    "sablelife": ["sable-life"],
+    "handheldmoon": ["handheld-moon"],
+    "qr": ["quality-railway"],
+    "dashpanelsextra": ["dashpanels-extra"],
+    "ftblibrary": ["ftb-library", "ftb-library-forge"],
+    "worldeditcui": ["world-edit-cui"],
+}
 UA = {"User-Agent": "packwiz-from-instance/1.0 (+https://github.com/packwiz/packwiz)"}
 
 # Content at the instance root that belongs in a modpack. Deliberately an ALLOW list:
@@ -92,7 +109,7 @@ CURSEFORGE_PINS = {
 def forgecdn_url(file_id: int, filename: str) -> str:
     """The CDN URL CurseForge hands out for one file id."""
     return (f"https://mediafilez.forgecdn.net/files/"
-            f"{file_id // 1000}/{file_id % 1000:03d}/{filename}")
+            f"{file_id // 1000}/{file_id % 1000}/{urllib.parse.quote(filename)}")
 
 
 VERISH = re.compile(r"^[vV]?\d")
@@ -318,6 +335,104 @@ def cf_resolve(filename: str, cache: dict, delay: float = 0.0) -> dict | None:
     return found
 
 
+def cfw_slugs(filename: str) -> list[str]:
+    """Candidate cfwidget slugs for one jar name, most specific first."""
+    stem = re.sub(r"\.jar$", "", filename, flags=re.I)
+    pieces = re.split(r"[-_+ .()\[\]]+", stem)
+    keep: list[str] = []
+    for p in pieces:
+        if not p:
+            continue
+        if VERISH.match(p) or p.lower() in {"neoforge", "forge", "fabric", "no", "dependency",
+                                           "required", "release", "snapshot", "beta", "alpha"}:
+            break
+        keep.append(p)
+    out: list[str] = []
+
+    def add(slug: str) -> None:
+        slug = re.sub(r"[^a-z0-9]+", "-", slug.lower()).strip("-")
+        if slug and slug not in out:
+            out.append(slug)
+
+    if keep:
+        add("-".join(keep))
+        add("".join(keep))
+    add(stem)
+    for slug in list(out):
+        for alias in CFW_ALIASES.get(slug.replace("-", ""), []):
+            add(alias)
+    return out[:6]
+
+
+def cfwidget_project(slug: str, cache_dir: Path | None) -> dict | None:
+    """Whole-project metadata from cfwidget (carries the file list). Cached on disk."""
+    if cache_dir:
+        cached = cache_dir / f"{slug}.json"
+        if cached.exists():
+            try:
+                return json.loads(cached.read_text(encoding="utf-8"))
+            except Exception:
+                pass
+    data = http_json(f"{CFWIDGET}/{urllib.parse.quote(slug)}")
+    if not isinstance(data, dict) or "id" not in data or data.get("__error__"):
+        data = None
+    if cache_dir:
+        cache_dir.mkdir(parents=True, exist_ok=True)
+        try:
+            (cache_dir / f"{slug}.json").write_text(
+                json.dumps(data, indent=1) if data else "null", encoding="utf-8")
+        except OSError:
+            pass
+    return data
+
+
+def cfwidget_resolve(filename: str, sha1: str, size: int,
+                     cache_dir: Path | None, delay: float = 0.0) -> dict | None:
+    """Find the CurseForge file whose bytes equal this jar. Never guesses: the bytes decide.
+
+    cfwidget publishes no hashes, so the only safe test is to download the candidates that
+    share our size and compare sha1. Size is a cheap prefilter; the hash is the answer."""
+    tried: set[int] = set()
+    for slug in cfw_slugs(filename):
+        proj = cfwidget_project(slug, cache_dir)
+        if delay:
+            time.sleep(delay)
+        if not proj:
+            continue
+        cands = [f for f in (proj.get("files") or [])
+                 if f.get("filesize") == size or (f.get("name") or "").lower() == filename.lower()]
+        cands.sort(key=lambda f: (f.get("name") or "").lower() != filename.lower(),
+                   reverse=False)
+        for f in cands[:4]:
+            fid = f.get("id")
+            if not isinstance(fid, int) or fid in tried:
+                continue
+            tried.add(fid)
+            name = f.get("name") or filename
+            # cfwidget's "url" is the project page, not a download; only a CDN link is usable.
+            # Names with spaces or parentheses must be percent-encoded -- packwiz fetches the
+            # URL literally, so an unencoded space is a hard failure (403/InvalidURL).
+            cdn = f.get("url") or ""
+            url = cdn if "forgecdn" in cdn else forgecdn_url(fid, name)
+            try:
+                req = urllib.request.Request(url, headers=UA)
+                with urllib.request.urlopen(req, timeout=120) as r:
+                    blob = r.read()
+            except Exception:
+                continue
+            if hashlib.sha1(blob).hexdigest() != sha1:
+                continue
+            return {
+                "projectId": proj.get("id"),
+                "fileId": fid,
+                "url": url,
+                "name": proj.get("title") or proj.get("slug") or filename,
+                "filename": name,
+                "slug": proj.get("slug") or slug,
+            }
+    return None
+
+
 def load_old_index(path: Path):
     """Read a previous .mrpack (zip) or bare modrinth.index.json -> (by_sha1, by_name, deps)."""
     if path.suffix.lower() in (".zip", ".mrpack"):
@@ -431,18 +546,29 @@ minecraft = {toml_str(mc)}
 # ------------------------------------------------------------------------------------- main
 
 def detect_loader(instance: Path, mc: str) -> tuple[str, str]:
-    """PCL writes the loader version as a bare string into the instance json."""
-    js = next((p for p in instance.glob("*.json")
-               if p.name.lower() != "modrinth.index.json"), None)
-    if js:
+    """Read the loader version out of the launcher's instance json.
+
+    Every launcher writes it differently: PCL as a bare string, HMCL as
+    ``"neoforge": "21.1.265"`` inside a map, Prism inside ``libraries``.  Rather
+    than guessing at a layout, count ``"21.1.N"`` occurrences across every json in
+    the instance root and take the most common one.  Scanning all of them matters:
+    the root also holds mod data files, so picking whichever json the directory
+    listing happens to return first used to decide between "found it" and "nothing".
+    """
+    minor = ".".join(mc.split(".")[1:])          # 1.21.1 -> 21.1
+    tally: dict[str, int] = {}
+    for js in instance.glob("*.json"):
+        if js.name.lower() == "modrinth.index.json":
+            continue
         try:
             text = js.read_text(encoding="utf-8", errors="replace")
-            minor = ".".join(mc.split(".")[1:])          # 1.21.1 -> 21.1
-            cands = re.findall(rf'"{re.escape(minor)}\.(\d+)"', text)
-            if cands:
-                return "neoforge", f"{minor}.{max(set(cands), key=cands.count)}"
         except OSError:
-            pass
+            continue
+        for n in re.findall(rf'"{re.escape(minor)}\.(\d+)"', text):
+            tally[n] = tally.get(n, 0) + 1
+    if tally:
+        best = max(tally, key=lambda k: (tally[k], int(k)))
+        return "neoforge", f"{minor}.{best}"
     return "neoforge", ""
 
 
@@ -1332,7 +1458,14 @@ def main() -> int:
         _, _, old_deps = load_old_index(Path(args.old_index).resolve())
     mc = mc or old_deps.get("minecraft") or "1.21.1"
     if not loader_version:
-        loader_version = old_deps.get(args.loader) or detect_loader(instance, mc)[1]
+        # The instance is the source of truth for a rebuild; the previous pack is
+        # only a fallback. (It used to be the other way round, which silently kept
+        # an ancient loader version after the instance had been upgraded.)
+        detected = detect_loader(instance, mc)[1]
+        legacy = old_deps.get(args.loader)
+        if detected and legacy and detected != legacy:
+            say(f"loader      : instance says {detected}, previous pack said {legacy} -- using {detected}")
+        loader_version = detected or legacy
     say(f"pack        : {name} {args.version}")
     say(f"instance    : {instance}")
     say(f"output      : {out}")
@@ -1514,6 +1647,41 @@ def main() -> int:
     if pinned:
         say(f"  CurseForge pinned     : {pinned} (hand-checked project/file ids)")
 
+    # ---- resolver 3c: cfwidget -------------------------------------------------
+    # Both keyless CurseForge routes are effectively closed (api.curse.tools is behind
+    # Cloudflare, the official API wants a key), so the leftovers are looked up through
+    # cfwidget. It publishes no hashes, so the byte comparison inside cfwidget_resolve is
+    # what decides: a size match alone is never accepted.
+    if not args.no_cf_search:
+        left = [f for f in info if f not in resolved]
+        if left:
+            say(f"  cfwidget lookup       : {len(left)} jar(s) with no source yet")
+            cfw_dir = Path(args.report).resolve().parent / "cfwidget-cache" if args.report else None
+            found_cfw = 0
+            cfw_jobs = max(1, min(int(args.jobs or 4), 4))
+
+            def _cfw(fname: str):
+                rec = info[fname]
+                return cfwidget_resolve(fname, rec["sha1"], rec["size"], cfw_dir, delay=0.15)
+
+            with concurrent.futures.ThreadPoolExecutor(max_workers=cfw_jobs) as pool:
+                for fname, hit in zip(left, pool.map(_cfw, left)):
+                    if not hit or fname in resolved:
+                        continue
+                    resolved[fname] = {
+                        "kind": "cfwidget",
+                        "name": hit["name"],
+                        "filename": hit["filename"],
+                        "url": hit["url"],
+                        "hash": info[fname]["sha512"],
+                        "hash_format": "sha512",
+                        "side": "both",
+                        "update": ("curseforge", {"file-id": hit["fileId"],
+                                                  "project-id": hit["projectId"]}),
+                    }
+                    found_cfw += 1
+            say(f"  cfwidget matched      : {found_cfw} (bytes verified against forgecdn)")
+
     # ---- resolver 4: give the previous-pack matches a project id ---------------
     # The old .mrpack gave us a forgecdn URL, which carries the FILE id but not the
     # PROJECT id. Without a project id packwiz has nothing to query, so those mods
@@ -1594,6 +1762,7 @@ def main() -> int:
     say(f"resolved via Modrinth      : {sum(1 for v in resolved.values() if v['kind'] == 'modrinth')}")
     say(f"resolved via previous pack : {sum(1 for v in resolved.values() if v['kind'] == 'old-index')}")
     say(f"resolved via CurseForge    : {sum(1 for v in resolved.values() if v['kind'] == 'curseforge')}")
+    say(f"resolved via cfwidget      : {sum(1 for v in resolved.values() if v['kind'] == 'cfwidget')}")
     say(f"bundled (unresolved)       : {len(bundled)}")
     if bundled:
         say("  bundled files: " + ", ".join(bundled))

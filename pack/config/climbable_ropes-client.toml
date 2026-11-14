@@ -1,8 +1,8 @@
-#Player climb animation playback (KosmX playerAnimator layer).
+#Procedural player climb animation.
 [animation]
-	#Play the rope-climb animations on your local player while attached to a rope.
+	#Pose climbing players (you and others) with the procedural rope-climb animation.
 	enableClimbAnimation = true
-	#Playback speed multiplier for the climb animations. 1.0 is authored speed.
+	#Multiplier for how fast the hands and feet cycle while climbing. 1.0 is the default cadence.
 	# Default: 1.0
 	# Range: 0.1 ~ 5.0
 	animationSpeedMultiplier = 1.0

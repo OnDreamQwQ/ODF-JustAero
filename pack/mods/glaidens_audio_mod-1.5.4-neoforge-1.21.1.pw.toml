@@ -1,0 +1,12 @@
+name = "Glaiden's Audio"
+filename = "glaidens_audio_mod-1.5.4-neoforge-1.21.1.jar"
+side = "both"
+
+[download]
+hash-format = "sha512"
+hash = "60c28c27be2bfbd12782023f3486e457fd097bc346b2bf4c6c615f6a96f43f8eb5218f7ff2c50bc114009751836436b65269c4a002fae6ff333a357bd8fdced5"
+url = "https://cdn.modrinth.com/data/JQHhusVl/versions/FYHoO8Aq/glaidens_audio_mod-1.5.4-neoforge-1.21.1.jar"
+
+[update.modrinth]
+mod-id = "JQHhusVl"
+version = "FYHoO8Aq"

@@ -1,0 +1,12 @@
+name = "Create: Lights & Controls"
+filename = "create-lights-and-controls-1.21.1-2.2.1.jar"
+side = "both"
+
+[download]
+hash-format = "sha512"
+hash = "2447fe03571c98036dd102ba3f0b470baf4e58a8f5db25ac9c54959b581add0239b723fea9eef7a5c7ee1ced93aa862710b1f38afcea8d6a860481ce919ef117"
+url = "https://cdn.modrinth.com/data/pX72TnVK/versions/z4HjcNCx/create-lights-and-controls-1.21.1-2.2.1.jar"
+
+[update.modrinth]
+mod-id = "pX72TnVK"
+version = "z4HjcNCx"

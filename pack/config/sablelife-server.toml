@@ -1,0 +1,338 @@
+#Maximum newly authored wireless channels per core. Existing saves keep their channels.
+# Default: 256
+# Range: 1 ~ 65535
+maximumWirelessChannels = 256
+
+#Maximum newly authored virtual modules per core; existing saved modules are retained up to the storage limit of 256.
+# Default: 128
+# Range: 16 ~ 256
+maximumModulesPerCreature = 128
+
+#Maximum factions one non-operator player can own/create. 0 disables this personal limit. Operators (permission level 2+) bypass it. Existing factions and joining other factions are unaffected; the global 256-faction storage limit still applies.
+# Default: 1
+# Range: 0 ~ 256
+maximumFactionsPerPlayer = 1
+
+#Visual particle points per player per server tick. Damage and timing are unaffected.
+# Default: 8192
+# Range: 256 ~ 65536
+particlePointsPerPlayerTick = 8192
+
+#Fallback block removals per server tick, shared across death jobs and dimensions. An eligible whole-body native removal is atomic and may exceed this block count.
+# Default: 256
+# Range: 16 ~ 4096
+deathCleanupBlocksPerTick = 256
+
+#Maximum loaded Sable Life projectiles per dimension. Saved projectiles are never discarded by this limit.
+# Default: 8192
+# Range: 256 ~ 65536
+maximumProjectilesPerWorld = 8192
+
+#Maximum new Sable Life projectiles for one creature. Existing flights continue when the limit is reached.
+# Default: 2048
+# Range: 64 ~ 16384
+maximumProjectilesPerCreature = 2048
+
+#Maximum simultaneous entity damage receivers per Heart Core. Extra modules keep their settings. Higher values increase entity and targeting work.
+# Default: 8
+# Range: 1 ~ 32
+maximumEntityHitboxesPerCreature = 8
+
+#Maximum blueprint blocks shown as a model projection. Larger templates use a boundary preview. Raising this increases client rendering work.
+# Default: 8192
+# Range: 0 ~ 32768
+maximumBlueprintProjectionBlocks = 8192
+
+#Terrain voxel visits and body broad-phase checks per dimension/tick. Movement waits when exhausted. Minimum permits one maximum-size 16-step rotation check.
+# Default: 8388608
+# Range: 4194304 ~ 16777216
+collisionChecksPerTick = 8388608
+
+#Bounding-box cells (including air) allowed in one creative-operator Arena capture. Capture uses native Photomancy export synchronously; raising this can increase a one-time pause. Templates and actual block/entity limits remain separate.
+# Default: 4194304
+# Range: 262144 ~ 16777216
+arenaCaptureScanVoxels = 4194304
+
+#Actual blocks permitted in one administrator Arena record. Also bounds the work of native one-call respawn placement; this is not a per-tick construction budget.
+# Default: 131072
+# Range: 1024 ~ 1048576
+arenaCaptureBlocks = 131072
+
+#Block entities permitted in one administrator Arena record. Limits NBT restoration work during native one-call placement.
+# Default: 16384
+# Range: 256 ~ 131072
+arenaCaptureBlockEntities = 16384
+
+#Uncompressed estimated bytes permitted per Arena template at capture and saved-data admission. Required for native one-call respawn memory limits.
+# Default: 33554432
+# Range: 1048576 ~ 134217728
+arenaTemplateBytes = 33554432
+
+#Total uncompressed estimated bytes permitted across world Arena templates.
+# Default: 134217728
+# Range: 1048576 ~ 536870912
+arenaWorldTemplateBytes = 134217728
+
+#WARNING: Enable this only if you know what you are doing.
+#Survival players gain Heart Core editing, including loot and experience rewards and terrain destruction.
+#Players can farm items and experience or destroy terrain. These effects can be difficult to control.
+allowEditHeartCoreUnderSurvivalMode = false
+
+#Master switch for the Wild Encounter Tool and natural blueprint encounters.
+#Set false to disable automatic and test spawning and suspend encounter lifetime cleanup. Saved rules are retained.
+enableWildEncounters = true
+
+#Server-wide tracked wild encounter cap across dimensions, including unloaded encounters.
+# Default: 64
+# Range: 1 ~ 256
+maximumWildEncounters = 64
+
+#Maximum tracked wild encounters within 128 blocks of a player or a candidate spawn.
+# Default: 4
+# Range: 1 ~ 64
+maximumNearbyWildEncounters = 4
+
+#Horizontal distance from a fixed-world vanilla crafting table to the nearest blueprint footprint edge where natural spawning is blocked, at every height. Default 64; 0 disables. Also applies to Test spawn and obstacle clearing. Unknown/unindexed areas wait without loading chunks.
+# Default: 64
+# Range: 0 ~ 256
+wildWorkbenchProtectionRadius = 64
+
+#Maximum actual blocks in one natural-spawn blueprint. Native placement is synchronous; large templates can cause a pause.
+# Default: 262144
+# Range: 1 ~ 1048576
+maximumWildBlueprintBlocks = 262144
+
+#Maximum independent Sable structure parts in one natural-spawn blueprint. Independent of Arena limits. Model projections support at most 32 parts; larger templates use a boundary preview.
+# Default: 128
+# Range: 1 ~ 512
+maximumWildBlueprintParts = 128
+
+#Maximum compressed file bytes and estimated uncompressed NBT bytes for one natural-spawn blueprint. Independent of Arena capture limits.
+# Default: 268435456
+# Range: 1048576 ~ 1073741824
+maximumWildBlueprintBytes = 268435456
+
+#Maximum X or Z footprint in blocks for a natural-spawn blueprint. Its entire footprint must be in loaded chunks.
+# Default: 256
+# Range: 16 ~ 512
+maximumWildBlueprintHorizontalSize = 256
+
+#Maximum terrain voxel visits per natural-spawn placement check. Insufficient budget rejects the candidate without changing terrain.
+# Default: 4194304
+# Range: 262144 ~ 16777216
+wildPlacementScanVoxels = 4194304
+
+#Maximum blocks removed by one natural-spawn Clear obstacles operation. Protected blocks reject the entire candidate. Zero disables pre-clearing.
+# Default: 131072
+# Range: 0 ~ 1048576
+maximumWildClearedBlocks = 131072
+
+#Server-owned module switches. False hides new modules and suspends existing modules without deleting their settings.
+[modules]
+
+	[modules.heartCore]
+		move_set = true
+		signal_logic = true
+		combat_event = true
+		health_phase = true
+		hit_counter = true
+		damage_accumulation = true
+		sequence = true
+		wireless_redstone = true
+		command = true
+		sensor = true
+		navigation = true
+		melee = true
+		flame = true
+		arrow = true
+		gun = true
+		mortar = true
+		homing = true
+		laser = true
+		sphere_blast = true
+		slash = true
+		ground_strike = true
+		quake = true
+		pull = true
+		freeze = true
+		grab = true
+		pulse = true
+		surface_field = true
+		summoned_weapon = true
+		arena = true
+		armor = true
+		health_adjustment = true
+		linear_movement = true
+		auto_facing = true
+		signal_turn = true
+		gyroscope = true
+		hover_anchor = true
+		visual_shockwave = true
+		distortion_trail = true
+		particles = true
+		health_bar = true
+		item_display = true
+		trigger_sound = true
+		sound = true
+		bgm = true
+		loot = true
+		blueprint_spawn = true
+		entity_hitbox = true
+		block_interaction = true
+
+	#Only supported control modules are configurable here; this table cannot grant Heart Core capabilities.
+	[modules.redstoneCore]
+		move_set = true
+		signal_logic = true
+		sequence = true
+		wireless_redstone = true
+		sensor = true
+		navigation = true
+		auto_facing = true
+		signal_turn = true
+		gyroscope = true
+		hover_anchor = true
+		linear_movement = true
+		visual_shockwave = true
+		distortion_trail = true
+		particles = true
+		item_display = true
+		trigger_sound = true
+		block_interaction = true
+
+	#Skill switches for the Survival Heart Core. Unsupported skills stay unavailable.
+	[modules.survivalHeartCore]
+		move_set = true
+		signal_logic = true
+		combat_event = true
+		health_phase = true
+		hit_counter = true
+		damage_accumulation = true
+		sequence = true
+		wireless_redstone = true
+		sensor = true
+		navigation = true
+		melee = true
+		flame = true
+		arrow = true
+		gun = true
+		mortar = true
+		homing = true
+		laser = true
+		sphere_blast = true
+		slash = true
+		ground_strike = true
+		quake = true
+		pull = true
+		freeze = true
+		grab = true
+		pulse = true
+		surface_field = true
+		summoned_weapon = true
+		armor = true
+		health_adjustment = true
+		linear_movement = true
+		auto_facing = true
+		signal_turn = true
+		gyroscope = true
+		hover_anchor = true
+		visual_shockwave = true
+		distortion_trail = true
+		particles = true
+		health_bar = true
+		item_display = true
+		trigger_sound = true
+		sound = true
+		bgm = true
+		entity_hitbox = true
+		block_interaction = true
+
+[survivalTokens]
+	#All refueling materials as item_id=energy_value, including copper. Later duplicate entries override earlier ones. An empty list disables refueling.
+	depositValues = ["minecraft:copper_ingot=10", "minecraft:iron_ingot=30", "minecraft:gold_ingot=60", "minecraft:emerald=120", "minecraft:diamond=300", "minecraft:netherite_ingot=3000", "minecraft:copper_block=90", "minecraft:iron_block=270", "minecraft:gold_block=540", "minecraft:emerald_block=1080", "minecraft:diamond_block=2700", "minecraft:netherite_block=27000"]
+
+	#Energy per missing health point when activating. Costs round up.
+	# Default: 1
+	# Range: 1 ~ 1000000
+	activationTokensPerHealth = 1
+
+	#Energy per health point actually restored while active. Costs round up.
+	# Default: 1
+	# Range: 1 ~ 1000000
+	healingTokensPerHealth = 1
+
+	#Energy multiplier for each Survival Heart Core arrow volley.
+	# Default: 1
+	# Range: 1 ~ 1000000
+	arrowTokenMultiplier = 1
+
+	#Energy per configured damage point for each successful Survival Heart Core melee hit.
+	# Default: 1
+	# Range: 1 ~ 1000000
+	meleeTokensPerDamage = 1
+
+	#Energy per 1 percentage point of damage reduction per active second, for each Survival Heart Core armor module. Reduction is capped at 90 percent: default 90 percent costs 90 Energy/second.
+	# Default: 1
+	# Range: 1 ~ 1000000
+	armorTokensPerReductionSecond = 1
+
+	[survivalTokens.moduleMultipliers]
+		# Default: 1
+		# Range: 1 ~ 1000000
+		flame = 1
+
+		# Default: 1
+		# Range: 1 ~ 1000000
+		gun = 1
+
+		# Default: 1
+		# Range: 1 ~ 1000000
+		mortar = 1
+
+		# Default: 1
+		# Range: 1 ~ 1000000
+		homing = 1
+
+		# Default: 1
+		# Range: 1 ~ 1000000
+		laser = 1
+
+		# Default: 1
+		# Range: 1 ~ 1000000
+		sphere_blast = 1
+
+		# Default: 1
+		# Range: 1 ~ 1000000
+		slash = 1
+
+		# Default: 1
+		# Range: 1 ~ 1000000
+		ground_strike = 1
+
+		# Default: 1
+		# Range: 1 ~ 1000000
+		quake = 1
+
+		# Default: 1
+		# Range: 1 ~ 1000000
+		pull = 1
+
+		# Default: 1
+		# Range: 1 ~ 1000000
+		freeze = 1
+
+		# Default: 1
+		# Range: 1 ~ 1000000
+		grab = 1
+
+		# Default: 1
+		# Range: 1 ~ 1000000
+		pulse = 1
+
+		# Default: 1
+		# Range: 1 ~ 1000000
+		surface_field = 1
+
+		# Default: 1
+		# Range: 1 ~ 1000000
+		summoned_weapon = 1
